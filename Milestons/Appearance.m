@@ -1,0 +1,57 @@
+//
+//  Appearance.m
+//  Milestons
+//
+//  Created by Dalton on 5/2/15.
+//  Copyright (c) 2015 Dalton. All rights reserved.
+//
+
+#import "Appearance.h"
+#import "ScrapbookListViewController.h"
+
+#import "AddScrapbookViewController.h"
+#import "EntryListViewController.h"
+
+#import "AddEntryViewController.h"
+#import "EntryDetailViewController.h"
+
+
+@implementation Appearance
+
+
++ (void)initializeAppearanceDefaults {
+    
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:240/255.0 green:240/255.0 blue:255/255.0 alpha:1]];
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:226/255.0 green:170/255.0 blue:253/255.0 alpha:1]];
+    
+    [[UIToolbar appearance] setBarTintColor:[UIColor colorWithRed:240/255.0 green:240/255.0 blue:255/255.0 alpha:1]];
+    
+    [[UIToolbar appearance] setTintColor:[UIColor colorWithRed:74/255.0 green:75/255.0 blue:76/255.0 alpha:1]];
+    
+    [[UILabel appearance] setTextColor:[UIColor colorWithRed:74/255.0 green:75/255.0 blue:76/255.0 alpha:1]];
+    
+    [[UINavigationBar appearance] setTranslucent:NO];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                        [UIColor colorWithRed:122/255.0 green:197/255.0 blue:237/255.0 alpha:1],
+                                                        NSForegroundColorAttributeName,
+                                                        nil]];
+
+
+//    [[UITextView appearance] setBackgroundColor:[UIColor clearColor]];
+    
+    [[UITextView appearance] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Layer-1.png"]]];
+     
+
+//    [[UITextField appearance] setBackgroundColor:[UIColor clearColor]];
+    
+    [[UITextField appearance] setBackground:[UIImage imageNamed:@"Layer-1.png"]];
+    
+    
+    
+}
+
+
+@end

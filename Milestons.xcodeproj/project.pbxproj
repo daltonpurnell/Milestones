@@ -14,6 +14,40 @@
 		CF2C22DC1AF5B40A00D28EAB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF2C22DB1AF5B40A00D28EAB /* Images.xcassets */; };
 		CF2C22DF1AF5B40A00D28EAB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF2C22DD1AF5B40A00D28EAB /* LaunchScreen.xib */; };
 		CF2C22EB1AF5B40A00D28EAB /* MilestonsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C22EA1AF5B40A00D28EAB /* MilestonsTests.m */; };
+		CF2C22F61AF5B45900D28EAB /* ScrapbookListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C22F51AF5B45900D28EAB /* ScrapbookListViewController.m */; };
+		CF2C22FF1AF5B48400D28EAB /* EntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C22FE1AF5B48400D28EAB /* EntryController.m */; };
+		CF2C23021AF5B49300D28EAB /* ScrapbookController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C23011AF5B49300D28EAB /* ScrapbookController.m */; };
+		CF2C23051AF5B4B000D28EAB /* ScrapbookListViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C23041AF5B4B000D28EAB /* ScrapbookListViewDataSource.m */; };
+		CF2C23081AF5B4C300D28EAB /* EntryListViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C23071AF5B4C300D28EAB /* EntryListViewDataSource.m */; };
+		CF2C230B1AF5B4D800D28EAB /* EntryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C230A1AF5B4D800D28EAB /* EntryListViewController.m */; };
+		CF2C23101AF5C01D00D28EAB /* AddScrapbookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C230F1AF5C01D00D28EAB /* AddScrapbookViewController.m */; };
+		CF2C23131AF5C03C00D28EAB /* AddEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C23121AF5C03C00D28EAB /* AddEntryViewController.m */; };
+		CF2C23161AF5C26200D28EAB /* Appearance.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C23151AF5C26200D28EAB /* Appearance.m */; };
+		CF2C23191AF5CA5900D28EAB /* EntryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C23181AF5CA5900D28EAB /* EntryDetailViewController.m */; };
+		CF2C231B1AF5D1E900D28EAB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C231A1AF5D1E900D28EAB /* CoreData.framework */; };
+		CF2C232F1AF5EE2B00D28EAB /* PhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C232E1AF5EE2B00D28EAB /* PhotoController.m */; };
+		CF2C233D1AF6CDCE00D28EAB /* Scrapbook.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C233C1AF6CDCE00D28EAB /* Scrapbook.m */; };
+		CF2C23401AF6CDCE00D28EAB /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C233F1AF6CDCE00D28EAB /* Entry.m */; };
+		CF2C23431AF6CDCE00D28EAB /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C23421AF6CDCE00D28EAB /* Photo.m */; };
+		CF2C234A1AF7E13800D28EAB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23441AF7E13800D28EAB /* Bolts.framework */; };
+		CF2C234B1AF7E13800D28EAB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23451AF7E13800D28EAB /* Parse.framework */; };
+		CF2C234C1AF7E13800D28EAB /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23461AF7E13800D28EAB /* ParseCrashReporting.framework */; };
+		CF2C234D1AF7E13800D28EAB /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23471AF7E13800D28EAB /* ParseFacebookUtils.framework */; };
+		CF2C234E1AF7E13800D28EAB /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23481AF7E13800D28EAB /* ParseFacebookUtilsV4.framework */; };
+		CF2C234F1AF7E13800D28EAB /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23491AF7E13800D28EAB /* ParseUI.framework */; };
+		CF2C23511AF7E15C00D28EAB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23501AF7E15C00D28EAB /* AudioToolbox.framework */; };
+		CF2C23531AF7E16700D28EAB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23521AF7E16700D28EAB /* CFNetwork.framework */; };
+		CF2C23551AF7E16F00D28EAB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23541AF7E16F00D28EAB /* CoreGraphics.framework */; };
+		CF2C23571AF7E17800D28EAB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23561AF7E17800D28EAB /* CoreLocation.framework */; };
+		CF2C23591AF7E18200D28EAB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23581AF7E18200D28EAB /* MobileCoreServices.framework */; };
+		CF2C235B1AF7E18A00D28EAB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C235A1AF7E18A00D28EAB /* QuartzCore.framework */; };
+		CF2C235D1AF7E19300D28EAB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C235C1AF7E19300D28EAB /* Security.framework */; };
+		CF2C235F1AF7E19B00D28EAB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C235E1AF7E19B00D28EAB /* StoreKit.framework */; };
+		CF2C23611AF7E1A900D28EAB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23601AF7E1A900D28EAB /* SystemConfiguration.framework */; };
+		CF2C23631AF7E1B600D28EAB /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23621AF7E1B600D28EAB /* libz.dylib */; };
+		CF2C23651AF7E1BF00D28EAB /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23641AF7E1BF00D28EAB /* libsqlite3.dylib */; };
+		CF2C23671AF7E1CA00D28EAB /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23661AF7E1CA00D28EAB /* Accounts.framework */; };
+		CF2C23691AF7E1D400D28EAB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23681AF7E1D400D28EAB /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +74,54 @@
 		CF2C22E41AF5B40A00D28EAB /* MilestonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MilestonsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF2C22E91AF5B40A00D28EAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF2C22EA1AF5B40A00D28EAB /* MilestonsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MilestonsTests.m; sourceTree = "<group>"; };
+		CF2C22F41AF5B45900D28EAB /* ScrapbookListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrapbookListViewController.h; sourceTree = "<group>"; };
+		CF2C22F51AF5B45900D28EAB /* ScrapbookListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrapbookListViewController.m; sourceTree = "<group>"; };
+		CF2C22FD1AF5B48400D28EAB /* EntryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EntryController.h; path = Milestons/EntryController.h; sourceTree = "<group>"; };
+		CF2C22FE1AF5B48400D28EAB /* EntryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EntryController.m; path = Milestons/EntryController.m; sourceTree = "<group>"; };
+		CF2C23001AF5B49300D28EAB /* ScrapbookController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScrapbookController.h; path = Milestons/ScrapbookController.h; sourceTree = "<group>"; };
+		CF2C23011AF5B49300D28EAB /* ScrapbookController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScrapbookController.m; path = Milestons/ScrapbookController.m; sourceTree = "<group>"; };
+		CF2C23031AF5B4B000D28EAB /* ScrapbookListViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrapbookListViewDataSource.h; sourceTree = "<group>"; };
+		CF2C23041AF5B4B000D28EAB /* ScrapbookListViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrapbookListViewDataSource.m; sourceTree = "<group>"; };
+		CF2C23061AF5B4C300D28EAB /* EntryListViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryListViewDataSource.h; sourceTree = "<group>"; };
+		CF2C23071AF5B4C300D28EAB /* EntryListViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryListViewDataSource.m; sourceTree = "<group>"; };
+		CF2C23091AF5B4D800D28EAB /* EntryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryListViewController.h; sourceTree = "<group>"; };
+		CF2C230A1AF5B4D800D28EAB /* EntryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryListViewController.m; sourceTree = "<group>"; };
+		CF2C230E1AF5C01D00D28EAB /* AddScrapbookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddScrapbookViewController.h; sourceTree = "<group>"; };
+		CF2C230F1AF5C01D00D28EAB /* AddScrapbookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddScrapbookViewController.m; sourceTree = "<group>"; };
+		CF2C23111AF5C03C00D28EAB /* AddEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEntryViewController.h; sourceTree = "<group>"; };
+		CF2C23121AF5C03C00D28EAB /* AddEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEntryViewController.m; sourceTree = "<group>"; };
+		CF2C23141AF5C26200D28EAB /* Appearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appearance.h; sourceTree = "<group>"; };
+		CF2C23151AF5C26200D28EAB /* Appearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Appearance.m; sourceTree = "<group>"; };
+		CF2C23171AF5CA5900D28EAB /* EntryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryDetailViewController.h; sourceTree = "<group>"; };
+		CF2C23181AF5CA5900D28EAB /* EntryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryDetailViewController.m; sourceTree = "<group>"; };
+		CF2C231A1AF5D1E900D28EAB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CF2C232D1AF5EE2B00D28EAB /* PhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoController.h; path = Milestons/PhotoController.h; sourceTree = "<group>"; };
+		CF2C232E1AF5EE2B00D28EAB /* PhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoController.m; path = Milestons/PhotoController.m; sourceTree = "<group>"; };
+		CF2C233B1AF6CDCE00D28EAB /* Scrapbook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scrapbook.h; sourceTree = "<group>"; };
+		CF2C233C1AF6CDCE00D28EAB /* Scrapbook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scrapbook.m; sourceTree = "<group>"; };
+		CF2C233E1AF6CDCE00D28EAB /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
+		CF2C233F1AF6CDCE00D28EAB /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
+		CF2C23411AF6CDCE00D28EAB /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		CF2C23421AF6CDCE00D28EAB /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		CF2C23441AF7E13800D28EAB /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		CF2C23451AF7E13800D28EAB /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		CF2C23461AF7E13800D28EAB /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
+		CF2C23471AF7E13800D28EAB /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		CF2C23481AF7E13800D28EAB /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		CF2C23491AF7E13800D28EAB /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		CF2C23501AF7E15C00D28EAB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		CF2C23521AF7E16700D28EAB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		CF2C23541AF7E16F00D28EAB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CF2C23561AF7E17800D28EAB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CF2C23581AF7E18200D28EAB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		CF2C235A1AF7E18A00D28EAB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CF2C235C1AF7E19300D28EAB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		CF2C235E1AF7E19B00D28EAB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		CF2C23601AF7E1A900D28EAB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CF2C23621AF7E1B600D28EAB /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		CF2C23641AF7E1BF00D28EAB /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		CF2C23661AF7E1CA00D28EAB /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		CF2C23681AF7E1D400D28EAB /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +129,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF2C23691AF7E1D400D28EAB /* Social.framework in Frameworks */,
+				CF2C23671AF7E1CA00D28EAB /* Accounts.framework in Frameworks */,
+				CF2C23651AF7E1BF00D28EAB /* libsqlite3.dylib in Frameworks */,
+				CF2C23631AF7E1B600D28EAB /* libz.dylib in Frameworks */,
+				CF2C23611AF7E1A900D28EAB /* SystemConfiguration.framework in Frameworks */,
+				CF2C235F1AF7E19B00D28EAB /* StoreKit.framework in Frameworks */,
+				CF2C235D1AF7E19300D28EAB /* Security.framework in Frameworks */,
+				CF2C235B1AF7E18A00D28EAB /* QuartzCore.framework in Frameworks */,
+				CF2C23591AF7E18200D28EAB /* MobileCoreServices.framework in Frameworks */,
+				CF2C23571AF7E17800D28EAB /* CoreLocation.framework in Frameworks */,
+				CF2C23551AF7E16F00D28EAB /* CoreGraphics.framework in Frameworks */,
+				CF2C23531AF7E16700D28EAB /* CFNetwork.framework in Frameworks */,
+				CF2C23511AF7E15C00D28EAB /* AudioToolbox.framework in Frameworks */,
+				CF2C231B1AF5D1E900D28EAB /* CoreData.framework in Frameworks */,
+				CF2C234B1AF7E13800D28EAB /* Parse.framework in Frameworks */,
+				CF2C234F1AF7E13800D28EAB /* ParseUI.framework in Frameworks */,
+				CF2C234E1AF7E13800D28EAB /* ParseFacebookUtilsV4.framework in Frameworks */,
+				CF2C234A1AF7E13800D28EAB /* Bolts.framework in Frameworks */,
+				CF2C234D1AF7E13800D28EAB /* ParseFacebookUtils.framework in Frameworks */,
+				CF2C234C1AF7E13800D28EAB /* ParseCrashReporting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +165,7 @@
 		CF2C22C21AF5B40A00D28EAB = {
 			isa = PBXGroup;
 			children = (
+				CF2C236A1AF7EE6C00D28EAB /* Model */,
 				CF2C22CD1AF5B40A00D28EAB /* Milestons */,
 				CF2C22E71AF5B40A00D28EAB /* MilestonsTests */,
 				CF2C22CC1AF5B40A00D28EAB /* Products */,
@@ -85,8 +188,13 @@
 				CF2C22D31AF5B40A00D28EAB /* AppDelegate.m */,
 				CF2C22D51AF5B40A00D28EAB /* ViewController.h */,
 				CF2C22D61AF5B40A00D28EAB /* ViewController.m */,
-				CF2C22D81AF5B40A00D28EAB /* Main.storyboard */,
+				CF2C23141AF5C26200D28EAB /* Appearance.h */,
+				CF2C23151AF5C26200D28EAB /* Appearance.m */,
+				CF2C23301AF5EE3900D28EAB /* Photos */,
+				CF2C230C1AF5B50100D28EAB /* Scrapbooks */,
+				CF2C230D1AF5B50D00D28EAB /* Entries */,
 				CF2C22DB1AF5B40A00D28EAB /* Images.xcassets */,
+				CF2C22D81AF5B40A00D28EAB /* Main.storyboard */,
 				CF2C22DD1AF5B40A00D28EAB /* LaunchScreen.xib */,
 				CF2C22CE1AF5B40A00D28EAB /* Supporting Files */,
 			);
@@ -96,6 +204,26 @@
 		CF2C22CE1AF5B40A00D28EAB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CF2C23681AF7E1D400D28EAB /* Social.framework */,
+				CF2C23661AF7E1CA00D28EAB /* Accounts.framework */,
+				CF2C23641AF7E1BF00D28EAB /* libsqlite3.dylib */,
+				CF2C23621AF7E1B600D28EAB /* libz.dylib */,
+				CF2C23601AF7E1A900D28EAB /* SystemConfiguration.framework */,
+				CF2C235E1AF7E19B00D28EAB /* StoreKit.framework */,
+				CF2C235C1AF7E19300D28EAB /* Security.framework */,
+				CF2C235A1AF7E18A00D28EAB /* QuartzCore.framework */,
+				CF2C23581AF7E18200D28EAB /* MobileCoreServices.framework */,
+				CF2C23561AF7E17800D28EAB /* CoreLocation.framework */,
+				CF2C23541AF7E16F00D28EAB /* CoreGraphics.framework */,
+				CF2C23521AF7E16700D28EAB /* CFNetwork.framework */,
+				CF2C23501AF7E15C00D28EAB /* AudioToolbox.framework */,
+				CF2C23441AF7E13800D28EAB /* Bolts.framework */,
+				CF2C23451AF7E13800D28EAB /* Parse.framework */,
+				CF2C23461AF7E13800D28EAB /* ParseCrashReporting.framework */,
+				CF2C23471AF7E13800D28EAB /* ParseFacebookUtils.framework */,
+				CF2C23481AF7E13800D28EAB /* ParseFacebookUtilsV4.framework */,
+				CF2C23491AF7E13800D28EAB /* ParseUI.framework */,
+				CF2C231A1AF5D1E900D28EAB /* CoreData.framework */,
 				CF2C22CF1AF5B40A00D28EAB /* Info.plist */,
 				CF2C22D01AF5B40A00D28EAB /* main.m */,
 			);
@@ -117,6 +245,60 @@
 				CF2C22E91AF5B40A00D28EAB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CF2C230C1AF5B50100D28EAB /* Scrapbooks */ = {
+			isa = PBXGroup;
+			children = (
+				CF2C22F41AF5B45900D28EAB /* ScrapbookListViewController.h */,
+				CF2C22F51AF5B45900D28EAB /* ScrapbookListViewController.m */,
+				CF2C23031AF5B4B000D28EAB /* ScrapbookListViewDataSource.h */,
+				CF2C23041AF5B4B000D28EAB /* ScrapbookListViewDataSource.m */,
+				CF2C230E1AF5C01D00D28EAB /* AddScrapbookViewController.h */,
+				CF2C230F1AF5C01D00D28EAB /* AddScrapbookViewController.m */,
+			);
+			name = Scrapbooks;
+			sourceTree = "<group>";
+		};
+		CF2C230D1AF5B50D00D28EAB /* Entries */ = {
+			isa = PBXGroup;
+			children = (
+				CF2C23091AF5B4D800D28EAB /* EntryListViewController.h */,
+				CF2C230A1AF5B4D800D28EAB /* EntryListViewController.m */,
+				CF2C23061AF5B4C300D28EAB /* EntryListViewDataSource.h */,
+				CF2C23071AF5B4C300D28EAB /* EntryListViewDataSource.m */,
+				CF2C23111AF5C03C00D28EAB /* AddEntryViewController.h */,
+				CF2C23121AF5C03C00D28EAB /* AddEntryViewController.m */,
+				CF2C23171AF5CA5900D28EAB /* EntryDetailViewController.h */,
+				CF2C23181AF5CA5900D28EAB /* EntryDetailViewController.m */,
+			);
+			name = Entries;
+			sourceTree = "<group>";
+		};
+		CF2C23301AF5EE3900D28EAB /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Photos;
+			sourceTree = "<group>";
+		};
+		CF2C236A1AF7EE6C00D28EAB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF2C23411AF6CDCE00D28EAB /* Photo.h */,
+				CF2C23421AF6CDCE00D28EAB /* Photo.m */,
+				CF2C232D1AF5EE2B00D28EAB /* PhotoController.h */,
+				CF2C232E1AF5EE2B00D28EAB /* PhotoController.m */,
+				CF2C233E1AF6CDCE00D28EAB /* Entry.h */,
+				CF2C233F1AF6CDCE00D28EAB /* Entry.m */,
+				CF2C22FD1AF5B48400D28EAB /* EntryController.h */,
+				CF2C22FE1AF5B48400D28EAB /* EntryController.m */,
+				CF2C233B1AF6CDCE00D28EAB /* Scrapbook.h */,
+				CF2C233C1AF6CDCE00D28EAB /* Scrapbook.m */,
+				CF2C23001AF5B49300D28EAB /* ScrapbookController.h */,
+				CF2C23011AF5B49300D28EAB /* ScrapbookController.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +401,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF2C23191AF5CA5900D28EAB /* EntryDetailViewController.m in Sources */,
+				CF2C23021AF5B49300D28EAB /* ScrapbookController.m in Sources */,
 				CF2C22D71AF5B40A00D28EAB /* ViewController.m in Sources */,
+				CF2C23431AF6CDCE00D28EAB /* Photo.m in Sources */,
 				CF2C22D41AF5B40A00D28EAB /* AppDelegate.m in Sources */,
+				CF2C23081AF5B4C300D28EAB /* EntryListViewDataSource.m in Sources */,
 				CF2C22D11AF5B40A00D28EAB /* main.m in Sources */,
+				CF2C23051AF5B4B000D28EAB /* ScrapbookListViewDataSource.m in Sources */,
+				CF2C230B1AF5B4D800D28EAB /* EntryListViewController.m in Sources */,
+				CF2C232F1AF5EE2B00D28EAB /* PhotoController.m in Sources */,
+				CF2C233D1AF6CDCE00D28EAB /* Scrapbook.m in Sources */,
+				CF2C23401AF6CDCE00D28EAB /* Entry.m in Sources */,
+				CF2C22FF1AF5B48400D28EAB /* EntryController.m in Sources */,
+				CF2C22F61AF5B45900D28EAB /* ScrapbookListViewController.m in Sources */,
+				CF2C23131AF5C03C00D28EAB /* AddEntryViewController.m in Sources */,
+				CF2C23101AF5C01D00D28EAB /* AddScrapbookViewController.m in Sources */,
+				CF2C23161AF5C26200D28EAB /* Appearance.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,9 +543,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Milestons",
+				);
 				INFOPLIST_FILE = Milestons/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -357,9 +558,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Milestons",
+				);
 				INFOPLIST_FILE = Milestons/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -416,6 +622,7 @@
 				CF2C22F01AF5B40A00D28EAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF2C22F11AF5B40A00D28EAB /* Build configuration list for PBXNativeTarget "MilestonsTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +631,7 @@
 				CF2C22F31AF5B40A00D28EAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

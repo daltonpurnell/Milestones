@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "Appearance.h"
+#import "ScrapbookController.h"
+#import "ScrapbookListViewController.h"
+
+@import Parse;
 
 @interface AppDelegate ()
 
@@ -17,6 +22,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [Appearance initializeAppearanceDefaults];
+    
+    [Scrapbook registerSubclass];
+    
+    [Parse enableLocalDatastore];
+    
+    // Initialize Parse.
+    [Parse setApplicationId:@"ZP4dc4didhOZFuurMoswvziSSuuc1aHByCsZT5MC"
+                  clientKey:@"hJsfouL4Wk8drBFrQBHqrnUks83QscDHtl9y26fm"];
+    
+    // [Optional] Track statistics around application opens.
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    [PFUser enableAutomaticUser];
+    PFACL *defaultACL = [PFACL ACL];
+    [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
+    
     return YES;
 }
 
