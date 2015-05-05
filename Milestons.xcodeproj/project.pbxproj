@@ -47,6 +47,7 @@
 		CF2C23651AF7E1BF00D28EAB /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23641AF7E1BF00D28EAB /* libsqlite3.dylib */; };
 		CF2C23671AF7E1CA00D28EAB /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23661AF7E1CA00D28EAB /* Accounts.framework */; };
 		CF2C23691AF7E1D400D28EAB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23681AF7E1D400D28EAB /* Social.framework */; };
+		CF2C236D1AF868DD00D28EAB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C236C1AF868DD00D28EAB /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,8 @@
 		CF2C23641AF7E1BF00D28EAB /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		CF2C23661AF7E1CA00D28EAB /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		CF2C23681AF7E1D400D28EAB /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		CF2C236B1AF868DD00D28EAB /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		CF2C236C1AF868DD00D28EAB /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +190,8 @@
 				CF2C22D61AF5B40A00D28EAB /* ViewController.m */,
 				CF2C23141AF5C26200D28EAB /* Appearance.h */,
 				CF2C23151AF5C26200D28EAB /* Appearance.m */,
+				CF2C236B1AF868DD00D28EAB /* LoginViewController.h */,
+				CF2C236C1AF868DD00D28EAB /* LoginViewController.m */,
 				CF2C23301AF5EE3900D28EAB /* Photos */,
 				CF2C230C1AF5B50100D28EAB /* Scrapbooks */,
 				CF2C230D1AF5B50D00D28EAB /* Entries */,
@@ -403,6 +408,7 @@
 				CF2C23081AF5B4C300D28EAB /* EntryListViewDataSource.m in Sources */,
 				CF2C22D11AF5B40A00D28EAB /* main.m in Sources */,
 				CF2C23051AF5B4B000D28EAB /* ScrapbookListViewDataSource.m in Sources */,
+				CF2C236D1AF868DD00D28EAB /* LoginViewController.m in Sources */,
 				CF2C230B1AF5B4D800D28EAB /* EntryListViewController.m in Sources */,
 				CF2C232F1AF5EE2B00D28EAB /* PhotoController.m in Sources */,
 				CF2C233D1AF6CDCE00D28EAB /* Scrapbook.m in Sources */,

@@ -15,7 +15,7 @@
 @import ParseUI;
 
 
-@interface EntryListViewController () <UITableViewDelegate, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
+@interface EntryListViewController () <UITableViewDelegate>
 
 @end
 
