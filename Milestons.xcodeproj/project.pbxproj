@@ -48,8 +48,8 @@
 		CF2C23671AF7E1CA00D28EAB /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23661AF7E1CA00D28EAB /* Accounts.framework */; };
 		CF2C23691AF7E1D400D28EAB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23681AF7E1D400D28EAB /* Social.framework */; };
 		CF2C236D1AF868DD00D28EAB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C236C1AF868DD00D28EAB /* LoginViewController.m */; };
-		CF2C23701AF86E3200D28EAB /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C236F1AF86E3200D28EAB /* SWRevealViewController.m */; };
 		CF2C23731AF876A000D28EAB /* OptionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C23721AF876A000D28EAB /* OptionsTableViewController.m */; };
+		CF2C23771AF9611200D28EAB /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C23761AF9611200D28EAB /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,10 +124,10 @@
 		CF2C23681AF7E1D400D28EAB /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		CF2C236B1AF868DD00D28EAB /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		CF2C236C1AF868DD00D28EAB /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		CF2C236E1AF86E3200D28EAB /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		CF2C236F1AF86E3200D28EAB /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		CF2C23711AF876A000D28EAB /* OptionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsTableViewController.h; sourceTree = "<group>"; };
 		CF2C23721AF876A000D28EAB /* OptionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsTableViewController.m; sourceTree = "<group>"; };
+		CF2C23751AF9611200D28EAB /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		CF2C23761AF9611200D28EAB /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,8 +311,8 @@
 		CF2C23741AF876CB00D28EAB /* SlideOutMenu */ = {
 			isa = PBXGroup;
 			children = (
-				CF2C236E1AF86E3200D28EAB /* SWRevealViewController.h */,
-				CF2C236F1AF86E3200D28EAB /* SWRevealViewController.m */,
+				CF2C23751AF9611200D28EAB /* SWRevealViewController.h */,
+				CF2C23761AF9611200D28EAB /* SWRevealViewController.m */,
 				CF2C23711AF876A000D28EAB /* OptionsTableViewController.h */,
 				CF2C23721AF876A000D28EAB /* OptionsTableViewController.m */,
 			);
@@ -420,12 +420,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF2C23021AF5B49300D28EAB /* ScrapbookController.m in Sources */,
+				CF2C23771AF9611200D28EAB /* SWRevealViewController.m in Sources */,
 				CF2C22D71AF5B40A00D28EAB /* ViewController.m in Sources */,
 				CF2C23431AF6CDCE00D28EAB /* Photo.m in Sources */,
 				CF2C22D41AF5B40A00D28EAB /* AppDelegate.m in Sources */,
 				CF2C23081AF5B4C300D28EAB /* EntryListViewDataSource.m in Sources */,
 				CF2C23731AF876A000D28EAB /* OptionsTableViewController.m in Sources */,
-				CF2C23701AF86E3200D28EAB /* SWRevealViewController.m in Sources */,
 				CF2C22D11AF5B40A00D28EAB /* main.m in Sources */,
 				CF2C23051AF5B4B000D28EAB /* ScrapbookListViewDataSource.m in Sources */,
 				CF2C236D1AF868DD00D28EAB /* LoginViewController.m in Sources */,

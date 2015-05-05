@@ -154,7 +154,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="zPV-Sb-Kcm" kind="presentation" id="ilx-LQ-ig4"/>
+                                    <segue destination="zPV-Sb-Kcm" kind="presentation" id="cSz-GA-QpX"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -178,7 +178,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kkq-2V-SkR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="WJD-2D-TR3" customClass="ScrapbookListViewDataSource"/>
             </objects>
-            <point key="canvasLocation" x="1332" y="361"/>
+            <point key="canvasLocation" x="1332" y="377"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="chN-TO-HF7">
@@ -417,7 +417,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7DR-BW-DGJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="1UO-pK-Nkk" customClass="EntryListViewDataSource"/>
             </objects>
-            <point key="canvasLocation" x="1964" y="361"/>
+            <point key="canvasLocation" x="2058" y="377"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SRb-kh-Pou">
@@ -494,6 +494,6 @@
         <image name="giftlyBackground" width="320" height="568"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ilx-LQ-ig4"/>
+        <segue reference="cSz-GA-QpX"/>
     </inferredMetricsTieBreakers>
 </document>

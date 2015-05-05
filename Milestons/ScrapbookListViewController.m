@@ -29,25 +29,23 @@
     [super viewDidLoad];
     
     
-    // This sets up the slide out menu
-    self.options.target = self.revealViewController;
+    // This sets up the swipe recognition to open the slide out menu
+    SWRevealViewController *revealController = [self revealViewController];
+    
+    self.options.target = revealController;
     self.options.action = @selector(revealToggle:);
-
     
-//    if (self.revealViewController.panGestureRecognizer) {
-//      [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-//    }
+//    [self.view addGestureRecognizer:revealController.panGestureRecognizer];
     
-//    UIPanGestureRecognizer *gestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(revealToggle:)];
-//    [self.view addGestureRecognizer:gestureRecognizer];
-    
-//    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+//    UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self.revealViewController                                                                            action:@selector(revealToggle:)];
+//    [self.view addGestureRecognizer:panGestureRecognizer];
     
     [Appearance initializeAppearanceDefaults];
 
 }
 
 -(void)viewWillAppear:(BOOL)animated {
+    
     [self.tableView reloadData];
 }
 
