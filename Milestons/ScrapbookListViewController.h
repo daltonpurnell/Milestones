@@ -10,4 +10,8 @@
 
 @interface ScrapbookListViewController : UITableViewController
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *options;
+
+
+
 @end
