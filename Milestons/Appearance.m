@@ -13,7 +13,6 @@
 #import "EntryListViewController.h"
 
 #import "AddEntryViewController.h"
-#import "EntryDetailViewController.h"
 
 
 @implementation Appearance
