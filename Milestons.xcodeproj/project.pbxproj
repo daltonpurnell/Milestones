@@ -23,7 +23,6 @@
 		CF2C23101AF5C01D00D28EAB /* AddScrapbookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C230F1AF5C01D00D28EAB /* AddScrapbookViewController.m */; };
 		CF2C23131AF5C03C00D28EAB /* AddEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C23121AF5C03C00D28EAB /* AddEntryViewController.m */; };
 		CF2C23161AF5C26200D28EAB /* Appearance.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C23151AF5C26200D28EAB /* Appearance.m */; };
-		CF2C23191AF5CA5900D28EAB /* EntryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C23181AF5CA5900D28EAB /* EntryDetailViewController.m */; };
 		CF2C231B1AF5D1E900D28EAB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C231A1AF5D1E900D28EAB /* CoreData.framework */; };
 		CF2C232F1AF5EE2B00D28EAB /* PhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C232E1AF5EE2B00D28EAB /* PhotoController.m */; };
 		CF2C233D1AF6CDCE00D28EAB /* Scrapbook.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C233C1AF6CDCE00D28EAB /* Scrapbook.m */; };
@@ -92,8 +91,6 @@
 		CF2C23121AF5C03C00D28EAB /* AddEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEntryViewController.m; sourceTree = "<group>"; };
 		CF2C23141AF5C26200D28EAB /* Appearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appearance.h; sourceTree = "<group>"; };
 		CF2C23151AF5C26200D28EAB /* Appearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Appearance.m; sourceTree = "<group>"; };
-		CF2C23171AF5CA5900D28EAB /* EntryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryDetailViewController.h; sourceTree = "<group>"; };
-		CF2C23181AF5CA5900D28EAB /* EntryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryDetailViewController.m; sourceTree = "<group>"; };
 		CF2C231A1AF5D1E900D28EAB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		CF2C232D1AF5EE2B00D28EAB /* PhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoController.h; path = Milestons/PhotoController.h; sourceTree = "<group>"; };
 		CF2C232E1AF5EE2B00D28EAB /* PhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoController.m; path = Milestons/PhotoController.m; sourceTree = "<group>"; };
@@ -269,8 +266,6 @@
 				CF2C23071AF5B4C300D28EAB /* EntryListViewDataSource.m */,
 				CF2C23111AF5C03C00D28EAB /* AddEntryViewController.h */,
 				CF2C23121AF5C03C00D28EAB /* AddEntryViewController.m */,
-				CF2C23171AF5CA5900D28EAB /* EntryDetailViewController.h */,
-				CF2C23181AF5CA5900D28EAB /* EntryDetailViewController.m */,
 			);
 			name = Entries;
 			sourceTree = "<group>";
@@ -401,7 +396,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF2C23191AF5CA5900D28EAB /* EntryDetailViewController.m in Sources */,
 				CF2C23021AF5B49300D28EAB /* ScrapbookController.m in Sources */,
 				CF2C22D71AF5B40A00D28EAB /* ViewController.m in Sources */,
 				CF2C23431AF6CDCE00D28EAB /* Photo.m in Sources */,

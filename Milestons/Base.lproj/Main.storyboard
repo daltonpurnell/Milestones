@@ -350,6 +350,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jfh-bi-QJz" id="VgF-Zm-3CR">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Y1i-jh-hRn" kind="presentation" id="dbh-KI-pog"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -365,24 +368,6 @@
                 <customObject id="1UO-pK-Nkk" customClass="EntryListViewDataSource"/>
             </objects>
             <point key="canvasLocation" x="1964" y="361"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="bMR-Tf-xKw">
-            <objects>
-                <viewController id="Bne-CO-DaR" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="I91-DQ-qBZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="mRD-s7-zSY"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="sfx-4q-44w">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FNL-lW-Cu7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2601" y="361"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SRb-kh-Pou">

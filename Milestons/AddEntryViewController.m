@@ -24,7 +24,7 @@
     
     self.titleTextField.delegate = self;
     
-//    [self updateWithEntry:self.entry];
+    [self updateWithEntry:self.entry];
     
     [Appearance initializeAppearanceDefaults];
 }

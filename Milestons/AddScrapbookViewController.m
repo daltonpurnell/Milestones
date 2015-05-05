@@ -21,7 +21,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//    [self updateWithScrapbook:self.scrapbook];
+    [self updateWithScrapbook:self.scrapbook];
+    
     
     self.titleTextField.delegate = self;
     

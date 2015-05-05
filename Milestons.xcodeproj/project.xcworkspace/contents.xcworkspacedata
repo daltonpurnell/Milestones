@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <Group
-      location = "container:"
-      name = "Model Objects">
-      <FileRef
-         location = "group:../Milestons/Photo.h">
-      </FileRef>
-      <FileRef
-         location = "group:../Milestons/Photo.m">
-      </FileRef>
-      <FileRef
-         location = "group:../Milestons/Entry.h">
-      </FileRef>
-      <FileRef
-         location = "group:../Milestons/Entry.m">
-      </FileRef>
-      <FileRef
-         location = "group:../Milestons/Scrapbook.h">
-      </FileRef>
-      <FileRef
-         location = "group:../Milestons/Scrapbook.m">
-      </FileRef>
-   </Group>
    <FileRef
-      location = "self:Milestons.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>
