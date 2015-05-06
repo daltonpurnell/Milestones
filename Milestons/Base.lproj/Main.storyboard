@@ -70,7 +70,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="photoButtonTapped:" destination="zPV-Sb-Kcm" eventType="touchUpInside" id="dde-DK-ShT"/>
+                                            <action selector="videoButtonTapped:" destination="zPV-Sb-Kcm" eventType="touchUpInside" id="l92-Id-UdS"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shO-6b-Ms9">
@@ -272,8 +272,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="photoButtonTapped:" destination="Y1i-jh-hRn" eventType="touchUpInside" id="ZfW-yw-Yml"/>
-                                            <action selector="photoButtonTapped:" destination="zPV-Sb-Kcm" eventType="touchUpInside" id="opK-Zd-CZl"/>
+                                            <action selector="videoButtonTapped:" destination="Y1i-jh-hRn" eventType="touchUpInside" id="cLN-J5-bqf"/>
                                         </connections>
                                     </button>
                                 </subviews>

@@ -57,7 +57,7 @@
     
 }
 
-- (IBAction)photoButtonTapped:(id)sender {
+- (IBAction)videoButtonTapped:(id)sender {
     
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
     
