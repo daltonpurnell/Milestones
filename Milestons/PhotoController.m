@@ -23,12 +23,9 @@
 
 #pragma mark - Create
 
-- (void)createPhotoWithTitle: (NSString *) title date:(NSDate *)timestamp {
+- (void)createPhoto {
     
     Photo *photo = [Photo object];
-    
-    photo.titleOfPhoto = title;
-    photo.timestamp = timestamp;
     
     [photo pinInBackground];
     [photo saveInBackground];

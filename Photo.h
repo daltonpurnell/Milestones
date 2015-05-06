@@ -13,9 +13,8 @@
 
 @interface Photo : PFObject <PFSubclassing>
 
-@property (nonatomic, retain) NSDate * timestamp;
 @property (nonatomic, retain) Entry *entry;
-@property (nonatomic, retain) NSString *titleOfPhoto;
+@property (nonatomic, retain) NSData *photo;
 
 
 + (NSString *)parseClassName;

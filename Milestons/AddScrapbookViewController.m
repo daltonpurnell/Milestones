@@ -10,7 +10,9 @@
 #import "Appearance.h"
 #import "ScrapbookController.h"
 
-@interface AddScrapbookViewController () <UITextFieldDelegate>
+@import MessageUI;
+
+@interface AddScrapbookViewController () <UITextFieldDelegate, MFMailComposeViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 
 @end
@@ -63,17 +65,28 @@
 }
 
 - (IBAction)shareButtonTapped:(id)sender {
+    
+    MFMailComposeViewController *mailViewController = [MFMailComposeViewController new];
+    mailViewController.mailComposeDelegate = self;
+    
+    [mailViewController setSubject:[NSString stringWithFormat:@"%@", self.scrapbook.titleOfScrapbook]];
+    
+    [self presentViewController:mailViewController animated:YES completion:nil];
+    
 }
+
 
 - (IBAction)deleteButtonTapped:(id)sender {
     
     [self presentDeleteAlertViewController];
 }
 
+
 - (IBAction)cancelButtonTapped:(id)sender {
     
     [self presentAlertViewController];
 }
+
 
 - (IBAction)doneButtonTapped:(id)sender {
     
@@ -90,6 +103,7 @@
     
         [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 
 -(void)presentAlertViewController {
     

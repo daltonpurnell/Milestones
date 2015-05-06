@@ -9,8 +9,12 @@
 #import "AddEntryViewController.h"
 #import "Appearance.h"
 #import "EntryController.h"
+#import "Entry.h"
 
-@interface AddEntryViewController () <UITextFieldDelegate>
+@import MessageUI;
+
+
+@interface AddEntryViewController () <UITextFieldDelegate, MFMailComposeViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 //@property (weak, nonatomic) IBOutlet UITextView *description;
 
@@ -69,7 +73,17 @@
 
 - (IBAction)shareButtonTapped:(id)sender {
     
+    MFMailComposeViewController *mailViewController = [MFMailComposeViewController new];
+    mailViewController.mailComposeDelegate = self;
+    
+    [mailViewController setSubject:[NSString stringWithFormat:@"%@", self.entry.titleOfEntry]];
+    
+    [mailViewController setMessageBody:[NSString stringWithFormat:@"%@", self.entry.descriptionOfEntry] isHTML:NO];
+    
+    
+    [self presentViewController:mailViewController animated:YES completion:nil];
 }
+
 
 - (IBAction)deleteButtonTapped:(id)sender {
     

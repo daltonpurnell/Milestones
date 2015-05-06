@@ -15,7 +15,7 @@
 
 + (PhotoController *) sharedInstance;
 
-- (void)createPhotoWithTitle: (NSString *) title date:(NSDate *)timestamp;
+- (void)createPhoto;
 - (void)updatePhoto:(Photo *)photo;
 - (void)removePhoto:(Photo *)photo;
 
