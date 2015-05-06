@@ -154,7 +154,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="zPV-Sb-Kcm" kind="presentation" id="cSz-GA-QpX"/>
+                                    <segue destination="FdX-8r-yfi" kind="show" identifier="showEntryList" id="JRM-v4-72E"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -167,7 +167,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Options" id="b6q-bL-pCe"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gQQ-1V-zmg">
                             <connections>
-                                <segue destination="zPV-Sb-Kcm" kind="presentation" id="Jcj-8v-P0O"/>
+                                <segue destination="zPV-Sb-Kcm" kind="presentation" identifier="presentAddScrapbook" id="Jcj-8v-P0O"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -348,6 +348,25 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="Pds-RP-W3b">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cDp-Wb-nvd">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <items>
+                                        <navigationItem title="Title" id="acf-kS-kK3">
+                                            <barButtonItem key="rightBarButtonItem" systemItem="add" id="eBZ-cd-uDS">
+                                                <connections>
+                                                    <segue destination="Y1i-jh-hRn" kind="presentation" identifier="presentAddEntry" id="3Ow-z2-8AQ"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </navigationItem>
+                                    </items>
+                                </navigationBar>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="entryCell" id="Jfh-bi-QJz">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -355,7 +374,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Y1i-jh-hRn" kind="presentation" id="dbh-KI-pog"/>
+                                    <segue destination="Y1i-jh-hRn" kind="presentation" identifier="presentViewEntry" id="dbh-KI-pog"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -369,6 +388,13 @@
                     <nil key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7DR-BW-DGJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationBar contentMode="scaleToFill" id="GkL-wi-4gD">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <items>
+                        <navigationItem title="Title" id="zPd-1K-RTn"/>
+                    </items>
+                </navigationBar>
                 <customObject id="1UO-pK-Nkk" customClass="EntryListViewDataSource"/>
             </objects>
             <point key="canvasLocation" x="2058" y="377"/>
@@ -400,6 +426,6 @@
         <image name="giftlyBackground" width="320" height="568"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cSz-GA-QpX"/>
+        <segue reference="3Ow-z2-8AQ"/>
     </inferredMetricsTieBreakers>
 </document>
