@@ -10,7 +10,7 @@
 #import "Appearance.h"
 #import "AddScrapbookViewController.h"
 #import "ScrapbookController.h"
-#import "SWRevealViewController.h"
+
 
 @import Parse;
 @import ParseUI;
@@ -27,18 +27,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    // This sets up the swipe recognition to open the slide out menu
-    SWRevealViewController *revealController = [self revealViewController];
-    
-    self.options.target = revealController;
-    self.options.action = @selector(revealToggle:);
-    
-//    [self.view addGestureRecognizer:revealController.panGestureRecognizer];
-    
-//    UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self.revealViewController                                                                            action:@selector(revealToggle:)];
-//    [self.view addGestureRecognizer:panGestureRecognizer];
     
     [Appearance initializeAppearanceDefaults];
 
