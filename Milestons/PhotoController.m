@@ -23,6 +23,7 @@
 
 #pragma mark - Create
 
+// Needs to pass in the location of the photo on the device
 - (void)createPhoto {
     
     Photo *photo = [Photo object];

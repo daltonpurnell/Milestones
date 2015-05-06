@@ -15,6 +15,7 @@
 
 + (PhotoController *) sharedInstance;
 
+// This method needs to pass in the location of the photo on the device
 - (void)createPhoto;
 - (void)updatePhoto:(Photo *)photo;
 - (void)removePhoto:(Photo *)photo;

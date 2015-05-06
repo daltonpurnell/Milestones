@@ -14,7 +14,7 @@ static NSString * const PhotoClassName = @"Photo";
 @implementation Photo
 
 @dynamic entry;
-@dynamic photo;
+@dynamic locationOnDevice;
 
 
 + (NSString *)parseClassName {
