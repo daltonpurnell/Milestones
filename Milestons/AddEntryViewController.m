@@ -17,6 +17,7 @@
 @interface AddEntryViewController () <UITextFieldDelegate, MFMailComposeViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 //@property (weak, nonatomic) IBOutlet UITextView *description;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 

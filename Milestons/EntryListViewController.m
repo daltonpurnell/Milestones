@@ -10,6 +10,8 @@
 #import "Appearance.h"
 #import "EntryController.h"
 #import "AddEntryViewController.h"
+#import "AddScrapbookViewController.h"
+
 
 @import Parse;
 @import ParseUI;

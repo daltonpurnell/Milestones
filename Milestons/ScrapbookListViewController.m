@@ -10,6 +10,7 @@
 #import "Appearance.h"
 #import "AddScrapbookViewController.h"
 #import "ScrapbookController.h"
+#import "EntryListViewController.h"
 
 
 @import Parse;
@@ -48,6 +49,7 @@
     
     AddScrapbookViewController *addScrapbookViewController = [AddScrapbookViewController new];
     [addScrapbookViewController updateWithScrapbook:[ScrapbookController sharedInstance].scrapbooks[indexPath.row]];
+    
     
 }
 
