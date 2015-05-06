@@ -11,6 +11,7 @@
 #import "AddScrapbookViewController.h"
 #import "ScrapbookController.h"
 #import "EntryListViewController.h"
+#import "EntryController.h"
 
 
 @import Parse;
@@ -44,17 +45,29 @@
 }
 
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    AddScrapbookViewController *addScrapbookViewController = [AddScrapbookViewController new];
-    [addScrapbookViewController updateWithScrapbook:[ScrapbookController sharedInstance].scrapbooks[indexPath.row]];
-    
-    
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//    
+//    AddScrapbookViewController *addScrapbookViewController = [AddScrapbookViewController new];
+//    [addScrapbookViewController updateWithScrapbook:[ScrapbookController sharedInstance].scrapbooks[indexPath.row]];
+//    
+//    
+//}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    if ([segue.identifier isEqualToString:@"showEntryList"]) {
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
+        EntryListViewController *entryListViewController = segue.destinationViewController;
+        
+        Entry *entry = [EntryController sharedInstance].entries[indexPath.row];
+        
+        entryListViewController.entry = entry;
+        
+    }
 }
-
-
-
-
 
 @end

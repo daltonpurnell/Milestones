@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Entry.h"
 
 @interface EntryListViewController : UITableViewController
+
+@property (strong, nonatomic) Entry *entry;
+
 
 @end
