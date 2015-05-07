@@ -124,8 +124,7 @@
     
     [alertController addAction:[UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
         
-        // write code to delete the draft here
-        // [[EntryController sharedInstance]deleteEntry:entry];
+        // write code to delete draft here
 
         
         [self dismissViewControllerAnimated:YES completion:nil];
