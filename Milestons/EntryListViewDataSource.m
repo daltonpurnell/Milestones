@@ -41,5 +41,22 @@
 }
 
 
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        Entry *entry = [EntryController sharedInstance].entries[indexPath.row];
+        
+        [[EntryController sharedInstance] removeEntry:entry];
+        
+        
+        [tableView reloadData];
+        
+    }
+}
+
+
 
 @end

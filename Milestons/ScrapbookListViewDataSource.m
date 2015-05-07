@@ -43,5 +43,20 @@
 }
 
 
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        Scrapbook *scrapbook = [ScrapbookController sharedInstance].scrapbooks[indexPath.row];
+        
+        [[ScrapbookController sharedInstance] removeScrapbook:scrapbook];
+        
+        [tableView reloadData];
+        
+    }
+}
+
 
 @end
