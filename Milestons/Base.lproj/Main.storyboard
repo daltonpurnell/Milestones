@@ -137,6 +137,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="7Fi-kT-1hX" id="emv-kR-laR"/>
                         <outlet property="titleTextField" destination="om3-1R-jsk" id="sFF-n0-oNr"/>
                     </connections>
                 </viewController>

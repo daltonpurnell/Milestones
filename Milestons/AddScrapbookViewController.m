@@ -14,6 +14,7 @@
 
 @interface AddScrapbookViewController () <UITextFieldDelegate, MFMailComposeViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -59,6 +60,8 @@
     
     }
 
+
+
 - (IBAction)videoButtonTapped:(id)sender {
     
     
@@ -78,6 +81,22 @@
     [self presentViewController:imagePicker animated:YES completion:nil];
 
 }
+
+
+
+-(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    finalImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    [self.imageView setImage:finalImage];
+    
+    // UIImageWriteToSavedPhotosAlbum(image, self, nil, nil);
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+}
+
+
 
 - (IBAction)shareButtonTapped:(id)sender {
     
