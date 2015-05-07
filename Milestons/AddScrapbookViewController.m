@@ -42,26 +42,41 @@
 }
 - (IBAction)cameraButtonTapped:(id)sender {
     
-    
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-
+    
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+    {
         [imagePicker setSourceType:UIImagePickerControllerSourceTypeCamera];
+    }
+    else
+    {
+        [imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    }
     
     [imagePicker setDelegate:self];
     
     [self presentViewController:imagePicker animated:YES completion:nil];
-}
+    
+    }
 
 - (IBAction)videoButtonTapped:(id)sender {
     
-     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
     
-            [imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+    {
+        [imagePicker setSourceType:UIImagePickerControllerSourceTypeCamera];
+    }
+    else
+    {
+        [imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    }
     
     [imagePicker setDelegate:self];
     
     [self presentViewController:imagePicker animated:YES completion:nil];
-    
+
 }
 
 - (IBAction)shareButtonTapped:(id)sender {
