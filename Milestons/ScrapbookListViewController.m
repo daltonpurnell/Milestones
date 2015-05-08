@@ -31,6 +31,7 @@
     [super viewDidLoad];
     
     [Appearance initializeAppearanceDefaults];
+    
 
 }
 

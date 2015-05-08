@@ -29,10 +29,8 @@
     [Appearance initializeAppearanceDefaults];
     
     
-//    // Parse test
-//    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-//    testObject[@"foo"] = @"bar";
-//    [testObject saveInBackground];
+    // Not sure if this is the right code to load the entries belonging to the specific scrapbook
+    [[EntryController sharedInstance]loadTheseEntriesFromParse];
     
 }
 
