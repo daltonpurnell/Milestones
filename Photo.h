@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSString *locationOnDevice;
 
 
+
 + (NSString *)parseClassName;
 
 @end

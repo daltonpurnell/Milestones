@@ -20,4 +20,5 @@
 
 + (NSString *)parseClassName;
 
+
 @end

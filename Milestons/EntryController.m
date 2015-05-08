@@ -8,6 +8,7 @@
 
 #import "EntryController.h"
 #import "Entry.h"
+#import "Scrapbook.h"
 
 
 @implementation EntryController
@@ -33,7 +34,7 @@
     entry.descriptionOfEntry = description;
     entry.timestamp = timestamp;
     
-    [entry pinInBackground];
+    [entry pinInBackgroundWithBlock:nil];
     [entry saveInBackground];
     
 }
@@ -48,17 +49,36 @@
     // Without notifications to update the tableview we'll need to restart the app to get the tableview to load
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         for (Entry *entry in objects) {
-            [entry pin];
+            
+            [entry pinInBackgroundWithBlock:nil];
         }
     }];
 }
+
+
+- (void)loadTheseEntriesFromParse {
+    
+    
+    PFQuery *entryQuery = [Entry query];
+    
+    Entry *myEntry = [Entry new];
+    
+    Scrapbook *myScrapbook = [Scrapbook new];
+    
+    myEntry.scrapbook = myScrapbook;
+    
+    [entryQuery whereKey:@"scrapbook" equalTo:myScrapbook];
+    
+    [myEntry pinInBackgroundWithBlock:nil];
+    
+}
+
 
 - (NSArray *)entries {
     
     PFQuery *query = [Entry query];
     [query fromLocalDatastore];
     return [query findObjects];
-    
 }
 
 
@@ -66,7 +86,7 @@
 
 - (void)updateEntry:(Entry *)entry {
     
-    [entry pinInBackground];
+    [entry pinInBackgroundWithBlock:nil];
     [entry saveInBackground];
     
 }
@@ -75,8 +95,8 @@
 
 - (void)removeEntry:(Entry *)entry {
     
-    [entry unpinInBackground];
-    [entry deleteInBackground];
+    [entry unpinInBackgroundWithBlock:nil];
+    [entry deleteInBackgroundWithBlock:nil];
 }
 
 

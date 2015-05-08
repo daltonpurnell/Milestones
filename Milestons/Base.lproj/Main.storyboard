@@ -347,7 +347,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6lk-pY-Bp4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2107" y="-125"/>
+            <point key="canvasLocation" x="2074" y="-185"/>
         </scene>
         <!--Your Scrapbooks-->
         <scene sceneID="IeB-qR-dW7">

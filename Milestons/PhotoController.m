@@ -8,6 +8,8 @@
 
 #import "PhotoController.h"
 #import "Photo.h"
+#import "Entry.h"
+
 
 @implementation PhotoController
 
@@ -28,8 +30,8 @@
     
     Photo *photo = [Photo object];
     
-    [photo pinInBackground];
-    [photo saveInBackground];
+    [photo pinInBackgroundWithBlock:nil];
+    [photo saveInBackgroundWithBlock:nil];
     
 }
 
@@ -40,13 +42,30 @@
     
     PFQuery *query = [Photo query];
     
-    // Without notifications to update the tableview we'll need to restart the app to get the tableview to load
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         for (Photo *photo in objects) {
-            [photo pin];
+            [photo pinInBackgroundWithBlock:nil];
         }
     }];
 }
+
+- (void)loadThesePhotosFromParse {
+    
+    
+    PFQuery *photoQuery = [Photo query];
+    
+    Photo *myPhoto = [Photo new];
+    
+    Entry *myEntry = [Entry new];
+    
+    myPhoto.entry = myEntry;
+    
+    [photoQuery whereKey:@"entry" equalTo:myEntry];
+    
+    [myEntry pinInBackgroundWithBlock:nil];
+    
+}
+
 
 - (NSArray *)photos {
     

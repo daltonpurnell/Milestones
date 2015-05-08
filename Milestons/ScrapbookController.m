@@ -30,7 +30,7 @@
     scrapbook.titleOfScrapbook = title;
     scrapbook.timestamp = timestamp;
     
-    [scrapbook pinInBackground];
+    [scrapbook pinInBackgroundWithBlock:nil];
     [scrapbook saveInBackground];
     
 }
@@ -45,7 +45,7 @@
     // Without notifications to update the tableview we'll need to restart the app to get the tableview to load
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         for (Scrapbook *scrapbook in objects) {
-            [scrapbook pin];
+            [scrapbook pinInBackground];
         }
     }];
 }
@@ -63,7 +63,7 @@
 
 - (void)updateScrapbook:(Scrapbook *)scrapbook {
     
-    [scrapbook pinInBackground];
+    [scrapbook pinInBackgroundWithBlock:nil];
     [scrapbook saveInBackground];
     
 }
@@ -72,7 +72,7 @@
 
 - (void)removeScrapbook:(Scrapbook *)scrapbook {
     
-    [scrapbook unpinInBackground];
+    [scrapbook unpinInBackgroundWithBlock:nil];
     [scrapbook deleteInBackground];
 }
 

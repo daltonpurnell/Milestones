@@ -45,14 +45,15 @@
 }
 
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-//    
-//    AddScrapbookViewController *addScrapbookViewController = [AddScrapbookViewController new];
-//    [addScrapbookViewController updateWithScrapbook:[ScrapbookController sharedInstance].scrapbooks[indexPath.row]];
-//    
-//    
-//}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    EntryListViewController *entryListViewController = [EntryListViewController new];
+
+    Entry *entry = [EntryController sharedInstance].entries[indexPath.row];
+
+    entryListViewController.entry = entry;
+}
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

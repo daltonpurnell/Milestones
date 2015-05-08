@@ -16,7 +16,9 @@
 + (EntryController *) sharedInstance;
 
 - (void)createEntryWithTitle: (NSString *) title description: (NSString *)description date:(NSDate *)timestamp;
+- (void)loadTheseEntriesFromParse;
 - (void)updateEntry:(Entry *)entry;
 - (void)removeEntry:(Entry *)entry;
+
 
 @end

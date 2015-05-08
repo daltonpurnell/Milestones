@@ -13,6 +13,8 @@
 
 static NSString * const EntryClassName = @"Entry";
 
+
+
 @implementation Entry
 
 @dynamic descriptionOfEntry;
@@ -24,5 +26,6 @@ static NSString * const EntryClassName = @"Entry";
 + (NSString *)parseClassName {
     return EntryClassName;
 }
+
 
 @end
