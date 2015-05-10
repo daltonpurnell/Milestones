@@ -38,7 +38,8 @@
     NSDate *date = scrapbook.timestamp;
     NSString *formattedDate = [formatter stringFromDate:date];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", scrapbook.titleOfScrapbook, formattedDate];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", scrapbook.titleOfScrapbook];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", formattedDate];
     
     return cell;
 }

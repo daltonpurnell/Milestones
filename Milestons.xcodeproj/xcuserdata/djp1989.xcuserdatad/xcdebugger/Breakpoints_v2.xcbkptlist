@@ -9,7 +9,7 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            symbolName = "warnBlockingOperationOnMainThread"
+            symbolName = "warnBlockingOperationOnMainThread()"
             moduleName = "">
             <Actions>
                <BreakpointActionProxy

@@ -35,7 +35,9 @@
     NSDate *date = entry.timestamp;
     NSString *formattedDate = [formatter stringFromDate:date];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", entry.titleOfEntry, formattedDate];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", entry.titleOfEntry];
+    
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", formattedDate];
     
     return cell;
 }

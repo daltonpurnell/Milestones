@@ -30,7 +30,7 @@
     scrapbook.titleOfScrapbook = title;
     scrapbook.timestamp = timestamp;
     
-    [scrapbook pinInBackgroundWithBlock:nil];
+    [scrapbook pinInBackground];
     [scrapbook saveInBackground];
     
 }
@@ -63,7 +63,7 @@
 
 - (void)updateScrapbook:(Scrapbook *)scrapbook {
     
-    [scrapbook pinInBackgroundWithBlock:nil];
+    [scrapbook pinInBackground];
     [scrapbook saveInBackground];
     
 }
@@ -72,7 +72,7 @@
 
 - (void)removeScrapbook:(Scrapbook *)scrapbook {
     
-    [scrapbook unpinInBackgroundWithBlock:nil];
+    [scrapbook unpinInBackground];
     [scrapbook deleteInBackground];
 }
 

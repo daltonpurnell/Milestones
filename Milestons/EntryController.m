@@ -34,7 +34,7 @@
     entry.descriptionOfEntry = description;
     entry.timestamp = timestamp;
     
-    [entry pinInBackgroundWithBlock:nil];
+    [entry pinInBackground];
     [entry saveInBackground];
     
 }
@@ -50,7 +50,7 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         for (Entry *entry in objects) {
             
-            [entry pinInBackgroundWithBlock:nil];
+            [entry pinInBackground];
         }
     }];
 }
@@ -69,7 +69,7 @@
     
     [entryQuery whereKey:@"scrapbook" equalTo:myScrapbook];
     
-    [myEntry pinInBackgroundWithBlock:nil];
+    [myEntry pinInBackground];
     
 }
 
@@ -86,7 +86,7 @@
 
 - (void)updateEntry:(Entry *)entry {
     
-    [entry pinInBackgroundWithBlock:nil];
+    [entry pinInBackground];
     [entry saveInBackground];
     
 }
@@ -95,8 +95,8 @@
 
 - (void)removeEntry:(Entry *)entry {
     
-    [entry unpinInBackgroundWithBlock:nil];
-    [entry deleteInBackgroundWithBlock:nil];
+    [entry unpinInBackground];
+    [entry deleteInBackground];
 }
 
 

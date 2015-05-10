@@ -30,8 +30,8 @@
     
     Photo *photo = [Photo object];
     
-    [photo pinInBackgroundWithBlock:nil];
-    [photo saveInBackgroundWithBlock:nil];
+    [photo pinInBackground];
+    [photo saveInBackground];
     
 }
 
@@ -44,7 +44,7 @@
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         for (Photo *photo in objects) {
-            [photo pinInBackgroundWithBlock:nil];
+            [photo pinInBackground];
         }
     }];
 }
@@ -62,7 +62,7 @@
     
     [photoQuery whereKey:@"entry" equalTo:myEntry];
     
-    [myEntry pinInBackgroundWithBlock:nil];
+    [myEntry pinInBackground];
     
     
 }
