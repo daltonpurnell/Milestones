@@ -10,6 +10,6 @@
 @import UIKit;
 
 
-@interface ScrapbookListViewDataSource : NSObject <UITableViewDataSource>
+@interface ScrapbookListViewDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
 
 @end

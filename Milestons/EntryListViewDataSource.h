@@ -10,6 +10,6 @@
 @import UIKit;
 
 
-@interface EntryListViewDataSource : NSObject <UITableViewDataSource>
+@interface EntryListViewDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
 
 @end
