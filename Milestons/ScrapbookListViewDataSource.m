@@ -41,6 +41,12 @@
     cell.textLabel.text = [NSString stringWithFormat:@"%@", scrapbook.titleOfScrapbook];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", formattedDate];
     
+    // why is this not working?
+    cell.imageView.image = [UIImage imageWithData:scrapbook.photo];
+    
+    
+    
+    
     return cell;
 }
 

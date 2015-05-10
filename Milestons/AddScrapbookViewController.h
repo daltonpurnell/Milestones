@@ -12,7 +12,7 @@
 
 @interface AddScrapbookViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate> {
     
-        UIImage *finalImage;
+        NSData *finalImage;
 }
 
 @property (strong, nonatomic) Scrapbook *scrapbook;

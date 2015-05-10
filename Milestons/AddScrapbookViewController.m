@@ -32,15 +32,16 @@
     [Appearance initializeAppearanceDefaults];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 -(void)updateWithScrapbook:(Scrapbook *)scrapbook {
     self.titleTextField.text = scrapbook.titleOfScrapbook;
     
+    // don't know if this is working
+    self.imageView.image = [UIImage imageWithData:scrapbook.photo];
+    
 }
+
+
 - (IBAction)cameraButtonTapped:(id)sender {
     
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
@@ -128,6 +129,7 @@
         
         self.scrapbook.titleOfScrapbook = self.titleTextField.text;
         self.scrapbook.timestamp = [NSDate date];
+        self.scrapbook.photo = self->finalImage;
         
         [[ScrapbookController sharedInstance] updateScrapbook:self.scrapbook];
         
