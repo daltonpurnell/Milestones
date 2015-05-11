@@ -9,6 +9,8 @@
 #import "EntryListViewDataSource.h"
 #import "EntryController.h"
 #import "CustomEntryCell.h"
+#import <QuartzCore/QuartzCore.h>
+
 
 @implementation EntryListViewDataSource
 
