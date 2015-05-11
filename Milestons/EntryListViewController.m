@@ -34,12 +34,6 @@
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -47,6 +41,21 @@
     AddEntryViewController *addEntryViewController = [AddEntryViewController new];
     [addEntryViewController updateWithEntry:[EntryController sharedInstance].entries[indexPath.row]];
     
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    if ([segue.identifier isEqualToString:@"showEntryList"]) {
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
+        AddEntryViewController *addEntryViewController = segue.destinationViewController;
+        
+        Entry *entry = [EntryController sharedInstance].entries[indexPath.row];
+        
+        addEntryViewController.entry = entry;
+        
+    }
 }
 
 @end
