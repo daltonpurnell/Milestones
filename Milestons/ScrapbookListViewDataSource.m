@@ -9,6 +9,7 @@
 #import "ScrapbookListViewDataSource.h"
 #import "ScrapbookController.h"
 #import "CustomScrapbookCell.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation ScrapbookListViewDataSource
 
@@ -43,14 +44,23 @@
     customCell.timestampLabel.text = [NSString stringWithFormat:@"%@", formattedDate];
     
     // why is this not working?
+    
     customCell.photoImageView.image = [UIImage imageWithData:scrapbook.photo];
-    
-    
-    
+    customCell.photoImageView.clipsToBounds = YES;
+    [self setRoundedView:customCell.photoImageView toDiameter:100.0];
     
     return customCell;
 }
 
+
+-(void)setRoundedView:(UIImageView *)roundedView toDiameter:(float)newSize;
+{
+    CGPoint saveCenter = roundedView.center;
+    CGRect newFrame = CGRectMake(roundedView.frame.origin.x, roundedView.frame.origin.y, newSize, newSize);
+    roundedView.frame = newFrame;
+    roundedView.layer.cornerRadius = newSize / 2.0;
+    roundedView.center = saveCenter;
+}
 
 
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {

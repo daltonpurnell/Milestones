@@ -49,6 +49,7 @@
 		CF2C23691AF7E1D400D28EAB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23681AF7E1D400D28EAB /* Social.framework */; };
 		CF2C24871B01008A00D28EAB /* CustomScrapbookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C24861B01008A00D28EAB /* CustomScrapbookCell.m */; };
 		CF2C248A1B01009F00D28EAB /* CustomEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C24891B01009F00D28EAB /* CustomEntryCell.m */; };
+		CF2C248C1B01110000D28EAB /* grayimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF2C248B1B01110000D28EAB /* grayimage.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		CF2C24861B01008A00D28EAB /* CustomScrapbookCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomScrapbookCell.m; sourceTree = "<group>"; };
 		CF2C24881B01009F00D28EAB /* CustomEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomEntryCell.h; sourceTree = "<group>"; };
 		CF2C24891B01009F00D28EAB /* CustomEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomEntryCell.m; sourceTree = "<group>"; };
+		CF2C248B1B01110000D28EAB /* grayimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grayimage.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 				CF2C230C1AF5B50100D28EAB /* Scrapbooks */,
 				CF2C230D1AF5B50D00D28EAB /* Entries */,
 				CF2C22DB1AF5B40A00D28EAB /* Images.xcassets */,
+				CF2C248B1B01110000D28EAB /* grayimage.jpg */,
 				CF2C22D81AF5B40A00D28EAB /* Main.storyboard */,
 				CF2C22DD1AF5B40A00D28EAB /* LaunchScreen.xib */,
 				CF2C22CE1AF5B40A00D28EAB /* Supporting Files */,
@@ -388,6 +391,7 @@
 			files = (
 				CF2C22DA1AF5B40A00D28EAB /* Main.storyboard in Resources */,
 				CF2C22DF1AF5B40A00D28EAB /* LaunchScreen.xib in Resources */,
+				CF2C248C1B01110000D28EAB /* grayimage.jpg in Resources */,
 				CF2C22DC1AF5B40A00D28EAB /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
