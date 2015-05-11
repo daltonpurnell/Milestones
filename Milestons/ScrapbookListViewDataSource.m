@@ -52,6 +52,7 @@
     return customCell;
 }
 
+#pragma mark - Make image view into a circle
 
 -(void)setRoundedView:(UIImageView *)roundedView toDiameter:(float)newSize;
 {
