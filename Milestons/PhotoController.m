@@ -18,7 +18,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[PhotoController alloc] init];
-        [sharedInstance loadPhotosFromParse];
+        [sharedInstance loadThesePhotosFromParse];
     });
     return sharedInstance;
 }
@@ -38,16 +38,16 @@
 
 #pragma mark - Read
 
-- (void)loadPhotosFromParse {
-    
-    PFQuery *query = [Photo query];
-    
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        for (Photo *photo in objects) {
-            [photo pinInBackground];
-        }
-    }];
-}
+//- (void)loadPhotosFromParse {
+//    
+//    PFQuery *query = [Photo query];
+//    
+//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//        for (Photo *photo in objects) {
+//            [photo pinInBackground];
+//        }
+//    }];
+//}
 
 - (void)loadThesePhotosFromParse {
     
@@ -64,7 +64,7 @@
     
     [photoQuery findObjectsInBackground];
 
-    [myEntry pinInBackground];
+    [myPhoto pinInBackground];
     
 }
 

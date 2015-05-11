@@ -18,7 +18,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [EntryController new];
-        [sharedInstance loadEntriesFromParse];
+        [sharedInstance loadTheseEntriesFromParse];
     });
     return sharedInstance;
 }
@@ -43,18 +43,18 @@
 
 #pragma mark - Read
 
-- (void)loadEntriesFromParse {
-    
-    PFQuery *query = [Entry query];
-    
-    // Without notifications to update the tableview we'll need to restart the app to get the tableview to load
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        for (Entry *entry in objects) {
-            
-            [entry pinInBackground];
-        }
-    }];
-}
+//- (void)loadEntriesFromParse {
+//    
+//    PFQuery *query = [Entry query];
+//    
+//    // Without notifications to update the tableview we'll need to restart the app to get the tableview to load
+//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//        for (Entry *entry in objects) {
+//            
+//            [entry pinInBackground];
+//        }
+//    }];
+//}
 
 
 - (void)loadTheseEntriesFromParse {
