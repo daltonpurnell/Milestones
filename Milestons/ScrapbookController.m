@@ -54,8 +54,8 @@
     
     PFQuery *query = [Scrapbook query];
     [query fromLocalDatastore];
-//    return [query findObjects];
-    return [NSArray arrayWithObject:[query findObjectsInBackground]];
+    return [query findObjects];
+//    return [NSArray arrayWithObject:[query findObjectsInBackground]];
     
 }
 
