@@ -8,6 +8,7 @@
 
 #import "EntryListViewDataSource.h"
 #import "EntryController.h"
+#import "CustomEntryCell.h"
 
 @implementation EntryListViewDataSource
 
@@ -26,7 +27,7 @@
 
     Entry *entry = [EntryController sharedInstance].entries[indexPath.row];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"entryCell"];
+    CustomEntryCell *customCell = [tableView dequeueReusableCellWithIdentifier:@"entryCell"];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateStyle:NSDateFormatterShortStyle];
@@ -35,11 +36,13 @@
     NSDate *date = entry.timestamp;
     NSString *formattedDate = [formatter stringFromDate:date];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@", entry.titleOfEntry];
+    customCell.titleOfEntryLabel.text = [NSString stringWithFormat:@"%@", entry.titleOfEntry];
     
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", formattedDate];
+    customCell.timestampLabel.text = [NSString stringWithFormat:@"%@", formattedDate];
     
-    return cell;
+//    customCell.photoImageView.image = [UIImage imageWithData:]
+    
+    return customCell;
 }
 
 
@@ -59,14 +62,6 @@
     }
 }
 
-#pragma mark - Table View delegate methods
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    
-    return 100;
-    
-}
 
 
 @end

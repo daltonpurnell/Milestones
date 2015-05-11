@@ -8,6 +8,7 @@
 
 #import "ScrapbookListViewDataSource.h"
 #import "ScrapbookController.h"
+#import "CustomScrapbookCell.h"
 
 @implementation ScrapbookListViewDataSource
 
@@ -29,7 +30,7 @@
 
     Scrapbook *scrapbook = [ScrapbookController sharedInstance].scrapbooks[indexPath.row];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"scrapbookCell"];
+    CustomScrapbookCell *customCell = [tableView dequeueReusableCellWithIdentifier:@"scrapbookCell"];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateStyle:NSDateFormatterShortStyle];
@@ -38,16 +39,16 @@
     NSDate *date = scrapbook.timestamp;
     NSString *formattedDate = [formatter stringFromDate:date];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@", scrapbook.titleOfScrapbook];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", formattedDate];
+    customCell.titleOfScrapbookLabel.text = [NSString stringWithFormat:@"%@", scrapbook.titleOfScrapbook];
+    customCell.timestampLabel.text = [NSString stringWithFormat:@"%@", formattedDate];
     
     // why is this not working?
-    cell.imageView.image = [UIImage imageWithData:scrapbook.photo];
+    customCell.photoImageView.image = [UIImage imageWithData:scrapbook.photo];
     
     
     
     
-    return cell;
+    return customCell;
 }
 
 
@@ -67,14 +68,6 @@
     }
 }
 
-
-#pragma mark - Table View delegate methods
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    return 100;
-    
-}
 
 
 

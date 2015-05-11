@@ -47,6 +47,8 @@
 		CF2C23651AF7E1BF00D28EAB /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23641AF7E1BF00D28EAB /* libsqlite3.dylib */; };
 		CF2C23671AF7E1CA00D28EAB /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23661AF7E1CA00D28EAB /* Accounts.framework */; };
 		CF2C23691AF7E1D400D28EAB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23681AF7E1D400D28EAB /* Social.framework */; };
+		CF2C24871B01008A00D28EAB /* CustomScrapbookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C24861B01008A00D28EAB /* CustomScrapbookCell.m */; };
+		CF2C248A1B01009F00D28EAB /* CustomEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C24891B01009F00D28EAB /* CustomEntryCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +121,10 @@
 		CF2C23641AF7E1BF00D28EAB /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		CF2C23661AF7E1CA00D28EAB /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		CF2C23681AF7E1D400D28EAB /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		CF2C24851B01008A00D28EAB /* CustomScrapbookCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomScrapbookCell.h; sourceTree = "<group>"; };
+		CF2C24861B01008A00D28EAB /* CustomScrapbookCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomScrapbookCell.m; sourceTree = "<group>"; };
+		CF2C24881B01009F00D28EAB /* CustomEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomEntryCell.h; sourceTree = "<group>"; };
+		CF2C24891B01009F00D28EAB /* CustomEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomEntryCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +259,8 @@
 				CF2C23041AF5B4B000D28EAB /* ScrapbookListViewDataSource.m */,
 				CF2C230E1AF5C01D00D28EAB /* AddScrapbookViewController.h */,
 				CF2C230F1AF5C01D00D28EAB /* AddScrapbookViewController.m */,
+				CF2C24851B01008A00D28EAB /* CustomScrapbookCell.h */,
+				CF2C24861B01008A00D28EAB /* CustomScrapbookCell.m */,
 			);
 			name = Scrapbooks;
 			sourceTree = "<group>";
@@ -266,6 +274,8 @@
 				CF2C23071AF5B4C300D28EAB /* EntryListViewDataSource.m */,
 				CF2C23111AF5C03C00D28EAB /* AddEntryViewController.h */,
 				CF2C23121AF5C03C00D28EAB /* AddEntryViewController.m */,
+				CF2C24881B01009F00D28EAB /* CustomEntryCell.h */,
+				CF2C24891B01009F00D28EAB /* CustomEntryCell.m */,
 			);
 			name = Entries;
 			sourceTree = "<group>";
@@ -399,6 +409,7 @@
 				CF2C23021AF5B49300D28EAB /* ScrapbookController.m in Sources */,
 				CF2C22D71AF5B40A00D28EAB /* ViewController.m in Sources */,
 				CF2C23431AF6CDCE00D28EAB /* Photo.m in Sources */,
+				CF2C248A1B01009F00D28EAB /* CustomEntryCell.m in Sources */,
 				CF2C22D41AF5B40A00D28EAB /* AppDelegate.m in Sources */,
 				CF2C23081AF5B4C300D28EAB /* EntryListViewDataSource.m in Sources */,
 				CF2C22D11AF5B40A00D28EAB /* main.m in Sources */,
@@ -410,6 +421,7 @@
 				CF2C22FF1AF5B48400D28EAB /* EntryController.m in Sources */,
 				CF2C22F61AF5B45900D28EAB /* ScrapbookListViewController.m in Sources */,
 				CF2C23131AF5C03C00D28EAB /* AddEntryViewController.m in Sources */,
+				CF2C24871B01008A00D28EAB /* CustomScrapbookCell.m in Sources */,
 				CF2C23101AF5C01D00D28EAB /* AddScrapbookViewController.m in Sources */,
 				CF2C23161AF5C26200D28EAB /* Appearance.m in Sources */,
 			);
