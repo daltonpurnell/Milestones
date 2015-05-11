@@ -62,8 +62,9 @@
     
     [photoQuery whereKey:@"entry" equalTo:myEntry];
     
+    [photoQuery findObjectsInBackground];
+
     [myEntry pinInBackground];
-    
     
 }
 

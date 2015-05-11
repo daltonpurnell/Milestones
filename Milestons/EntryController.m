@@ -32,6 +32,7 @@
     
     entry.titleOfEntry = title;
     entry.descriptionOfEntry = description;
+    
     entry.timestamp = timestamp;
     
     [entry pinInBackground];
@@ -68,6 +69,8 @@
     myEntry.scrapbook = myScrapbook;
     
     [entryQuery whereKey:@"scrapbook" equalTo:myScrapbook];
+    
+    [entryQuery findObjectsInBackground];
     
     [myEntry pinInBackground];
     
