@@ -38,7 +38,31 @@
     [entry pinInBackground];
     [entry saveInBackground];
     
+    
+
+    // Add the entries to an array and 'assign' this array to the scrapbook
+    
+    Scrapbook *scrapbook = [Scrapbook new];
+
+    // NSArray *chapters = @[one, two, three];
+    NSArray *theseEntries =
+    
+    [scrapbook setObject:theseEntries forKey:@"entryList"];
+    
+    // Save the scrapbook again, which will save the entries.
+    [scrapbook saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            // success
+        } else {
+            // failure
+        }
+    }];
+    
+
+    
 }
+
+
 
 
 #pragma mark - Read
