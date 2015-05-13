@@ -40,37 +40,21 @@
     [self.tableView reloadData];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
-// Kind of confused on how this works, since i'm segueing from the scrapbook list to the list of entries that belongs to a particular scrapbook
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    EntryListViewController *entryListViewController = [EntryListViewController new];
-
-//    [EntryListViewController updateWithscrapbook:[ScrapbookController sharedInstance].scrapbooks[indexPath.row]];
-//
-//    ScrapbookListViewController.scrapbook = scrapbook;
-}
-
-
 
 // Kind of confused on how this works, since i'm segueing from the scrapbook list to the list of entries that belongs to a particular scrapbook
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
+    
     if ([segue.identifier isEqualToString:@"showEntryList"]) {
         
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         
         EntryListViewController *entryListViewController = segue.destinationViewController;
         
-        Entry *entry = [EntryController sharedInstance].entries[indexPath.row];
+        Scrapbook *scrapbook = [ScrapbookController sharedInstance].scrapbooks[indexPath.row];
         
-        entryListViewController.entry = entry;
+//        entryListViewController.entry = entry;
+        
+        [[EntryController sharedInstance]loadTheseEntriesFromParse];
         
     }
 }

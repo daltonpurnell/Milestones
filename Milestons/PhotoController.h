@@ -11,7 +11,7 @@
 
 @interface PhotoController : NSObject
 
-@property (strong, nonatomic, readonly) NSArray *photos;
+@property (strong, nonatomic) NSArray *photos;
 
 + (PhotoController *) sharedInstance;
 

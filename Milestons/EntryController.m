@@ -70,7 +70,11 @@
     
     [entryQuery whereKey:@"scrapbook" equalTo:myScrapbook];
     
-    [entryQuery findObjectsInBackground];
+    [entryQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
+        self.entries = objects;
+        
+    }];
     
     [myEntry pinInBackground];
     

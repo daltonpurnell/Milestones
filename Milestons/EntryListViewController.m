@@ -27,25 +27,15 @@
     [super viewDidLoad];
 
     [Appearance initializeAppearanceDefaults];
-    
-    
-    // Not sure if this is the right code to load the entries belonging to the specific scrapbook
+        
     [[EntryController sharedInstance]loadTheseEntriesFromParse];
     
 }
 
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    AddEntryViewController *addEntryViewController = [AddEntryViewController new];
-    [addEntryViewController updateWithEntry:[EntryController sharedInstance].entries[indexPath.row]];
-    
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
-    if ([segue.identifier isEqualToString:@"showEntryList"]) {
+    if ([segue.identifier isEqualToString:@"presentAddEntry"]) {
         
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         
@@ -54,7 +44,6 @@
         Entry *entry = [EntryController sharedInstance].entries[indexPath.row];
         
         addEntryViewController.entry = entry;
-        
     }
 }
 

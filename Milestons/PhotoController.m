@@ -62,7 +62,12 @@
     
     [photoQuery whereKey:@"entry" equalTo:myEntry];
     
-    [photoQuery findObjectsInBackground];
+    [photoQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
+        self.photos = objects;
+        
+    }];
+    
 
     [myPhoto pinInBackground];
     
