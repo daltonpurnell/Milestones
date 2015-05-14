@@ -13,15 +13,12 @@
 #import "EntryListViewController.h"
 #import "EntryController.h"
 
-
 @import Parse;
 @import ParseUI;
 
-
-
 @interface ScrapbookListViewController () <UITableViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *editButton;
 
 @end
 
@@ -32,7 +29,30 @@
     
     [Appearance initializeAppearanceDefaults];
     
+    self.editButton.tintColor = [UIColor colorWithRed:226/255.0 green:170/255.0 blue:253/255.0 alpha:1];
+    
+    self.tableView.rowHeight = 250;
+    
+    self.refreshControl = [UIRefreshControl new];
+    [self.refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];
+    
+    [[ScrapbookController sharedInstance]loadScrapbooksFromParse:^(NSError *error) {
+        [self.tableView reloadData];
+        
+    }];
+    
+}
 
+-(void)refreshTable {
+    
+    [self.refreshControl beginRefreshing];
+    
+    [[ScrapbookController sharedInstance]loadScrapbooksFromParse:^(NSError *error) {
+        [self.tableView reloadData];
+        [self.refreshControl endRefreshing];
+        
+    }];
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -41,20 +61,18 @@
 }
 
 
-// Kind of confused on how this works, since i'm segueing from the scrapbook list to the list of entries that belongs to a particular scrapbook
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([segue.identifier isEqualToString:@"showEntryList"]) {
         
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        Scrapbook *myScrapbook = [ScrapbookController sharedInstance].scrapbooks[indexPath.row];
         
         EntryListViewController *entryListViewController = segue.destinationViewController;
         
-        Scrapbook *scrapbook = [ScrapbookController sharedInstance].scrapbooks[indexPath.row];
+        entryListViewController.scrapbook = myScrapbook;
         
-//        entryListViewController.entry = entry;
-        
-        [[EntryController sharedInstance]loadTheseEntriesFromParse];
+        [[EntryController sharedInstance] loadTheseEntriesFromParse];
         
     }
 }

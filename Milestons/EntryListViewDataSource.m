@@ -42,6 +42,8 @@
     
     customCell.timestampLabel.text = [NSString stringWithFormat:@"%@", formattedDate];
     
+    customCell.descriptionLabel.text = [NSString stringWithFormat:@"%@", entry.description];
+    
 //    customCell.photoImageView.image = [UIImage imageWithData:]
     
     return customCell;
@@ -58,21 +60,9 @@
         
         [[EntryController sharedInstance] removeEntry:entry];
         
-        
-        [tableView reloadData];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         
     }
-}
-
-#pragma mark - Make image view into a circle
-
--(void)setRoundedView:(UIImageView *)roundedView toDiameter:(float)newSize;
-{
-    CGPoint saveCenter = roundedView.center;
-    CGRect newFrame = CGRectMake(roundedView.frame.origin.x, roundedView.frame.origin.y, newSize, newSize);
-    roundedView.frame = newFrame;
-    roundedView.layer.cornerRadius = newSize / 2.0;
-    roundedView.center = saveCenter;
 }
 
 

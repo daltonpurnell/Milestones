@@ -9,6 +9,12 @@
 #import "ScrapbookController.h"
 #import "Scrapbook.h"
 
+@interface ScrapbookController()
+
+@property (nonatomic, strong) NSArray *scrapbooks;
+
+@end
+
 @implementation ScrapbookController
 
 + (ScrapbookController *) sharedInstance {
@@ -16,7 +22,9 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [ScrapbookController new];
-        [sharedInstance loadScrapbooksFromParse];
+        [sharedInstance loadScrapbooksFromParse:^(NSError *error) {
+            // Nothing
+        }];
     });
     return sharedInstance;
 }
@@ -33,29 +41,27 @@
     [scrapbook pinInBackground];
     [scrapbook saveInBackground];
     
+    NSMutableArray *mutableScrapbooks = [NSMutableArray arrayWithArray:self.scrapbooks];
+    [mutableScrapbooks insertObject:scrapbook atIndex:0];
+    self.scrapbooks = mutableScrapbooks;
+
 }
 
 
 #pragma mark - Read
 
-- (void)loadScrapbooksFromParse {
-    
-    PFQuery *query = [Scrapbook query];
-    
-    // Without notifications to update the tableview we'll need to restart the app to get the tableview to load
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        for (Scrapbook *scrapbook in objects) {
-            [scrapbook pinInBackground];
-        }
-    }];
-}
-
-- (NSArray *)scrapbooks {
+- (void)loadScrapbooksFromParse:(void (^)(NSError *error))completion {
     
     PFQuery *query = [Scrapbook query];
     [query fromLocalDatastore];
-    return [query findObjects];
-//    return [NSArray arrayWithObject:[query findObjectsInBackground]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
+        if (!error) {
+            self.scrapbooks = objects;
+            completion(nil);
+        } else {
+            completion(error);
+        }
+    }];
     
 }
 
@@ -72,7 +78,9 @@
 #pragma mark - Delete
 
 - (void)removeScrapbook:(Scrapbook *)scrapbook {
-    
+    NSMutableArray *mutableScrapbooks = [NSMutableArray arrayWithArray:self.scrapbooks];
+    [mutableScrapbooks removeObject:scrapbook];
+    self.scrapbooks = mutableScrapbooks;
     [scrapbook unpinInBackground];
     [scrapbook deleteInBackground];
 }

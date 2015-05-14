@@ -10,7 +10,6 @@
 		CF2C22D11AF5B40A00D28EAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C22D01AF5B40A00D28EAB /* main.m */; };
 		CF2C22D41AF5B40A00D28EAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C22D31AF5B40A00D28EAB /* AppDelegate.m */; };
 		CF2C22D71AF5B40A00D28EAB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C22D61AF5B40A00D28EAB /* ViewController.m */; };
-		CF2C22DA1AF5B40A00D28EAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF2C22D81AF5B40A00D28EAB /* Main.storyboard */; };
 		CF2C22DC1AF5B40A00D28EAB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF2C22DB1AF5B40A00D28EAB /* Images.xcassets */; };
 		CF2C22DF1AF5B40A00D28EAB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF2C22DD1AF5B40A00D28EAB /* LaunchScreen.xib */; };
 		CF2C22EB1AF5B40A00D28EAB /* MilestonsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C22EA1AF5B40A00D28EAB /* MilestonsTests.m */; };
@@ -49,7 +48,7 @@
 		CF2C23691AF7E1D400D28EAB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23681AF7E1D400D28EAB /* Social.framework */; };
 		CF2C24871B01008A00D28EAB /* CustomScrapbookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C24861B01008A00D28EAB /* CustomScrapbookCell.m */; };
 		CF2C248A1B01009F00D28EAB /* CustomEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C24891B01009F00D28EAB /* CustomEntryCell.m */; };
-		CF2C248C1B01110000D28EAB /* grayimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF2C248B1B01110000D28EAB /* grayimage.jpg */; };
+		CFEC12DC1B04379500AB6C1B /* Main 19-52-21-834.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFEC12DB1B04379500AB6C1B /* Main 19-52-21-834.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +69,6 @@
 		CF2C22D31AF5B40A00D28EAB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CF2C22D51AF5B40A00D28EAB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CF2C22D61AF5B40A00D28EAB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CF2C22D91AF5B40A00D28EAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF2C22DB1AF5B40A00D28EAB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CF2C22DE1AF5B40A00D28EAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CF2C22E41AF5B40A00D28EAB /* MilestonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MilestonsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,7 +124,7 @@
 		CF2C24861B01008A00D28EAB /* CustomScrapbookCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomScrapbookCell.m; sourceTree = "<group>"; };
 		CF2C24881B01009F00D28EAB /* CustomEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomEntryCell.h; sourceTree = "<group>"; };
 		CF2C24891B01009F00D28EAB /* CustomEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomEntryCell.m; sourceTree = "<group>"; };
-		CF2C248B1B01110000D28EAB /* grayimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grayimage.jpg; sourceTree = "<group>"; };
+		CFEC12DB1B04379500AB6C1B /* Main 19-52-21-834.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Main 19-52-21-834.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,9 +197,8 @@
 				CF2C230C1AF5B50100D28EAB /* Scrapbooks */,
 				CF2C230D1AF5B50D00D28EAB /* Entries */,
 				CF2C22DB1AF5B40A00D28EAB /* Images.xcassets */,
-				CF2C248B1B01110000D28EAB /* grayimage.jpg */,
-				CF2C22D81AF5B40A00D28EAB /* Main.storyboard */,
 				CF2C22DD1AF5B40A00D28EAB /* LaunchScreen.xib */,
+				CFEC12DB1B04379500AB6C1B /* Main 19-52-21-834.storyboard */,
 				CF2C22CE1AF5B40A00D28EAB /* Supporting Files */,
 			);
 			path = Milestons;
@@ -389,9 +386,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF2C22DA1AF5B40A00D28EAB /* Main.storyboard in Resources */,
 				CF2C22DF1AF5B40A00D28EAB /* LaunchScreen.xib in Resources */,
-				CF2C248C1B01110000D28EAB /* grayimage.jpg in Resources */,
+				CFEC12DC1B04379500AB6C1B /* Main 19-52-21-834.storyboard in Resources */,
 				CF2C22DC1AF5B40A00D28EAB /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,14 +446,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CF2C22D81AF5B40A00D28EAB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CF2C22D91AF5B40A00D28EAB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CF2C22DD1AF5B40A00D28EAB /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

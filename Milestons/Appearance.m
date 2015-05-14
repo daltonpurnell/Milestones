@@ -37,14 +37,10 @@
                                                         [UIColor colorWithRed:122/255.0 green:197/255.0 blue:237/255.0 alpha:1],
                                                         NSForegroundColorAttributeName,
                                                         nil]];
-
-
-//    [[UITextView appearance] setBackgroundColor:[UIColor clearColor]];
+    
     
     [[UITextView appearance] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Layer-1.png"]]];
      
-
-//    [[UITextField appearance] setBackgroundColor:[UIColor clearColor]];
     
     [[UITextField appearance] setBackground:[UIImage imageNamed:@"Layer-1.png"]];
     

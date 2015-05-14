@@ -38,16 +38,6 @@
 
 #pragma mark - Read
 
-//- (void)loadPhotosFromParse {
-//    
-//    PFQuery *query = [Photo query];
-//    
-//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//        for (Photo *photo in objects) {
-//            [photo pinInBackground];
-//        }
-//    }];
-//}
 
 - (void)loadThesePhotosFromParse {
     

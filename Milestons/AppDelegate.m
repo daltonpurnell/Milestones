@@ -39,7 +39,7 @@
     [PFUser enableAutomaticUser];
     PFACL *defaultACL = [PFACL ACL];
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
-    
+
     return YES;
 }
 

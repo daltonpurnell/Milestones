@@ -12,6 +12,6 @@
 @interface EntryListViewController : UITableViewController
 
 @property (strong, nonatomic) Entry *entry;
-
+@property (strong, nonatomic) Scrapbook *scrapbook;
 
 @end

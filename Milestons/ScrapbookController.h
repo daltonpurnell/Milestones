@@ -15,6 +15,7 @@
 
 + (ScrapbookController *) sharedInstance;
 
+- (void)loadScrapbooksFromParse:(void (^)(NSError *error))completion;
 - (void)createScrapbookWithTitle: (NSString *) title date:(NSDate *)timestamp;
 - (void)updateScrapbook:(Scrapbook *)scrapbook;
 - (void)removeScrapbook:(Scrapbook *)scrapbook;

@@ -26,82 +26,48 @@
 
 #pragma mark - Create
 
-- (void)createEntryWithTitle: (NSString *) title description: (NSString *)description date:(NSDate *)timestamp {
+- (void)createEntryWithTitle: (NSString *) title description: (NSString *)description date:(NSDate *)timestamp inScrapbook: (Scrapbook *)scrapbook {
     
     Entry *entry = [Entry object];
     
     entry.titleOfEntry = title;
     entry.descriptionOfEntry = description;
+    entry.scrapbook = scrapbook;
     
     entry.timestamp = timestamp;
     
+    NSMutableArray *mutableEntries = [NSMutableArray arrayWithArray:self.entries];
+    [mutableEntries insertObject:scrapbook atIndex:0];
+    self.entries = mutableEntries;
+    
     [entry pinInBackground];
     [entry saveInBackground];
-    
-    
 
-    // Add the entries to an array and 'assign' this array to the scrapbook
-    
-    Scrapbook *scrapbook = [Scrapbook new];
-
-    // NSArray *chapters = @[one, two, three];
-    NSArray *theseEntries =
-    
-    [scrapbook setObject:theseEntries forKey:@"entryList"];
-    
-    // Save the scrapbook again, which will save the entries.
-    [scrapbook saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            // success
-        } else {
-            // failure
-        }
-    }];
-    
-
-    
 }
-
 
 
 
 #pragma mark - Read
 
-//- (void)loadEntriesFromParse {
-//    
-//    PFQuery *query = [Entry query];
-//    
-//    // Without notifications to update the tableview we'll need to restart the app to get the tableview to load
-//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//        for (Entry *entry in objects) {
-//            
-//            [entry pinInBackground];
-//        }
-//    }];
-//}
-
 
 - (void)loadTheseEntriesFromParse {
     
     
-    PFQuery *entryQuery = [Entry query];
-    
-    Entry *myEntry = [Entry new];
-    
-    Scrapbook *myScrapbook = [Scrapbook new];
-    
-    myEntry.scrapbook = myScrapbook;
-    
-    [entryQuery whereKey:@"scrapbook" equalTo:myScrapbook];
-    
-    [entryQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+    PFQuery *query = [PFQuery queryWithClassName:@"Scrapbook"];
+        
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
+        if (!error) {
         
         self.entries = objects;
+            NSLog(@"%lu", (unsigned long)self.entries.count);
+            
+        } else {
+            
+            NSLog(@"Error");
+        }
         
     }];
-    
-    [myEntry pinInBackground];
-    
 }
 
 
@@ -125,6 +91,10 @@
 #pragma mark - Delete
 
 - (void)removeEntry:(Entry *)entry {
+    
+    NSMutableArray *mutableEntries = [NSMutableArray arrayWithArray:self.entries];
+    [mutableEntries removeObject:entry];
+    self.entries = mutableEntries;
     
     [entry unpinInBackground];
     [entry deleteInBackground];

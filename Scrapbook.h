@@ -16,7 +16,7 @@
 @property (nonatomic, retain) NSData * photo;
 @property (nonatomic, retain) NSDate * timestamp;
 @property (nonatomic, retain) NSString * titleOfScrapbook;
-@property (nonatomic, retain) NSSet *entries;
+@property (nonatomic, retain) NSArray *entries;
 
 + (NSString *)parseClassName;
 
