@@ -18,6 +18,7 @@
 
 
 @interface EntryListViewController () <UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *editEntry;
 
 @end
 
@@ -32,9 +33,9 @@
     
         self.tableView.rowHeight = 350;
     
-    [[EntryController sharedInstance]loadTheseEntriesFromParse:^(NSError *error) {
-        // Nothing
-    }];
+    self.editEntry.tintColor = [UIColor colorWithRed:226/255.0 green:170/255.0 blue:253/255.0 alpha:1];
+        
+    [[EntryController sharedInstance]loadTheseEntriesFromParse];
     
 }
 

@@ -18,6 +18,8 @@
 
 @interface ScrapbookListViewController () <UITableViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *editButton;
+
 @end
 
 @implementation ScrapbookListViewController
@@ -26,7 +28,9 @@
     [super viewDidLoad];
     
     [Appearance initializeAppearanceDefaults];
-        
+    
+    self.editButton.tintColor = [UIColor colorWithRed:226/255.0 green:170/255.0 blue:253/255.0 alpha:1];
+    
     self.tableView.rowHeight = 250;
     
     self.refreshControl = [UIRefreshControl new];
@@ -68,10 +72,7 @@
         
         entryListViewController.scrapbook = myScrapbook;
         
-        [[EntryController sharedInstance] loadTheseEntriesFromParse:^(NSError *error) {
-            // Nothing
-        }];
-
+        [[EntryController sharedInstance] loadTheseEntriesFromParse];
         
     }
 }

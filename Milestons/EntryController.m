@@ -18,10 +18,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [EntryController new];
-        [sharedInstance loadTheseEntriesFromParse:^(NSError *error) {
-            // Nothing
-        }];
-
+        [sharedInstance loadTheseEntriesFromParse];
     });
     return sharedInstance;
 }
@@ -53,7 +50,7 @@
 #pragma mark - Read
 
 
-- (void)loadTheseEntriesFromParse:(void (^)(NSError *error))completion {
+- (void)loadTheseEntriesFromParse {
     
     
     PFQuery *query = [PFQuery queryWithClassName:@"Scrapbook"];
@@ -64,11 +61,10 @@
         
         self.entries = objects;
             NSLog(@"%lu", (unsigned long)self.entries.count);
-            completion(nil);
+            
         } else {
             
             NSLog(@"Error");
-            completion(error);
         }
         
     }];
