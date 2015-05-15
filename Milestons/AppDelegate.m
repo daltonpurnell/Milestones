@@ -11,7 +11,6 @@
 #import "ScrapbookController.h"
 #import "ScrapbookListViewController.h"
 #import "EntryController.h"
-#import "PhotoController.h"
 
 @import Parse;
 
@@ -29,7 +28,6 @@
     
     [Scrapbook registerSubclass];
     [Entry registerSubclass];
-    [Photo registerSubclass];
     
     [Parse enableLocalDatastore];
     

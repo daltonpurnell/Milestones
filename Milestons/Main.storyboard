@@ -291,6 +291,47 @@
             </objects>
             <point key="canvasLocation" x="2872" y="-185"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="bkx-Th-9ma">
+            <objects>
+                <viewController id="DQa-zA-41y" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qP1-cT-xyK"/>
+                        <viewControllerLayoutGuide type="bottom" id="hid-kr-jZa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fNC-n8-Q7R">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6G4-BO-wHA">
+                                <rect key="frame" x="279" y="244" width="43" height="30"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="DQa-zA-41y" eventType="touchUpInside" id="uUb-pN-0rJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MN9-fF-6Qy">
+                                <rect key="frame" x="273" y="293" width="55" height="30"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signUpButtonTapped:" destination="DQa-zA-41y" eventType="touchUpInside" id="Hqg-sZ-CPG"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="DLZ-zI-5UZ">
+                                <rect key="frame" x="16" y="20" width="568" height="216"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="daR-09-4qI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1120" y="-541"/>
+        </scene>
         <!--Your Scrapbooks-->
         <scene sceneID="IeB-qR-dW7">
             <objects>
@@ -1019,6 +1060,7 @@
     </scenes>
     <resources>
         <image name="Camera" width="50" height="50"/>
+        <image name="LaunchImage" width="258" height="133"/>
         <image name="ShareIcon" width="22" height="31"/>
         <image name="Trash-can" width="24" height="32"/>
         <image name="Video" width="50" height="48"/>

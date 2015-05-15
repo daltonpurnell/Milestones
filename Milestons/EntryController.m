@@ -10,6 +10,11 @@
 #import "Entry.h"
 #import "Scrapbook.h"
 
+@interface EntryController()
+
+@property (nonatomic, strong) NSArray *entries;
+
+@end
 
 @implementation EntryController
 
@@ -35,16 +40,14 @@
     entry.titleOfEntry = title;
     entry.descriptionOfEntry = description;
     entry.scrapbook = scrapbook;
-    
     entry.timestamp = timestamp;
+    
+    [entry pinInBackground];
+    [entry saveInBackground];
     
     NSMutableArray *mutableEntries = [NSMutableArray arrayWithArray:self.entries];
     [mutableEntries insertObject:scrapbook atIndex:0];
     self.entries = mutableEntries;
-    
-    [entry pinInBackground];
-    [entry saveInBackground];
-
 }
 
 
@@ -54,10 +57,9 @@
 
 - (void)loadTheseEntriesFromParse:(void (^)(NSError *error))completion {
     
-    
-    
     PFQuery *query = [PFQuery queryWithClassName:@"Scrapbook"];
     [query fromLocalDatastore];
+    [query includeKey:@"photos"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
         if (!error) {
             self.entries = objects;
