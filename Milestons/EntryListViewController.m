@@ -35,7 +35,11 @@
     
     self.editEntry.tintColor = [UIColor colorWithRed:226/255.0 green:170/255.0 blue:253/255.0 alpha:1];
         
-    [[EntryController sharedInstance]loadTheseEntriesFromParse];
+    [[EntryController sharedInstance]loadTheseEntriesFromParse:^(NSError *error) {
+        [self.tableView reloadData];
+        
+    }];
+
     
 }
 

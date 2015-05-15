@@ -12,7 +12,7 @@
 
 
 
-//static NSString * const EntryClassName = @"Entry";
+static NSString * const EntryClassName = @"Entry";
 
 
 
@@ -25,7 +25,7 @@
 @dynamic scrapbook;
 
 + (NSString *)parseClassName {
-    return @"Entry";
+    return EntryClassName;
 }
 
 

@@ -18,7 +18,9 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [EntryController new];
-        [sharedInstance loadTheseEntriesFromParse];
+        [sharedInstance loadTheseEntriesFromParse:^(NSError *error) {
+            // Nothing
+        }];
     });
     return sharedInstance;
 }
@@ -50,24 +52,41 @@
 #pragma mark - Read
 
 
-- (void)loadTheseEntriesFromParse {
+- (void)loadTheseEntriesFromParse:(void (^)(NSError *error))completion {
+    
+    
     
     PFQuery *query = [PFQuery queryWithClassName:@"Scrapbook"];
-        
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        
+    [query fromLocalDatastore];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
         if (!error) {
-        
-        self.entries = objects;
-            NSLog(@"%lu", (unsigned long)self.entries.count);
-            
+            self.entries = objects;
+            completion(nil);
         } else {
-            
-            NSLog(@"Error");
+            completion(error);
         }
-        
     }];
+    
 }
+    
+//    PFQuery *query = [PFQuery queryWithClassName:@"Scrapbook"];
+//        
+//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//        
+//        if (!error) {
+//        
+//        self.entries = objects;
+//            NSLog(@"%lu", (unsigned long)self.entries.count);
+//            
+//        } else {
+//            
+//            NSLog(@"Error");
+//        }
+//        
+//    }];
+//}
+
+
 
 
 - (NSArray *)entries {

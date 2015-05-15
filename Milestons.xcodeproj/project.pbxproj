@@ -48,7 +48,7 @@
 		CF2C23691AF7E1D400D28EAB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23681AF7E1D400D28EAB /* Social.framework */; };
 		CF2C24871B01008A00D28EAB /* CustomScrapbookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C24861B01008A00D28EAB /* CustomScrapbookCell.m */; };
 		CF2C248A1B01009F00D28EAB /* CustomEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C24891B01009F00D28EAB /* CustomEntryCell.m */; };
-		CFEC12DC1B04379500AB6C1B /* Main 19-52-21-834.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFEC12DB1B04379500AB6C1B /* Main 19-52-21-834.storyboard */; };
+		CFEC12DC1B04379500AB6C1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFEC12DB1B04379500AB6C1B /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,7 +124,7 @@
 		CF2C24861B01008A00D28EAB /* CustomScrapbookCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomScrapbookCell.m; sourceTree = "<group>"; };
 		CF2C24881B01009F00D28EAB /* CustomEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomEntryCell.h; sourceTree = "<group>"; };
 		CF2C24891B01009F00D28EAB /* CustomEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomEntryCell.m; sourceTree = "<group>"; };
-		CFEC12DB1B04379500AB6C1B /* Main 19-52-21-834.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Main 19-52-21-834.storyboard"; sourceTree = "<group>"; };
+		CFEC12DB1B04379500AB6C1B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,7 +198,7 @@
 				CF2C230D1AF5B50D00D28EAB /* Entries */,
 				CF2C22DB1AF5B40A00D28EAB /* Images.xcassets */,
 				CF2C22DD1AF5B40A00D28EAB /* LaunchScreen.xib */,
-				CFEC12DB1B04379500AB6C1B /* Main 19-52-21-834.storyboard */,
+				CFEC12DB1B04379500AB6C1B /* Main.storyboard */,
 				CF2C22CE1AF5B40A00D28EAB /* Supporting Files */,
 			);
 			path = Milestons;
@@ -387,7 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF2C22DF1AF5B40A00D28EAB /* LaunchScreen.xib in Resources */,
-				CFEC12DC1B04379500AB6C1B /* Main 19-52-21-834.storyboard in Resources */,
+				CFEC12DC1B04379500AB6C1B /* Main.storyboard in Resources */,
 				CF2C22DC1AF5B40A00D28EAB /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

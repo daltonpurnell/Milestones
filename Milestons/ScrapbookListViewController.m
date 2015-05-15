@@ -72,7 +72,11 @@
         
         entryListViewController.scrapbook = myScrapbook;
         
-        [[EntryController sharedInstance] loadTheseEntriesFromParse];
+        [[EntryController sharedInstance] loadTheseEntriesFromParse:^(NSError *error) {
+            [self.tableView reloadData];
+            
+        }];
+
         
     }
 }
