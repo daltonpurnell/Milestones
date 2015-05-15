@@ -54,6 +54,7 @@
     
     PFQuery *query = [Scrapbook query];
     [query fromLocalDatastore];
+    [query includeKey:@"entries"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
         if (!error) {
             self.scrapbooks = objects;

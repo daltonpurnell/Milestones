@@ -10,6 +10,7 @@
 #import "Appearance.h"
 #import "ScrapbookController.h"
 #import "ScrapbookListViewController.h"
+#import "EntryController.h"
 
 @import Parse;
 
@@ -26,6 +27,7 @@
     [Appearance initializeAppearanceDefaults];
     
     [Scrapbook registerSubclass];
+    [Entry registerSubclass];
     
     [Parse enableLocalDatastore];
     

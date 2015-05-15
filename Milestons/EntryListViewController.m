@@ -40,6 +40,12 @@
 }
 
 
+-(void)viewWillAppear:(BOOL)animated {
+    
+    [self.tableView reloadData];
+}
+
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     if ([segue.identifier isEqualToString:@"presentAddEntry"]) {

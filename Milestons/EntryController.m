@@ -52,7 +52,6 @@
 
 - (void)loadTheseEntriesFromParse {
     
-    
     PFQuery *query = [PFQuery queryWithClassName:@"Scrapbook"];
         
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
