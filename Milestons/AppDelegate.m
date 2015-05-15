@@ -43,6 +43,20 @@
     [PFUser enableAutomaticUser];
     PFACL *defaultACL = [PFACL ACL];
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
+    
+    
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
+        
+        // show scrapbook list view controller
+        
+    } else {
+        
+    // show login view controller
+        
+    }
+    
+    
 
     return YES;
 }
