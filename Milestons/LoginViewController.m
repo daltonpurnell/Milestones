@@ -21,7 +21,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    
+    self.view.backgroundColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:255/255.0 alpha:1];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -80,7 +83,7 @@
             PFObject *yourData = [PFObject objectWithClassName:@"yourData"];
             yourData[@"dictionaryKey"] = @"dictionaryValue";
             
-            // If there is a current user you can set that user as the only user that can access this object:
+            // If there is a current user, set that user as the only user that can access this object:
             if (self.currentUser) {
                 yourData.ACL = [PFACL ACLWithUser:self.currentUser];
             }
