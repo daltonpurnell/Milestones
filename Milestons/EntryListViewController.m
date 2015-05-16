@@ -48,6 +48,19 @@
 }
 
 
+-(void)refreshTable {
+    
+    [self.refreshControl beginRefreshing];
+    
+    [[EntryController sharedInstance]loadTheseEntriesFromParse:^(NSError *error) {
+        [self.tableView reloadData];
+        [self.refreshControl endRefreshing];
+        
+    }];
+    
+}
+
+
 -(void)viewWillAppear:(BOOL)animated {
     
     [self.tableView reloadData];

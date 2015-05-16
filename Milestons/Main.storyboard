@@ -311,7 +311,7 @@
                                                 <constraint firstAttribute="width" constant="250" id="7Lp-9F-lnT"/>
                                                 <constraint firstAttribute="height" constant="21" id="Tib-tp-zsr"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -894,7 +894,7 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4O-SL-oLs">
                                             <rect key="frame" x="8" y="8" width="250" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -916,9 +916,9 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooa-6b-X2T">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooa-6b-X2T">
                                             <rect key="frame" x="8" y="249" width="584" height="92"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -935,9 +935,13 @@
                                         </scrollView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="ooa-6b-X2T" firstAttribute="leading" secondItem="VgF-Zm-3CR" secondAttribute="leadingMargin" id="KFp-Pn-oBr"/>
                                         <constraint firstItem="R0B-Hr-dBa" firstAttribute="trailing" secondItem="VgF-Zm-3CR" secondAttribute="trailingMargin" id="Kj1-D6-e2Y"/>
                                         <constraint firstItem="FPZ-Nn-kdY" firstAttribute="top" secondItem="VgF-Zm-3CR" secondAttribute="topMargin" id="dpP-84-DqT"/>
+                                        <constraint firstAttribute="centerX" secondItem="ooa-6b-X2T" secondAttribute="centerX" id="e5e-xR-eu5"/>
+                                        <constraint firstItem="ooa-6b-X2T" firstAttribute="trailing" secondItem="VgF-Zm-3CR" secondAttribute="trailingMargin" id="l7Q-oM-5fy"/>
                                         <constraint firstItem="R0B-Hr-dBa" firstAttribute="top" secondItem="VgF-Zm-3CR" secondAttribute="topMargin" id="qho-eE-62p"/>
+                                        <constraint firstItem="ooa-6b-X2T" firstAttribute="bottom" secondItem="VgF-Zm-3CR" secondAttribute="bottomMargin" id="sCh-4c-cq9"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="FPZ-Nn-kdY" secondAttribute="trailing" constant="32" id="tKc-2a-KjE"/>
                                     </constraints>
                                 </tableViewCellContentView>
