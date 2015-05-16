@@ -12,6 +12,7 @@
 #import "ScrapbookListViewController.h"
 #import "EntryController.h"
 #import "PhotoController.h"
+#import "LoginViewController.h"
 
 @import Parse;
 

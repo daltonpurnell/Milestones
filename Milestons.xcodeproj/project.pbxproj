@@ -49,7 +49,6 @@
 		CF2C24871B01008A00D28EAB /* CustomScrapbookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C24861B01008A00D28EAB /* CustomScrapbookCell.m */; };
 		CF2C248A1B01009F00D28EAB /* CustomEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C24891B01009F00D28EAB /* CustomEntryCell.m */; };
 		CFEC12DC1B04379500AB6C1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFEC12DB1B04379500AB6C1B /* Main.storyboard */; };
-		CFEC12DF1B058B5900AB6C1B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12DE1B058B5900AB6C1B /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,8 +125,6 @@
 		CF2C24881B01009F00D28EAB /* CustomEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomEntryCell.h; sourceTree = "<group>"; };
 		CF2C24891B01009F00D28EAB /* CustomEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomEntryCell.m; sourceTree = "<group>"; };
 		CFEC12DB1B04379500AB6C1B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		CFEC12DD1B058B5900AB6C1B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Milestons/LoginViewController.h; sourceTree = "<group>"; };
-		CFEC12DE1B058B5900AB6C1B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Milestons/LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +168,6 @@
 		CF2C22C21AF5B40A00D28EAB = {
 			isa = PBXGroup;
 			children = (
-				CFEC12E01B058B6800AB6C1B /* Login */,
 				CF2C236A1AF7EE6C00D28EAB /* Model */,
 				CF2C22CD1AF5B40A00D28EAB /* Milestons */,
 				CF2C22E71AF5B40A00D28EAB /* MilestonsTests */,
@@ -310,15 +306,6 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		CFEC12E01B058B6800AB6C1B /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				CFEC12DD1B058B5900AB6C1B /* LoginViewController.h */,
-				CFEC12DE1B058B5900AB6C1B /* LoginViewController.m */,
-			);
-			name = Login;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -434,7 +421,6 @@
 				CF2C22FF1AF5B48400D28EAB /* EntryController.m in Sources */,
 				CF2C22F61AF5B45900D28EAB /* ScrapbookListViewController.m in Sources */,
 				CF2C23131AF5C03C00D28EAB /* AddEntryViewController.m in Sources */,
-				CFEC12DF1B058B5900AB6C1B /* LoginViewController.m in Sources */,
 				CF2C24871B01008A00D28EAB /* CustomScrapbookCell.m in Sources */,
 				CF2C23101AF5C01D00D28EAB /* AddScrapbookViewController.m in Sources */,
 				CF2C23161AF5C26200D28EAB /* Appearance.m in Sources */,

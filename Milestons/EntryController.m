@@ -71,25 +71,6 @@
     
 }
     
-//    PFQuery *query = [PFQuery queryWithClassName:@"Scrapbook"];
-//        
-//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//        
-//        if (!error) {
-//        
-//        self.entries = objects;
-//            NSLog(@"%lu", (unsigned long)self.entries.count);
-//            
-//        } else {
-//            
-//            NSLog(@"Error");
-//        }
-//        
-//    }];
-//}
-
-
-
 
 - (NSArray *)entries {
     
