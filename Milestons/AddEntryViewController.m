@@ -11,6 +11,8 @@
 #import "EntryController.h"
 #import "Entry.h"
 
+
+
 @import MessageUI;
 
 
@@ -57,7 +59,7 @@
     
     [self presentViewController:imagePicker animated:YES completion:nil];
     
-    [self presentCameraAlertViewController];
+//    [self presentCameraAlertViewController];
     
 }
 
@@ -71,7 +73,7 @@
     
     [self presentViewController:imagePicker animated:YES completion:nil];
     
-    [self presentPhotoAlertViewController];
+//    [self presentPhotoAlertViewController];
     
 }
 
@@ -107,17 +109,18 @@
 //    if (self.entry) {
 //        
 //        self.entry.titleOfEntry = self.titleTextField.text;
-//        self.entry.descriptionOfEntry = self.description.text;
+//        self.entry.descriptionOfEntry = self.descriptionTextView.text;
 //        self.entry.timestamp = [NSDate date];
 //        
 //        [[EntryController sharedInstance] updateEntry:self.entry];
 //        
 //    } else {
-//        [[EntryController sharedInstance] createEntryWithTitle:self.titleTextField.text description:self.description.text date:[NSDate date]];
+//        [[EntryController sharedInstance] createEntryWithTitle:self.titleTextField.text description:self.descriptionTextView.text date:[NSDate date] inScrapbook:self.entry.scrapbook];
 //    }
 //    
 //        [self dismissViewControllerAnimated:YES completion:nil];
 //}
+
 
 #pragma mark - delete button alert controller
 
@@ -168,40 +171,40 @@
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
-#pragma mark - permission to access photos
+//#pragma mark - permission to access photos
+//
+//- (void) presentPhotoAlertViewController {
+//    
+//    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+//    
+//    [alertController addAction:[UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:nil]];
+//
+//    [alertController addAction:[UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//            
+//            [self dismissViewControllerAnimated:YES completion:nil];
+//    }]];
+//    
+//    [self presentViewController:alertController animated:YES completion:nil];
+//    
+//}
 
-- (void) presentPhotoAlertViewController {
-    
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-    
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:nil]];
-
-    [alertController addAction:[UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            
-            [self dismissViewControllerAnimated:YES completion:nil];
-    }]];
-    
-    [self presentViewController:alertController animated:YES completion:nil];
-    
-}
-
-
-#pragma mark - permission to access camera
-
-- (void) presentCameraAlertViewController {
-    
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-    
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:nil]];
-    
-    [alertController addAction:[UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }]];
-    
-    [self presentViewController:alertController animated:YES completion:nil];
-    
-}
+//
+//#pragma mark - permission to access camera
+//
+//- (void) presentCameraAlertViewController {
+//    
+//    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+//    
+//    [alertController addAction:[UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:nil]];
+//    
+//    [alertController addAction:[UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//        
+//        [self dismissViewControllerAnimated:YES completion:nil];
+//    }]];
+//    
+//    [self presentViewController:alertController animated:YES completion:nil];
+//    
+//}
 
 
 #pragma mark - text field delegate method
@@ -213,10 +216,6 @@
     return YES;
     
 }
-
-//-(void)textFieldDidEndEditing:(UITextField *)textField {
-//    self.entry = [[EntryController sharedInstance] createEntryWithTitle:<#(NSString *)#> description:<#(NSString *)#> date:<#(NSDate *)#>
-//}
 
 
 @end

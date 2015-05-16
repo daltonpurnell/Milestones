@@ -331,6 +331,18 @@
                                                 <rect key="frame" x="105" y="50" width="191" height="191"/>
                                             </variation>
                                         </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucm-6n-4rU">
+                                            <rect key="frame" x="560" y="8" width="32" height="32"/>
+                                            <state key="normal" image="Trash-can">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDL-hD-qek">
+                                            <rect key="frame" x="520" y="8" width="32" height="32"/>
+                                            <state key="normal" image="Edit-32">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="xS7-BP-qyO" firstAttribute="top" secondItem="nLH-wX-Tto" secondAttribute="topMargin" constant="16" id="5ti-d6-oEl"/>
@@ -596,6 +608,7 @@
                             <constraint firstItem="uij-36-Bxk" firstAttribute="top" secondItem="Tdg-WY-h02" secondAttribute="bottom" constant="70" id="615-gH-frC"/>
                             <constraint firstItem="emn-oH-hK9" firstAttribute="top" secondItem="yeJ-gA-UCv" secondAttribute="bottom" constant="115" id="63s-tq-FlA"/>
                             <constraint firstItem="WNE-AF-sWA" firstAttribute="top" secondItem="ypf-1S-Ia1" secondAttribute="bottom" constant="37" id="6sQ-n4-aAW"/>
+                            <constraint firstItem="emn-oH-hK9" firstAttribute="top" secondItem="Lsg-kn-eAr" secondAttribute="bottom" id="83m-Gc-dAv"/>
                             <constraint firstItem="ppX-YY-l8P" firstAttribute="top" secondItem="NoW-2q-WFc" secondAttribute="bottom" constant="266" id="9Au-eM-af9"/>
                             <constraint firstItem="Lsg-kn-eAr" firstAttribute="top" secondItem="NoW-2q-WFc" secondAttribute="bottom" constant="27" id="9oh-TV-Evx"/>
                             <constraint firstItem="ypf-1S-Ia1" firstAttribute="bottom" secondItem="yeJ-gA-UCv" secondAttribute="bottom" id="AK9-tJ-xod"/>
@@ -634,7 +647,7 @@
                             <constraint firstItem="Lsg-kn-eAr" firstAttribute="leading" secondItem="NbK-La-IKg" secondAttribute="leadingMargin" constant="-20" id="XoR-mh-GLc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Dge-dQ-eke" secondAttribute="trailing" constant="1" id="YIL-l5-LE1"/>
                             <constraint firstItem="Tdg-WY-h02" firstAttribute="leading" secondItem="NbK-La-IKg" secondAttribute="leadingMargin" id="Z0L-st-76I"/>
-                            <constraint firstItem="Lsg-kn-eAr" firstAttribute="top" secondItem="NoW-2q-WFc" secondAttribute="bottom" constant="27" id="bpN-LY-H1X"/>
+                            <constraint firstItem="Lsg-kn-eAr" firstAttribute="top" secondItem="NoW-2q-WFc" secondAttribute="bottom" id="bpN-LY-H1X"/>
                             <constraint firstItem="ypf-1S-Ia1" firstAttribute="leading" secondItem="NbK-La-IKg" secondAttribute="leading" constant="194" id="cyH-x4-ada"/>
                             <constraint firstAttribute="centerX" secondItem="Tdg-WY-h02" secondAttribute="centerX" id="fif-ef-0iP"/>
                             <constraint firstItem="yeJ-gA-UCv" firstAttribute="centerX" secondItem="ypf-1S-Ia1" secondAttribute="centerX" id="geL-5C-k9g"/>
@@ -710,6 +723,7 @@
                                 <exclude reference="lTr-vC-eeO"/>
                                 <exclude reference="tLx-Vs-t3v"/>
                                 <exclude reference="63s-tq-FlA"/>
+                                <exclude reference="83m-Gc-dAv"/>
                                 <exclude reference="PEo-yT-Jgf"/>
                                 <exclude reference="T5m-Hj-Wdl"/>
                                 <exclude reference="ilg-mY-iUK"/>
@@ -819,6 +833,7 @@
                                 <exclude reference="Wnl-nk-BjR"/>
                                 <include reference="YIL-l5-LE1"/>
                                 <include reference="tLx-Vs-t3v"/>
+                                <include reference="83m-Gc-dAv"/>
                                 <include reference="vIg-dS-3fi"/>
                             </mask>
                         </variation>
@@ -901,6 +916,18 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0B-Hr-dBa">
+                                            <rect key="frame" x="568" y="8" width="24" height="32"/>
+                                            <state key="normal" image="Trash-can">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPZ-Nn-kdY">
+                                            <rect key="frame" x="528" y="8" width="32" height="32"/>
+                                            <state key="normal" image="Edit-32">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
@@ -1004,6 +1031,7 @@
     </scenes>
     <resources>
         <image name="Camera" width="50" height="50"/>
+        <image name="Edit-32" width="32" height="32"/>
         <image name="ShareIcon" width="22" height="31"/>
         <image name="Trash-can" width="24" height="32"/>
         <image name="Video" width="50" height="48"/>
