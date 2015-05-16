@@ -478,7 +478,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Description" translatesAutoresizingMaskIntoConstraints="NO" id="Dge-dQ-eke">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dge-dQ-eke">
                                 <rect key="frame" x="15" y="410" width="568" height="137"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -878,7 +878,7 @@
             </objects>
             <point key="canvasLocation" x="3678" y="1048.5"/>
         </scene>
-        <!--Title-->
+        <!--Entry List View Controller-->
         <scene sceneID="Rbl-F3-3IO">
             <objects>
                 <tableViewController id="FdX-8r-yfi" customClass="EntryListViewController" sceneMemberID="viewController">
@@ -955,7 +955,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="5XQ-lp-FVI">
+                    <navigationItem key="navigationItem" id="5XQ-lp-FVI">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="eBZ-cd-uDS">
                             <connections>
                                 <segue destination="UaZ-7O-LOv" kind="presentation" identifier="presentAddEntry" id="3Ow-z2-8AQ"/>
@@ -963,6 +963,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="navBar" destination="5XQ-lp-FVI" id="dsz-gJ-bgo"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7DR-BW-DGJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationBar contentMode="scaleToFill" id="GkL-wi-4gD">
@@ -974,7 +977,7 @@
                 </navigationBar>
                 <customObject id="1UO-pK-Nkk" customClass="EntryListViewDataSource"/>
             </objects>
-            <point key="canvasLocation" x="2066" y="1049"/>
+            <point key="canvasLocation" x="2074" y="1049"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SRb-kh-Pou">

@@ -137,7 +137,7 @@
     // Dismiss controller
     [picker dismissViewControllerAnimated:YES completion:nil];
     
-    // Set Avatar Image
+    // Set Image
     self.imageView.image = image;
 }
 

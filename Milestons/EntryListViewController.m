@@ -18,6 +18,7 @@
 
 
 @interface EntryListViewController () <UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UINavigationItem *navBar;
 
 @end
 
@@ -27,7 +28,12 @@
     [super viewDidLoad];
     
     self.navigationController.toolbarHidden = YES;
+    
+// set title on navbar to title of current scrapbook
+    
 //    self.navigationController.navigationBar.titleTextAttribute
+    
+    self.navBar.title = [NSString stringWithFormat:@"%@", self.scrapbook.titleOfScrapbook];
 
     [Appearance initializeAppearanceDefaults];
     

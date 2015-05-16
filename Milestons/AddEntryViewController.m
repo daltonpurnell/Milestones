@@ -28,18 +28,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
     self.titleTextField.delegate = self;
-    
-//    [self updateWithEntry:self.entry];
     
     [Appearance initializeAppearanceDefaults];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(void)updateWithEntry:(Entry *)entry {
@@ -142,11 +138,12 @@
     
     // UIImageWriteToSavedPhotosAlbum(image, self, nil, nil);
     
+    // Set Image
+    self.imageView.image = image;
+    
     // Dismiss controller
     [picker dismissViewControllerAnimated:YES completion:nil];
-    
-    // Set Avatar Image
-    self.imageView.image = image;
+
 }
 
 
