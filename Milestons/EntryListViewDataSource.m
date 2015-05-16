@@ -42,7 +42,7 @@
     
     customCell.timestampLabel.text = [NSString stringWithFormat:@"%@", formattedDate];
     
-    customCell.descriptionLabel.text = [NSString stringWithFormat:@"%@", entry.description];
+    customCell.descriptionLabel.text = [NSString stringWithFormat:@"%@", entry.descriptionOfEntry];
     
 //    customCell.photoImageView.image = [UIImage imageWithData:]
     

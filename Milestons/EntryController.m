@@ -46,7 +46,7 @@
     [entry saveInBackground];
     
     NSMutableArray *mutableEntries = [NSMutableArray arrayWithArray:self.entries];
-    [mutableEntries insertObject:scrapbook atIndex:0];
+    [mutableEntries insertObject:entry atIndex:0];
     self.entries = mutableEntries;
 }
 
