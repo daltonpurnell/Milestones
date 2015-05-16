@@ -104,22 +104,24 @@
     
 }
 
-//- (IBAction)doneButtonTapped:(id)sender {
-//    
-//    if (self.entry) {
-//        
-//        self.entry.titleOfEntry = self.titleTextField.text;
-//        self.entry.descriptionOfEntry = self.descriptionTextView.text;
-//        self.entry.timestamp = [NSDate date];
-//        
-//        [[EntryController sharedInstance] updateEntry:self.entry];
-//        
-//    } else {
-//        [[EntryController sharedInstance] createEntryWithTitle:self.titleTextField.text description:self.descriptionTextView.text date:[NSDate date] inScrapbook:self.entry.scrapbook];
-//    }
-//    
-//        [self dismissViewControllerAnimated:YES completion:nil];
-//}
+
+// this method is crashing the app....
+- (IBAction)doneButtonTapped:(id)sender {
+    
+    if (self.entry) {
+        
+        self.entry.titleOfEntry = self.titleTextField.text;
+        self.entry.descriptionOfEntry = self.descriptionTextView.text;
+        self.entry.timestamp = [NSDate date];
+        
+        [[EntryController sharedInstance] updateEntry:self.entry];
+        
+    } else {
+        [[EntryController sharedInstance] createEntryWithTitle:self.titleTextField.text description:self.descriptionTextView.text date:[NSDate date] inScrapbook:self.entry.scrapbook];
+    }
+    
+        [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 
 #pragma mark - delete button alert controller

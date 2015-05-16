@@ -331,13 +331,13 @@
                                                 <rect key="frame" x="105" y="50" width="191" height="191"/>
                                             </variation>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucm-6n-4rU">
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucm-6n-4rU">
                                             <rect key="frame" x="560" y="8" width="32" height="32"/>
                                             <state key="normal" image="Trash-can">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDL-hD-qek">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDL-hD-qek">
                                             <rect key="frame" x="520" y="8" width="32" height="32"/>
                                             <state key="normal" image="Edit-32">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -347,9 +347,13 @@
                                     <constraints>
                                         <constraint firstItem="xS7-BP-qyO" firstAttribute="top" secondItem="nLH-wX-Tto" secondAttribute="topMargin" constant="16" id="5ti-d6-oEl"/>
                                         <constraint firstItem="xS7-BP-qyO" firstAttribute="leading" secondItem="KxY-iZ-7P5" secondAttribute="leading" id="Lah-kl-cay"/>
+                                        <constraint firstItem="ucm-6n-4rU" firstAttribute="trailing" secondItem="nLH-wX-Tto" secondAttribute="trailingMargin" id="OIr-1T-xnq"/>
+                                        <constraint firstItem="ucm-6n-4rU" firstAttribute="top" secondItem="nLH-wX-Tto" secondAttribute="topMargin" id="cuK-3f-V5c"/>
+                                        <constraint firstItem="yDL-hD-qek" firstAttribute="top" secondItem="nLH-wX-Tto" secondAttribute="topMargin" id="hQm-tN-Ubo"/>
                                         <constraint firstItem="ebh-xf-pRW" firstAttribute="top" secondItem="KxY-iZ-7P5" secondAttribute="bottom" constant="21" id="lUp-pU-4Ak"/>
                                         <constraint firstItem="KxY-iZ-7P5" firstAttribute="leading" secondItem="nLH-wX-Tto" secondAttribute="leadingMargin" constant="-7" id="ovm-ZA-fRH"/>
                                         <constraint firstItem="KxY-iZ-7P5" firstAttribute="top" secondItem="nLH-wX-Tto" secondAttribute="topMargin" id="sFM-gN-cUF"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="yDL-hD-qek" secondAttribute="trailing" constant="40" id="tSR-qc-cCG"/>
                                         <constraint firstItem="KxY-iZ-7P5" firstAttribute="leading" secondItem="ebh-xf-pRW" secondAttribute="trailing" constant="26" id="uUc-Xh-mWM"/>
                                     </constraints>
                                     <variation key="default">

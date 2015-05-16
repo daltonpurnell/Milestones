@@ -71,15 +71,6 @@
     }];
     
 }
-    
-
-//- (NSArray *)entries {
-//    
-//    PFQuery *query = [Entry query];
-//    [query fromLocalDatastore];
-//    return [query findObjects];
-//}
-
 
 #pragma mark - Update
 
