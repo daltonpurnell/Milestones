@@ -248,40 +248,6 @@
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
-//#pragma mark - permission to access photos
-//
-//- (void) presentPhotoAlertViewController {
-//    
-//    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-//    
-//    [alertController addAction:[UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:nil]];
-//
-//    [alertController addAction:[UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-//            
-//            [self dismissViewControllerAnimated:YES completion:nil];
-//    }]];
-//    
-//    [self presentViewController:alertController animated:YES completion:nil];
-//    
-//}
-
-//
-//#pragma mark - permission to access camera
-//
-//- (void) presentCameraAlertViewController {
-//    
-//    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-//    
-//    [alertController addAction:[UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:nil]];
-//    
-//    [alertController addAction:[UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-//        
-//        [self dismissViewControllerAnimated:YES completion:nil];
-//    }]];
-//    
-//    [self presentViewController:alertController animated:YES completion:nil];
-//    
-//}
 
 
 #pragma mark - text field delegate method
