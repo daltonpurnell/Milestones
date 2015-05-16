@@ -42,6 +42,8 @@
 }
 
 
+
+
 - (IBAction)cameraButtonTapped:(id)sender {
     
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
@@ -49,10 +51,17 @@
     
     UIAlertController *photoActionSheet = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+        
+    }];
+    
+    [photoActionSheet addAction:cancelAction];
+    
     UIAlertAction *cameraRollAction = [UIAlertAction actionWithTitle:@"From Library" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         imagePicker.sourceType =  UIImagePickerControllerSourceTypePhotoLibrary;
         [self presentViewController:imagePicker animated:YES completion:nil];
     }];
+    
     [photoActionSheet addAction:cameraRollAction];
     
     UIAlertAction *takePictureAction = [UIAlertAction actionWithTitle:@"Take Picture" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
@@ -69,7 +78,6 @@
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Camera Not Available on Device" message:@"This device does not have a camera option. Please choose photo from library." preferredStyle:UIAlertControllerStyleAlert];
             
             UIAlertAction *dismissAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-                [self dismissViewControllerAnimated:YES completion:nil];
             }];
             
             [alert addAction:dismissAction];
@@ -77,10 +85,13 @@
             [self presentViewController:alert animated:YES completion:nil];
         }
     }];
+
     [photoActionSheet addAction:takePictureAction];
     
     [self presentViewController:photoActionSheet animated:YES completion:nil];
 }
+
+
 
 
 - (IBAction)videoButtonTapped:(id)sender {
@@ -110,7 +121,6 @@
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Camera Not Available on Device" message:@"This device does not have a camera option. Please choose video from library." preferredStyle:UIAlertControllerStyleAlert];
             
             UIAlertAction *dismissAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-                [self dismissViewControllerAnimated:YES completion:nil];
             }];
             
             [alert addAction:dismissAction];
@@ -123,6 +133,8 @@
     [self presentViewController:photoActionSheet animated:YES completion:nil];
 
 }
+
+
 
 
 
