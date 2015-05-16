@@ -18,7 +18,6 @@
 
 
 @interface EntryListViewController () <UITableViewDelegate>
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *editEntry;
 
 @end
 
@@ -27,14 +26,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationController.toolbarHidden = NO;
+    self.navigationController.toolbarHidden = YES;
+//    self.navigationController.navigationBar.titleTextAttribute
 
     [Appearance initializeAppearanceDefaults];
     
         self.tableView.rowHeight = 350;
     
-    self.editEntry.tintColor = [UIColor colorWithRed:226/255.0 green:170/255.0 blue:253/255.0 alpha:1];
-        
     [[EntryController sharedInstance]loadTheseEntriesFromParse:^(NSError *error) {
         [self.tableView reloadData];
         
@@ -49,19 +47,19 @@
     [self.tableView reloadData];
 }
 
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    if ([segue.identifier isEqualToString:@"presentAddEntry"]) {
-        
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        
-        AddEntryViewController *addEntryViewController = segue.destinationViewController;
-        
-        Entry *entry = [EntryController sharedInstance].entries[indexPath.row];
-        
-        addEntryViewController.entry = entry;
-    }
-}
+//
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    // Get the new view controller using [segue destinationViewController].
+//    if ([segue.identifier isEqualToString:@"presentAddEntry"]) {
+//        
+//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+//        
+//        AddEntryViewController *addEntryViewController = segue.destinationViewController;
+//        
+//        Entry *entry = [EntryController sharedInstance].entries[indexPath.row];
+//        
+//        addEntryViewController.entry = entry;
+//    }
+//}
 
 @end

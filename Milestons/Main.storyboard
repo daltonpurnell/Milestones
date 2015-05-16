@@ -305,19 +305,27 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fBN-QD-Djk" id="nLH-wX-Tto">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxY-iZ-7P5">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxY-iZ-7P5">
                                             <rect key="frame" x="8" y="8" width="250" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="250" id="7Lp-9F-lnT"/>
+                                                <constraint firstAttribute="height" constant="21" id="Tib-tp-zsr"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xS7-BP-qyO">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xS7-BP-qyO">
                                             <rect key="frame" x="8" y="24" width="114" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="HYQ-8j-vGk"/>
+                                                <constraint firstAttribute="width" constant="114" id="YpR-aD-ZsU"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                             <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ebh-xf-pRW">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ebh-xf-pRW">
                                             <rect key="frame" x="202" y="50" width="191" height="191"/>
                                             <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
                                                 <rect key="frame" x="105" y="50" width="191" height="191"/>
@@ -325,6 +333,11 @@
                                         </imageView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="xS7-BP-qyO" firstAttribute="top" secondItem="nLH-wX-Tto" secondAttribute="topMargin" constant="16" id="5ti-d6-oEl"/>
+                                        <constraint firstItem="xS7-BP-qyO" firstAttribute="leading" secondItem="KxY-iZ-7P5" secondAttribute="leading" id="Lah-kl-cay"/>
+                                        <constraint firstItem="ebh-xf-pRW" firstAttribute="top" secondItem="KxY-iZ-7P5" secondAttribute="bottom" constant="21" id="lUp-pU-4Ak"/>
+                                        <constraint firstItem="KxY-iZ-7P5" firstAttribute="leading" secondItem="nLH-wX-Tto" secondAttribute="leadingMargin" constant="-7" id="ovm-ZA-fRH"/>
+                                        <constraint firstItem="KxY-iZ-7P5" firstAttribute="top" secondItem="nLH-wX-Tto" secondAttribute="topMargin" id="sFM-gN-cUF"/>
                                         <constraint firstItem="KxY-iZ-7P5" firstAttribute="leading" secondItem="ebh-xf-pRW" secondAttribute="trailing" constant="26" id="uUc-Xh-mWM"/>
                                     </constraints>
                                     <variation key="default">
@@ -348,7 +361,6 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Your Scrapbooks" id="5dn-fF-DbF">
-                        <barButtonItem key="leftBarButtonItem" title="Options" id="b6q-bL-pCe"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gQQ-1V-zmg">
                             <connections>
                                 <segue destination="du9-zh-6TT" kind="presentation" identifier="presentAddScrapbook" id="Jcj-8v-P0O"/>
@@ -356,7 +368,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="options" destination="b6q-bL-pCe" id="eP3-EL-5tm"/>
                         <outlet property="tableView" destination="o8h-uA-uzi" id="6V5-6j-b2d"/>
                     </connections>
                 </tableViewController>
