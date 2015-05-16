@@ -903,6 +903,24 @@
                                             <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0B-Hr-dBa">
+                                            <rect key="frame" x="568" y="8" width="24" height="32"/>
+                                            <state key="normal" image="Trash-can">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPZ-Nn-kdY">
+                                            <rect key="frame" x="528" y="8" width="32" height="32"/>
+                                            <state key="normal" image="Edit-32">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooa-6b-X2T">
+                                            <rect key="frame" x="8" y="249" width="584" height="92"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qu2-Re-sRc">
                                             <rect key="frame" x="0.0" y="50" width="600" height="191"/>
                                             <subviews>
@@ -914,25 +932,13 @@
                                                 </imageView>
                                             </subviews>
                                         </scrollView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooa-6b-X2T">
-                                            <rect key="frame" x="8" y="249" width="584" height="92"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0B-Hr-dBa">
-                                            <rect key="frame" x="568" y="8" width="24" height="32"/>
-                                            <state key="normal" image="Trash-can">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPZ-Nn-kdY">
-                                            <rect key="frame" x="528" y="8" width="32" height="32"/>
-                                            <state key="normal" image="Edit-32">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                        </button>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="R0B-Hr-dBa" firstAttribute="trailing" secondItem="VgF-Zm-3CR" secondAttribute="trailingMargin" id="Kj1-D6-e2Y"/>
+                                        <constraint firstItem="FPZ-Nn-kdY" firstAttribute="top" secondItem="VgF-Zm-3CR" secondAttribute="topMargin" id="dpP-84-DqT"/>
+                                        <constraint firstItem="R0B-Hr-dBa" firstAttribute="top" secondItem="VgF-Zm-3CR" secondAttribute="topMargin" id="qho-eE-62p"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="FPZ-Nn-kdY" secondAttribute="trailing" constant="32" id="tKc-2a-KjE"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="descriptionLabel" destination="ooa-6b-X2T" id="de6-kf-SD9"/>
