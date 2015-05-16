@@ -57,7 +57,8 @@
 
 - (void)loadTheseEntriesFromParse:(void (^)(NSError *error))completion {
     
-    PFQuery *query = [PFQuery queryWithClassName:@"Scrapbook"];
+    NSLog(@"Loading entries from Parse");
+    PFQuery *query = [PFQuery queryWithClassName:@"Entry"];
     [query fromLocalDatastore];
     [query includeKey:@"photos"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
@@ -72,12 +73,12 @@
 }
     
 
-- (NSArray *)entries {
-    
-    PFQuery *query = [Entry query];
-    [query fromLocalDatastore];
-    return [query findObjects];
-}
+//- (NSArray *)entries {
+//    
+//    PFQuery *query = [Entry query];
+//    [query fromLocalDatastore];
+//    return [query findObjects];
+//}
 
 
 #pragma mark - Update
