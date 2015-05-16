@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -130,6 +131,24 @@
     [self presentViewController:photoActionSheet animated:YES completion:nil];
     
 }
+
+
+
+-(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    
+    // Access the uncropped image from info dictionary
+    UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+    
+    // UIImageWriteToSavedPhotosAlbum(image, self, nil, nil);
+    
+    // Dismiss controller
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    // Set Avatar Image
+    self.imageView.image = image;
+}
+
 
 - (IBAction)shareButtonTapped:(id)sender {
     

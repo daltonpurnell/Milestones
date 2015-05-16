@@ -128,14 +128,17 @@
 
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    finalImage = [info objectForKey:UIImagePickerControllerOriginalImage];
     
-    [self.imageView setImage:finalImage];
+    // Access the uncropped image from info dictionary
+    UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
     
     // UIImageWriteToSavedPhotosAlbum(image, self, nil, nil);
     
-    [self dismissViewControllerAnimated:YES completion:nil];
-
+    // Dismiss controller
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    // Set Avatar Image
+    self.imageView.image = image;
 }
 
 

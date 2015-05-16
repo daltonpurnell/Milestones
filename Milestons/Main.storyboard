@@ -869,6 +869,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="descriptionTextView" destination="Dge-dQ-eke" id="Njz-VZ-5au"/>
+                        <outlet property="imageView" destination="I8f-xV-9SW" id="Zfd-S3-yrr"/>
                         <outlet property="scrollView" destination="WNE-AF-sWA" id="lo4-YE-tk7"/>
                         <outlet property="titleTextField" destination="Tdg-WY-h02" id="Rib-9j-gOI"/>
                     </connections>
