@@ -30,6 +30,8 @@
     [super viewDidLoad];
     
     self.titleTextField.delegate = self;
+    self.descriptionTextView.delegate = self;
+    
     
     [Appearance initializeAppearanceDefaults];
 }
@@ -260,7 +262,6 @@
 
 #pragma mark - text view delegate method
 
-// this doesn't work.  i need to make a way for the keyboard to dsimiss when the user hits enter
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
     
     if([text isEqualToString:@"\n"]) {

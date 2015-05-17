@@ -28,7 +28,7 @@
     
     [Appearance initializeAppearanceDefaults];
     
-    // app is not distinguishing between the scrapbooks count
+    // this is not working right
     if ([ScrapbookController sharedInstance].scrapbooks.count == 0) {
         
         self.tableView.rowHeight = self.view.frame.size.height;
@@ -37,17 +37,19 @@
         customCell.titleOfScrapbookLabel.hidden = YES;
         customCell.timestampLabel.hidden = YES;
         customCell.photoImageView.hidden = YES;
+        
         customCell.instructionsLabel.hidden = NO;
         
     }
     else {
     
-    self.tableView.rowHeight = 250;
+        self.tableView.rowHeight = 250;
         
         CustomScrapbookCell *customCell = [CustomScrapbookCell new];
         customCell.titleOfScrapbookLabel.hidden = NO;
         customCell.timestampLabel.hidden = NO;
         customCell.photoImageView.hidden = NO;
+    
         customCell.instructionsLabel.hidden = YES;
         
     }
