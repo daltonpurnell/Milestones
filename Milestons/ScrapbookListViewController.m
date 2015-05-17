@@ -12,6 +12,7 @@
 #import "ScrapbookController.h"
 #import "EntryListViewController.h"
 #import "EntryController.h"
+#import "CustomScrapbookCell.h"
 
 @import Parse;
 @import ParseUI;
@@ -27,7 +28,27 @@
     
     [Appearance initializeAppearanceDefaults];
     
+    if ([ScrapbookController sharedInstance].scrapbooks.count == 0) {
+        self.tableView.rowHeight = self.view.frame.size.height;
+        
+        CustomScrapbookCell *customCell = [CustomScrapbookCell new];
+        customCell.titleOfScrapbookLabel.hidden = YES;
+        customCell.timestampLabel.hidden = YES;
+        customCell.photoImageView.hidden = YES;
+        customCell.instructionsLabel.hidden = NO;
+        
+    }
+    else {
+    
     self.tableView.rowHeight = 250;
+        
+        CustomScrapbookCell *customCell = [CustomScrapbookCell new];
+        customCell.titleOfScrapbookLabel.hidden = NO;
+        customCell.timestampLabel.hidden = NO;
+        customCell.photoImageView.hidden = NO;
+        customCell.instructionsLabel.hidden = YES;
+        
+    }
     
     self.refreshControl = [UIRefreshControl new];
     [self.refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];

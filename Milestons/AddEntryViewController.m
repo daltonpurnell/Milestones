@@ -261,9 +261,12 @@
 #pragma mark - text view delegate method
 
 // this doesn't work.  i need to make a way for the keyboard to dsimiss when the user hits enter
--(BOOL)textViewShouldEndEditing:(UITextView *)textView {
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
     
-    [self.descriptionTextView resignFirstResponder];
+    if([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+        return NO;
+    }
     
     return YES;
 }

@@ -7,11 +7,14 @@
 //
 
 #import "CustomScrapbookCell.h"
+#import "ScrapbookController.h"
+#import "EntryController.h"
 
 @implementation CustomScrapbookCell
 
 - (void)awakeFromNib {
     // Initialization code
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
