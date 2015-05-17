@@ -49,6 +49,7 @@
 		CF2C24871B01008A00D28EAB /* CustomScrapbookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C24861B01008A00D28EAB /* CustomScrapbookCell.m */; };
 		CF2C248A1B01009F00D28EAB /* CustomEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C24891B01009F00D28EAB /* CustomEntryCell.m */; };
 		CFEC12DC1B04379500AB6C1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFEC12DB1B04379500AB6C1B /* Main.storyboard */; };
+		CFEC12E31B08939C00AB6C1B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12E21B08939C00AB6C1B /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,8 @@
 		CF2C24881B01009F00D28EAB /* CustomEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomEntryCell.h; sourceTree = "<group>"; };
 		CF2C24891B01009F00D28EAB /* CustomEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomEntryCell.m; sourceTree = "<group>"; };
 		CFEC12DB1B04379500AB6C1B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CFEC12E11B08939C00AB6C1B /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		CFEC12E21B08939C00AB6C1B /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +293,8 @@
 		CF2C236A1AF7EE6C00D28EAB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CFEC12E11B08939C00AB6C1B /* User.h */,
+				CFEC12E21B08939C00AB6C1B /* User.m */,
 				CF2C23411AF6CDCE00D28EAB /* Photo.h */,
 				CF2C23421AF6CDCE00D28EAB /* Photo.m */,
 				CF2C232D1AF5EE2B00D28EAB /* PhotoController.h */,
@@ -422,6 +427,7 @@
 				CF2C22FF1AF5B48400D28EAB /* EntryController.m in Sources */,
 				CF2C22F61AF5B45900D28EAB /* ScrapbookListViewController.m in Sources */,
 				CF2C23131AF5C03C00D28EAB /* AddEntryViewController.m in Sources */,
+				CFEC12E31B08939C00AB6C1B /* User.m in Sources */,
 				CF2C24871B01008A00D28EAB /* CustomScrapbookCell.m in Sources */,
 				CF2C23101AF5C01D00D28EAB /* AddScrapbookViewController.m in Sources */,
 				CF2C23161AF5C26200D28EAB /* Appearance.m in Sources */,
