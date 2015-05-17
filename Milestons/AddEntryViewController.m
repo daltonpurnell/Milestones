@@ -139,9 +139,7 @@
     
     // Access the uncropped image from info dictionary
     UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
-    
-    // UIImageWriteToSavedPhotosAlbum(image, self, nil, nil);
-    
+        
     // Set Image
     self.imageView.image = image;
     
