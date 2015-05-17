@@ -204,7 +204,7 @@
     [alertController addAction:[UIAlertAction actionWithTitle:@"Delete Draft" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
         
         // write code to delete the draft here
-//        [[ScrapbookController sharedInstance]deleteScrapbook:scrapbook];
+//        [[ScrapbookController sharedInstance]removeScrapbook:scrapbook];
         
         [self dismissViewControllerAnimated:YES completion:nil];
         
@@ -219,7 +219,7 @@
         
     }]];
     
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:nil]];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
     
     [self presentViewController:alertController animated:YES completion:nil];
 }
