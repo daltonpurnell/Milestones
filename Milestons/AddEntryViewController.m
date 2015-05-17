@@ -179,7 +179,6 @@
 }
 
 
-// this method is crashing the app....
 - (IBAction)doneButtonTapped:(id)sender {
     
     if (self.entry) {
@@ -238,6 +237,7 @@
     [alertController addAction:[UIAlertAction actionWithTitle:@"Save Draft" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         
         // write code to save the draft here
+        [[EntryController sharedInstance] createEntryWithTitle:self.titleTextField.text description:self.descriptionTextView.text date:[NSDate date] inScrapbook:self.entry.scrapbook];
         
         [self dismissViewControllerAnimated:YES completion:nil];
         
