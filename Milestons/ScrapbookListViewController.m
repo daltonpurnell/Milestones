@@ -28,7 +28,10 @@
     
     [Appearance initializeAppearanceDefaults];
     
+    
+    // app is not distinguishing between the scrapbooks count
     if ([ScrapbookController sharedInstance].scrapbooks.count == 0) {
+        
         self.tableView.rowHeight = self.view.frame.size.height;
         
         CustomScrapbookCell *customCell = [CustomScrapbookCell new];
