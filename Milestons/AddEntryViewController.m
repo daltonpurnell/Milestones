@@ -16,7 +16,7 @@
 @import MessageUI;
 
 
-@interface AddEntryViewController () <UITextFieldDelegate, MFMailComposeViewControllerDelegate>
+@interface AddEntryViewController () <UITextFieldDelegate, MFMailComposeViewControllerDelegate, UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -139,7 +139,7 @@
     
     // Access the uncropped image from info dictionary
     UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
-        
+    
     // Set Image
     self.imageView.image = image;
     
@@ -258,5 +258,13 @@
     
 }
 
+#pragma mark - text view delegate method
+
+-(BOOL)textViewShouldEndEditing:(UITextView *)textView {
+    
+    [self.descriptionTextView resignFirstResponder];
+    
+    return YES;
+}
 
 @end
