@@ -39,6 +39,9 @@
     
         self.tableView.rowHeight = 350;
     
+    self.refreshControl = [UIRefreshControl new];
+    [self.refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];
+    
     [[EntryController sharedInstance]loadTheseEntriesFromParse:^(NSError *error) {
         [self.tableView reloadData];
         

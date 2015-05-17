@@ -28,7 +28,6 @@
     
     [Appearance initializeAppearanceDefaults];
     
-    
     // app is not distinguishing between the scrapbooks count
     if ([ScrapbookController sharedInstance].scrapbooks.count == 0) {
         
