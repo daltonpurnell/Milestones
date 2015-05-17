@@ -254,9 +254,5 @@
     
 }
 
-//-(void)textFieldDidEndEditing:(UITextField *)textField {
-//    self.scrapbook = [[ScrapbookController sharedInstance] createScrapbookWithTitle:self.titleTextField.text];
-//}
-
 
 @end
