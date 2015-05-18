@@ -31,12 +31,14 @@
 
 #pragma mark - Create
 
-- (void)createScrapbookWithTitle: (NSString *) title date:(NSDate *)timestamp {
+- (void)createScrapbookWithTitle: (NSString *) title date:(NSDate *)timestamp photo:(UIImage *)image {
     
     Scrapbook *scrapbook = [Scrapbook object];
     
     scrapbook.titleOfScrapbook = title;
     scrapbook.timestamp = timestamp;
+    scrapbook.photo = image;
+    
     
     [scrapbook pinInBackground];
     [scrapbook saveInBackground];

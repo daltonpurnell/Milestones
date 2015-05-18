@@ -33,7 +33,7 @@
     // this is not working right
     if ([ScrapbookController sharedInstance].scrapbooks.count == 0) {
         
-        self.tableView.rowHeight = self.view.frame.size.height;
+        self.tableView.rowHeight = self.view.frame.size.height - 64;
         
         CustomScrapbookCell *customCell = [CustomScrapbookCell new];
         customCell.titleOfScrapbookLabel.hidden = YES;
@@ -70,6 +70,7 @@
         
         PFLogInViewController *logIn = [PFLogInViewController new];
         logIn.delegate = self;
+        logIn.signUpController.delegate = self;
         [self presentViewController:logIn animated:YES completion:nil];
         
     }
