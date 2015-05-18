@@ -31,7 +31,7 @@
 
 #pragma mark - Create
 
-- (void)createScrapbookWithTitle: (NSString *) title date:(NSDate *)timestamp photo:(UIImage *)image {
+- (void)createScrapbookWithTitle: (NSString *) title date:(NSDate *)timestamp photo:(PFFile *)image {
     
     Scrapbook *scrapbook = [Scrapbook object];
     

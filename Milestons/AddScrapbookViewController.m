@@ -36,7 +36,6 @@
 -(void)updateWithScrapbook:(Scrapbook *)scrapbook {
     self.titleTextField.text = scrapbook.titleOfScrapbook;
     
-    // don't know if this is working
     self.imageView.image = scrapbook.photo;
     
 }
@@ -185,16 +184,20 @@
 
 - (IBAction)doneButtonTapped:(id)sender {
     
+PFFile *imageFile = [PFFile fileWithData:UIImageJPEGRepresentation(self.imageView.image,0.95)];
+    
     if (self.scrapbook) {
         
         self.scrapbook.titleOfScrapbook = self.titleTextField.text;
         self.scrapbook.timestamp = [NSDate date];
-        self.scrapbook.photo = self.imageView.image;
+        
+
+        self.scrapbook.photo = imageFile;
         
         [[ScrapbookController sharedInstance] updateScrapbook:self.scrapbook];
         
     } else {
-        [[ScrapbookController sharedInstance] createScrapbookWithTitle:self.titleTextField.text date:[NSDate date] photo:self.imageView.image];
+        [[ScrapbookController sharedInstance] createScrapbookWithTitle:self.titleTextField.text date:[NSDate date] photo:imageFile];
     }
     
         [self dismissViewControllerAnimated:YES completion:nil];
@@ -202,6 +205,8 @@
 
 
 -(void)presentAlertViewController {
+    
+    PFFile *imageFile = [PFFile fileWithData:UIImageJPEGRepresentation(self.imageView.image,0.95)];
     
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     
@@ -217,7 +222,7 @@
     [alertController addAction:[UIAlertAction actionWithTitle:@"Save Draft" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         
         // write code to save the draft here
-        [[ScrapbookController sharedInstance] createScrapbookWithTitle:self.titleTextField.text date:[NSDate date] photo:self.imageView.image];
+        [[ScrapbookController sharedInstance] createScrapbookWithTitle:self.titleTextField.text date:[NSDate date] photo:imageFile];
         
         
         [self dismissViewControllerAnimated:YES completion:nil];
