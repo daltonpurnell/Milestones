@@ -37,7 +37,7 @@
     self.titleTextField.text = scrapbook.titleOfScrapbook;
     
     // don't know if this is working
-    self.imageView.image = [UIImage imageWithData:scrapbook.photo];
+    self.imageView.image = scrapbook.photo;
     
 }
 
@@ -100,6 +100,12 @@
     imagePicker.delegate = self;
     
     UIAlertController *photoActionSheet = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        
+    }];
+    
+    [photoActionSheet addAction:cancelAction];
     
     UIAlertAction *cameraRollAction = [UIAlertAction actionWithTitle:@"From Library" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         imagePicker.sourceType =  UIImagePickerControllerSourceTypePhotoLibrary;
@@ -183,12 +189,12 @@
         
         self.scrapbook.titleOfScrapbook = self.titleTextField.text;
         self.scrapbook.timestamp = [NSDate date];
-        self.scrapbook.photo = self->finalImage;
+        self.scrapbook.photo = self.imageView.image;
         
         [[ScrapbookController sharedInstance] updateScrapbook:self.scrapbook];
         
     } else {
-        [[ScrapbookController sharedInstance] createScrapbookWithTitle:self.titleTextField.text date:[NSDate date]];
+        [[ScrapbookController sharedInstance] createScrapbookWithTitle:self.titleTextField.text date:[NSDate date] photo:self.imageView.image];
     }
     
         [self dismissViewControllerAnimated:YES completion:nil];
@@ -211,7 +217,7 @@
     [alertController addAction:[UIAlertAction actionWithTitle:@"Save Draft" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         
         // write code to save the draft here
-        [[ScrapbookController sharedInstance] createScrapbookWithTitle:self.titleTextField.text date:[NSDate date]];
+        [[ScrapbookController sharedInstance] createScrapbookWithTitle:self.titleTextField.text date:[NSDate date] photo:self.imageView.image];
         
         
         [self dismissViewControllerAnimated:YES completion:nil];
