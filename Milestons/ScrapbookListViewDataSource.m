@@ -21,9 +21,9 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     if ([ScrapbookController sharedInstance].scrapbooks.count == 0) {
-    return [ScrapbookController sharedInstance].scrapbooks.count;
-    } else {
         return 1;
+    } else {
+        return [ScrapbookController sharedInstance].scrapbooks.count;
     }
 }
 

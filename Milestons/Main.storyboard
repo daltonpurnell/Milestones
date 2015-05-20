@@ -268,9 +268,6 @@
                                         <constraint firstItem="soF-Uj-dO2" firstAttribute="top" secondItem="4pp-WB-R2k" secondAttribute="topMargin" constant="42" id="uut-bM-Qs1"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="instructionsLabel" destination="soF-Uj-dO2" id="SHZ-MA-ifH"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
