@@ -33,15 +33,7 @@
     
     CustomScrapbookCell *customCell = [tableView dequeueReusableCellWithIdentifier:@"scrapbookCell"];
     
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateStyle:NSDateFormatterShortStyle];
-    [formatter setTimeStyle:NSDateFormatterShortStyle];
-    
-    NSDate *date = scrapbook.timestamp;
-    NSString *formattedDate = [formatter stringFromDate:date];
-    
-    customCell.titleOfScrapbookLabel.text = [NSString stringWithFormat:@"%@", scrapbook.titleOfScrapbook];
-    customCell.timestampLabel.text = [NSString stringWithFormat:@"%@", formattedDate];
+    [customCell updateWithScrapbook:scrapbook];
 
     return customCell;
 }

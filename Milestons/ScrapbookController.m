@@ -31,13 +31,15 @@
 
 #pragma mark - Create
 
-- (void)createScrapbookWithTitle: (NSString *) title date:(NSDate *)timestamp photo:(UIImage *)image {
+- (Scrapbook *)createScrapbookWithTitle: (NSString *) title date:(NSDate *)timestamp photo:(UIImage *)image {
     
     Scrapbook *scrapbook = [Scrapbook object];
     
     scrapbook.titleOfScrapbook = title;
     scrapbook.timestamp = timestamp;
-    scrapbook.photo = image;
+    PFFile *imageFile = [PFFile fileWithData:UIImageJPEGRepresentation(image,0.95)];
+
+    scrapbook.photo = imageFile;
     
     
     [scrapbook pinInBackground];
@@ -47,6 +49,7 @@
     [mutableScrapbooks insertObject:scrapbook atIndex:0];
     self.scrapbooks = mutableScrapbooks;
 
+    return scrapbook;
 }
 
 

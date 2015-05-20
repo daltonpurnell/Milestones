@@ -185,20 +185,20 @@
 
 - (IBAction)doneButtonTapped:(id)sender {
     
-PFFile *imageFile = [PFFile fileWithData:UIImageJPEGRepresentation(self.imageView.image,0.95)];
     
     if (self.scrapbook) {
         
         self.scrapbook.titleOfScrapbook = self.titleTextField.text;
         self.scrapbook.timestamp = [NSDate date];
         
+        PFFile *imageFile = [PFFile fileWithData:UIImageJPEGRepresentation(self.imageView.image,0.95)];
 
         self.scrapbook.photo = imageFile;
         
         [[ScrapbookController sharedInstance] updateScrapbook:self.scrapbook];
         
     } else {
-        [[ScrapbookController sharedInstance] createScrapbookWithTitle:self.titleTextField.text date:[NSDate date] photo:imageFile];
+        [[ScrapbookController sharedInstance] createScrapbookWithTitle:self.titleTextField.text date:[NSDate date] photo:self.imageView.image];
     }
     
         [self dismissViewControllerAnimated:YES completion:nil];
@@ -207,7 +207,7 @@ PFFile *imageFile = [PFFile fileWithData:UIImageJPEGRepresentation(self.imageVie
 
 -(void)presentAlertViewController {
     
-    PFFile *imageFile = [PFFile fileWithData:UIImageJPEGRepresentation(self.imageView.image,0.95)];
+//    PFFile *imageFile = [PFFile fileWithData:UIImageJPEGRepresentation(self.imageView.image,0.95)];
     
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     
@@ -223,7 +223,7 @@ PFFile *imageFile = [PFFile fileWithData:UIImageJPEGRepresentation(self.imageVie
     [alertController addAction:[UIAlertAction actionWithTitle:@"Save Draft" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         
         // write code to save the draft here
-        [[ScrapbookController sharedInstance] createScrapbookWithTitle:self.titleTextField.text date:[NSDate date] photo:imageFile];
+        [[ScrapbookController sharedInstance] createScrapbookWithTitle:self.titleTextField.text date:[NSDate date] photo:self.imageView.image];
         
         
         [self dismissViewControllerAnimated:YES completion:nil];

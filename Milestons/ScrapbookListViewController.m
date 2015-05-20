@@ -13,6 +13,8 @@
 #import "EntryListViewController.h"
 #import "EntryController.h"
 #import "CustomScrapbookCell.h"
+#import "MyLoginViewController.h"
+#import "MySignUpViewController.h"
 
 @import Parse;
 @import ParseUI;
@@ -71,18 +73,24 @@
     PFUser *currentUser = [PFUser currentUser];
     if (!currentUser) { // No user logged in
         
-        // Create the log in view controller
-        PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
+        MyLoginViewController *logInViewController = [[MyLoginViewController alloc] init];
         [logInViewController setDelegate:self];
+        [logInViewController setFields:PFLogInFieldsUsernameAndPassword
+                | PFLogInFieldsSignUpButton
+                | PFLogInFieldsDismissButton
+                | PFLogInFieldsSignUpButton
+                | PFLogInFieldsLogInButton
+                | PFLogInFieldsUsernameAndPassword];
         
-        // Create the sign up view controller
-        PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
-        [signUpViewController setDelegate:self]; 
+        MySignUpViewController *signUpViewController = [[MySignUpViewController alloc] init];
+        [signUpViewController setDelegate:self];
+        [signUpViewController setFields:PFSignUpFieldsDefault
+         | PFSignUpFieldsAdditional
+         | PFSignUpFieldsAdditional
+         | PFSignUpFieldsSignUpButton];
         
-        // Assign our sign up controller to be displayed from the login controller
         [logInViewController setSignUpController:signUpViewController];
         
-        // Present the log in view controller
         [self presentViewController:logInViewController animated:YES completion:NULL];
     }
 }

@@ -7,7 +7,7 @@
 //
 
 #import "CustomScrapbookCell.h"
-#import "ScrapbookController.h"
+
 #import "EntryController.h"
 
 @implementation CustomScrapbookCell
@@ -21,6 +21,19 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+-(void)updateWithScrapbook:(Scrapbook *)scrapbook {
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateStyle:NSDateFormatterShortStyle];
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    
+    NSDate *date = scrapbook.timestamp;
+    NSString *formattedDate = [formatter stringFromDate:date];
+    
+    self.titleOfScrapbookLabel.text = [NSString stringWithFormat:@"%@", scrapbook.titleOfScrapbook];
+    self.timestampLabel.text = [NSString stringWithFormat:@"%@", formattedDate];
 }
 
 @end
