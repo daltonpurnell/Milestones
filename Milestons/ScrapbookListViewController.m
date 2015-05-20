@@ -30,7 +30,17 @@
     
     [Appearance initializeAppearanceDefaults];
     
-    // this is not working right
+    self.refreshControl = [UIRefreshControl new];
+    [self.refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];
+    
+    [[ScrapbookController sharedInstance]loadScrapbooksFromParse:^(NSError *error) {
+        [self.tableView reloadData];
+        
+    }];
+    
+#pragma mark - empty state
+    
+    // This is not working right...
     if ([ScrapbookController sharedInstance].scrapbooks.count == 0) {
         
         self.tableView.rowHeight = self.view.frame.size.height - 64;
@@ -44,41 +54,58 @@
         
     }
     else {
-    
+        
         self.tableView.rowHeight = 250;
         
         CustomScrapbookCell *customCell = [CustomScrapbookCell new];
         customCell.titleOfScrapbookLabel.hidden = NO;
         customCell.timestampLabel.hidden = NO;
         customCell.photoImageView.hidden = NO;
-    
+        
         customCell.instructionsLabel.hidden = YES;
         
     }
     
-    self.refreshControl = [UIRefreshControl new];
-    [self.refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];
-    
-    [[ScrapbookController sharedInstance]loadScrapbooksFromParse:^(NSError *error) {
-        [self.tableView reloadData];
-        
-    }];
-    
+#pragma mark - login view
     
     PFUser *currentUser = [PFUser currentUser];
-    if (!currentUser) {
+    if (!currentUser) { // No user logged in
         
-        PFLogInViewController *logIn = [PFLogInViewController new];
-        logIn.delegate = self;
-        logIn.signUpController.delegate = self;
-        [self presentViewController:logIn animated:YES completion:nil];
+        // Create the log in view controller
+        PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
+        [logInViewController setDelegate:self];
         
+        // Create the sign up view controller
+        PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
+        [signUpViewController setDelegate:self]; 
+        
+        // Assign our sign up controller to be displayed from the login controller
+        [logInViewController setSignUpController:signUpViewController];
+        
+        // Present the log in view controller
+        [self presentViewController:logInViewController animated:YES completion:NULL];
     }
-    
 }
 
 
-#pragma mark - login view controller delegate methods
+#pragma mark - login delegate methods
+
+// Sent to the delegate to determine whether the log in request should be submitted to the server.
+- (BOOL)logInViewController:(PFLogInViewController *)logInController shouldBeginLogInWithUsername:(NSString *)username password:(NSString *)password {
+    // Check if both fields are completed
+    if (username && password && username.length != 0 && password.length != 0) {
+        return YES; // Begin login process
+    }
+    
+    [[[UIAlertView alloc] initWithTitle:@"Missing Information"
+                                message:@"Make sure you fill out all of the information!"
+                               delegate:nil
+                      cancelButtonTitle:@"OK"
+                      otherButtonTitles:nil] show];
+    return NO; // Interrupt login process
+}
+
+
 
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
     self.currentUser = user;
@@ -88,13 +115,15 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
-    self.currentUser = user;
-    
-    [self addUserData];
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
-    
+
+// for when the login attempt fails
+- (void)logInViewController:(PFLogInViewController *)logInController didFailToLogInWithError:(NSError *)error {
+    NSLog(@"Failed to log in...");
+}
+
+// For when the login view is dismissed
+- (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
@@ -125,6 +154,58 @@
     
 }
 
+#pragma mark - signup delegate methods
+
+- (BOOL)signUpViewController:(PFSignUpViewController *)signUpController shouldBeginSignUp:(NSDictionary *)info {
+    BOOL informationComplete = YES;
+    
+    // loop through all of the submitted data
+    for (id key in info) {
+        NSString *field = [info objectForKey:key];
+        if (!field || field.length == 0) { // check completion
+            informationComplete = NO;
+            break;
+        }
+    }
+    
+    // Display an alert if a field wasn't completed
+    if (!informationComplete) {
+        [[[UIAlertView alloc] initWithTitle:@"Missing Information"
+                                    message:@"Make sure you fill out all of the information!"
+                                   delegate:nil
+                          cancelButtonTitle:@"ok"
+                          otherButtonTitles:nil] show];
+    }
+    
+    return informationComplete;
+}
+
+
+
+- (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
+    self.currentUser = user;
+    
+    [self addUserData];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
+
+
+- (void)signUpViewController:(PFSignUpViewController *)signUpController didFailToSignUpWithError:(NSError *)error {
+    NSLog(@"Failed to sign up...");
+}
+
+
+
+- (void)signUpViewControllerDidCancelSignUp:(PFSignUpViewController *)signUpController {
+    NSLog(@"User dismissed the signUpViewController");
+}
+
+
+
+#pragma mark - loading table view with correct data
 
 -(void)refreshTable {
     

@@ -36,6 +36,7 @@
 -(void)updateWithScrapbook:(Scrapbook *)scrapbook {
     self.titleTextField.text = scrapbook.titleOfScrapbook;
     
+    
     self.imageView.image = scrapbook.photo;
     
 }

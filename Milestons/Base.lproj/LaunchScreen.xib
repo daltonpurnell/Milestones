@@ -9,35 +9,10 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9fX-BT-CNo">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
-                    <color key="backgroundColor" red="0.94196646500000003" green="0.95255676430000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="dlf-tL-oA3">
-                    <rect key="frame" x="80" y="118" width="320" height="168"/>
-                    <color key="backgroundColor" red="0.94196646504341086" green="0.95255676430146852" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="168" id="4Gg-x7-GI4"/>
-                    </constraints>
-                </imageView>
-            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstItem="dlf-tL-oA3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="91j-vO-1Me"/>
-                <constraint firstItem="9fX-BT-CNo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="EkE-c0-FKN"/>
-                <constraint firstItem="dlf-tL-oA3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="118" id="PR8-uK-0Yx"/>
-                <constraint firstItem="9fX-BT-CNo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="VRr-fj-ubl"/>
-                <constraint firstItem="dlf-tL-oA3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="80" id="XeC-Gp-I2c"/>
-                <constraint firstItem="9fX-BT-CNo" firstAttribute="centerX" secondItem="dlf-tL-oA3" secondAttribute="centerX" id="czw-gy-Fzu"/>
-                <constraint firstAttribute="bottom" secondItem="9fX-BT-CNo" secondAttribute="bottom" id="mSq-NF-2w3"/>
-            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
-    <resources>
-        <image name="LaunchImage" width="258" height="133"/>
-    </resources>
 </document>
