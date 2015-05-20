@@ -1,5 +1,5 @@
 //
-//  PFLoginViewController.h
+//  PFSignUpViewController.h
 //  Milestons
 //
 //  Created by Dalton on 5/19/15.
@@ -8,6 +8,6 @@
 
 #import <ParseUI/ParseUI.h>
 
-@interface PFLoginViewController : PFLogInViewController
+@interface MySignUpViewController : PFSignUpViewController
 
 @end

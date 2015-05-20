@@ -50,8 +50,8 @@
 		CF2C248A1B01009F00D28EAB /* CustomEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C24891B01009F00D28EAB /* CustomEntryCell.m */; };
 		CFEC12DC1B04379500AB6C1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFEC12DB1B04379500AB6C1B /* Main.storyboard */; };
 		CFEC12E31B08939C00AB6C1B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12E21B08939C00AB6C1B /* User.m */; };
-		CFEC12E91B0C117800AB6C1B /* PFLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12E81B0C117800AB6C1B /* PFLoginViewController.m */; };
-		CFEC12EC1B0C119100AB6C1B /* PFSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12EB1B0C119100AB6C1B /* PFSignUpViewController.m */; };
+		CFEC12E91B0C117800AB6C1B /* MyLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */; };
+		CFEC12EC1B0C119100AB6C1B /* MySignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12EB1B0C119100AB6C1B /* MySignUpViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,10 +130,10 @@
 		CFEC12DB1B04379500AB6C1B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CFEC12E11B08939C00AB6C1B /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		CFEC12E21B08939C00AB6C1B /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		CFEC12E71B0C117800AB6C1B /* PFLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PFLoginViewController.h; path = ../PFLoginViewController.h; sourceTree = "<group>"; };
-		CFEC12E81B0C117800AB6C1B /* PFLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PFLoginViewController.m; path = ../PFLoginViewController.m; sourceTree = "<group>"; };
-		CFEC12EA1B0C119100AB6C1B /* PFSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PFSignUpViewController.h; path = ../PFSignUpViewController.h; sourceTree = "<group>"; };
-		CFEC12EB1B0C119100AB6C1B /* PFSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PFSignUpViewController.m; path = ../PFSignUpViewController.m; sourceTree = "<group>"; };
+		CFEC12E71B0C117800AB6C1B /* MyLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLoginViewController.h; path = ../MyLoginViewController.h; sourceTree = "<group>"; };
+		CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyLoginViewController.m; path = ../MyLoginViewController.m; sourceTree = "<group>"; };
+		CFEC12EA1B0C119100AB6C1B /* MySignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MySignUpViewController.h; path = ../MySignUpViewController.h; sourceTree = "<group>"; };
+		CFEC12EB1B0C119100AB6C1B /* MySignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MySignUpViewController.m; path = ../MySignUpViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,10 +202,10 @@
 				CF2C22D61AF5B40A00D28EAB /* ViewController.m */,
 				CF2C23141AF5C26200D28EAB /* Appearance.h */,
 				CF2C23151AF5C26200D28EAB /* Appearance.m */,
-				CFEC12E71B0C117800AB6C1B /* PFLoginViewController.h */,
-				CFEC12E81B0C117800AB6C1B /* PFLoginViewController.m */,
-				CFEC12EA1B0C119100AB6C1B /* PFSignUpViewController.h */,
-				CFEC12EB1B0C119100AB6C1B /* PFSignUpViewController.m */,
+				CFEC12E71B0C117800AB6C1B /* MyLoginViewController.h */,
+				CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */,
+				CFEC12EA1B0C119100AB6C1B /* MySignUpViewController.h */,
+				CFEC12EB1B0C119100AB6C1B /* MySignUpViewController.m */,
 				CF2C23301AF5EE3900D28EAB /* Photos */,
 				CF2C230C1AF5B50100D28EAB /* Scrapbooks */,
 				CF2C230D1AF5B50D00D28EAB /* Entries */,
@@ -430,9 +430,9 @@
 				CF2C23081AF5B4C300D28EAB /* EntryListViewDataSource.m in Sources */,
 				CF2C22D11AF5B40A00D28EAB /* main.m in Sources */,
 				CF2C23051AF5B4B000D28EAB /* ScrapbookListViewDataSource.m in Sources */,
-				CFEC12E91B0C117800AB6C1B /* PFLoginViewController.m in Sources */,
+				CFEC12E91B0C117800AB6C1B /* MyLoginViewController.m in Sources */,
 				CF2C230B1AF5B4D800D28EAB /* EntryListViewController.m in Sources */,
-				CFEC12EC1B0C119100AB6C1B /* PFSignUpViewController.m in Sources */,
+				CFEC12EC1B0C119100AB6C1B /* MySignUpViewController.m in Sources */,
 				CF2C232F1AF5EE2B00D28EAB /* PhotoController.m in Sources */,
 				CF2C233D1AF6CDCE00D28EAB /* Scrapbook.m in Sources */,
 				CF2C23401AF6CDCE00D28EAB /* Entry.m in Sources */,

@@ -6,13 +6,14 @@
 //  Copyright (c) 2015 Dalton. All rights reserved.
 //
 
-#import "PFLoginViewController.h"
+#import "MyLoginViewController.h"
+#import "MySignUpViewController.h"
 
-@interface PFLoginViewController ()
+@interface MyLoginViewController ()
 
 @end
 
-@implementation PFLoginViewController
+@implementation MyLoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
