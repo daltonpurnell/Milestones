@@ -10,6 +10,8 @@
 
 #import "EntryController.h"
 
+#import "ScrapbookController.h"
+
 @implementation CustomScrapbookCell
 
 - (void)awakeFromNib {
@@ -34,8 +36,6 @@
     
     self.titleOfScrapbookLabel.text = [NSString stringWithFormat:@"%@", scrapbook.titleOfScrapbook];
     self.timestampLabel.text = [NSString stringWithFormat:@"%@", formattedDate];
-   
-    [self convertPFFileToUIImage:  ]
     
 }
 
