@@ -27,11 +27,8 @@
 //    [self.logInView.dismissButton setImage:[UIImage imageNamed:@"exit.png"] forState:UIControlStateNormal];
 //    [self.logInView.dismissButton setImage:[UIImage imageNamed:@"exit_down.png"] forState:UIControlStateHighlighted];
     
-    
-//    [self.logInView.signUpButton setBackgroundImage:[UIImage imageNamed:@"signup.png"] forState:UIControlStateNormal];
-//    [self.logInView.signUpButton setBackgroundImage:[UIImage imageNamed:@"signup_down.png"] forState:UIControlStateHighlighted];
-//    [self.logInView.signUpButton setTitle:@"" forState:UIControlStateNormal];
-//    [self.logInView.signUpButton setTitle:@"" forState:UIControlStateHighlighted];
+    [self.logInView.logInButton setBackgroundColor:[UIColor colorWithRed:74/255.0 green:75/255.0 blue:76/255.0 alpha:1]];
+    [self.logInView.signUpButton setBackgroundColor:[UIColor colorWithRed:102/255.0 green:183/255.0 blue:235/255.0 alpha:1]];
     
     // Remove text shadow
     CALayer *layer = self.logInView.usernameField.layer;
@@ -42,6 +39,11 @@
     // Set field text color
     [self.logInView.usernameField setTextColor:[UIColor colorWithRed:74/255.0 green:75/255.0 blue:76/255.0 alpha:1]];
     [self.logInView.passwordField setTextColor:[UIColor colorWithRed:74/255.0 green:75/255.0 blue:76/255.0 alpha:1]];
+    
+    
+    // Set text field background color
+    [self.logInView.usernameField setBackgroundColor:[UIColor colorWithRed:240/255.0 green:240/255.0 blue:255/255.0 alpha:1]];
+    [self.logInView.passwordField setBackgroundColor:[UIColor colorWithRed:240/255.0 green:240/255.0 blue:255/255.0 alpha:1]];
 }
 
 
