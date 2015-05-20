@@ -20,4 +20,6 @@
 
 -(void)updateWithScrapbook:(Scrapbook *)scrapbook;
 
+-(void)convertPFFileToUIImage:(UIImage *)image;
+
 @end

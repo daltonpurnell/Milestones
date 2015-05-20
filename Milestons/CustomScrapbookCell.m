@@ -35,18 +35,24 @@
     self.titleOfScrapbookLabel.text = [NSString stringWithFormat:@"%@", scrapbook.titleOfScrapbook];
     self.timestampLabel.text = [NSString stringWithFormat:@"%@", formattedDate];
    
-// convert PFFile back into UIImage to be able to display on the image view
-    
-//    PFFile *imageFile = [PFFile fileWithData:UIImageJPEGRepresentation(image,0.95)];
-//    [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-//        if (!error) {
-//            UIImage *image = [UIImage imageWithData:data];
-//            
-//            // image can now be set on a UIImageView
-//            self.photoImageView.image =
-//        }
-//    }];
+    [self convertPFFileToUIImage:  ]
     
 }
+
+-(void)convertPFFileToUIImage:(UIImage *)image {
+    
+    // convert PFFile back into UIImage to be able to display on the image view
+    
+        PFFile *imageFile = [PFFile fileWithData:UIImageJPEGRepresentation(image,0.95)];
+        [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            if (!error) {
+                UIImage *myImage = [UIImage imageWithData:data];
+    
+                // image can now be set on a UIImageView
+                self.photoImageView.image = myImage;
+            }
+        }];
+}
+
 
 @end
