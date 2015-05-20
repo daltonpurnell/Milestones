@@ -34,6 +34,11 @@
     
     self.titleOfScrapbookLabel.text = [NSString stringWithFormat:@"%@", scrapbook.titleOfScrapbook];
     self.timestampLabel.text = [NSString stringWithFormat:@"%@", formattedDate];
+   
+// convert PFFile back into UIImage to be able to display on the image view
+    
+//    self.photoImageView.image =
+    
 }
 
 @end

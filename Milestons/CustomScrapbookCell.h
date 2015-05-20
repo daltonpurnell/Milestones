@@ -18,8 +18,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 
-@property (weak, nonatomic) IBOutlet UILabel *instructionsLabel;
-
 -(void)updateWithScrapbook:(Scrapbook *)scrapbook;
 
 @end

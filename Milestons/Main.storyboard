@@ -225,24 +225,16 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the + to create your first scrapbook." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMA-Ru-d9w">
-                                            <rect key="frame" x="147" y="50" width="307" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="xS7-BP-qyO" firstAttribute="top" secondItem="nLH-wX-Tto" secondAttribute="topMargin" constant="16" id="5ti-d6-oEl"/>
                                         <constraint firstItem="xS7-BP-qyO" firstAttribute="leading" secondItem="KxY-iZ-7P5" secondAttribute="leading" id="Lah-kl-cay"/>
-                                        <constraint firstAttribute="centerX" secondItem="cMA-Ru-d9w" secondAttribute="centerX" constant="-0.5" id="Ngo-3P-QRO"/>
                                         <constraint firstItem="ucm-6n-4rU" firstAttribute="trailing" secondItem="nLH-wX-Tto" secondAttribute="trailingMargin" id="OIr-1T-xnq"/>
                                         <constraint firstItem="ucm-6n-4rU" firstAttribute="top" secondItem="nLH-wX-Tto" secondAttribute="topMargin" id="cuK-3f-V5c"/>
                                         <constraint firstItem="yDL-hD-qek" firstAttribute="top" secondItem="nLH-wX-Tto" secondAttribute="topMargin" id="hQm-tN-Ubo"/>
                                         <constraint firstItem="ebh-xf-pRW" firstAttribute="top" secondItem="KxY-iZ-7P5" secondAttribute="bottom" constant="21" id="lUp-pU-4Ak"/>
                                         <constraint firstItem="KxY-iZ-7P5" firstAttribute="leading" secondItem="nLH-wX-Tto" secondAttribute="leadingMargin" constant="-7" id="ovm-ZA-fRH"/>
                                         <constraint firstItem="KxY-iZ-7P5" firstAttribute="top" secondItem="nLH-wX-Tto" secondAttribute="topMargin" id="sFM-gN-cUF"/>
-                                        <constraint firstItem="cMA-Ru-d9w" firstAttribute="top" secondItem="nLH-wX-Tto" secondAttribute="topMargin" constant="42" id="sjp-um-GVj"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="yDL-hD-qek" secondAttribute="trailing" constant="40" id="tSR-qc-cCG"/>
                                         <constraint firstItem="KxY-iZ-7P5" firstAttribute="leading" secondItem="ebh-xf-pRW" secondAttribute="trailing" constant="26" id="uUc-Xh-mWM"/>
                                     </constraints>
@@ -253,11 +245,31 @@
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="instructionsLabel" destination="cMA-Ru-d9w" id="71F-bz-9f3"/>
                                     <outlet property="photoImageView" destination="ebh-xf-pRW" id="d7F-8M-6kr"/>
                                     <outlet property="timestampLabel" destination="xS7-BP-qyO" id="wCe-Q7-x8g"/>
                                     <outlet property="titleOfScrapbookLabel" destination="KxY-iZ-7P5" id="XY9-cb-0fQ"/>
                                     <segue destination="FdX-8r-yfi" kind="show" identifier="showEntryList" id="JRM-v4-72E"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="emptyStateCell" id="uqk-Rp-Edb">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uqk-Rp-Edb" id="4pp-WB-R2k">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the + to create your first scrapbook." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soF-Uj-dO2">
+                                            <rect key="frame" x="147" y="50" width="307" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerX" secondItem="soF-Uj-dO2" secondAttribute="centerX" constant="-0.5" id="7oi-z5-ZmV"/>
+                                        <constraint firstItem="soF-Uj-dO2" firstAttribute="top" secondItem="4pp-WB-R2k" secondAttribute="topMargin" constant="42" id="uut-bM-Qs1"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="instructionsLabel" destination="soF-Uj-dO2" id="SHZ-MA-ifH"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

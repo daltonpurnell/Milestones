@@ -20,15 +20,26 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    // Return the number of rows in the section.
+    if ([ScrapbookController sharedInstance].scrapbooks.count == 0) {
     return [ScrapbookController sharedInstance].scrapbooks.count;
+    } else {
+        return 1;
+    }
 }
-
 
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-
+    if ([ScrapbookController sharedInstance].scrapbooks.count == 0) {
+       
+        // return emptyState cell
+        UITableViewCell *emptyStateCell = [tableView dequeueReusableCellWithIdentifier:@"emptyStateCell"];
+        
+        return emptyStateCell;
+        
+    } else {
+        
+    // return customCell
     Scrapbook *scrapbook = [ScrapbookController sharedInstance].scrapbooks[indexPath.row];
     
     CustomScrapbookCell *customCell = [tableView dequeueReusableCellWithIdentifier:@"scrapbookCell"];
@@ -36,6 +47,21 @@
     [customCell updateWithScrapbook:scrapbook];
 
     return customCell;
+        
+    }
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if ([ScrapbookController sharedInstance].scrapbooks.count == 0) {
+        
+        return tableView.frame.size.height;
+        
+    } else {
+
+        return 250;
+    }
 }
 
 
