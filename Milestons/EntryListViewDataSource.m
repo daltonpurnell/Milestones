@@ -20,35 +20,51 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    // Return the number of rows in the section.
-   return [EntryController sharedInstance].entries.count;
+    
+    if ([EntryController sharedInstance].entries.count == 0) {
+        return 1;
+    } else {
+        return [EntryController sharedInstance].entries.count;
+    }
 }
 
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
+   if ([EntryController sharedInstance].entries.count == 0) {
+       
+       // return emptyState cell
+       UITableViewCell *emptyStateCell = [tableView dequeueReusableCellWithIdentifier:@"emptyStateCell"];
+       
+       return emptyStateCell;
+   
+   }else {
+       
+       // return customCell
     Entry *entry = [EntryController sharedInstance].entries[indexPath.row];
     
     CustomEntryCell *customCell = [tableView dequeueReusableCellWithIdentifier:@"entryCell"];
     
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateStyle:NSDateFormatterShortStyle];
-    [formatter setTimeStyle:NSDateFormatterShortStyle];
-    
-    NSDate *date = entry.timestamp;
-    NSString *formattedDate = [formatter stringFromDate:date];
-    
-    customCell.titleOfEntryLabel.text = [NSString stringWithFormat:@"%@", entry.titleOfEntry];
-    
-    customCell.timestampLabel.text = [NSString stringWithFormat:@"%@", formattedDate];
-    
-    customCell.descriptionLabel.text = [NSString stringWithFormat:@"%@", entry.descriptionOfEntry];
-    
-//    customCell.photoImageView.image = [UIImage imageWithData:]
-    
+    [customCell updateWithEntry:entry];
+       
     return customCell;
+   }
 }
 
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if ([EntryController sharedInstance].entries.count == 0) {
+        
+        return tableView.frame.size.height;
+        
+    } else {
+        
+        return 250;
+    }
+}
+
+
+#pragma mark - delete cell
 
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     

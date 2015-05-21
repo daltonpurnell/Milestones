@@ -256,8 +256,8 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uqk-Rp-Edb" id="4pp-WB-R2k">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the + to create your first scrapbook." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soF-Uj-dO2">
-                                            <rect key="frame" x="147" y="50" width="307" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You do not have any scrapbooks. Tap the + to create your first one!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soF-Uj-dO2">
+                                            <rect key="frame" x="43" y="50" width="515" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -816,7 +816,7 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooa-6b-X2T">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooa-6b-X2T">
                                             <rect key="frame" x="8" y="249" width="584" height="92"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -850,6 +850,39 @@
                                     <outlet property="photoImageView" destination="rBY-In-aBy" id="z7b-GK-2of"/>
                                     <outlet property="timestampLabel" destination="48l-dk-EiE" id="Z2Q-4b-vsa"/>
                                     <outlet property="titleOfEntryLabel" destination="m4O-SL-oLs" id="fjd-h5-kTd"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="emptyStateCell" id="Ao8-8S-qYY" customClass="CustomEntryCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ao8-8S-qYY" id="vyA-2c-897">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cC6-4T-DOY">
+                                            <rect key="frame" x="8" y="249" width="584" height="92"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You do not have any milestones in this scrapbook. Tap the + to create your first one." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12v-Co-KoJ">
+                                            <rect key="frame" x="8" y="31" width="584" height="66"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerX" secondItem="cC6-4T-DOY" secondAttribute="centerX" id="GSd-ZN-Jqx"/>
+                                        <constraint firstItem="12v-Co-KoJ" firstAttribute="top" secondItem="vyA-2c-897" secondAttribute="topMargin" constant="23" id="MYY-l6-ndq"/>
+                                        <constraint firstItem="12v-Co-KoJ" firstAttribute="leading" secondItem="vyA-2c-897" secondAttribute="leadingMargin" id="MaW-rK-UeJ"/>
+                                        <constraint firstItem="cC6-4T-DOY" firstAttribute="leading" secondItem="vyA-2c-897" secondAttribute="leadingMargin" id="QSp-OY-Lai"/>
+                                        <constraint firstItem="12v-Co-KoJ" firstAttribute="trailing" secondItem="vyA-2c-897" secondAttribute="trailingMargin" id="S6a-X7-oNt"/>
+                                        <constraint firstAttribute="centerX" secondItem="12v-Co-KoJ" secondAttribute="centerX" id="aB4-jR-ZUj"/>
+                                        <constraint firstItem="cC6-4T-DOY" firstAttribute="trailing" secondItem="vyA-2c-897" secondAttribute="trailingMargin" id="h65-B5-Onp"/>
+                                        <constraint firstItem="cC6-4T-DOY" firstAttribute="bottom" secondItem="vyA-2c-897" secondAttribute="bottomMargin" id="qHH-Ms-fZm"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="cC6-4T-DOY" id="qeD-5a-JTs"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

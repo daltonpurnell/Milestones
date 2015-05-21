@@ -8,6 +8,12 @@
 
 #import "CustomEntryCell.h"
 
+#import "EntryController.h"
+
+#import "ScrapbookController.h"
+
+#import "Entry.h"
+
 @implementation CustomEntryCell
 
 - (void)awakeFromNib {
@@ -18,6 +24,25 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+-(void)updateWithEntry:(Entry *)entry {
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateStyle:NSDateFormatterShortStyle];
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    
+    NSDate *date = entry.timestamp;
+    NSString *formattedDate = [formatter stringFromDate:date];
+    
+    self.titleOfEntryLabel.text = [NSString stringWithFormat:@"%@", entry.titleOfEntry];
+    
+    self.timestampLabel.text = [NSString stringWithFormat:@"%@", formattedDate];
+    
+    self.descriptionLabel.text = [NSString stringWithFormat:@"%@", entry.descriptionOfEntry];
+    
+    //    customCell.photoImageView.image = [UIImage imageWithData:]
+
 }
 
 @end
