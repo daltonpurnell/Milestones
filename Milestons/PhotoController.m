@@ -10,6 +10,12 @@
 #import "Photo.h"
 #import "Entry.h"
 
+@interface PhotoController()
+
+@property (nonatomic, strong) NSArray *photos;
+
+@end
+
 
 @implementation PhotoController
 
@@ -18,14 +24,16 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[PhotoController alloc] init];
-        [sharedInstance loadThesePhotosFromParse];
+        [sharedInstance loadThesePhotosFromParse:^(NSError *error) {
+            // Nothing
+        }];
     });
     return sharedInstance;
 }
 
 #pragma mark - Create
 
-// Needs to pass in the location of the photo on the device
+// Needs to pass in the location of the photo in the file system
 - (void)createPhoto {
     
     Photo *photo = [Photo object];
@@ -33,42 +41,28 @@
     [photo pinInBackground];
     [photo saveInBackground];
     
+    NSMutableArray *mutablePhotos = [NSMutableArray arrayWithArray:self.photos];
+    [mutablePhotos insertObject:photo atIndex:0];
+    self.photos = mutablePhotos;
 }
 
 
 #pragma mark - Read
 
 
-- (void)loadThesePhotosFromParse {
+- (void)loadThesePhotosFromParse:(void (^)(NSError *error))completion {
     
-    
-    PFQuery *photoQuery = [Photo query];
-    
-    Photo *myPhoto = [Photo new];
-    
-    Entry *myEntry = [Entry new];
-    
-    myPhoto.entry = myEntry;
-    
-    [photoQuery whereKey:@"entry" equalTo:myEntry];
-    
-    [photoQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        
-        self.photos = objects;
-        
-    }];
-    
-
-    [myPhoto pinInBackground];
-    
-}
-
-
-- (NSArray *)photos {
-    
-    PFQuery *query = [Photo query];
+    NSLog(@"Loading photos from Parse");
+    PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
     [query fromLocalDatastore];
-    return [query findObjects];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
+        if (!error) {
+            self.photos = objects;
+            completion(nil);
+        } else {
+            completion(error);
+        }
+    }];
     
 }
 
@@ -85,6 +79,10 @@
 #pragma mark - Delete
 
 - (void)removePhoto:(Photo *)photo {
+    
+    NSMutableArray *mutablePhotos = [NSMutableArray arrayWithArray:self.photos];
+    [mutablePhotos removeObject:photo];
+    self.photos = mutablePhotos;
     
     [photo unpinInBackground];
     [photo deleteInBackground];
