@@ -218,6 +218,9 @@
                                             <state key="normal" image="Trash-can">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="deleteButtonTapped:forRowAtIndexPath:" destination="fBN-QD-Djk" eventType="touchUpInside" id="Qwl-Em-khC"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDL-hD-qek">
                                             <rect key="frame" x="520" y="8" width="32" height="32"/>

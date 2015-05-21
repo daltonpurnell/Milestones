@@ -15,7 +15,22 @@
 @implementation CustomScrapbookCell
 
 - (void)awakeFromNib {
-    // Initialization code
+
+// Get the image from Parse and load it into the image view
+    PFQuery *query = [PFQuery queryWithClassName:@"Scrapbook"];
+    
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        
+        NSLog(@"Retrieved data");
+        
+        if (!error) {
+            PFFile *file = [object objectForKey:@"imageFile"];
+            
+            self.photoImageView.file = file;
+            
+            [self.photoImageView loadInBackground];
+        }
+    }];
     
 }
 
@@ -39,20 +54,20 @@
     
 }
 
--(void)convertPFFileToUIImage:(UIImage *)image {
+
+
+#pragma mark - delete cell
+
+
+- (IBAction)deleteButtonTapped:(id)sender forRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    // convert PFFile back into UIImage to be able to display on the image view
+    Scrapbook *scrapbook = [ScrapbookController sharedInstance].scrapbooks[indexPath.row];
     
-        PFFile *imageFile = [PFFile fileWithData:UIImageJPEGRepresentation(image,0.95)];
-        [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-            if (!error) {
-                UIImage *myImage = [UIImage imageWithData:data];
+    [[ScrapbookController sharedInstance] removeScrapbook:scrapbook];
     
-                // image can now be set on a UIImageView
-                self.photoImageView.image = myImage;
-            }
-        }];
+
 }
+
 
 
 @end
