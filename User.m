@@ -14,7 +14,9 @@ static NSString * const UserClassName = @"User";
 
 @implementation User
 
-
+@dynamic userId;
+@dynamic name;
+@dynamic email;
 
 + (NSString *)parseClassName {
     return UserClassName;

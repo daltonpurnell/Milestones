@@ -12,6 +12,10 @@
 
 @interface User : PFObject <PFSubclassing>
 
+@property(nonatomic, strong)NSString *userId;
+@property(nonatomic, strong)NSString *name;
+@property(nonatomic, strong)NSString *email;
+
 
 + (NSString *)parseClassName;
 
