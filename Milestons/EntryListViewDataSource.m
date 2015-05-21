@@ -9,7 +9,6 @@
 #import "EntryListViewDataSource.h"
 #import "EntryController.h"
 #import "CustomEntryCell.h"
-#import <QuartzCore/QuartzCore.h>
 
 
 @implementation EntryListViewDataSource
@@ -40,7 +39,7 @@
    
    }else {
        
-       // return customCell
+    // return customCell
     Entry *entry = [EntryController sharedInstance].entries[indexPath.row];
     
     CustomEntryCell *customCell = [tableView dequeueReusableCellWithIdentifier:@"entryCell"];
