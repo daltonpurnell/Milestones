@@ -37,9 +37,9 @@
     
     scrapbook.titleOfScrapbook = title;
     scrapbook.timestamp = timestamp;
-//    PFFile *imageFile = [PFFile fileWithData:UIImageJPEGRepresentation(image,0.95)];
-    NSData *imageData = UIImagePNGRepresentation(image);
-    scrapbook.photo = imageData;
+    PFFile *imageFile = [PFFile fileWithData:UIImageJPEGRepresentation(image,0.95)];
+
+    scrapbook.photo = imageFile;
     
     
     [scrapbook pinInBackground];

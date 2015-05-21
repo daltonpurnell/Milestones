@@ -15,7 +15,7 @@
 
 @interface AddScrapbookViewController () <UITextFieldDelegate, MFMailComposeViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet PFImageView *imageView;
 
 @end
 
@@ -25,7 +25,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self updateWithScrapbook:self.scrapbook andPhoto:finalImage];
+    [self updateWithScrapbook:self.scrapbook];
     
     
     self.titleTextField.delegate = self;
@@ -34,12 +34,11 @@
 }
 
 
--(void)updateWithScrapbook:(Scrapbook *)scrapbook andPhoto:(UIImage *)myImage {
+-(void)updateWithScrapbook:(Scrapbook *)scrapbook {
     self.titleTextField.text = scrapbook.titleOfScrapbook;
     
-    NSData *data = UIImagePNGRepresentation(myImage);
-
-    scrapbook.photo = data;
+    
+    self.imageView.image = scrapbook.photo;
     
 }
 
