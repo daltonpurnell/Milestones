@@ -13,7 +13,7 @@
 
 @interface Scrapbook : PFObject <PFSubclassing>
 
-@property (nonatomic, retain) PFFile * photo;
+@property (nonatomic, retain) NSData * photo;
 @property (nonatomic, retain) NSDate * timestamp;
 @property (nonatomic, retain) NSString * titleOfScrapbook;
 @property (nonatomic, retain) NSArray *entries;

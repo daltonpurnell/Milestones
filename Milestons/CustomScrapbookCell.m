@@ -17,20 +17,20 @@
 - (void)awakeFromNib {
 
 // Get the image from Parse and load it into the image view
-    PFQuery *query = [PFQuery queryWithClassName:@"Scrapbook"];
-    
-    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-        
-        NSLog(@"Retrieved data");
-        
-        if (!error) {
-            PFFile *file = [object objectForKey:@"imageFile"];
-            
-            self.photoImageView.file = file;
-            
-            [self.photoImageView loadInBackground];
-        }
-    }];
+//    PFQuery *query = [PFQuery queryWithClassName:@"Scrapbook"];
+//    
+//    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+//        
+//        NSLog(@"Retrieved data");
+//        
+//        if (!error) {
+//            PFFile *file = [object objectForKey:@"imageFile"];
+//            
+//            self.photoImageView.image = file;
+//            
+//            [self.photoImageView loadInBackground];
+//        }
+//    }];
     
 }
 
@@ -40,7 +40,7 @@
     // Configure the view for the selected state
 }
 
--(void)updateWithScrapbook:(Scrapbook *)scrapbook {
+-(void)updateWithScrapbook:(Scrapbook *)scrapbook andPhoto:(UIImage *)myImage {
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateStyle:NSDateFormatterShortStyle];
@@ -52,8 +52,13 @@
     self.titleOfScrapbookLabel.text = [NSString stringWithFormat:@"%@", scrapbook.titleOfScrapbook];
     self.timestampLabel.text = [NSString stringWithFormat:@"%@", formattedDate];
     
+    
+    NSData *data = UIImagePNGRepresentation(myImage);
+    
+    UIImage *image = [UIImage imageWithData:data];
+    
+    self.photoImageView.image = image;
 }
-
 
 
 #pragma mark - delete cell

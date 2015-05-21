@@ -17,6 +17,6 @@
 
 @property (strong, nonatomic) Scrapbook *scrapbook;
 
--(void)updateWithScrapbook:(Scrapbook *)scrapbook;
+-(void)updateWithScrapbook:(Scrapbook *)scrapbook andPhoto:(UIImage *)myImage;
 
 @end

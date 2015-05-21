@@ -43,8 +43,8 @@
     Scrapbook *scrapbook = [ScrapbookController sharedInstance].scrapbooks[indexPath.row];
     
     CustomScrapbookCell *customCell = [tableView dequeueReusableCellWithIdentifier:@"scrapbookCell"];
-    
-    [customCell updateWithScrapbook:scrapbook];
+            
+        [customCell updateWithScrapbook:scrapbook andPhoto:scrapbook.photo];
 
     return customCell;
         
