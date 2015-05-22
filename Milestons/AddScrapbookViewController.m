@@ -33,13 +33,13 @@
     [Appearance initializeAppearanceDefaults];
 }
 
-
--(void)updateWithScrapbook:(Scrapbook *)scrapbook {
-    
-    
-    self.titleTextField.text = scrapbook.titleOfScrapbook;
-    
-}
+//
+//-(void)updateWithScrapbook:(Scrapbook *)scrapbook {
+//    
+//    
+//    self.titleTextField.text = scrapbook.titleOfScrapbook;
+//    
+//}
 
 
 

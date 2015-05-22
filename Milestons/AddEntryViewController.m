@@ -40,13 +40,13 @@
     [super didReceiveMemoryWarning];
 }
 
--(void)updateWithEntry:(Entry *)entry {
-    if (!entry) {
-        return;
-    }
-    self.titleTextField.text = entry.titleOfEntry;
-    
-}
+//-(void)updateWithEntry:(Entry *)entry {
+//    if (!entry) {
+//        return;
+//    }
+//    self.titleTextField.text = entry.titleOfEntry;
+//    
+//}
 
 - (IBAction)cameraButtonTapped:(id)sender {
     

@@ -13,6 +13,6 @@
 
 @property (strong, nonatomic) Entry *entry;
 
--(void)updateWithEntry:(Entry *)entry;
+//-(void)updateWithEntry:(Entry *)entry;
 
 @end
