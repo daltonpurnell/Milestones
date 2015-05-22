@@ -41,8 +41,8 @@
     
     self.descriptionLabel.text = [NSString stringWithFormat:@"%@", entry.descriptionOfEntry];
     
-    //    customCell.photoImageView.image = [UIImage imageWithData:]
-
+//    self.photoImageView.image = [UIImage imageWithData:entry.photos.getData];
+    
 }
 
 @end

@@ -16,21 +16,6 @@
 
 - (void)awakeFromNib {
 
-// Get the image from Parse and load it into the image view
-    PFQuery *query = [PFQuery queryWithClassName:@"Scrapbook"];
-    
-    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-        
-        NSLog(@"Retrieved data");
-        
-        if (!error) {
-            PFFile *file = [object objectForKey:@"imageFile"];
-            
-            self.photoImageView.file = file;
-            
-            [self.photoImageView loadInBackground];
-        }
-    }];
     
 }
 
@@ -52,8 +37,9 @@
     self.titleOfScrapbookLabel.text = [NSString stringWithFormat:@"%@", scrapbook.titleOfScrapbook];
     self.timestampLabel.text = [NSString stringWithFormat:@"%@", formattedDate];
     
+    self.imageView.image = [UIImage imageWithData:scrapbook.photo.getData];
+    
 }
-
 
 
 #pragma mark - delete cell
