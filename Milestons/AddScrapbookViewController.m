@@ -72,7 +72,7 @@
              UIImagePickerControllerSourceTypeCamera] == YES) {
             
             imagePicker.sourceType =  UIImagePickerControllerSourceTypeCamera;
-            imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+            imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
             imagePicker.allowsEditing = YES;
             
             [self presentViewController:imagePicker animated:YES completion:nil];
@@ -121,7 +121,7 @@
              UIImagePickerControllerSourceTypeCamera] == YES) {
             
             imagePicker.sourceType =  UIImagePickerControllerSourceTypeCamera;
-            imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+            imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
             imagePicker.allowsEditing = YES;
             
             [self presentViewController:imagePicker animated:YES completion:nil];
