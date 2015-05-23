@@ -42,6 +42,11 @@
     entry.scrapbook = scrapbook;
     entry.timestamp = timestamp;
     
+    PFUser *user = [PFUser currentUser];
+    entry.user = user;
+    entry.ACL = [PFACL ACLWithUser:user];
+
+    
     [entry pinInBackground];
     [entry saveInBackground];
     
@@ -59,7 +64,12 @@
     
     NSLog(@"Loading entries from Parse");
     PFQuery *query = [PFQuery queryWithClassName:@"Entry"];
+    
+    PFUser *user = [PFUser currentUser];
+    [query whereKey:@"user" equalTo:user];
+    
     [query fromLocalDatastore];
+
     [query includeKey:@"photos"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
         if (!error) {

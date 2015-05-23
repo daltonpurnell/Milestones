@@ -90,8 +90,6 @@
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
     self.currentUser = user;
     
-    [self addUserData];
-    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -106,33 +104,6 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-
-- (void)addUserData {
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"yourData"];
-    
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        
-        if ([objects count] == 0) {
-            
-            PFObject *yourData = [PFObject objectWithClassName:@"yourData"];
-            yourData[@"dictionaryKey"] = @"dictionaryValue";
-            
-            // If there is a current user you can set that user as the only user that can access this object:
-            if (self.currentUser) {
-                yourData.ACL = [PFACL ACLWithUser:self.currentUser];
-            }
-            
-            [yourData saveInBackground];
-            
-        } else {
-            
-            NSLog(@"You already stored your data");
-        }
-        
-    }];
-    
-}
 
 #pragma mark - signup delegate methods
 
@@ -164,8 +135,6 @@
 
 - (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
     self.currentUser = user;
-    
-    [self addUserData];
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
@@ -199,10 +168,12 @@
     
 }
 
+
 -(void)viewWillAppear:(BOOL)animated {
     
     [self.tableView reloadData];
 }
+
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

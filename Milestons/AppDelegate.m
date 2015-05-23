@@ -29,15 +29,19 @@
     
     [Appearance initializeAppearanceDefaults];
     
+    // Initialize Parse.
+    [Parse setApplicationId:@"ZP4dc4didhOZFuurMoswvziSSuuc1aHByCsZT5MC"
+                  clientKey:@"hJsfouL4Wk8drBFrQBHqrnUks83QscDHtl9y26fm"];
+    
     [Scrapbook registerSubclass];
     [Entry registerSubclass];
     [Photo registerSubclass];
     
-    [Parse enableLocalDatastore];
+//    [Parse enableLocalDatastore];
     
-    // Initialize Parse.
-    [Parse setApplicationId:@"ZP4dc4didhOZFuurMoswvziSSuuc1aHByCsZT5MC"
-                  clientKey:@"hJsfouL4Wk8drBFrQBHqrnUks83QscDHtl9y26fm"];
+    NSArray *scrapbookArray = [[PFQuery queryWithClassName:@"Scrapbook"] findObjects];
+    
+    NSArray *entryArray = [[PFQuery queryWithClassName:@"Entry"] findObjects];
     
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];

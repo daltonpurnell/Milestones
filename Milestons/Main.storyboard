@@ -231,7 +231,6 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="xS7-BP-qyO" firstAttribute="top" secondItem="nLH-wX-Tto" secondAttribute="topMargin" constant="16" id="5ti-d6-oEl"/>
-                                        <constraint firstAttribute="centerX" secondItem="ebh-xf-pRW" secondAttribute="centerX" constant="-0.5" id="9QJ-rf-Qfa"/>
                                         <constraint firstAttribute="centerX" secondItem="ebh-xf-pRW" secondAttribute="centerX" constant="2.5" id="Dk0-by-VtQ"/>
                                         <constraint firstItem="xS7-BP-qyO" firstAttribute="leading" secondItem="KxY-iZ-7P5" secondAttribute="leading" id="Lah-kl-cay"/>
                                         <constraint firstItem="ucm-6n-4rU" firstAttribute="trailing" secondItem="nLH-wX-Tto" secondAttribute="trailingMargin" id="OIr-1T-xnq"/>
@@ -247,12 +246,6 @@
                                     <variation key="default">
                                         <mask key="constraints">
                                             <exclude reference="uUc-Xh-mWM"/>
-                                            <exclude reference="9QJ-rf-Qfa"/>
-                                        </mask>
-                                    </variation>
-                                    <variation key="heightClass=regular-widthClass=compact">
-                                        <mask key="constraints">
-                                            <include reference="9QJ-rf-Qfa"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>

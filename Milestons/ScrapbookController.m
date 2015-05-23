@@ -41,7 +41,10 @@
 
     scrapbook.photo = imageFile;
     
-    
+    PFUser *user = [PFUser currentUser];
+    scrapbook.user = user;
+    scrapbook.ACL = [PFACL ACLWithUser:user];
+
     [scrapbook pinInBackground];
     [scrapbook saveInBackground];
     
@@ -58,8 +61,12 @@
 - (void)loadScrapbooksFromParse:(void (^)(NSError *error))completion {
     
     PFQuery *query = [Scrapbook query];
-    [query fromLocalDatastore];
+    
+    PFUser *user = [PFUser currentUser];
+    [query whereKey:@"user" equalTo:user];
+    
     [query includeKey:@"entries"];
+    
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
         if (!error) {
             self.scrapbooks = objects;
@@ -68,6 +75,7 @@
             completion(error);
         }
     }];
+    
     
 }
 

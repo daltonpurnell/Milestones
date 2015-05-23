@@ -20,6 +20,8 @@
 @property (nonatomic, retain) NSString * titleOfEntry;
 @property (nonatomic, retain) NSArray *photos;
 @property (nonatomic, retain) Scrapbook *scrapbook;
+@property (nonatomic, retain) PFUser *user;
+
 
 + (NSString *)parseClassName;
 

@@ -23,6 +23,7 @@ static NSString * const EntryClassName = @"Entry";
 @dynamic titleOfEntry;
 @dynamic photos;
 @dynamic scrapbook;
+@dynamic user;
 
 + (NSString *)parseClassName {
     return EntryClassName;

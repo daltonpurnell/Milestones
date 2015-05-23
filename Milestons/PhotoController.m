@@ -38,6 +38,11 @@
     
     Photo *photo = [Photo object];
     
+    PFUser *user = [PFUser currentUser];
+    photo.user = user;
+    photo.ACL = [PFACL ACLWithUser:user];
+
+    
     [photo pinInBackground];
     [photo saveInBackground];
     
@@ -54,6 +59,10 @@
     
     NSLog(@"Loading photos from Parse");
     PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
+    
+    PFUser *user = [PFUser currentUser];
+    [query whereKey:@"user" equalTo:user];
+    
     [query fromLocalDatastore];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
         if (!error) {

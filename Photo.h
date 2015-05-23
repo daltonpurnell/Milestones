@@ -15,7 +15,7 @@
 
 @property (nonatomic, retain) Entry *entry;
 @property (nonatomic, strong) NSString *locationOnDevice;
-
+@property (nonatomic, strong) PFUser *user;
 
 
 + (NSString *)parseClassName;
