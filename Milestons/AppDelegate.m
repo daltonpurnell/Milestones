@@ -37,11 +37,9 @@
     [Entry registerSubclass];
     [Photo registerSubclass];
     
+    [PFImageView class];
+    
 //    [Parse enableLocalDatastore];
-    
-    NSArray *scrapbookArray = [[PFQuery queryWithClassName:@"Scrapbook"] findObjects];
-    
-    NSArray *entryArray = [[PFQuery queryWithClassName:@"Entry"] findObjects];
     
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];

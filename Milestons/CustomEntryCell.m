@@ -43,6 +43,9 @@
     
 //    self.photoImageView.image = [UIImage imageWithData:entry.photos.getData];
     
+//    [self.photoImageView loadInBackground];
+
+    
 }
 
 @end

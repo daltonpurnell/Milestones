@@ -18,7 +18,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *timestampLabel;
 
-@property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
+@property (weak, nonatomic) IBOutlet PFImageView *photoImageView;
 
 -(void)updateWithScrapbook:(Scrapbook *)scrapbook;
 
