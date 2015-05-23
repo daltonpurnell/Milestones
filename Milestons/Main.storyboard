@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leather" translatesAutoresizingMaskIntoConstraints="NO" id="rQB-lJ-wAl">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leatherwhite" translatesAutoresizingMaskIntoConstraints="NO" id="rQB-lJ-wAl">
                                 <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="692" id="LIk-BK-lWz"/>
@@ -1019,6 +1019,6 @@
         <image name="Trash-can" width="24" height="32"/>
         <image name="Video" width="50" height="48"/>
         <image name="giftlyBackground" width="320" height="568"/>
-        <image name="leather" width="1485" height="2341"/>
+        <image name="leatherwhite" width="550" height="250"/>
     </resources>
 </document>
