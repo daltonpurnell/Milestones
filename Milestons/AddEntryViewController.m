@@ -32,8 +32,6 @@
     
     self.titleTextField.delegate = self;
     self.descriptionTextView.delegate = self;
-    
-    
     [Appearance initializeAppearanceDefaults];
     
     
@@ -53,17 +51,6 @@
 
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
-//-(void)updateWithEntry:(Entry *)entry {
-//    if (!entry) {
-//        return;
-//    }
-//    self.titleTextField.text = entry.titleOfEntry;
-//    
-//}
 
 - (IBAction)cameraButtonTapped:(id)sender {
     
@@ -110,12 +97,20 @@
     [self presentViewController:photoActionSheet animated:YES completion:nil];
 }
 
+
+
 - (IBAction)videoButtonTapped:(id)sender {
     
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
     imagePicker.delegate = self;
     
     UIAlertController *photoActionSheet = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        
+    }];
+    
+    [photoActionSheet addAction:cancelAction];
     
     UIAlertAction *cameraRollAction = [UIAlertAction actionWithTitle:@"From Library" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         imagePicker.sourceType =  UIImagePickerControllerSourceTypePhotoLibrary;
@@ -156,13 +151,9 @@
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     
-    // Access the uncropped image from info dictionary
     UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
-    
     // Set Image
     self.imageView.image = image;
-    
-    // Dismiss controller
     [picker dismissViewControllerAnimated:YES completion:nil];
 
 }
@@ -174,25 +165,17 @@
     mailViewController.mailComposeDelegate = self;
     
     [mailViewController setSubject:[NSString stringWithFormat:@"%@", self.entry.titleOfEntry]];
-    
     [mailViewController setMessageBody:[NSString stringWithFormat:@"%@", self.entry.descriptionOfEntry] isHTML:NO];
-    
-    
     [self presentViewController:mailViewController animated:YES completion:nil];
 }
 
 
 - (IBAction)deleteButtonTapped:(id)sender {
-    
-    
     [self presentDeleteAlertViewController];
-    
 }
 
 - (IBAction)cancelButtonTapped:(id)sender {
-    
     [self presentAlertViewController];
-    
 }
 
 
@@ -231,7 +214,6 @@
     }]];
     
     [alertController addAction:[UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDefault handler:nil]];
-    
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
@@ -261,7 +243,6 @@
     }]];
     
     [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
-    
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
@@ -270,9 +251,7 @@
 #pragma mark - text field delegate method
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
-    
     [self.titleTextField resignFirstResponder];
-    
     return YES;
     
 }

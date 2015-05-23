@@ -23,25 +23,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-//    [self updateWithScrapbook:self.scrapbook];
-    
-    
     self.titleTextField.delegate = self;
-    
     [Appearance initializeAppearanceDefaults];
 }
-
-//
-//-(void)updateWithScrapbook:(Scrapbook *)scrapbook {
-//    
-//    
-//    self.titleTextField.text = scrapbook.titleOfScrapbook;
-//    
-//}
-
-
 
 
 - (IBAction)cameraButtonTapped:(id)sender {
@@ -135,7 +119,6 @@
         }
     }];
     [photoActionSheet addAction:takePictureAction];
-    
     [self presentViewController:photoActionSheet animated:YES completion:nil];
 
 }
@@ -147,13 +130,8 @@
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     
-    // Access the uncropped image from info dictionary
     UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
-        
-    // Dismiss controller
     [picker dismissViewControllerAnimated:YES completion:nil];
-    
-    // Set Image
     self.imageView.image = image;
 }
 
@@ -165,20 +143,17 @@
     mailViewController.mailComposeDelegate = self;
     
     [mailViewController setSubject:[NSString stringWithFormat:@"%@", self.scrapbook.titleOfScrapbook]];
-    
     [self presentViewController:mailViewController animated:YES completion:nil];
     
 }
 
 
 - (IBAction)deleteButtonTapped:(id)sender {
-    
     [self presentDeleteAlertViewController];
 }
 
 
 - (IBAction)cancelButtonTapped:(id)sender {
-    
     [self presentAlertViewController];
 }
 
@@ -194,7 +169,6 @@
         PFFile *imageFile = [PFFile fileWithData:UIImageJPEGRepresentation(self.imageView.image,0.95)];
 
         self.scrapbook.photo = imageFile;
-        
         [[ScrapbookController sharedInstance] updateScrapbook:self.scrapbook];
         
     } else {
@@ -203,6 +177,8 @@
     
         [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+
 
 
 -(void)presentAlertViewController {
@@ -229,9 +205,10 @@
     }]];
     
     [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
-    
     [self presentViewController:alertController animated:YES completion:nil];
 }
+
+
 
 
 -(void)presentDeleteAlertViewController {
@@ -247,7 +224,6 @@
     }]];
     
     [alertController addAction:[UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDefault handler:nil]];
-    
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
@@ -255,11 +231,8 @@
 #pragma mark - text field delegate method
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
-    
     [self.titleTextField resignFirstResponder];
-    
     return YES;
-    
 }
 
 
