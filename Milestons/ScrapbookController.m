@@ -45,7 +45,7 @@
     scrapbook.user = user;
     scrapbook.ACL = [PFACL ACLWithUser:user];
 
-    [scrapbook pinInBackground];
+//    [scrapbook pinInBackground];
     [scrapbook saveInBackground];
     
     NSMutableArray *mutableScrapbooks = [NSMutableArray arrayWithArray:self.scrapbooks];
@@ -83,7 +83,7 @@
 
 - (void)updateScrapbook:(Scrapbook *)scrapbook {
     
-    [scrapbook pinInBackground];
+//    [scrapbook pinInBackground];
     [scrapbook saveInBackground];
     
 }
@@ -94,7 +94,7 @@
     NSMutableArray *mutableScrapbooks = [NSMutableArray arrayWithArray:self.scrapbooks];
     [mutableScrapbooks removeObject:scrapbook];
     self.scrapbooks = mutableScrapbooks;
-    [scrapbook unpinInBackground];
+//    [scrapbook unpinInBackground];
     [scrapbook deleteInBackground];
 }
 

@@ -47,7 +47,7 @@
     entry.ACL = [PFACL ACLWithUser:user];
 
     
-    [entry pinInBackground];
+//    [entry pinInBackground];
     [entry saveInBackground];
     
     NSMutableArray *mutableEntries = [NSMutableArray arrayWithArray:self.entries];
@@ -68,7 +68,7 @@
     PFUser *user = [PFUser currentUser];
     [query whereKey:@"user" equalTo:user];
     
-    [query fromLocalDatastore];
+//    [query fromLocalDatastore];
 
     [query includeKey:@"photos"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
@@ -86,7 +86,7 @@
 
 - (void)updateEntry:(Entry *)entry {
     
-    [entry pinInBackground];
+//    [entry pinInBackground];
     [entry saveInBackground];
     
 }
@@ -99,7 +99,7 @@
     [mutableEntries removeObject:entry];
     self.entries = mutableEntries;
     
-    [entry unpinInBackground];
+//    [entry unpinInBackground];
     [entry deleteInBackground];
 }
 

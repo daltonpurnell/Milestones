@@ -43,7 +43,7 @@
     photo.ACL = [PFACL ACLWithUser:user];
 
     
-    [photo pinInBackground];
+//    [photo pinInBackground];
     [photo saveInBackground];
     
     NSMutableArray *mutablePhotos = [NSMutableArray arrayWithArray:self.photos];
@@ -63,7 +63,7 @@
     PFUser *user = [PFUser currentUser];
     [query whereKey:@"user" equalTo:user];
     
-    [query fromLocalDatastore];
+//    [query fromLocalDatastore];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
         if (!error) {
             self.photos = objects;
@@ -80,7 +80,7 @@
 
 - (void)updatePhoto:(Photo *)photo {
     
-    [photo pinInBackground];
+//    [photo pinInBackground];
     [photo saveInBackground];
     
 }
@@ -93,7 +93,7 @@
     [mutablePhotos removeObject:photo];
     self.photos = mutablePhotos;
     
-    [photo unpinInBackground];
+//    [photo unpinInBackground];
     [photo deleteInBackground];
 }
 
