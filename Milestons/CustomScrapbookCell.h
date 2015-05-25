@@ -12,7 +12,11 @@
 
 @import ParseUI;
 
+@protocol deleteCellDelegate;
+
 @interface CustomScrapbookCell : UITableViewCell
+
+@property (nonatomic, strong) id <deleteCellDelegate>delegate;
 
 @property (weak, nonatomic) IBOutlet UILabel *titleOfScrapbookLabel;
 
@@ -21,5 +25,11 @@
 @property (weak, nonatomic) IBOutlet PFImageView *photoImageView;
 
 -(void)updateWithScrapbook:(Scrapbook *)scrapbook;
+
+@end
+
+@protocol deleteCellDelegate <NSObject>
+
+- (IBAction)deleteButtonTapped:(id)sender forRowAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
