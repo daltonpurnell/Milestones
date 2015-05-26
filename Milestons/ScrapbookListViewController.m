@@ -198,9 +198,33 @@
 
 }
 
-//- (void)deleteButtonTapped:(NSIndexPath *)indexPath {
-//    
+
+#pragma mark - deleteCellDelegate method
+
+- (void)deleteButtonTapped:(NSIndexPath *)indexPath {
+    
+//    [self presentDeleteAlertViewController];
+    
 //    [self.tableView reloadData];
+}
+
+//
+//-(void)presentDeleteAlertViewController {
+//    
+//    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Are you sure you want to delete?" message:@"This will delete this scrapbook and all entries inside it" preferredStyle:UIAlertControllerStyleAlert];
+//    
+//    [alertController addAction:[UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+//
+//        // delete scrapbook here
+//
+//        [self dismissViewControllerAnimated:YES completion:nil];
+//        
+//    }]];
+//    
+//    [alertController addAction:[UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDefault handler:nil]];
+//    [self presentViewController:alertController animated:YES completion:nil];
 //}
+
+
 
 @end
