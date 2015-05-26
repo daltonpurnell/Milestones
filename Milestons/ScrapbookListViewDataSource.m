@@ -22,12 +22,6 @@
 #pragma mark - Table view data source
 
 
--(void)deleteButtonTapped:(id)sender{
-    
-    CustomScrapbookCell *clickedCell = (CustomScrapbookCell *)[[sender superview] superview];
-    clickedCell.delegate = self;
-    
-}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     if ([ScrapbookController sharedInstance].scrapbooks.count == 0) {
@@ -53,7 +47,8 @@
     Scrapbook *scrapbook = [ScrapbookController sharedInstance].scrapbooks[indexPath.row];
     
     CustomScrapbookCell *customCell = [tableView dequeueReusableCellWithIdentifier:@"scrapbookCell"];
-    
+        customCell.indexPath = indexPath;
+        customCell.delegate = self;
     [customCell updateWithScrapbook:scrapbook];
 
     return customCell;
@@ -74,20 +69,34 @@
     }
 }
 
+#pragma mark - delete cell
 
--(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+-(void)deleteButtonTapped:(NSIndexPath*)indexPath {
     
+    Scrapbook *scrapbook = [[ScrapbookController sharedInstance].scrapbooks objectAtIndex:indexPath.row];
+    [[ScrapbookController sharedInstance] removeScrapbook:scrapbook];
     
-    
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        
-        Scrapbook *scrapbook = [ScrapbookController sharedInstance].scrapbooks[indexPath.row];
-        
-        [[ScrapbookController sharedInstance] removeScrapbook:scrapbook];
-        
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-        
-    }
+//    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    NSLog(@"cell deleted");
 }
+
+
+
+
+
+//-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+//    
+//    
+//    
+//    if (editingStyle == UITableViewCellEditingStyleDelete) {
+//        
+//        Scrapbook *scrapbook = [ScrapbookController sharedInstance].scrapbooks[indexPath.row];
+//        
+//        [[ScrapbookController sharedInstance] removeScrapbook:scrapbook];
+//        
+//        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+//        
+//    }
+//}
 
 @end

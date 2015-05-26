@@ -24,12 +24,14 @@
 
 @property (weak, nonatomic) IBOutlet PFImageView *photoImageView;
 
+@property (strong, nonatomic) NSIndexPath *indexPath;
+
 -(void)updateWithScrapbook:(Scrapbook *)scrapbook;
 
 @end
 
 @protocol deleteCellDelegate <NSObject>
 
-- (IBAction)deleteButtonTapped:(id)sender;
+- (IBAction)deleteButtonTapped:(NSIndexPath *)indexPath;
 
 @end

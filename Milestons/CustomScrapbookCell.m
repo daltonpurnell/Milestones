@@ -47,7 +47,7 @@
 
 
 - (IBAction)deleteButtonTapped:(id)sender  {
-    [self.delegate deleteButtonTapped:sender];
+    [self.delegate deleteButtonTapped:self.indexPath];
 //    Scrapbook *scrapbook = [ScrapbookController sharedInstance].scrapbooks[indexPath.row];
 //    
 //    [[ScrapbookController sharedInstance] removeScrapbook:scrapbook];
