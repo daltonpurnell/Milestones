@@ -15,6 +15,12 @@
 @implementation CustomScrapbookCell
 
 - (void)awakeFromNib {
+    
+//    UIImageView *whiteSquare = [[UIImageView alloc] initWithFrame:CGRectMake(8, 8, self.contentView.frame.size.width - 8, self.contentView.frame.size.height - 8)];
+//    [whiteSquare setBackgroundColor:[UIColor whiteColor]];
+//    [self.contentView addSubview:whiteSquare];
+    
+    self.backgroundColor = [UIColor clearColor];
 
     
 }
@@ -22,7 +28,6 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
-    self.backgroundColor = [UIColor clearColor];
 }
 
 -(void)updateWithScrapbook:(Scrapbook *)scrapbook {
@@ -48,10 +53,6 @@
 
 - (IBAction)deleteButtonTapped:(id)sender  {
     [self.delegate deleteButtonTapped:self.indexPath];
-//    Scrapbook *scrapbook = [ScrapbookController sharedInstance].scrapbooks[indexPath.row];
-//    
-//    [[ScrapbookController sharedInstance] removeScrapbook:scrapbook];
-    
 
 }
 
