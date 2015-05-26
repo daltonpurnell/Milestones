@@ -78,6 +78,7 @@
     
 //    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     NSLog(@"cell deleted");
+
 }
 
 
