@@ -19,7 +19,7 @@
 @import Parse;
 @import ParseUI;
 
-@interface ScrapbookListViewController () <UITableViewDelegate, PFSignUpViewControllerDelegate, PFLogInViewControllerDelegate>
+@interface ScrapbookListViewController () <UITableViewDelegate, PFSignUpViewControllerDelegate, PFLogInViewControllerDelegate, deleteCellDelegate>
 
 @property (nonatomic, strong) PFUser *currentUser;
 
@@ -197,6 +197,10 @@
     }
 
 }
-    
-    
+
+//- (void)deleteButtonTapped:(NSIndexPath *)indexPath {
+//    
+//    [self.tableView reloadData];
+//}
+
 @end
