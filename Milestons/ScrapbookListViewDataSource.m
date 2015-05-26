@@ -11,13 +11,23 @@
 #import "CustomScrapbookCell.h"
 #import <QuartzCore/QuartzCore.h>
 
-@implementation ScrapbookListViewDataSource
+@interface ScrapbookListViewDataSource () <deleteCellDelegate>
 
+
+
+@end
+
+@implementation ScrapbookListViewDataSource
 
 #pragma mark - Table view data source
 
 
-
+-(void)deleteButtonTapped:(id)sender{
+    
+    CustomScrapbookCell *clickedCell = (CustomScrapbookCell *)[[sender superview] superview];
+    clickedCell.delegate = self;
+    
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     if ([ScrapbookController sharedInstance].scrapbooks.count == 0) {

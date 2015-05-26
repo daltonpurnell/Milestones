@@ -46,11 +46,11 @@
 #pragma mark - delete cell
 
 
-- (IBAction)deleteButtonTapped:(id)sender forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    Scrapbook *scrapbook = [ScrapbookController sharedInstance].scrapbooks[indexPath.row];
-    
-    [[ScrapbookController sharedInstance] removeScrapbook:scrapbook];
+- (IBAction)deleteButtonTapped:(id)sender  {
+    [self.delegate deleteButtonTapped:sender];
+//    Scrapbook *scrapbook = [ScrapbookController sharedInstance].scrapbooks[indexPath.row];
+//    
+//    [[ScrapbookController sharedInstance] removeScrapbook:scrapbook];
     
 
 }

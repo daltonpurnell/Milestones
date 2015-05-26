@@ -31,7 +31,7 @@
     [super viewDidLoad];
     
     [Appearance initializeAppearanceDefaults];
-       // self.view.backgroundColor = [UIColor colorWithRed:232/255 green:236/255 blue:243/255 alpha:1];
+//        self.view.backgroundColor = [UIColor colorWithRed:232/255 green:236/255 blue:243/255 alpha:1];
 
     
     self.refreshControl = [UIRefreshControl new];

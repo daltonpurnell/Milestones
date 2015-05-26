@@ -30,6 +30,6 @@
 
 @protocol deleteCellDelegate <NSObject>
 
-- (IBAction)deleteButtonTapped:(id)sender forRowAtIndexPath:(NSIndexPath *)indexPath;
+- (IBAction)deleteButtonTapped:(id)sender;
 
 @end
