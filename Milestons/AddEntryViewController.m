@@ -35,7 +35,7 @@
     [Appearance initializeAppearanceDefaults];
     
     
-//     set number of image views to number of photos added
+     // set number of image views to number of photos added
     
 //    for (int index = 0; index < [PhotoController sharedInstance].photos.count; index++) {
 //        
@@ -48,7 +48,7 @@
 //        
 //        [self.scrollView addSubview:imageView];
 //    }
-
+//
 }
 
 

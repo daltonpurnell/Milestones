@@ -22,8 +22,9 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
+    
+        self.backgroundColor = [UIColor clearColor];
 
-    // Configure the view for the selected state
 }
 
 -(void)updateWithEntry:(Entry *)entry {
