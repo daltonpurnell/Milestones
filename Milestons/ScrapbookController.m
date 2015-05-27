@@ -37,15 +37,16 @@
     
     scrapbook.titleOfScrapbook = title;
     scrapbook.timestamp = timestamp;
-    PFFile *imageFile = [PFFile fileWithData:UIImageJPEGRepresentation(image,0.95)];
 
+    //setup scrapbook image
+    PFFile *imageFile = [PFFile fileWithData:UIImageJPEGRepresentation(image,0.95)];
     scrapbook.photo = imageFile;
     
+    //setup scrapbook user:
     PFUser *user = [PFUser currentUser];
     scrapbook.user = user;
     scrapbook.ACL = [PFACL ACLWithUser:user];
 
-//    [scrapbook pinInBackground];
     [scrapbook saveInBackground];
     
     NSMutableArray *mutableScrapbooks = [NSMutableArray arrayWithArray:self.scrapbooks];
@@ -62,9 +63,9 @@
     
     PFQuery *query = [Scrapbook query];
     
-    PFUser *user = [PFUser currentUser];
-    [query whereKey:@"user" equalTo:user];
-    [query includeKey:@"entries"];
+//    PFUser *user = [PFUser currentUser];
+    [query whereKey:@"user" equalTo:[PFUser currentUser]];
+    [query includeKey:@"Entry"];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
         if (!error) {

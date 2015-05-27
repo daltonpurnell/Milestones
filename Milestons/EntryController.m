@@ -47,7 +47,6 @@
     entry.ACL = [PFACL ACLWithUser:user];
 
     
-//    [entry pinInBackground];
     [entry saveInBackground];
     
     NSMutableArray *mutableEntries = [NSMutableArray arrayWithArray:self.entries];
@@ -68,12 +67,15 @@
     PFUser *user = [PFUser currentUser];
     [query whereKey:@"user" equalTo:user];
     
-//    [query fromLocalDatastore];
-
-    [query includeKey:@"photos"];
+    __block NSArray *loadEntries = [NSArray new];
+    
+    [query includeKey:@"Photo"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
         if (!error) {
-            self.entries = objects;
+            for (Scrapbook *sb in objects) {
+                loadEntries = [loadEntries arrayByAddingObject:sb];
+            }
+            self.entries = loadEntries;
             completion(nil);
         } else {
             completion(error);

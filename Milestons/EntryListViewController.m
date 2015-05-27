@@ -12,6 +12,7 @@
 #import "AddEntryViewController.h"
 #import "AddScrapbookViewController.h"
 #import "CustomEntryCell.h"
+#import "PhotoController.h"
 
 
 @import Parse;
@@ -24,6 +25,24 @@
 @end
 
 @implementation EntryListViewController
+// This goes in the implementation file
++ (EntryListViewController *)sharedInstance {
+    
+    // create an instance of CurrentUser and set it to nil (only gets created once)
+    static EntryListViewController *sharedInstance = nil;
+    
+    // Never create that token again
+    static dispatch_once_t onceToken;
+    
+    // create this line of code only once
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[EntryListViewController alloc] init];
+    });
+    
+    // next time we call this method, this is the only code that will do anything
+    return sharedInstance;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,10 +63,18 @@
         [self.tableView reloadData];
         
     }];
-
     
+    [[PhotoController sharedInstance]loadThesePhotosFromParse:^(NSError *error) {
+        [self.tableView reloadData];
+        
+    }];
+
 }
 
+- (void)updateWithSB:(Scrapbook *)scrapbook {
+    self.scrapbook = scrapbook;
+    
+}
 
 -(void)refreshTable {
     
@@ -57,6 +84,11 @@
         [self.tableView reloadData];
         [self.refreshControl endRefreshing];
         
+    }];
+    
+    [[PhotoController sharedInstance]loadThesePhotosFromParse:^(NSError *error) {
+        [self.tableView reloadData];
+        [self.refreshControl endRefreshing];
     }];
     
 }
@@ -76,7 +108,15 @@
 }
 
 
-
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    
+//    if ([segue.identifier isEqualToString:@"presentAddEntry"]) {
+//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+//        AddEntryViewController *addEntryViewController = [segue destinationViewController];
+////        [entryViewController updateWithSB:[EntryController sharedInstance].entries[indexPath.row]];
+//    }
+//
+//}
 
 //
 //- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

@@ -9,13 +9,16 @@
 #import <UIKit/UIKit.h>
 
 #import "EntryController.h"
+#import "PhotoController.h"
+
+@import ParseUI;
 
 @protocol deleteCellDelegate;
 
 @interface CustomEntryCell : UITableViewCell
 @property (nonatomic, strong) id <deleteCellDelegate>delegate;
 
-@property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
+@property (weak, nonatomic) IBOutlet PFImageView *photoImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleOfEntryLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timestampLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;

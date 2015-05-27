@@ -33,17 +33,29 @@
 
 #pragma mark - Create
 
-- (void)createPhoto {
+- (void)createPhoto:(UIImage *)myPhoto inEntry:(Entry *)entry {
     
     Photo *photo = [Photo object];
     
-    PFUser *user = [PFUser currentUser];
-    photo.user = user;
-    photo.ACL = [PFACL ACLWithUser:user];
-
+    PFFile *imageFile = [PFFile fileWithData:UIImageJPEGRepresentation(myPhoto,0.95)];
     
-//    [photo pinInBackground];
-    [photo saveInBackground];
+    [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            if (succeeded) {
+                photo[@"picture"] = myPhoto;
+                photo[@"entry"] = entry;
+
+                PFUser *user = [PFUser currentUser];
+                photo.user = user;
+                photo.ACL = [PFACL ACLWithUser:user];
+
+                [photo saveInBackground];
+
+            }else {
+                NSLog(@"%@",error);
+            }
+        }
+    }];
     
     NSMutableArray *mutablePhotos = [NSMutableArray arrayWithArray:self.photos];
     [mutablePhotos insertObject:photo atIndex:0];

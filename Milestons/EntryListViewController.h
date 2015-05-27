@@ -14,4 +14,9 @@
 @property (strong, nonatomic) Entry *entry;
 @property (strong, nonatomic) Scrapbook *scrapbook;
 
+
++ (EntryListViewController *)sharedInstance;
+- (void)updateWithSB:(Scrapbook *)scrapbook;
+
+
 @end

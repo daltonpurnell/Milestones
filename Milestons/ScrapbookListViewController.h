@@ -9,11 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "Scrapbook.h"
 
+static NSString *const cellDeletedNotificationKey = @"cell deleted";
+
+
 @interface ScrapbookListViewController : UITableViewController
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *options;
 
 @property (strong, nonatomic) Scrapbook *scrapbook;
+
 
 
 @end

@@ -15,6 +15,7 @@
 
 @property (nonatomic, retain) Entry *entry;
 @property (nonatomic, strong) PFUser *user;
+@property (nonatomic, strong) PFFile *picture;
 
 
 + (NSString *)parseClassName;

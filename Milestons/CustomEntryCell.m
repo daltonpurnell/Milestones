@@ -58,10 +58,14 @@
     
 //    self.photoImageView.image = [UIImage imageWithData:entry.photos.getData];
     
+//    self.photoImageView.file = 
+    
 //    [self.photoImageView loadInBackground];
 
     
 }
+
+
 
 
 #pragma mark - delete cell

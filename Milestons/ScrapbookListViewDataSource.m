@@ -7,6 +7,7 @@
 //
 
 #import "ScrapbookListViewDataSource.h"
+#import "ScrapbookListViewController.h"
 #import "ScrapbookController.h"
 #import "CustomScrapbookCell.h"
 #import <QuartzCore/QuartzCore.h>
@@ -76,8 +77,8 @@
     Scrapbook *scrapbook = [[ScrapbookController sharedInstance].scrapbooks objectAtIndex:indexPath.row];
     [[ScrapbookController sharedInstance] removeScrapbook:scrapbook];
     
-//    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     NSLog(@"cell deleted");
+    [[NSNotificationCenter defaultCenter] postNotificationName:cellDeletedNotificationKey object:nil userInfo:nil];
 
 }
 

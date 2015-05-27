@@ -13,6 +13,8 @@
 
 @property (strong, nonatomic) Entry *entry;
 
+@property (strong, nonatomic) Photo *photo;
+
 //-(void)updateWithEntry:(Entry *)entry;
 
 @end

@@ -15,6 +15,7 @@ static NSString * const PhotoClassName = @"Photo";
 
 @dynamic entry;
 @dynamic user;
+@dynamic picture;
 
 
 + (NSString *)parseClassName {

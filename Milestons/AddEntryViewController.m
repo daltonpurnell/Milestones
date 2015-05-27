@@ -37,18 +37,18 @@
     
      // set number of image views to number of photos added
     
-//    for (int index = 0; index < [PhotoController sharedInstance].photos.count; index++) {
-//        
-//        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%d", index + 1]];
-//        
-//        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-//        
-//        imageView.frame = CGRectMake(index * self.view.bounds.size.width + 20, 20, self.view.bounds.size.width - 40, self.view.bounds.size.height - 40);
-//        imageView.contentMode = UIViewContentModeScaleAspectFit;
-//        
-//        [self.scrollView addSubview:imageView];
-//    }
-//
+    for (int index = 0; index < [PhotoController sharedInstance].photos.count; index++) {
+        
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%d", index + 1]];
+        
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+        
+        imageView.frame = CGRectMake(index * self.view.bounds.size.width + 20, 20, self.view.bounds.size.width - 40, self.view.bounds.size.height - 40);
+        imageView.contentMode = UIViewContentModeScaleAspectFit;
+        
+        [self.scrollView addSubview:imageView];
+    }
+
 }
 
 
@@ -191,6 +191,14 @@
         
     } else {
         [[EntryController sharedInstance] createEntryWithTitle:self.titleTextField.text description:self.descriptionTextView.text date:[NSDate date] inScrapbook:self.entry.scrapbook];
+    }
+    
+    if (self.photo) {
+        
+        [[PhotoController sharedInstance] updatePhoto:self.photo];
+        
+    } else {
+        [[PhotoController sharedInstance] createPhoto:self.photo inEntry:self.entry];
     }
     
         [self dismissViewControllerAnimated:YES completion:nil];

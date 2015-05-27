@@ -19,7 +19,7 @@
 @import Parse;
 @import ParseUI;
 
-@interface ScrapbookListViewController () <UITableViewDelegate, PFSignUpViewControllerDelegate, PFLogInViewControllerDelegate, deleteCellDelegate>
+@interface ScrapbookListViewController () <UITableViewDelegate, PFSignUpViewControllerDelegate, PFLogInViewControllerDelegate>
 
 @property (nonatomic, strong) PFUser *currentUser;
 
@@ -31,6 +31,8 @@
     [super viewDidLoad];
     
     [Appearance initializeAppearanceDefaults];
+    
+    [self registerForNotifications];
 
 //        self.tableView.backgroundColor = [UIColor colorWithRed:232/255 green:236/255 blue:243/255 alpha:1];
     
@@ -41,8 +43,6 @@
         [self.tableView reloadData];
         
     }];
-    
-#pragma mark - login view
     
     PFUser *currentUser = [PFUser currentUser];
     if (!currentUser) { // No user logged in
@@ -181,52 +181,36 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([segue.identifier isEqualToString:@"showEntryList"]) {
-        
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        Scrapbook *myScrapbook = [ScrapbookController sharedInstance].scrapbooks[indexPath.row];
-        
-        EntryListViewController *entryListViewController = segue.destinationViewController;
-        
-        entryListViewController.scrapbook = myScrapbook;
-        
-        [[EntryController sharedInstance] loadTheseEntriesFromParse:^(NSError *error) {
-            [self.tableView reloadData];
-            
-        }];
-        
+        EntryListViewController *entryViewController = [segue destinationViewController];
+        [entryViewController updateWithSB:[EntryController sharedInstance].entries[indexPath.row]];
     }
 
 }
 
 
-#pragma mark - deleteCellDelegate method
+#pragma mark - nsnotifications methods
 
-- (void)deleteButtonTapped:(NSIndexPath *)indexPath {
+-(void)registerForNotifications {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(respondToCellDeletion:) name:cellDeletedNotificationKey object:nil];
     
-//    [self presentDeleteAlertViewController];
-    
-//    [self.tableView reloadData];
 }
 
+-(void)respondToCellDeletion:(NSNotification *)notification {
+    [self.tableView reloadData];
+    
+}
 
+-(void)unregisterForNotifications {
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:cellDeletedNotificationKey object:nil];
+    
+}
 
-//
-//-(void)presentDeleteAlertViewController {
-//    
-//    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Are you sure you want to delete?" message:@"This will delete this scrapbook and all entries inside it" preferredStyle:UIAlertControllerStyleAlert];
-//    
-//    [alertController addAction:[UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
-//
-//        // delete scrapbook here
-//
-//        [self dismissViewControllerAnimated:YES completion:nil];
-//        
-//    }]];
-//    
-//    [alertController addAction:[UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDefault handler:nil]];
-//    [self presentViewController:alertController animated:YES completion:nil];
-//}
-
+-(void)dealloc {
+    
+    [self unregisterForNotifications];
+}
 
 
 @end
