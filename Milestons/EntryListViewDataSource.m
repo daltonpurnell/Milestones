@@ -10,6 +10,9 @@
 #import "EntryController.h"
 #import "CustomEntryCell.h"
 
+@interface EntryListViewDataSource ()<deleteCellDelegate>
+
+@end
 
 @implementation EntryListViewDataSource
 
@@ -43,7 +46,8 @@
     Entry *entry = [EntryController sharedInstance].entries[indexPath.row];
     
     CustomEntryCell *customCell = [tableView dequeueReusableCellWithIdentifier:@"entryCell"];
-    
+       customCell.indexPath = indexPath;
+       customCell.delegate = self;
     [customCell updateWithEntry:entry];
        
     return customCell;
@@ -63,22 +67,18 @@
 }
 
 
+
 #pragma mark - delete cell
 
-//-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-//    
-//    
-//    
-//    if (editingStyle == UITableViewCellEditingStyleDelete) {
-//        
-//        Entry *entry = [EntryController sharedInstance].entries[indexPath.row];
-//        
-//        [[EntryController sharedInstance] removeEntry:entry];
-//        
-//        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-//        
-//    }
-//}
+-(void)deleteButtonTapped:(NSIndexPath*)indexPath {
+    
+    Entry *entry = [[EntryController sharedInstance].entries objectAtIndex:indexPath.row];
+    [[EntryController sharedInstance] removeEntry:entry];
+
+    //    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    NSLog(@"cell deleted");
+    
+}
 
 
 @end

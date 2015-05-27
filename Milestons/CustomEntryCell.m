@@ -64,5 +64,13 @@
 }
 
 
+#pragma mark - delete cell
+
+
+- (IBAction)deleteButtonTapped:(id)sender  {
+    [self.delegate deleteButtonTapped:self.indexPath];
+    
+}
+
 
 @end

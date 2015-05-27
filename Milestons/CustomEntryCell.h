@@ -10,13 +10,25 @@
 
 #import "EntryController.h"
 
+@protocol deleteCellDelegate;
+
 @interface CustomEntryCell : UITableViewCell
+@property (nonatomic, strong) id <deleteCellDelegate>delegate;
+
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleOfEntryLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timestampLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
+@property (strong, nonatomic) NSIndexPath *indexPath;
+
 -(void)updateWithEntry:(Entry *)entry;
+
+@end
+
+@protocol deleteCellDelegate <NSObject>
+
+- (IBAction)deleteButtonTapped:(NSIndexPath *)indexPath;
 
 @end

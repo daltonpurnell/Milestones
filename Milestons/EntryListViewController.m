@@ -11,13 +11,14 @@
 #import "EntryController.h"
 #import "AddEntryViewController.h"
 #import "AddScrapbookViewController.h"
+#import "CustomEntryCell.h"
 
 
 @import Parse;
 @import ParseUI;
 
 
-@interface EntryListViewController () <UITableViewDelegate>
+@interface EntryListViewController () <UITableViewDelegate, deleteCellDelegate>
 @property (weak, nonatomic) IBOutlet UINavigationItem *navBar;
 
 @end
@@ -65,6 +66,17 @@
     
     [self.tableView reloadData];
 }
+
+
+#pragma mark - deleteCellDelegate method
+
+- (void)deleteButtonTapped:(NSIndexPath *)indexPath {
+
+    //    [self.tableView reloadData];
+}
+
+
+
 
 //
 //- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

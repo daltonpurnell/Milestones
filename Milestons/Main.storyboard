@@ -879,6 +879,9 @@
                                             <state key="normal" image="Trash-can">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="deleteButtonTapped:" destination="Jfh-bi-QJz" eventType="touchUpInside" id="rZL-Al-QK8"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
