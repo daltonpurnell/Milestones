@@ -898,6 +898,7 @@
                                 <connections>
                                     <outlet property="descriptionLabel" destination="ooa-6b-X2T" id="de6-kf-SD9"/>
                                     <outlet property="photoImageView" destination="rBY-In-aBy" id="z7b-GK-2of"/>
+                                    <outlet property="scrollView" destination="Qu2-Re-sRc" id="NIv-n4-1o8"/>
                                     <outlet property="timestampLabel" destination="48l-dk-EiE" id="Z2Q-4b-vsa"/>
                                     <outlet property="titleOfEntryLabel" destination="m4O-SL-oLs" id="fjd-h5-kTd"/>
                                 </connections>

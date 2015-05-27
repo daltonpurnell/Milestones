@@ -33,7 +33,6 @@
 
 #pragma mark - Create
 
-// Needs to pass in the location of the photo in the file system
 - (void)createPhoto {
     
     Photo *photo = [Photo object];
