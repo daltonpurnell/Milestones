@@ -14,7 +14,6 @@ static NSString * const PhotoClassName = @"Photo";
 @implementation Photo
 
 @dynamic entry;
-@dynamic locationOnDevice;
 @dynamic user;
 
 

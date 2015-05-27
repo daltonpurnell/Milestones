@@ -14,7 +14,6 @@
 @interface Photo : PFObject <PFSubclassing>
 
 @property (nonatomic, retain) Entry *entry;
-@property (nonatomic, strong) NSString *locationOnDevice;
 @property (nonatomic, strong) PFUser *user;
 
 
