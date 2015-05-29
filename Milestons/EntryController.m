@@ -38,8 +38,9 @@
     
     entry.titleOfEntry = title;
     entry.descriptionOfEntry = description;
-    entry.scrapbook = scrapbook;
+//    entry.scrapbook = scrapbook;
     entry.timestamp = timestamp;
+    entry.photos = nil;
     
     PFUser *user = [PFUser currentUser];
     entry.user = user;
@@ -49,7 +50,13 @@
     [mutableEntries insertObject:entry atIndex:0];
     scrapbook.entries = mutableEntries;
     
-    [entry saveInBackground];
+    [scrapbook saveEventually];
+    
+    [entry saveEventually];
+    
+//    [entry saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
+//        NSLog(@"Error saving: %@", error);
+//    }];
     
 }
 

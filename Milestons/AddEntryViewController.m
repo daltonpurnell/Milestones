@@ -208,13 +208,15 @@
         [[EntryController sharedInstance] createEntryWithTitle:self.titleTextField.text description:self.descriptionTextView.text date:[NSDate date] inScrapbook:self.scrapbook];
     }
     
-    if (self.photo) {
-        
-        [[PhotoController sharedInstance] updatePhoto:self.photo];
-        
-    } else {
-        [[PhotoController sharedInstance] createPhoto:self.photo inEntry:self.entry];
-    }
+    // TODO: Add photos to entry. As photos are selected, save them to an array, then pass in the array of images to the PhotoController and save them to the entry.
+//    
+//    if (self.photo) {
+//        
+//        [[PhotoController sharedInstance] updatePhoto:self.photo];
+//        
+//    } else {
+//        [[PhotoController sharedInstance] createPhotoWithImage:nil inEntry:self.entry];
+//    }
     
         [self dismissViewControllerAnimated:YES completion:nil];
 }

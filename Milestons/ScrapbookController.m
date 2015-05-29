@@ -1,4 +1,4 @@
-//
+ //
 //  ScrapbookController.m
 //  Milestons
 //
@@ -39,8 +39,10 @@
     scrapbook.timestamp = timestamp;
 
     //setup scrapbook image
-    PFFile *imageFile = [PFFile fileWithData:UIImageJPEGRepresentation(image,0.95)];
-    scrapbook.photo = imageFile;
+    if (image) {
+        PFFile *imageFile = [PFFile fileWithData:UIImageJPEGRepresentation(image,0.95)];
+        scrapbook.photo = imageFile;
+    }
     
     //setup scrapbook user:
     PFUser *user = [PFUser currentUser];

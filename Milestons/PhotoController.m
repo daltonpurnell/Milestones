@@ -33,7 +33,7 @@
 
 #pragma mark - Create
 
-- (void)createPhoto:(UIImage *)myPhoto inEntry:(Entry *)entry {
+- (void)createPhotoWithImage:(UIImage *)myPhoto inEntry:(Entry *)entry {
     
     Photo *photo = [Photo object];
     
