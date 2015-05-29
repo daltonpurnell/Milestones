@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 @import UIKit;
-
+#import "ScrapbookController.h"
 
 @interface EntryListViewDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) NSArray *entries;
+@property (nonatomic, strong) Scrapbook *scrapbook;
 
 @end

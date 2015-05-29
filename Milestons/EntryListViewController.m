@@ -13,6 +13,7 @@
 #import "AddScrapbookViewController.h"
 #import "CustomEntryCell.h"
 #import "PhotoController.h"
+#import "EntryListViewDataSource.h"
 
 
 @import Parse;
@@ -21,31 +22,19 @@
 
 @interface EntryListViewController () <UITableViewDelegate, deleteCellDelegate>
 @property (weak, nonatomic) IBOutlet UINavigationItem *navBar;
+@property (nonatomic, strong) EntryListViewDataSource *tableDataSource;
 
 @end
 
 @implementation EntryListViewController
-// This goes in the implementation file
-+ (EntryListViewController *)sharedInstance {
-    
-    // create an instance of CurrentUser and set it to nil (only gets created once)
-    static EntryListViewController *sharedInstance = nil;
-    
-    // Never create that token again
-    static dispatch_once_t onceToken;
-    
-    // create this line of code only once
-    dispatch_once(&onceToken, ^{
-        sharedInstance = [[EntryListViewController alloc] init];
-    });
-    
-    // next time we call this method, this is the only code that will do anything
-    return sharedInstance;
-}
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.tableDataSource = (EntryListViewDataSource *)self.tableView.dataSource;
+    if (self.scrapbook) {
+        self.tableDataSource.scrapbook = self.scrapbook;
+    }
     
     self.navigationController.toolbarHidden = YES;
     

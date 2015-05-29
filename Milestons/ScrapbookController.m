@@ -67,7 +67,7 @@
     
 //    PFUser *user = [PFUser currentUser];
     [query whereKey:@"user" equalTo:[PFUser currentUser]];
-    [query includeKey:@"Entry"];
+    [query includeKey:@"entries"];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
         if (!error) {
