@@ -154,6 +154,12 @@
     NSLog(@"User dismissed the signUpViewController");
 }
 
+#pragma mark - log out
+
+- (IBAction)logOutButtonTapped:(id)sender {
+    
+    [PFUser logOut];
+}
 
 
 #pragma mark - loading table view with correct data

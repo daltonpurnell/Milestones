@@ -41,11 +41,11 @@
     
     self.titleOfScrapbookLabel.text = [NSString stringWithFormat:@"%@", scrapbook.titleOfScrapbook];
     self.timestampLabel.text = [NSString stringWithFormat:@"%@", formattedDate];
-        
+    
     self.photoImageView.file = scrapbook.photo;
     
     [self.photoImageView loadInBackground];
-    
+
 }
 
 #pragma mark - delete cell

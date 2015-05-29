@@ -38,7 +38,6 @@
     
     entry.titleOfEntry = title;
     entry.descriptionOfEntry = description;
-//    entry.scrapbook = scrapbook;
     entry.timestamp = timestamp;
     entry.photos = nil;
     
@@ -53,10 +52,6 @@
     [scrapbook saveEventually];
     
     [entry saveEventually];
-    
-//    [entry saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
-//        NSLog(@"Error saving: %@", error);
-//    }];
     
 }
 

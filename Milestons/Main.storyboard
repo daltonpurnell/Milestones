@@ -317,6 +317,18 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Your Scrapbooks" id="5dn-fF-DbF">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="id0-qe-038">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VKm-IQ-hcf">
+                                <rect key="frame" x="16" y="7" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOutButtonTapped:" destination="Cyh-bt-Td6" eventType="touchUpInside" id="BeH-it-iQw"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gQQ-1V-zmg">
                             <connections>
                                 <segue destination="du9-zh-6TT" kind="presentation" identifier="presentAddScrapbook" id="Jcj-8v-P0O"/>
@@ -947,6 +959,18 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="5XQ-lp-FVI">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="Z71-BE-40X">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0Cn-mT-i40">
+                                <rect key="frame" x="16" y="7" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOutButtonTapped:" destination="FdX-8r-yfi" eventType="touchUpInside" id="9h6-Zk-Jdu"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="eBZ-cd-uDS">
                             <connections>
                                 <segue destination="UaZ-7O-LOv" kind="presentation" identifier="presentAddEntry" id="3Ow-z2-8AQ"/>
