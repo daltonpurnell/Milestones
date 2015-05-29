@@ -11,8 +11,6 @@
 
 @interface EntryController : NSObject
 
-@property (strong, nonatomic, readonly) NSArray *entries;
-
 + (EntryController *) sharedInstance;
 
 - (void)createEntryWithTitle: (NSString *) title description: (NSString *)description date:(NSDate *)timestamp inScrapbook: (Scrapbook *)scrapbook;

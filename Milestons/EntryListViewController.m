@@ -108,15 +108,15 @@
 }
 
 
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    
-//    if ([segue.identifier isEqualToString:@"presentAddEntry"]) {
-//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-//        AddEntryViewController *addEntryViewController = [segue destinationViewController];
-////        [entryViewController updateWithSB:[EntryController sharedInstance].entries[indexPath.row]];
-//    }
-//
-//}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"presentAddEntry"]) {
+        UINavigationController *navController = [segue destinationViewController];
+        AddEntryViewController *addEntryViewController = navController.viewControllers.firstObject;
+        [addEntryViewController updateWithScrapbook:self.scrapbook];
+    }
+
+}
 
 //
 //- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

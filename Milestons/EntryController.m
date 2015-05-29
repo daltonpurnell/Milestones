@@ -9,10 +9,9 @@
 #import "EntryController.h"
 #import "Entry.h"
 #import "Scrapbook.h"
+#import "ScrapbookController.h"
 
 @interface EntryController()
-
-@property (nonatomic, strong) NSArray *entries;
 
 @end
 
@@ -45,13 +44,13 @@
     PFUser *user = [PFUser currentUser];
     entry.user = user;
     entry.ACL = [PFACL ACLWithUser:user];
-
+    
+    NSMutableArray *mutableEntries = [NSMutableArray arrayWithArray:scrapbook.entries];
+    [mutableEntries insertObject:entry atIndex:0];
+    scrapbook.entries = mutableEntries;
     
     [entry saveInBackground];
     
-    NSMutableArray *mutableEntries = [NSMutableArray arrayWithArray:self.entries];
-    [mutableEntries insertObject:entry atIndex:0];
-    self.entries = mutableEntries;
 }
 
 
@@ -61,26 +60,28 @@
 
 - (void)loadTheseEntriesFromParse:(void (^)(NSError *error))completion {
     
-    NSLog(@"Loading entries from Parse");
-    PFQuery *query = [PFQuery queryWithClassName:@"Entry"];
-    
-    PFUser *user = [PFUser currentUser];
-    [query whereKey:@"user" equalTo:user];
-    
-    __block NSArray *loadEntries = [NSArray new];
-    
-    [query includeKey:@"Photo"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
-        if (!error) {
-            for (Scrapbook *sb in objects) {
-                loadEntries = [loadEntries arrayByAddingObject:sb];
-            }
-            self.entries = loadEntries;
-            completion(nil);
-        } else {
-            completion(error);
-        }
-    }];
+//    NSLog(@"Loading entries from Parse");
+//    PFQuery *query = [PFQuery queryWithClassName:@"Entry"];
+//    
+//    PFUser *user = [PFUser currentUser];
+//    [query whereKey:@"user" equalTo:user];
+//    
+////    [query whereKey:@"scrapbook" equalTo:scrapbook];
+//    
+//    __block NSArray *loadEntries = [NSArray new];
+//    
+//    [query includeKey:@"Photo"];
+//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
+//        if (!error) {
+//            for (Scrapbook *sb in objects) {
+//                loadEntries = [loadEntries arrayByAddingObject:sb];
+//            }
+//            self.entries = loadEntries;
+//            completion(nil);
+//        } else {
+//            completion(error);
+//        }
+//    }];
     
 }
 
@@ -97,12 +98,14 @@
 
 - (void)removeEntry:(Entry *)entry {
     
-    NSMutableArray *mutableEntries = [NSMutableArray arrayWithArray:self.entries];
+    Scrapbook *scrapbook = entry.scrapbook;
+    NSMutableArray *mutableEntries = [NSMutableArray arrayWithArray:scrapbook.entries];
     [mutableEntries removeObject:entry];
-    self.entries = mutableEntries;
+    scrapbook.entries = mutableEntries;
     
 //    [entry unpinInBackground];
     [entry deleteInBackground];
+    [scrapbook saveInBackground];
 }
 
 

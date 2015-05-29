@@ -154,6 +154,21 @@
     UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
     // Set Image
     self.imageView.image = image;
+    
+    // set number of image views to number of photos added
+    
+//    for (int index = 0; index < [PhotoController sharedInstance].photos.count; index++) {
+//        
+//        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%d", index + 1]];
+//        
+//        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+//        
+//        imageView.frame = CGRectMake(index * self.scrollView.bounds.size.width + 20, 20, self.scrollView.bounds.size.width - 40, self.scrollView.bounds.size.height - 40);
+//        imageView.contentMode = UIViewContentModeScaleAspectFit;
+//        
+//        [self.scrollView addSubview:imageView];
+//    }
+    
     [picker dismissViewControllerAnimated:YES completion:nil];
 
 }
@@ -190,7 +205,7 @@
         [[EntryController sharedInstance] updateEntry:self.entry];
         
     } else {
-        [[EntryController sharedInstance] createEntryWithTitle:self.titleTextField.text description:self.descriptionTextView.text date:[NSDate date] inScrapbook:self.entry.scrapbook];
+        [[EntryController sharedInstance] createEntryWithTitle:self.titleTextField.text description:self.descriptionTextView.text date:[NSDate date] inScrapbook:self.scrapbook];
     }
     
     if (self.photo) {
@@ -202,6 +217,13 @@
     }
     
         [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+- (void)updateWithScrapbook:(Scrapbook *)scrapbook {
+    if (scrapbook) {
+        self.scrapbook = scrapbook;
+    }
 }
 
 

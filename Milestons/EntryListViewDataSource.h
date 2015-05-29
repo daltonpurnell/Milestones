@@ -12,4 +12,6 @@
 
 @interface EntryListViewDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
 
+@property (nonatomic, strong) NSArray *entries;
+
 @end

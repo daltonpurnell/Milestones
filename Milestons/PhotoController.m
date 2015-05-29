@@ -74,6 +74,8 @@
     PFUser *user = [PFUser currentUser];
     [query whereKey:@"user" equalTo:user];
     
+//    [query whereKey:@"entry" equalTo:entry];
+    
 //    [query fromLocalDatastore];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
         if (!error) {

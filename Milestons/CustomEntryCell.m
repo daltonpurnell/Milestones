@@ -27,17 +27,17 @@
 
     // set number of image views to number of photos added
     
-    for (int index = 0; index < [PhotoController sharedInstance].photos.count; index++) {
-    
-        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%d", index + 1]];
-    
-        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-    
-        imageView.frame = CGRectMake(index * self.contentView.bounds.size.width + 20, 20, self.scrollView.bounds.size.width - 40, self.contentView.bounds.size.height - 40);
-        imageView.contentMode = UIViewContentModeScaleAspectFit;
-    
-        [self.scrollView addSubview:imageView];
-    }
+//    for (int index = 0; index < [PhotoController sharedInstance].photos.count; index++) {
+//    
+//        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%d", index + 1]];
+//    
+//        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+//    
+//        imageView.frame = CGRectMake(index * self.scrollView.bounds.size.width + 20, 20, self.scrollView.bounds.size.width - 40, self.contentView.bounds.size.height - 40);
+//        imageView.contentMode = UIViewContentModeScaleAspectFit;
+//    
+//        [self.scrollView addSubview:imageView];
+//    }
     
 }
 

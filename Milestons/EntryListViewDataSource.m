@@ -23,17 +23,17 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     
-    if ([EntryController sharedInstance].entries.count == 0) {
+    if (self.entries.count == 0) {
         return 1;
     } else {
-        return [EntryController sharedInstance].entries.count;
+        return self.entries.count;
     }
 }
 
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-   if ([EntryController sharedInstance].entries.count == 0) {
+   if (self.entries.count == 0) {
        
        // return emptyState cell
        UITableViewCell *emptyStateCell = [tableView dequeueReusableCellWithIdentifier:@"emptyStateCell"];
@@ -43,7 +43,7 @@
    }else {
        
     // return customCell
-    Entry *entry = [EntryController sharedInstance].entries[indexPath.row];
+    Entry *entry = self.entries[indexPath.row];
     
     CustomEntryCell *customCell = [tableView dequeueReusableCellWithIdentifier:@"entryCell"];
        customCell.indexPath = indexPath;
@@ -56,7 +56,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if ([EntryController sharedInstance].entries.count == 0) {
+    if (self.entries.count == 0) {
         
         return tableView.frame.size.height;
         
@@ -72,7 +72,7 @@
 
 -(void)deleteButtonTapped:(NSIndexPath*)indexPath {
     
-    Entry *entry = [[EntryController sharedInstance].entries objectAtIndex:indexPath.row];
+    Entry *entry = [self.entries objectAtIndex:indexPath.row];
     [[EntryController sharedInstance] removeEntry:entry];
 
     //    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
