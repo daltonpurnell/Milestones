@@ -58,7 +58,7 @@
 }
 
 
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if ([ScrapbookController sharedInstance].scrapbooks.count == 0) {
         

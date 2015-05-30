@@ -18,6 +18,7 @@ static NSString *const cellDeletedNotificationKey = @"cell deleted";
 
 @property (strong, nonatomic) Scrapbook *scrapbook;
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *settingsButton;
 
 
 @end

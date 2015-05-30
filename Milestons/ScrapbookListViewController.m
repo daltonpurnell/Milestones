@@ -15,6 +15,7 @@
 #import "CustomScrapbookCell.h"
 #import "MyLoginViewController.h"
 #import "MySignUpViewController.h"
+#import "SWRevealViewController.h"
 
 @import Parse;
 @import ParseUI;
@@ -29,6 +30,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.settingsButton setTarget: self.revealViewController];
+        [self.settingsButton setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
+
     
     [Appearance initializeAppearanceDefaults];
     
