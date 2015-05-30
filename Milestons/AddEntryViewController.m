@@ -34,9 +34,6 @@
     self.titleTextField.delegate = self;
     self.descriptionTextView.delegate = self;
     [Appearance initializeAppearanceDefaults];
-    
-    
-     // set number of image views to number of photos added
 
 }
 
@@ -147,6 +144,7 @@
 //    self.imageView.image = image;
 
     // collection view
+    
     
     [picker dismissViewControllerAnimated:YES completion:nil];
 
