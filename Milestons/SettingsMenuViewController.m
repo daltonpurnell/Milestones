@@ -19,17 +19,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+//    self.view.backgroundColor = [UIColor colorWithRed:74/255.0 green:75/255.0 blue:76/255.0 alpha:1];
+
 }
 
 - (IBAction)logOutButtonTapped:(id)sender {
     
-    [PFUser logOut];
-    
-    
+    [self presentLogOutAlert];
 }
 
 
+
+-(void)presentLogOutAlert {
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Are you sure you want to log out?" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+        [PFUser logOut];
+        
+    }]];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDefault handler:nil]];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
 
 
 @end
