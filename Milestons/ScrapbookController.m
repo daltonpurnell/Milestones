@@ -24,6 +24,10 @@
         sharedInstance = [ScrapbookController new];
         [sharedInstance loadScrapbooksFromParse:^(NSError *error) {
             // Nothing
+        
+            if (error) {
+                NSLog(@"Error: %@", error);
+            }
         }];
     });
     return sharedInstance;
@@ -65,19 +69,23 @@
     
     PFQuery *query = [Scrapbook query];
     
-//    PFUser *user = [PFUser currentUser];
-    [query whereKey:@"user" equalTo:[PFUser currentUser]];
-    [query includeKey:@"entries"];
+    PFUser *user = [PFUser currentUser];
     
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
-        if (!error) {
-            self.scrapbooks = objects;
-            completion(nil);
-        } else {
-            completion(error);
-        }
-    }];
-    
+    if (user) {
+        [query whereKey:@"user" equalTo:user];
+        [query includeKey:@"entries"];
+        
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
+            if (!error) {
+                self.scrapbooks = objects;
+                completion(nil);
+            } else {
+                completion(error);
+            }
+        }];
+    } else {
+        NSLog(@"No user logged in");
+    }
     
 }
 

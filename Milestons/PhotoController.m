@@ -49,7 +49,12 @@
                 photo.user = user;
                 photo.ACL = [PFACL ACLWithUser:user];
 
-                [photo saveInBackground];
+                NSMutableArray *mutablePhotos = [NSMutableArray arrayWithArray:entry.photos];
+                [mutablePhotos insertObject:photo atIndex:0];
+                self.photos = mutablePhotos;
+                
+                [entry saveEventually];
+                [photo saveEventually];
 
             }else {
                 NSLog(@"%@",error);
@@ -57,9 +62,7 @@
         }
     }];
     
-    NSMutableArray *mutablePhotos = [NSMutableArray arrayWithArray:self.photos];
-    [mutablePhotos insertObject:photo atIndex:0];
-    self.photos = mutablePhotos;
+
 }
 
 
@@ -68,25 +71,27 @@
 
 - (void)loadThesePhotosFromParse:(void (^)(NSError *error))completion {
     
-    NSLog(@"Loading photos from Parse");
-    PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
-    
-    PFUser *user = [PFUser currentUser];
-    [query whereKey:@"user" equalTo:user];
-    
-//    [query whereKey:@"entry" equalTo:entry];
-    
-//    [query fromLocalDatastore];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
-        if (!error) {
-            self.photos = objects;
-            completion(nil);
-        } else {
-            completion(error);
-        }
-    }];
+//    NSLog(@"Loading photos from Parse");
+//    PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
+//    
+//    PFUser *user = [PFUser currentUser];
+//    [query whereKey:@"user" equalTo:user];
+//    
+////    [query whereKey:@"entry" equalTo:entry];
+//    
+////    [query fromLocalDatastore];
+//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
+//        if (!error) {
+//            self.photos = objects;
+//            completion(nil);
+//        } else {
+//            completion(error);
+//        }
+//    }];
     
 }
+
+
 
 
 #pragma mark - Update

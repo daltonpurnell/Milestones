@@ -92,6 +92,10 @@
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
     self.currentUser = user;
     
+    [[ScrapbookController sharedInstance]loadScrapbooksFromParse:^(NSError *error) {
+        // Nothing
+    }];
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
