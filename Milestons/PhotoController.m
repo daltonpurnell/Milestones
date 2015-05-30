@@ -106,10 +106,10 @@
 #pragma mark - Delete
 
 - (void)removePhoto:(Photo *)photo {
-    
-    NSMutableArray *mutablePhotos = [NSMutableArray arrayWithArray:self.photos];
+    Entry *entry = photo.entry;
+    NSMutableArray *mutablePhotos = [NSMutableArray arrayWithArray:entry.photos];
     [mutablePhotos removeObject:photo];
-    self.photos = mutablePhotos;
+    entry.photos = mutablePhotos;
     
 //    [photo unpinInBackground];
     [photo deleteInBackground];
