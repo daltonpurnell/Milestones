@@ -282,6 +282,7 @@
                                     <outlet property="photoImageView" destination="ebh-xf-pRW" id="d7F-8M-6kr"/>
                                     <outlet property="timestampLabel" destination="xS7-BP-qyO" id="wCe-Q7-x8g"/>
                                     <outlet property="titleOfScrapbookLabel" destination="KxY-iZ-7P5" id="XY9-cb-0fQ"/>
+                                    <segue destination="FdX-8r-yfi" kind="show" identifier="showEntryList" id="kLJ-6V-dOh"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="emptyStateCell" id="uqk-Rp-Edb">
