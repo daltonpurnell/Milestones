@@ -20,8 +20,7 @@
 @interface AddEntryViewController () <UITextFieldDelegate, MFMailComposeViewControllerDelegate, UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
 
 @end
 
@@ -36,21 +35,11 @@
     
     
      // set number of image views to number of photos added
-    
-    for (int index = 0; index < [PhotoController sharedInstance].photos.count; index++) {
-        
-        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%d", index + 1]];
-        
-        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-        
-        imageView.frame = CGRectMake(index * self.view.bounds.size.width + 20, 20, self.view.bounds.size.width - 40, self.view.bounds.size.height - 40);
-        imageView.contentMode = UIViewContentModeScaleAspectFit;
-        
-        [self.scrollView addSubview:imageView];
-    }
 
 }
 
+
+#pragma mark - buttons
 
 - (IBAction)cameraButtonTapped:(id)sender {
     
@@ -151,27 +140,16 @@
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     
-    UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+//    UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
     // Set Image
-    self.imageView.image = image;
-    
-    // set number of image views to number of photos added
-    
-//    for (int index = 0; index < [PhotoController sharedInstance].photos.count; index++) {
-//        
-//        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%d", index + 1]];
-//        
-//        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-//        
-//        imageView.frame = CGRectMake(index * self.scrollView.bounds.size.width + 20, 20, self.scrollView.bounds.size.width - 40, self.scrollView.bounds.size.height - 40);
-//        imageView.contentMode = UIViewContentModeScaleAspectFit;
-//        
-//        [self.scrollView addSubview:imageView];
-//    }
+//    self.imageView.image = image;
+
+    // collection view
     
     [picker dismissViewControllerAnimated:YES completion:nil];
 
 }
+
 
 
 - (IBAction)shareButtonTapped:(id)sender {
@@ -209,14 +187,7 @@
     }
     
     // TODO: Add photos to entry. As photos are selected, save them to an array, then pass in the array of images to the PhotoController and save them to the entry.
-//    
-//    if (self.photo) {
-//        
-//        [[PhotoController sharedInstance] updatePhoto:self.photo];
-//        
-//    } else {
-//        [[PhotoController sharedInstance] createPhotoWithImage:nil inEntry:self.entry];
-//    }
+
     
         [self dismissViewControllerAnimated:YES completion:nil];
 }

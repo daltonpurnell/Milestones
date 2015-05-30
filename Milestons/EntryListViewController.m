@@ -116,19 +116,5 @@
 
 }
 
-//
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    // Get the new view controller using [segue destinationViewController].
-//    if ([segue.identifier isEqualToString:@"presentAddEntry"]) {
-//        
-//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-//        
-//        AddEntryViewController *addEntryViewController = segue.destinationViewController;
-//        
-//        Entry *entry = [EntryController sharedInstance].entries[indexPath.row];
-//        
-//        addEntryViewController.entry = entry;
-//    }
-//}
 
 @end
