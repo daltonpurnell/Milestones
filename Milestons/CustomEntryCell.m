@@ -11,6 +11,11 @@
 #import "ScrapbookController.h"
 #import "Entry.h"
 #import "PhotoController.h"
+#import "CollectionViewDataSource.h"
+
+@interface CustomEntryCell () <UICollectionViewDelegate>
+
+@end
 
 @implementation CustomEntryCell
 
@@ -41,12 +46,6 @@
     
     self.descriptionLabel.text = [NSString stringWithFormat:@"%@", entry.descriptionOfEntry];
     
-//    self.photoImageView.image = [UIImage imageWithData:entry.photos.getData];
-    
-//    self.photoImageView.file = 
-    
-//    [self.photoImageView loadInBackground];
-
     
 }
 

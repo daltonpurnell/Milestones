@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleOfEntryLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timestampLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 
 @property (strong, nonatomic) NSIndexPath *indexPath;
