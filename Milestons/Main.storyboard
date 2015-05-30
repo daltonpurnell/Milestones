@@ -946,10 +946,10 @@
             </objects>
             <point key="canvasLocation" x="2074" y="1049"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Settings Menu View Controller-->
         <scene sceneID="JMz-Zo-3ZJ">
             <objects>
-                <tableViewController id="TWA-rV-WkC" sceneMemberID="viewController">
+                <tableViewController id="TWA-rV-WkC" customClass="SettingsMenuViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Lag-iq-KmR">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1030,6 +1030,9 @@
                                                         <color key="titleColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="logOutButtonTapped:" destination="TWA-rV-WkC" eventType="touchUpInside" id="tXl-OE-ngD"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>

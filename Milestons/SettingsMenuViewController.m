@@ -8,6 +8,8 @@
 
 #import "SettingsMenuViewController.h"
 #import "SWRevealViewController.h"
+@import Parse;
+
 
 @interface SettingsMenuViewController ()
 
@@ -19,6 +21,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
+- (IBAction)logOutButtonTapped:(id)sender {
+    
+    [PFUser logOut];
+    
+    
+}
+
 
 
 
