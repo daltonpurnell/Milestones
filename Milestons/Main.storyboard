@@ -456,7 +456,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="QHm-t2-MBj">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="QHm-t2-MBj">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -758,6 +758,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="collectionView" destination="X1r-lL-4dS" id="JFC-1v-tFj"/>
                         <outlet property="descriptionTextView" destination="Dge-dQ-eke" id="Njz-VZ-5au"/>
                         <outlet property="titleTextField" destination="Tdg-WY-h02" id="Rib-9j-gOI"/>
                     </connections>

@@ -49,6 +49,7 @@
 		CF2C24871B01008A00D28EAB /* CustomScrapbookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C24861B01008A00D28EAB /* CustomScrapbookCell.m */; };
 		CF2C248A1B01009F00D28EAB /* CustomEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C24891B01009F00D28EAB /* CustomEntryCell.m */; };
 		CFE04C071B1A0DEA001F1DA6 /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE04C061B1A0DEA001F1DA6 /* SettingsController.m */; };
+		CFE04C0A1B1A1C73001F1DA6 /* CollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE04C091B1A1C73001F1DA6 /* CollectionViewDataSource.m */; };
 		CFEC12DC1B04379500AB6C1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFEC12DB1B04379500AB6C1B /* Main.storyboard */; };
 		CFEC12E91B0C117800AB6C1B /* MyLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */; };
 		CFEC12EC1B0C119100AB6C1B /* MySignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12EB1B0C119100AB6C1B /* MySignUpViewController.m */; };
@@ -129,6 +130,8 @@
 		CF2C24891B01009F00D28EAB /* CustomEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomEntryCell.m; sourceTree = "<group>"; };
 		CFE04C051B1A0DEA001F1DA6 /* SettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsController.h; sourceTree = "<group>"; };
 		CFE04C061B1A0DEA001F1DA6 /* SettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsController.m; sourceTree = "<group>"; };
+		CFE04C081B1A1C73001F1DA6 /* CollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewDataSource.h; sourceTree = "<group>"; };
+		CFE04C091B1A1C73001F1DA6 /* CollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewDataSource.m; sourceTree = "<group>"; };
 		CFEC12DB1B04379500AB6C1B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CFEC12E71B0C117800AB6C1B /* MyLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLoginViewController.h; path = ../MyLoginViewController.h; sourceTree = "<group>"; };
 		CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyLoginViewController.m; path = ../MyLoginViewController.m; sourceTree = "<group>"; };
@@ -289,6 +292,8 @@
 				CF2C23071AF5B4C300D28EAB /* EntryListViewDataSource.m */,
 				CF2C23111AF5C03C00D28EAB /* AddEntryViewController.h */,
 				CF2C23121AF5C03C00D28EAB /* AddEntryViewController.m */,
+				CFE04C081B1A1C73001F1DA6 /* CollectionViewDataSource.h */,
+				CFE04C091B1A1C73001F1DA6 /* CollectionViewDataSource.m */,
 				CF2C24881B01009F00D28EAB /* CustomEntryCell.h */,
 				CF2C24891B01009F00D28EAB /* CustomEntryCell.m */,
 			);
@@ -441,6 +446,7 @@
 				CF2C22F61AF5B45900D28EAB /* ScrapbookListViewController.m in Sources */,
 				CF2C23131AF5C03C00D28EAB /* AddEntryViewController.m in Sources */,
 				CF2C24871B01008A00D28EAB /* CustomScrapbookCell.m in Sources */,
+				CFE04C0A1B1A1C73001F1DA6 /* CollectionViewDataSource.m in Sources */,
 				CF2C23101AF5C01D00D28EAB /* AddScrapbookViewController.m in Sources */,
 				CF2C23161AF5C26200D28EAB /* Appearance.m in Sources */,
 			);
