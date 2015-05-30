@@ -10,6 +10,7 @@
 
 #import "EntryController.h"
 #import "PhotoController.h"
+#import "CollectionViewDataSource.h"
 
 @import ParseUI;
 
@@ -23,6 +24,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *timestampLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (nonatomic, strong) CollectionViewDataSource *collectionViewDataSource;
+@property (strong, nonatomic) Entry *entry;
 
 
 @property (strong, nonatomic) NSIndexPath *indexPath;

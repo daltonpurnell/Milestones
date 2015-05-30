@@ -88,15 +88,6 @@
     [self.tableView reloadData];
 }
 
-#pragma mark - log out
-
-- (IBAction)logOutButtonTapped:(id)sender {
-    
-    [PFUser logOut];
-    
-}
-
-
 
 #pragma mark - deleteCellDelegate method
 

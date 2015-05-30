@@ -21,7 +21,10 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    
+    self.collectionViewDataSource = (CollectionViewDataSource *)self.collectionView.dataSource;
+    if (self.entry) {
+        self.collectionViewDataSource.entry = self.entry;
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
