@@ -9,13 +9,13 @@
 #import "CollectionViewDataSource.h"
 #import "PhotoController.h"
 #import "EntryController.h"
+#import "CustomCollectionViewCell.h"
 
 @implementation CollectionViewDataSource
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"imageCell" forIndexPath:indexPath];
-    
+    //create cell...
+   CustomCollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
     return cell;
 }
 

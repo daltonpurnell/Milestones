@@ -14,6 +14,6 @@
 @interface CollectionViewDataSource : NSObject <UICollectionViewDataSource>
 
 @property (nonatomic, strong) Entry *entry;
-
+@property (nonatomic, strong)UIImageView *cellImageView;
 
 @end

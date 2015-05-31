@@ -171,6 +171,7 @@
     [alertController addAction:[UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
         
         // write code to delete the draft here
+        [[ScrapbookController sharedInstance]removeScrapbook:self.scrapbook];
         
         [self dismissViewControllerAnimated:YES completion:nil];
         

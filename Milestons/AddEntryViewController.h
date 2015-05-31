@@ -9,12 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "Entry.h"
 
-@interface AddEntryViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface AddEntryViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UICollectionViewDelegate>
 
 @property (strong, nonatomic) Entry *entry;
 @property (strong, nonatomic) Scrapbook *scrapbook;
 
 @property (strong, nonatomic) Photo *photo;
+@property (nonatomic, strong)UIImageView *cellImageView;
+
 
 //-(void)updateWithEntry:(Entry *)entry;
 - (void)updateWithScrapbook:(Scrapbook *)scrapbook;

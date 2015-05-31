@@ -12,6 +12,7 @@
 #import "Entry.h"
 #import "PhotoController.h"
 #import "CollectionViewDataSource.h"
+#import "CustomCollectionViewCell.h"
 
 @interface CustomEntryCell () <UICollectionViewDelegate>
 

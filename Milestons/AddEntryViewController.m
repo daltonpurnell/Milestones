@@ -12,6 +12,7 @@
 #import "Entry.h"
 #import "PhotoController.h"
 #import "CollectionViewDataSource.h"
+#import "CustomCollectionViewCell.h"
 
 
 
@@ -30,7 +31,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.collectionView.delegate = self;
     self.titleTextField.delegate = self;
     self.descriptionTextView.delegate = self;
     [Appearance initializeAppearanceDefaults];
@@ -139,12 +140,12 @@
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     
-//    UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
-    // Set Image
-//    self.imageView.image = image;
-
-    // collection view
-    
+    // add images to collection view
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    //set image when image is chosen from image picker controller
+    self.cellImageView.image = chosenImage;
+    //reload collectionView
+    [self.collectionView reloadData];
     
     [picker dismissViewControllerAnimated:YES completion:nil];
 
@@ -269,6 +270,23 @@
     }
     
     return YES;
+}
+
+#pragma mark - Collection view data source methods
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+
+    //create cell...
+    CustomCollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
+    
+    return cell;
+    
+}
+
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    
+    return self.entry.photos.count;
 }
 
 @end
