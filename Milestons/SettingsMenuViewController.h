@@ -8,6 +8,6 @@
 
 #import "ViewController.h"
 
-@interface SettingsMenuViewController : UITableViewController <UITableViewDataSource>
+@interface SettingsMenuViewController : UITableViewController
 
 @end
