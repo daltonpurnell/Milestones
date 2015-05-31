@@ -629,6 +629,10 @@
                                 <exclude reference="pbe-WT-ZPv"/>
                                 <exclude reference="rdv-2m-Ig0"/>
                                 <exclude reference="ree-25-AI4"/>
+                                <exclude reference="3pY-m9-Msf"/>
+                                <exclude reference="7Bq-gi-vee"/>
+                                <exclude reference="m3g-Z1-umV"/>
+                                <exclude reference="teU-jz-nle"/>
                                 <exclude reference="68F-KY-r53"/>
                                 <exclude reference="OYu-Ma-hcn"/>
                                 <exclude reference="XhB-aN-RiK"/>
@@ -638,10 +642,6 @@
                                 <exclude reference="M64-bq-sZd"/>
                                 <exclude reference="vNF-71-cm6"/>
                                 <exclude reference="x96-Np-APq"/>
-                                <exclude reference="3pY-m9-Msf"/>
-                                <exclude reference="7Bq-gi-vee"/>
-                                <exclude reference="m3g-Z1-umV"/>
-                                <exclude reference="teU-jz-nle"/>
                                 <exclude reference="27a-Lv-ywh"/>
                                 <exclude reference="Gsf-ZR-KrD"/>
                                 <exclude reference="NAC-9K-QLV"/>
@@ -709,13 +709,6 @@
                                 <include reference="rdv-2m-Ig0"/>
                                 <include reference="ree-25-AI4"/>
                                 <exclude reference="uVn-r9-3WI"/>
-                                <include reference="68F-KY-r53"/>
-                                <include reference="OYu-Ma-hcn"/>
-                                <include reference="hqE-H2-gNR"/>
-                                <exclude reference="iPI-mf-js2"/>
-                                <exclude reference="tqu-M3-0Ud"/>
-                                <exclude reference="iEp-24-5hx"/>
-                                <include reference="x96-Np-APq"/>
                                 <include reference="3pY-m9-Msf"/>
                                 <include reference="7Bq-gi-vee"/>
                                 <exclude reference="C2v-2q-qmI"/>
@@ -724,6 +717,13 @@
                                 <exclude reference="cpw-sk-ziv"/>
                                 <include reference="m3g-Z1-umV"/>
                                 <include reference="teU-jz-nle"/>
+                                <include reference="68F-KY-r53"/>
+                                <include reference="OYu-Ma-hcn"/>
+                                <include reference="hqE-H2-gNR"/>
+                                <exclude reference="iPI-mf-js2"/>
+                                <exclude reference="tqu-M3-0Ud"/>
+                                <exclude reference="iEp-24-5hx"/>
+                                <include reference="x96-Np-APq"/>
                                 <include reference="Gsf-ZR-KrD"/>
                                 <include reference="c8k-RP-k9P"/>
                                 <exclude reference="ije-K0-f93"/>
@@ -977,7 +977,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8A-Tv-wS5">
-                                                    <rect key="frame" x="8" y="7" width="118" height="30"/>
+                                                    <rect key="frame" x="62" y="7" width="118" height="30"/>
                                                     <state key="normal" title="Add Contributors">
                                                         <color key="titleColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -995,7 +995,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7W-fU-5Fa">
-                                                    <rect key="frame" x="8" y="7" width="108" height="30"/>
+                                                    <rect key="frame" x="62" y="7" width="108" height="30"/>
                                                     <state key="normal" title="Send Feedback">
                                                         <color key="titleColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1010,7 +1010,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUf-tX-lWU">
-                                                    <rect key="frame" x="8" y="7" width="32" height="30"/>
+                                                    <rect key="frame" x="62" y="7" width="32" height="30"/>
                                                     <state key="normal" title="Rate">
                                                         <color key="titleColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1025,7 +1025,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEN-YT-CEd">
-                                                    <rect key="frame" x="8" y="7" width="56" height="30"/>
+                                                    <rect key="frame" x="62" y="7" width="56" height="30"/>
                                                     <state key="normal" title="Log Out">
                                                         <color key="titleColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
