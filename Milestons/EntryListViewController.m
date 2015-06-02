@@ -14,6 +14,7 @@
 #import "CustomEntryCell.h"
 #import "PhotoController.h"
 #import "EntryListViewDataSource.h"
+#import "CustomCollectionViewCell.h"
 
 
 @import Parse;

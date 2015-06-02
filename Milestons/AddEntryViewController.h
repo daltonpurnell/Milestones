@@ -15,7 +15,6 @@
 @property (strong, nonatomic) Scrapbook *scrapbook;
 
 @property (strong, nonatomic) Photo *photo;
-@property (nonatomic, strong)UIImageView *cellImageView;
 
 
 //-(void)updateWithEntry:(Entry *)entry;

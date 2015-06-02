@@ -12,7 +12,7 @@
 #import "Entry.h"
 #import "PhotoController.h"
 #import "CollectionViewDataSource.h"
-#import "CustomCollectionViewCell.h"
+#import "CustomCollectionViewCell2.h"
 
 
 
@@ -140,12 +140,16 @@
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     
-    // add images to collection view
+
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    //set image when image is chosen from image picker controller
-    self.cellImageView.image = chosenImage;
-    //reload collectionView
+    
+    CustomCollectionViewCell2 *customCell = [CustomCollectionViewCell2 new];
+
+    customCell.imageView.image = chosenImage;
+
     [self.collectionView reloadData];
+    
+    [[PhotoController sharedInstance]createPhotoWithImage:chosenImage inEntry:self.entry];
     
     [picker dismissViewControllerAnimated:YES completion:nil];
 
@@ -277,7 +281,7 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
     //create cell...
-    CustomCollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
+    CustomCollectionViewCell2 *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
     
     return cell;
     
