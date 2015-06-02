@@ -144,17 +144,14 @@
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     
     CustomCollectionViewCell2 *customCell = [CustomCollectionViewCell2 new];
-
     customCell.imageView.image = chosenImage;
-
-    [self.collectionView reloadData];
     
     [[PhotoController sharedInstance]createPhotoWithImage:chosenImage inEntry:self.entry];
+    [self.collectionView reloadData];
     
     [picker dismissViewControllerAnimated:YES completion:nil];
 
 }
-
 
 
 - (IBAction)shareButtonTapped:(id)sender {
@@ -283,7 +280,10 @@
     //create cell...
     CustomCollectionViewCell2 *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
     
+    [cell updateWithPhoto:self.photo];
+    
     return cell;
+    
     
 }
 

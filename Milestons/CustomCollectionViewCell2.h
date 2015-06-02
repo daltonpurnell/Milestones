@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PhotoController.h"
 
 @interface CustomCollectionViewCell2 : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
+-(void)updateWithPhoto:(Photo *)photo;
 
 @end

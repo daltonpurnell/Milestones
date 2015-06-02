@@ -10,4 +10,8 @@
 
 @implementation CustomCollectionViewCell
 
+-(void)updateWithPhoto:(Photo *)photo {
+    
+}
+
 @end
