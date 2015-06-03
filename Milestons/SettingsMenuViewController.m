@@ -9,9 +9,10 @@
 #import "SettingsMenuViewController.h"
 #import "SWRevealViewController.h"
 @import Parse;
+@import MessageUI;
 
 
-@interface SettingsMenuViewController ()
+@interface SettingsMenuViewController () <MFMailComposeViewControllerDelegate>
 
 @end
 
@@ -22,6 +23,7 @@
     
     self.optionsList= [[NSArray alloc] initWithObjects: @"Add Contributors", @"Send Feedback", @"Rate",
                   @"Log Out", nil];
+    
     self.tableView.backgroundColor = [UIColor colorWithRed:74/255.0 green:75/255.0 blue:76/255.0 alpha:1];
     
 }
@@ -58,8 +60,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"addContributors" forIndexPath:indexPath];
     
     cell.textLabel.text=[self.optionsList objectAtIndex:indexPath.row];
-    cell.textLabel.textColor = [UIColor whiteColor];
-    cell.backgroundColor = [UIColor colorWithRed:74/255.0 green:75/255.0 blue:76/255.0 alpha:1];
+    cell.textLabel.textColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:255/255.0 alpha:1];
+    cell.backgroundColor = [UIColor clearColor];
     
     return cell;
 }
@@ -73,10 +75,26 @@
     }
     
     if (indexPath.row == 1) {
+        
+        MFMailComposeViewController *mailViewController = [MFMailComposeViewController new];
+        mailViewController.mailComposeDelegate = self;
+        [self presentViewController:mailViewController animated:YES completion:nil];
         NSLog(@"Send Feedback");
     }
     
     if (indexPath.row == 2) {
+        
+        // Take user to app store
+//        {
+//            NSString *appStoreString = @"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa";
+//            appStoreString = [NSString stringWithFormat:@"%@/wa/viewContentsUserReviews?", appStoreString];
+//            appStoreString = [NSString stringWithFormat:@"%@type=Purple+Software&id=", appStoreString];
+//            
+//            // app id from itunesconnect
+//            appStoreString = [NSString stringWithFormat:@"%@yourAppIDHere", appStoreString];
+//            
+//            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:appStoreString]];
+//        }
         NSLog(@"Rate");
     }
     
