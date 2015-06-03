@@ -141,7 +141,7 @@
 {
     
 
-    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    UIImage *chosenImage = [info valueForKey:UIImagePickerControllerOriginalImage];
     
     CustomCollectionViewCell2 *customCell = [CustomCollectionViewCell2 new];
     customCell.imageView.image = chosenImage;

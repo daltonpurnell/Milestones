@@ -20,15 +20,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.view.backgroundColor = [UIColor colorWithRed:74/255.0 green:75/255.0 blue:76/255.0 alpha:1];
-
-}
-
-- (IBAction)logOutButtonTapped:(id)sender {
+    self.optionsList= [[NSArray alloc] initWithObjects: @"Add Contributors", @"Send Feedback", @"Rate",
+                  @"Log Out", nil];
+    self.tableView.backgroundColor = [UIColor colorWithRed:74/255.0 green:75/255.0 blue:76/255.0 alpha:1];
     
-    [self presentLogOutAlert];
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    
+    
 }
-
 
 
 -(void)presentLogOutAlert {
@@ -46,5 +46,49 @@
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
+
+#pragma mark - data source methods
+
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return [self.optionsList count];
+    
+}
+
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"addContributors" forIndexPath:indexPath];
+    
+    cell.textLabel.text=[self.optionsList objectAtIndex:indexPath.row];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.backgroundColor = [UIColor colorWithRed:74/255.0 green:75/255.0 blue:76/255.0 alpha:1];
+    
+    return cell;
+}
+
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.row == 0) {
+        NSLog(@"Add Contributors");
+    }
+    
+    if (indexPath.row == 1) {
+        NSLog(@"Send Feedback");
+    }
+    
+    if (indexPath.row == 2) {
+        NSLog(@"Rate");
+    }
+    
+    else {
+        [self presentLogOutAlert];
+        NSLog(@"Log Out");
+    }
+    
+}
 
 @end

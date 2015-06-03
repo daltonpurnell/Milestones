@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 
-@interface SettingsMenuViewController : UITableViewController
+@interface SettingsMenuViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (strong, nonatomic) NSArray *optionsList;
+
 
 @end

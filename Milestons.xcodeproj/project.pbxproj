@@ -206,9 +206,11 @@
 		CF2C22C21AF5B40A00D28EAB = {
 			isa = PBXGroup;
 			children = (
+				CFE04C341B1A5802001F1DA6 /* SettingsMenu */,
 				CFE04C0E1B1A3999001F1DA6 /* InAppPurchases */,
 				CF2C236A1AF7EE6C00D28EAB /* Model */,
-				CF2C22CD1AF5B40A00D28EAB /* Milestons */,
+				CFE360461B1E2FE5003323A7 /* Controller */,
+				CF2C22CD1AF5B40A00D28EAB /* View */,
 				CF2C22E71AF5B40A00D28EAB /* MilestonsTests */,
 				CF2C22CC1AF5B40A00D28EAB /* Products */,
 			);
@@ -223,7 +225,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CF2C22CD1AF5B40A00D28EAB /* Milestons */ = {
+		CF2C22CD1AF5B40A00D28EAB /* View */ = {
 			isa = PBXGroup;
 			children = (
 				CF2C22D21AF5B40A00D28EAB /* AppDelegate.h */,
@@ -238,8 +240,6 @@
 				CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */,
 				CFEC12EA1B0C119100AB6C1B /* MySignUpViewController.h */,
 				CFEC12EB1B0C119100AB6C1B /* MySignUpViewController.m */,
-				CFE04C341B1A5802001F1DA6 /* SettingsMenu */,
-				CF2C23301AF5EE3900D28EAB /* Photos */,
 				CF2C230C1AF5B50100D28EAB /* Scrapbooks */,
 				CF2C230D1AF5B50D00D28EAB /* Entries */,
 				CF2C22DB1AF5B40A00D28EAB /* Images.xcassets */,
@@ -247,6 +247,7 @@
 				CFEC12DB1B04379500AB6C1B /* Main.storyboard */,
 				CF2C22CE1AF5B40A00D28EAB /* Supporting Files */,
 			);
+			name = View;
 			path = Milestons;
 			sourceTree = "<group>";
 		};
@@ -299,14 +300,8 @@
 		CF2C230C1AF5B50100D28EAB /* Scrapbooks */ = {
 			isa = PBXGroup;
 			children = (
-				CF2C22F41AF5B45900D28EAB /* ScrapbookListViewController.h */,
-				CF2C22F51AF5B45900D28EAB /* ScrapbookListViewController.m */,
-				CF2C23031AF5B4B000D28EAB /* ScrapbookListViewDataSource.h */,
-				CF2C23041AF5B4B000D28EAB /* ScrapbookListViewDataSource.m */,
-				CF2C230E1AF5C01D00D28EAB /* AddScrapbookViewController.h */,
-				CF2C230F1AF5C01D00D28EAB /* AddScrapbookViewController.m */,
-				CF2C24851B01008A00D28EAB /* CustomScrapbookCell.h */,
-				CF2C24861B01008A00D28EAB /* CustomScrapbookCell.m */,
+				CFE360441B1E2EA7003323A7 /* ListView */,
+				CFE360451B1E2EB3003323A7 /* DetailView */,
 			);
 			name = Scrapbooks;
 			sourceTree = "<group>";
@@ -314,29 +309,10 @@
 		CF2C230D1AF5B50D00D28EAB /* Entries */ = {
 			isa = PBXGroup;
 			children = (
-				CF2C23091AF5B4D800D28EAB /* EntryListViewController.h */,
-				CF2C230A1AF5B4D800D28EAB /* EntryListViewController.m */,
-				CF2C23061AF5B4C300D28EAB /* EntryListViewDataSource.h */,
-				CF2C23071AF5B4C300D28EAB /* EntryListViewDataSource.m */,
-				CF2C24881B01009F00D28EAB /* CustomEntryCell.h */,
-				CF2C24891B01009F00D28EAB /* CustomEntryCell.m */,
-				CF2C23111AF5C03C00D28EAB /* AddEntryViewController.h */,
-				CF2C23121AF5C03C00D28EAB /* AddEntryViewController.m */,
-				CFE04C3F1B1AA92E001F1DA6 /* CustomCollectionViewCell2.h */,
-				CFE04C401B1AA92E001F1DA6 /* CustomCollectionViewCell2.m */,
-				CFE04C081B1A1C73001F1DA6 /* CollectionViewDataSource.h */,
-				CFE04C091B1A1C73001F1DA6 /* CollectionViewDataSource.m */,
-				CFE04C3C1B1AA757001F1DA6 /* CustomCollectionViewCell.h */,
-				CFE04C3D1B1AA757001F1DA6 /* CustomCollectionViewCell.m */,
+				CFE360421B1E2E4D003323A7 /* ListView */,
+				CFE360431B1E2E73003323A7 /* DetailView */,
 			);
 			name = Entries;
-			sourceTree = "<group>";
-		};
-		CF2C23301AF5EE3900D28EAB /* Photos */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Photos;
 			sourceTree = "<group>";
 		};
 		CF2C236A1AF7EE6C00D28EAB /* Model */ = {
@@ -344,16 +320,10 @@
 			children = (
 				CF2C23411AF6CDCE00D28EAB /* Photo.h */,
 				CF2C23421AF6CDCE00D28EAB /* Photo.m */,
-				CF2C232D1AF5EE2B00D28EAB /* PhotoController.h */,
-				CF2C232E1AF5EE2B00D28EAB /* PhotoController.m */,
 				CF2C233E1AF6CDCE00D28EAB /* Entry.h */,
 				CF2C233F1AF6CDCE00D28EAB /* Entry.m */,
-				CF2C22FD1AF5B48400D28EAB /* EntryController.h */,
-				CF2C22FE1AF5B48400D28EAB /* EntryController.m */,
 				CF2C233B1AF6CDCE00D28EAB /* Scrapbook.h */,
 				CF2C233C1AF6CDCE00D28EAB /* Scrapbook.m */,
-				CF2C23001AF5B49300D28EAB /* ScrapbookController.h */,
-				CF2C23011AF5B49300D28EAB /* ScrapbookController.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -383,6 +353,70 @@
 				CFE04C3A1B1A67E7001F1DA6 /* SettingsMenuViewController.m */,
 			);
 			name = SettingsMenu;
+			path = Milestons;
+			sourceTree = "<group>";
+		};
+		CFE360421B1E2E4D003323A7 /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				CF2C23091AF5B4D800D28EAB /* EntryListViewController.h */,
+				CF2C230A1AF5B4D800D28EAB /* EntryListViewController.m */,
+				CF2C24881B01009F00D28EAB /* CustomEntryCell.h */,
+				CF2C24891B01009F00D28EAB /* CustomEntryCell.m */,
+				CF2C23061AF5B4C300D28EAB /* EntryListViewDataSource.h */,
+				CF2C23071AF5B4C300D28EAB /* EntryListViewDataSource.m */,
+				CFE04C3C1B1AA757001F1DA6 /* CustomCollectionViewCell.h */,
+				CFE04C3D1B1AA757001F1DA6 /* CustomCollectionViewCell.m */,
+				CFE04C081B1A1C73001F1DA6 /* CollectionViewDataSource.h */,
+				CFE04C091B1A1C73001F1DA6 /* CollectionViewDataSource.m */,
+			);
+			name = ListView;
+			sourceTree = "<group>";
+		};
+		CFE360431B1E2E73003323A7 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				CFE04C3F1B1AA92E001F1DA6 /* CustomCollectionViewCell2.h */,
+				CFE04C401B1AA92E001F1DA6 /* CustomCollectionViewCell2.m */,
+				CF2C23111AF5C03C00D28EAB /* AddEntryViewController.h */,
+				CF2C23121AF5C03C00D28EAB /* AddEntryViewController.m */,
+			);
+			name = DetailView;
+			sourceTree = "<group>";
+		};
+		CFE360441B1E2EA7003323A7 /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				CF2C22F41AF5B45900D28EAB /* ScrapbookListViewController.h */,
+				CF2C22F51AF5B45900D28EAB /* ScrapbookListViewController.m */,
+				CF2C23031AF5B4B000D28EAB /* ScrapbookListViewDataSource.h */,
+				CF2C23041AF5B4B000D28EAB /* ScrapbookListViewDataSource.m */,
+				CF2C24851B01008A00D28EAB /* CustomScrapbookCell.h */,
+				CF2C24861B01008A00D28EAB /* CustomScrapbookCell.m */,
+			);
+			name = ListView;
+			sourceTree = "<group>";
+		};
+		CFE360451B1E2EB3003323A7 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				CF2C230E1AF5C01D00D28EAB /* AddScrapbookViewController.h */,
+				CF2C230F1AF5C01D00D28EAB /* AddScrapbookViewController.m */,
+			);
+			name = DetailView;
+			sourceTree = "<group>";
+		};
+		CFE360461B1E2FE5003323A7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CF2C232D1AF5EE2B00D28EAB /* PhotoController.h */,
+				CF2C232E1AF5EE2B00D28EAB /* PhotoController.m */,
+				CF2C22FD1AF5B48400D28EAB /* EntryController.h */,
+				CF2C22FE1AF5B48400D28EAB /* EntryController.m */,
+				CF2C23001AF5B49300D28EAB /* ScrapbookController.h */,
+				CF2C23011AF5B49300D28EAB /* ScrapbookController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
