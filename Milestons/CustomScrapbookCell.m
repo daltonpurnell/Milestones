@@ -16,16 +16,12 @@
 
 - (void)awakeFromNib {
     
-//    UIImageView *whiteSquare = [[UIImageView alloc] initWithFrame:CGRectMake(8, 8, self.contentView.frame.size.width - 8, self.contentView.frame.size.height - 8)];
-//    [whiteSquare setBackgroundColor:[UIColor whiteColor]];
-//    [self.contentView addSubview:whiteSquare];
-    
     self.backgroundColor = [UIColor clearColor];
-
+    self.backImageView.backgroundColor = [UIColor whiteColor];
     
-//    // set image view to circle shape
-//    self.photoImageView.clipsToBounds = YES;
-//    self.photoImageView.layer.cornerRadius = 80/2.0f;
+//    // round corners on back image view
+    self.backImageView.clipsToBounds = YES;
+    self.backImageView.layer.cornerRadius = 5/2.0f;
     
     
 }

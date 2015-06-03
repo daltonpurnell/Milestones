@@ -41,10 +41,11 @@
 
     
     [Appearance initializeAppearanceDefaults];
+    self.tableView.backgroundColor = [UIColor colorWithRed:233/255.0 green:236/255.0 blue:243/255.0 alpha:1];
+    
     
     [self registerForNotifications];
 
-//        self.tableView.backgroundColor = [UIColor colorWithRed:232/255 green:236/255 blue:243/255 alpha:1];
     
     self.refreshControl = [UIRefreshControl new];
     [self.refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];

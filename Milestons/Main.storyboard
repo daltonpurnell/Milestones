@@ -183,6 +183,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fBN-QD-Djk" id="nLH-wX-Tto">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lf4-k8-Zsm">
+                                            <rect key="frame" x="8" y="8" width="584" height="242"/>
+                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxY-iZ-7P5">
                                             <rect key="frame" x="8" y="8" width="250" height="21"/>
                                             <constraints>
@@ -238,11 +241,13 @@
                                         </button>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="lf4-k8-Zsm" firstAttribute="trailing" secondItem="nLH-wX-Tto" secondAttribute="trailingMargin" id="0aX-j7-kwh"/>
                                         <constraint firstItem="ucm-6n-4rU" firstAttribute="bottom" secondItem="yDL-hD-qek" secondAttribute="bottom" id="1yZ-K0-aif"/>
                                         <constraint firstItem="xS7-BP-qyO" firstAttribute="top" secondItem="nLH-wX-Tto" secondAttribute="topMargin" constant="16" id="5ti-d6-oEl"/>
                                         <constraint firstItem="ebh-xf-pRW" firstAttribute="top" secondItem="xS7-BP-qyO" secondAttribute="bottom" constant="5" id="7p8-sM-umd"/>
                                         <constraint firstItem="ebh-xf-pRW" firstAttribute="leading" secondItem="nLH-wX-Tto" secondAttribute="leadingMargin" constant="75" id="ArB-ee-Eds"/>
                                         <constraint firstItem="ucm-6n-4rU" firstAttribute="top" secondItem="nLH-wX-Tto" secondAttribute="topMargin" constant="8" id="E9F-0e-Zqa"/>
+                                        <constraint firstItem="lf4-k8-Zsm" firstAttribute="leading" secondItem="nLH-wX-Tto" secondAttribute="leadingMargin" id="Hlx-5V-bPi"/>
                                         <constraint firstItem="ebh-xf-pRW" firstAttribute="centerX" secondItem="nLH-wX-Tto" secondAttribute="centerX" id="KaI-hO-z9I"/>
                                         <constraint firstItem="ebh-xf-pRW" firstAttribute="bottom" secondItem="nLH-wX-Tto" secondAttribute="bottomMargin" id="Khx-76-xsa"/>
                                         <constraint firstItem="xS7-BP-qyO" firstAttribute="leading" secondItem="KxY-iZ-7P5" secondAttribute="leading" id="Lah-kl-cay"/>
@@ -253,6 +258,8 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="ucm-6n-4rU" secondAttribute="trailing" constant="2" id="VHa-DK-6DF"/>
                                         <constraint firstItem="ebh-xf-pRW" firstAttribute="centerX" secondItem="nLH-wX-Tto" secondAttribute="centerX" id="VqR-dH-Pc1"/>
                                         <constraint firstItem="ucm-6n-4rU" firstAttribute="leading" secondItem="yDL-hD-qek" secondAttribute="trailing" constant="8" symbolic="YES" id="aMf-nQ-Kag"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="lf4-k8-Zsm" secondAttribute="bottom" constant="-8" id="jzn-V9-2u5"/>
+                                        <constraint firstItem="lf4-k8-Zsm" firstAttribute="top" secondItem="nLH-wX-Tto" secondAttribute="topMargin" id="mmv-eF-Xnp"/>
                                         <constraint firstItem="KxY-iZ-7P5" firstAttribute="leading" secondItem="nLH-wX-Tto" secondAttribute="leadingMargin" id="ovm-ZA-fRH"/>
                                         <constraint firstItem="KxY-iZ-7P5" firstAttribute="top" secondItem="nLH-wX-Tto" secondAttribute="topMargin" id="sFM-gN-cUF"/>
                                         <constraint firstItem="KxY-iZ-7P5" firstAttribute="leading" secondItem="ebh-xf-pRW" secondAttribute="trailing" constant="26" id="uUc-Xh-mWM"/>
@@ -279,6 +286,7 @@
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="backImageView" destination="lf4-k8-Zsm" id="sL0-21-I1Q"/>
                                     <outlet property="photoImageView" destination="ebh-xf-pRW" id="d7F-8M-6kr"/>
                                     <outlet property="timestampLabel" destination="xS7-BP-qyO" id="wCe-Q7-x8g"/>
                                     <outlet property="titleOfScrapbookLabel" destination="KxY-iZ-7P5" id="XY9-cb-0fQ"/>

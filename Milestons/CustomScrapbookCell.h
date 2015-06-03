@@ -24,6 +24,8 @@
 
 @property (weak, nonatomic) IBOutlet PFImageView *photoImageView;
 
+@property (weak, nonatomic) IBOutlet UIImageView *backImageView;
+
 @property (strong, nonatomic) NSIndexPath *indexPath;
 
 -(void)updateWithScrapbook:(Scrapbook *)scrapbook;
