@@ -32,26 +32,22 @@
 
 #pragma mark - Create
 
-- (void)createEntryWithTitle: (NSString *) title description: (NSString *)description date:(NSDate *)timestamp inScrapbook: (Scrapbook *)scrapbook {
+- (void)createEntryWithTitle: (NSString *) title description: (NSString *)description date:(NSDate *)timestamp inScrapbook: (Scrapbook *)scrapbook completion:(void (^)(BOOL succeeded, Entry *entry))completion {
     
     Entry *entry = [Entry object];
     
     entry.titleOfEntry = title;
     entry.descriptionOfEntry = description;
     entry.timestamp = timestamp;
+    entry.scrapbook = scrapbook;
     entry.photos = nil;
     
     PFUser *user = [PFUser currentUser];
     entry.user = user;
     entry.ACL = [PFACL ACLWithUser:user];
-    
-    NSMutableArray *mutableEntries = [NSMutableArray arrayWithArray:scrapbook.entries];
-    [mutableEntries insertObject:entry atIndex:0];
-    scrapbook.entries = mutableEntries;
-    
-    [scrapbook saveEventually];
-    
-    [entry saveEventually];
+    [entry saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        completion(succeeded, entry);
+    }];
     
 }
 

@@ -13,7 +13,7 @@
 
 + (EntryController *) sharedInstance;
 
-- (void)createEntryWithTitle: (NSString *) title description: (NSString *)description date:(NSDate *)timestamp inScrapbook: (Scrapbook *)scrapbook;
+- (void)createEntryWithTitle: (NSString *) title description: (NSString *)description date:(NSDate *)timestamp inScrapbook: (Scrapbook *)scrapbook completion:(void (^)(BOOL succeeded, Entry *entry))completion;
 - (void)loadTheseEntriesFromParse:(void (^)(NSError *error))completion;
 - (void)updateEntry:(Entry *)entry;
 - (void)removeEntry:(Entry *)entry;

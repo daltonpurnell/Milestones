@@ -11,8 +11,8 @@
 @implementation CustomCollectionViewCell2
 
 
--(void)updateWithPhoto:(Photo *)photo {
-    
+-(void)updateWithImage:(UIImage *)image {
+    self.imageView.image = image;
 }
 
 @end

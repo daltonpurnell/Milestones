@@ -14,7 +14,8 @@
 @property (strong, nonatomic) Entry *entry;
 @property (strong, nonatomic) Scrapbook *scrapbook;
 
-@property (strong, nonatomic) Photo *photo;
+@property (strong, nonatomic) NSMutableArray *images;
+@property (strong, nonatomic) UIImage *image;
 
 
 //-(void)updateWithEntry:(Entry *)entry;

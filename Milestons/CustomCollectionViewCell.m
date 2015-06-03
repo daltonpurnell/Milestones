@@ -7,11 +7,13 @@
 //
 
 #import "CustomCollectionViewCell.h"
+#import "PhotoController.h"
+#import "EntryController.h"
 
 @implementation CustomCollectionViewCell
 
 -(void)updateWithPhoto:(Photo *)photo {
-    
+    self.imageView.file = photo;
 }
 
 @end

@@ -19,7 +19,7 @@
 @import MessageUI;
 
 
-@interface AddEntryViewController () <UITextFieldDelegate, MFMailComposeViewControllerDelegate, UITextViewDelegate, UICollectionViewDelegate>
+@interface AddEntryViewController () <UITextFieldDelegate, MFMailComposeViewControllerDelegate, UITextViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -32,9 +32,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
     self.titleTextField.delegate = self;
     self.descriptionTextView.delegate = self;
     [Appearance initializeAppearanceDefaults];
+    self.images = [NSMutableArray new];
 
 }
 
@@ -143,10 +145,8 @@
 
     UIImage *chosenImage = [info valueForKey:UIImagePickerControllerOriginalImage];
     
-    CustomCollectionViewCell2 *customCell = [CustomCollectionViewCell2 new];
-    customCell.imageView.image = chosenImage;
+    [self.images addObject:chosenImage];
     
-    [[PhotoController sharedInstance]createPhotoWithImage:chosenImage inEntry:self.entry];
     [self.collectionView reloadData];
     
     [picker dismissViewControllerAnimated:YES completion:nil];
@@ -185,13 +185,20 @@
         [[EntryController sharedInstance] updateEntry:self.entry];
         
     } else {
-        [[EntryController sharedInstance] createEntryWithTitle:self.titleTextField.text description:self.descriptionTextView.text date:[NSDate date] inScrapbook:self.scrapbook];
+        [[EntryController sharedInstance] createEntryWithTitle:self.titleTextField.text description:self.descriptionTextView.text date:[NSDate date] inScrapbook:self.scrapbook completion:^(BOOL succeeded, Entry *entry) {
+            if (succeeded) {
+                // Save all images to parse
+                
+                for (_image in _images) {
+                     [[PhotoController sharedInstance]createPhotoWithImage:self.image inEntry:entry];
+                }
+                
+                [self dismissViewControllerAnimated:YES completion:nil];
+            } else {
+                // Display error
+            }
+        }];
     }
-    
-    // TODO: Add photos to entry. As photos are selected, save them to an array, then pass in the array of images to the PhotoController and save them to the entry.
-
-    
-        [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
@@ -241,7 +248,9 @@
     [alertController addAction:[UIAlertAction actionWithTitle:@"Save Draft" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         
         // write code to save the draft here
-        [[EntryController sharedInstance] createEntryWithTitle:self.titleTextField.text description:self.descriptionTextView.text date:[NSDate date] inScrapbook:self.entry.scrapbook];
+        [[EntryController sharedInstance] createEntryWithTitle:self.titleTextField.text description:self.descriptionTextView.text date:[NSDate date] inScrapbook:self.entry.scrapbook completion:^(BOOL succeeded, Entry *entry) {
+            // success
+        }];
         
         [self dismissViewControllerAnimated:YES completion:nil];
         
@@ -278,9 +287,9 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
     //create cell...
-    CustomCollectionViewCell2 *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
+    CustomCollectionViewCell2 *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
     
-    [cell updateWithPhoto:self.photo];
+    [cell updateWithImage:self.images[indexPath.row]];
     
     return cell;
     
@@ -290,7 +299,7 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return self.entry.photos.count;
+    return self.images.count;
 }
 
 @end

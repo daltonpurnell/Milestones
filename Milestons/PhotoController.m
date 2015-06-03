@@ -47,13 +47,9 @@
 
                 PFUser *user = [PFUser currentUser];
                 photo.user = user;
+                photo.entry = entry;
                 photo.ACL = [PFACL ACLWithUser:user];
-
-                NSMutableArray *mutablePhotos = [NSMutableArray arrayWithArray:entry.photos];
-                [mutablePhotos insertObject:photo atIndex:0];
-                self.photos = mutablePhotos;
                 
-                [entry saveEventually];
                 [photo saveEventually];
 
             }else {

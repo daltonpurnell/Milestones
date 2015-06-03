@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "PhotoController.h"
+@import ParseUI;
 
 @interface CustomCollectionViewCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet PFImageView *imageView;
 
 -(void)updateWithPhoto:(Photo *)photo;
 
