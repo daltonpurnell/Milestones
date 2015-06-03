@@ -23,6 +23,11 @@
     self.backgroundColor = [UIColor clearColor];
 
     
+//    // set image view to circle shape
+//    self.photoImageView.clipsToBounds = YES;
+//    self.photoImageView.layer.cornerRadius = 80/2.0f;
+    
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

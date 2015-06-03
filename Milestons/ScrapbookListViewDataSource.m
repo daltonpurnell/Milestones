@@ -66,7 +66,7 @@
         
     } else {
 
-        return 250;
+        return 100;
     }
 }
 

@@ -24,10 +24,6 @@
                   @"Log Out", nil];
     self.tableView.backgroundColor = [UIColor colorWithRed:74/255.0 green:75/255.0 blue:76/255.0 alpha:1];
     
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
-    
-    
 }
 
 
@@ -84,7 +80,7 @@
         NSLog(@"Rate");
     }
     
-    else {
+    if (indexPath.row == 3) {
         [self presentLogOutAlert];
         NSLog(@"Log Out");
     }
