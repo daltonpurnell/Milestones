@@ -444,6 +444,9 @@
                                 <variation key="heightClass=compact" ambiguous="YES">
                                     <rect key="frame" x="15" y="228" width="568" height="137"/>
                                 </variation>
+                                <variation key="heightClass=regular" ambiguous="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="BpZ-8T-26U"/>
@@ -863,7 +866,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                        <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eUQ-An-cSQ" customClass="PFImageView">
@@ -970,7 +973,7 @@
                 <customObject id="1UO-pK-Nkk" customClass="EntryListViewDataSource"/>
                 <customObject id="KIx-6f-1ON" customClass="CollectionViewDataSource"/>
             </objects>
-            <point key="canvasLocation" x="2074" y="1049"/>
+            <point key="canvasLocation" x="2074" y="1048.5"/>
         </scene>
         <!--Settings Menu View Controller-->
         <scene sceneID="JMz-Zo-3ZJ">
