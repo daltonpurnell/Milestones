@@ -25,16 +25,18 @@
 @property (weak, nonatomic) IBOutlet UINavigationItem *navBar;
 @property (nonatomic, strong) EntryListViewDataSource *tableDataSource;
 
+
 @end
 
 @implementation EntryListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+ 
     
     self.tableDataSource = (EntryListViewDataSource *)self.tableView.dataSource;
     if (self.scrapbook) {
-        self.tableDataSource.scrapbook = self.scrapbook;
+        [self refreshTable];
     }
     
     self.navigationController.toolbarHidden = YES;
@@ -42,24 +44,12 @@
     self.navBar.title = [NSString stringWithFormat:@"%@", self.scrapbook.titleOfScrapbook];
 
     [Appearance initializeAppearanceDefaults];
-// self.view.backgroundColor = [UIColor colorWithRed:232/255 green:236/255 blue:243/255 alpha:1];
-    
     self.tableView.rowHeight = 350;
+    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"giftlyBackground.png"]];
     
     self.refreshControl = [UIRefreshControl new];
     [self.refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];
-    
-    [[EntryController sharedInstance]loadTheseEntriesFromParse:^(NSError *error) {
-        [self.tableView reloadData];
-        
-    }];
-    
-    [[PhotoController sharedInstance]loadThesePhotosFromParse:^(NSError *error) {
-        [self.tableView reloadData];
-        
-    }];
-
-}
+} 
 
 - (void)updateWithSB:(Scrapbook *)scrapbook {
     self.scrapbook = scrapbook;
@@ -70,17 +60,15 @@
     
     [self.refreshControl beginRefreshing];
     
-    [[EntryController sharedInstance]loadTheseEntriesFromParse:^(NSError *error) {
+    [[EntryController sharedInstance] loadTheseEntriesFromParseInScrapbook:self.scrapbook completion:^(NSArray *entries, NSError *error) {
+        self.tableDataSource.entries = entries;
         [self.tableView reloadData];
-        [self.refreshControl endRefreshing];
-        
     }];
     
-    [[PhotoController sharedInstance]loadThesePhotosFromParse:^(NSError *error) {
-        [self.tableView reloadData];
-        [self.refreshControl endRefreshing];
-    }];
-    
+    // TODO: This should be inside the photo collection view controller
+//    [[PhotoController sharedInstance]loadThesePhotosFromParseInEntry:self.entry completion:^(NSArray *photos, NSError *error) {
+//        [self.tableView reloadData];
+//    }];
 }
 
 
@@ -103,6 +91,9 @@
     if ([segue.identifier isEqualToString:@"presentAddEntry"]) {
         UINavigationController *navController = [segue destinationViewController];
         AddEntryViewController *addEntryViewController = navController.viewControllers.firstObject;
+        addEntryViewController.didCreateEntry = ^(Entry *entry) {
+            [self refreshTable];
+        };
         [addEntryViewController updateWithScrapbook:self.scrapbook];
     }
 

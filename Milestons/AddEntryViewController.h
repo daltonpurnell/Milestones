@@ -17,8 +17,9 @@
 @property (strong, nonatomic) NSMutableArray *images;
 @property (strong, nonatomic) UIImage *image;
 
+@property (copy, nonatomic) void (^didCreateEntry)(Entry *entry);
+@property (copy, nonatomic) void (^didCreatePhoto)(Photo *photo);
 
-//-(void)updateWithEntry:(Entry *)entry;
 - (void)updateWithScrapbook:(Scrapbook *)scrapbook;
 
 @end

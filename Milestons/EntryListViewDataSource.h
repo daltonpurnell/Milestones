@@ -12,6 +12,6 @@
 
 @interface EntryListViewDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) Scrapbook *scrapbook;
+@property (nonatomic, strong) NSArray *entries;
 
 @end

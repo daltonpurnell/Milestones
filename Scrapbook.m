@@ -16,7 +16,6 @@ static NSString * const ScrapbookClassName = @"Scrapbook";
 @dynamic photo;
 @dynamic timestamp;
 @dynamic titleOfScrapbook;
-@dynamic entries;
 @dynamic user;
 
 + (NSString *)parseClassName {

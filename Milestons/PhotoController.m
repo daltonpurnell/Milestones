@@ -24,16 +24,13 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[PhotoController alloc] init];
-        [sharedInstance loadThesePhotosFromParse:^(NSError *error) {
-            // Nothing
-        }];
     });
     return sharedInstance;
 }
 
 #pragma mark - Create
 
-- (void)createPhotoWithImage:(UIImage *)myPhoto inEntry:(Entry *)entry {
+- (void)createPhotoWithImage:(UIImage *)myPhoto inEntry:(Entry *)entry completion:(void (^)(BOOL succeeded, Photo *photo))completion {
     
     Photo *photo = [Photo object];
     
@@ -42,15 +39,16 @@
     [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
             if (succeeded) {
-                photo[@"picture"] = myPhoto;
-                photo[@"entry"] = entry;
+                photo.picture = imageFile;
 
                 PFUser *user = [PFUser currentUser];
                 photo.user = user;
                 photo.entry = entry;
                 photo.ACL = [PFACL ACLWithUser:user];
                 
-                [photo saveEventually];
+                [photo saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                    completion(succeeded, photo);
+                }];
 
             }else {
                 NSLog(@"%@",error);
@@ -65,29 +63,26 @@
 #pragma mark - Read
 
 
-- (void)loadThesePhotosFromParse:(void (^)(NSError *error))completion {
+- (void)loadThesePhotosFromParseInEntry:(Entry *)entry completion:(void (^)(NSArray *photos, NSError *error))completion {
     
-//    NSLog(@"Loading photos from Parse");
-//    PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
-//    
-//    PFUser *user = [PFUser currentUser];
-//    [query whereKey:@"user" equalTo:user];
-//    
-////    [query whereKey:@"entry" equalTo:entry];
-//    
-////    [query fromLocalDatastore];
-//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
-//        if (!error) {
-//            self.photos = objects;
-//            completion(nil);
-//        } else {
-//            completion(error);
-//        }
-//    }];
+    NSLog(@"Loading photos from Parse");
+    PFQuery *query = [Photo query];
+    
+    PFUser *user = [PFUser currentUser];
+    [query whereKey:@"user" equalTo:user];
+    [query whereKey:@"entry" equalTo:entry];
+    
+//    [query fromLocalDatastore];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
+        if (!error) {
+            self.photos = objects;
+            completion(objects, nil);
+        } else {
+            completion(nil, error);
+        }
+    }];
     
 }
-
-
 
 
 #pragma mark - Update
@@ -102,10 +97,6 @@
 #pragma mark - Delete
 
 - (void)removePhoto:(Photo *)photo {
-    Entry *entry = photo.entry;
-    NSMutableArray *mutablePhotos = [NSMutableArray arrayWithArray:entry.photos];
-    [mutablePhotos removeObject:photo];
-    entry.photos = mutablePhotos;
     
 //    [photo unpinInBackground];
     [photo deleteInBackground];

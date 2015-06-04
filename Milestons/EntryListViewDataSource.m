@@ -22,17 +22,17 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     
-    if (self.scrapbook.entries.count == 0) {
+    if (self.entries.count == 0) {
         return 1;
     } else {
-        return self.scrapbook.entries.count;
+        return self.entries.count;
     }
 }
 
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-   if (self.scrapbook.entries.count == 0) {
+   if (self.entries.count == 0) {
        
        // return emptyState cell
        UITableViewCell *emptyStateCell = [tableView dequeueReusableCellWithIdentifier:@"emptyStateCell"];
@@ -42,11 +42,12 @@
    }else {
        
     // return customCell
-    Entry *entry = self.scrapbook.entries[indexPath.row];
+    Entry *entry = self.entries[indexPath.row];
     
     CustomEntryCell *customCell = [tableView dequeueReusableCellWithIdentifier:@"entryCell"];
        customCell.indexPath = indexPath;
        customCell.delegate = self;
+       customCell.entry = entry;
     [customCell updateWithEntry:entry];
        
     return customCell;
@@ -55,7 +56,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (self.scrapbook.entries.count == 0) {
+    if (self.entries.count == 0) {
         
         return tableView.frame.size.height;
         
@@ -71,10 +72,9 @@
 
 -(void)deleteButtonTapped:(NSIndexPath*)indexPath {
     
-    Entry *entry = [self.scrapbook.entries objectAtIndex:indexPath.row];
+    Entry *entry = [self.entries objectAtIndex:indexPath.row];
     [[EntryController sharedInstance] removeEntry:entry];
 
-    //    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     NSLog(@"cell deleted");
     
 }

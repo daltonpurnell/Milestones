@@ -17,7 +17,7 @@
     //create cell...
    CustomCollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
     
-    [cell updateWithPhoto:self.photo];
+    [cell updateWithPhoto:self.photos[indexPath.row]];
 
     return cell;
 }
@@ -25,7 +25,7 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return self.entry.photos.count;
+    return self.photos.count;
 }
 
 @end

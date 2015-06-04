@@ -188,9 +188,11 @@
         [[EntryController sharedInstance] createEntryWithTitle:self.titleTextField.text description:self.descriptionTextView.text date:[NSDate date] inScrapbook:self.scrapbook completion:^(BOOL succeeded, Entry *entry) {
             if (succeeded) {
                 // Save all images to parse
-                
+                self.didCreateEntry(entry);
                 for (_image in _images) {
-                     [[PhotoController sharedInstance]createPhotoWithImage:self.image inEntry:entry];
+                     [[PhotoController sharedInstance]createPhotoWithImage:self.image inEntry:entry completion:^(BOOL succeeded, Photo *photo) {
+                         //...
+                     }];
                 }
                 
                 [self dismissViewControllerAnimated:YES completion:nil];

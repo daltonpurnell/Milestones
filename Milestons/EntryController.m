@@ -22,9 +22,6 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [EntryController new];
-        [sharedInstance loadTheseEntriesFromParse:^(NSError *error) {
-            // Nothing
-        }];
     });
     return sharedInstance;
 }
@@ -40,7 +37,6 @@
     entry.descriptionOfEntry = description;
     entry.timestamp = timestamp;
     entry.scrapbook = scrapbook;
-    entry.photos = nil;
     
     PFUser *user = [PFUser currentUser];
     entry.user = user;
@@ -56,30 +52,22 @@
 #pragma mark - Read
 
 
-- (void)loadTheseEntriesFromParse:(void (^)(NSError *error))completion {
+- (void)loadTheseEntriesFromParseInScrapbook:(Scrapbook *)scrapbook completion:(void (^)(NSArray *entries, NSError *error))completion {
     
-//    NSLog(@"Loading entries from Parse");
-//    PFQuery *query = [PFQuery queryWithClassName:@"Entry"];
-//    
-//    PFUser *user = [PFUser currentUser];
-//    [query whereKey:@"user" equalTo:user];
-//    
-////    [query whereKey:@"scrapbook" equalTo:scrapbook];
-//    
-//    __block NSArray *loadEntries = [NSArray new];
-//    
-//    [query includeKey:@"Photo"];
-//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
-//        if (!error) {
-//            for (Scrapbook *sb in objects) {
-//                loadEntries = [loadEntries arrayByAddingObject:sb];
-//            }
-//            self.entries = loadEntries;
-//            completion(nil);
-//        } else {
-//            completion(error);
-//        }
-//    }];
+    NSLog(@"Loading entries from Parse");
+    PFQuery *query = [Entry query];
+    
+    PFUser *user = [PFUser currentUser];
+    [query whereKey:@"user" equalTo:user];
+    [query whereKey:@"scrapbook" equalTo:scrapbook];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
+        if (!error) {
+            completion(objects, nil);
+        } else {
+            completion(nil, error);
+        }
+    }];
     
 }
 
@@ -95,15 +83,7 @@
 #pragma mark - Delete
 
 - (void)removeEntry:(Entry *)entry {
-    
-    Scrapbook *scrapbook = entry.scrapbook;
-    NSMutableArray *mutableEntries = [NSMutableArray arrayWithArray:scrapbook.entries];
-    [mutableEntries removeObject:entry];
-    scrapbook.entries = mutableEntries;
-    
-//    [entry unpinInBackground];
     [entry deleteInBackground];
-    [scrapbook saveInBackground];
 }
 
 

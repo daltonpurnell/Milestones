@@ -13,7 +13,8 @@
 @implementation CustomCollectionViewCell
 
 -(void)updateWithPhoto:(Photo *)photo {
-    self.imageView.file = photo;
+    self.imageView.file = photo.picture;
+
 }
 
 @end

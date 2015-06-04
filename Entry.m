@@ -21,7 +21,6 @@ static NSString * const EntryClassName = @"Entry";
 @dynamic descriptionOfEntry;
 @dynamic timestamp;
 @dynamic titleOfEntry;
-@dynamic photos;
 @dynamic scrapbook;
 @dynamic user;
 

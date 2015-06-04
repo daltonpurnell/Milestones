@@ -16,5 +16,7 @@
 @property (nonatomic, strong) Entry *entry;
 @property (nonatomic, strong)UIImageView *cellImageView;
 @property (strong, nonatomic) Photo *photo;
+@property (nonatomic, strong) NSArray *photos;
+
 
 @end

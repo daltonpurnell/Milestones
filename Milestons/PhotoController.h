@@ -16,8 +16,8 @@
 + (PhotoController *) sharedInstance;
 
 // This method needs to pass in the location of the photo on the device
-- (void)createPhotoWithImage:(UIImage *)myPhoto inEntry:(Entry *)entry;
-- (void)loadThesePhotosFromParse:(void (^)(NSError *error))completion;
+- (void)createPhotoWithImage:(UIImage *)myPhoto inEntry:(Entry *)entry completion:(void (^)(BOOL succeeded, Photo *photo))completion;
+- (void)loadThesePhotosFromParseInEntry:(Entry *)entry completion:(void (^)(NSArray *photos, NSError *error))completion;
 - (void)updatePhoto:(Photo *)photo;
 - (void)removePhoto:(Photo *)photo;
 

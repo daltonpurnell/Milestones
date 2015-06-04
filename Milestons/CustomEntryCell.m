@@ -22,10 +22,9 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    self.collectionViewDataSource = (CollectionViewDataSource *)self.collectionView.dataSource;
-    if (self.entry) {
-        self.collectionViewDataSource.entry = self.entry;
-    }
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self.collectionViewDataSource;
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -50,7 +49,16 @@
     
     self.descriptionLabel.text = [NSString stringWithFormat:@"%@", entry.descriptionOfEntry];
     
+    self.descriptionLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Layer-1.png"]];
     
+//    self.collectionViewDataSource = (CollectionViewDataSource *)self.collectionView.dataSource;
+    
+        [[PhotoController sharedInstance] loadThesePhotosFromParseInEntry:entry completion:^(NSArray *photos, NSError *error) {
+            self.collectionViewDataSource.photos = photos;
+            [self.collectionView reloadData];
+        }];
+        
+
 }
 
 
