@@ -27,7 +27,7 @@
     self.collectionView.dataSource = self.collectionViewDataSource;
     
     
-    // create drop shadow for back image view
+    // create drop shadow for description label
     self.descriptionLabel.layer.shadowColor = [UIColor grayColor].CGColor;
     self.descriptionLabel.layer.shadowOffset = CGSizeMake(0, 1);
     self.descriptionLabel.layer.shadowOpacity = 1;

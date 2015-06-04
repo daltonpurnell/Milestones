@@ -30,6 +30,13 @@
     self.backImageView.layer.shadowRadius = 1.0;
     self.backImageView.clipsToBounds = NO;
     
+    
+    // create drop shadow for image view
+    self.photoImageView.layer.shadowColor = [UIColor grayColor].CGColor;
+    self.photoImageView.layer.shadowOffset = CGSizeMake(0, 1);
+    self.photoImageView.layer.shadowOpacity = 1;
+    self.photoImageView.layer.shadowRadius = 1.0;
+    self.photoImageView.clipsToBounds = NO;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
