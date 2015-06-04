@@ -7,10 +7,9 @@
 //
 
 #import "CustomScrapbookCell.h"
-
 #import "EntryController.h"
-
 #import "ScrapbookController.h"
+@import QuartzCore;
 
 @implementation CustomScrapbookCell
 
@@ -19,10 +18,17 @@
     self.backgroundColor = [UIColor clearColor];
     self.backImageView.backgroundColor = [UIColor whiteColor];
     
-//    // round corners on back image view
+   // round corners on back image view
     self.backImageView.clipsToBounds = YES;
     self.backImageView.layer.cornerRadius = 5/2.0f;
     
+    
+    // create drop shadow for back image view
+    self.backImageView.layer.shadowColor = [UIColor grayColor].CGColor;
+    self.backImageView.layer.shadowOffset = CGSizeMake(0, 1);
+    self.backImageView.layer.shadowOpacity = 1;
+    self.backImageView.layer.shadowRadius = 1.0;
+    self.backImageView.clipsToBounds = NO;
     
 }
 

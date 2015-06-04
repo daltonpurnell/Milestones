@@ -13,6 +13,7 @@
 #import "PhotoController.h"
 #import "CollectionViewDataSource.h"
 #import "CustomCollectionViewCell.h"
+@import QuartzCore;
 
 @interface CustomEntryCell () <UICollectionViewDelegate> 
 
@@ -24,6 +25,14 @@
     // Initialization code
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self.collectionViewDataSource;
+    
+    
+    // create drop shadow for back image view
+    self.descriptionLabel.layer.shadowColor = [UIColor grayColor].CGColor;
+    self.descriptionLabel.layer.shadowOffset = CGSizeMake(0, 1);
+    self.descriptionLabel.layer.shadowOpacity = 1;
+    self.descriptionLabel.layer.shadowRadius = 1.0;
+    self.descriptionLabel.clipsToBounds = NO;
 
 }
 
