@@ -14,7 +14,7 @@
 #import "CollectionViewDataSource.h"
 #import "CustomCollectionViewCell.h"
 
-@interface CustomEntryCell () <UICollectionViewDelegate>
+@interface CustomEntryCell () <UICollectionViewDelegate> 
 
 @end
 
