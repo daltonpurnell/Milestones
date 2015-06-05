@@ -59,9 +59,6 @@
 		CFE04C3B1B1A67E7001F1DA6 /* SettingsMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE04C3A1B1A67E7001F1DA6 /* SettingsMenuViewController.m */; };
 		CFE04C3E1B1AA757001F1DA6 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE04C3D1B1AA757001F1DA6 /* CustomCollectionViewCell.m */; };
 		CFE04C411B1AA92E001F1DA6 /* CustomCollectionViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE04C401B1AA92E001F1DA6 /* CustomCollectionViewCell2.m */; };
-		CFE360551B21716E003323A7 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE360541B21716E003323A7 /* ShareViewController.m */; };
-		CFE360571B21716E003323A7 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFE360561B21716E003323A7 /* MainInterface.storyboard */; };
-		CFE3605A1B21716E003323A7 /* postPhotoToApp.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CFE3604F1B21716D003323A7 /* postPhotoToApp.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CFEC12DC1B04379500AB6C1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFEC12DB1B04379500AB6C1B /* Main.storyboard */; };
 		CFEC12E91B0C117800AB6C1B /* MyLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */; };
 		CFEC12EC1B0C119100AB6C1B /* MySignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12EB1B0C119100AB6C1B /* MySignUpViewController.m */; };
@@ -75,28 +72,7 @@
 			remoteGlobalIDString = CF2C22CA1AF5B40A00D28EAB;
 			remoteInfo = Milestons;
 		};
-		CFE360581B21716E003323A7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CF2C22C31AF5B40A00D28EAB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CFE3604E1B21716D003323A7;
-			remoteInfo = postPhotoToApp;
-		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		CFE3605E1B21716E003323A7 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				CFE3605A1B21716E003323A7 /* postPhotoToApp.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CF2C22CB1AF5B40A00D28EAB /* Milestons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Milestons.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,12 +158,6 @@
 		CFE04C3D1B1AA757001F1DA6 /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
 		CFE04C3F1B1AA92E001F1DA6 /* CustomCollectionViewCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell2.h; sourceTree = "<group>"; };
 		CFE04C401B1AA92E001F1DA6 /* CustomCollectionViewCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell2.m; sourceTree = "<group>"; };
-		CFE3604A1B216FFF003323A7 /* Milestons.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Milestons.entitlements; path = Milestons/Milestons.entitlements; sourceTree = "<group>"; };
-		CFE3604F1B21716D003323A7 /* postPhotoToApp.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = postPhotoToApp.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFE360521B21716E003323A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CFE360531B21716E003323A7 /* ShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
-		CFE360541B21716E003323A7 /* ShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
-		CFE360561B21716E003323A7 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		CFEC12DB1B04379500AB6C1B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CFEC12E71B0C117800AB6C1B /* MyLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLoginViewController.h; path = ../MyLoginViewController.h; sourceTree = "<group>"; };
 		CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyLoginViewController.m; path = ../MyLoginViewController.m; sourceTree = "<group>"; };
@@ -230,27 +200,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFE3604C1B21716D003323A7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		CF2C22C21AF5B40A00D28EAB = {
 			isa = PBXGroup;
 			children = (
-				CFE3604A1B216FFF003323A7 /* Milestons.entitlements */,
 				CFE04C341B1A5802001F1DA6 /* SettingsMenu */,
 				CFE04C0E1B1A3999001F1DA6 /* InAppPurchases */,
 				CF2C236A1AF7EE6C00D28EAB /* Model */,
 				CFE360461B1E2FE5003323A7 /* Controller */,
 				CF2C22CD1AF5B40A00D28EAB /* View */,
 				CF2C22E71AF5B40A00D28EAB /* MilestonsTests */,
-				CFE360501B21716E003323A7 /* postPhotoToApp */,
 				CF2C22CC1AF5B40A00D28EAB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -260,7 +221,6 @@
 			children = (
 				CF2C22CB1AF5B40A00D28EAB /* Milestons.app */,
 				CF2C22E41AF5B40A00D28EAB /* MilestonsTests.xctest */,
-				CFE3604F1B21716D003323A7 /* postPhotoToApp.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -459,25 +419,6 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		CFE360501B21716E003323A7 /* postPhotoToApp */ = {
-			isa = PBXGroup;
-			children = (
-				CFE360531B21716E003323A7 /* ShareViewController.h */,
-				CFE360541B21716E003323A7 /* ShareViewController.m */,
-				CFE360561B21716E003323A7 /* MainInterface.storyboard */,
-				CFE360511B21716E003323A7 /* Supporting Files */,
-			);
-			path = postPhotoToApp;
-			sourceTree = "<group>";
-		};
-		CFE360511B21716E003323A7 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				CFE360521B21716E003323A7 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -488,12 +429,10 @@
 				CF2C22C71AF5B40A00D28EAB /* Sources */,
 				CF2C22C81AF5B40A00D28EAB /* Frameworks */,
 				CF2C22C91AF5B40A00D28EAB /* Resources */,
-				CFE3605E1B21716E003323A7 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CFE360591B21716E003323A7 /* PBXTargetDependency */,
 			);
 			name = Milestons;
 			productName = Milestons;
@@ -518,23 +457,6 @@
 			productReference = CF2C22E41AF5B40A00D28EAB /* MilestonsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CFE3604E1B21716D003323A7 /* postPhotoToApp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CFE3605B1B21716E003323A7 /* Build configuration list for PBXNativeTarget "postPhotoToApp" */;
-			buildPhases = (
-				CFE3604B1B21716D003323A7 /* Sources */,
-				CFE3604C1B21716D003323A7 /* Frameworks */,
-				CFE3604D1B21716D003323A7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = postPhotoToApp;
-			productName = postPhotoToApp;
-			productReference = CFE3604F1B21716D003323A7 /* postPhotoToApp.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -547,19 +469,10 @@
 					CF2C22CA1AF5B40A00D28EAB = {
 						CreatedOnToolsVersion = 6.3;
 						DevelopmentTeam = ZW8XHLXS82;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-						};
 					};
 					CF2C22E31AF5B40A00D28EAB = {
 						CreatedOnToolsVersion = 6.3;
 						TestTargetID = CF2C22CA1AF5B40A00D28EAB;
-					};
-					CFE3604E1B21716D003323A7 = {
-						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = ZW8XHLXS82;
 					};
 				};
 			};
@@ -578,7 +491,6 @@
 			targets = (
 				CF2C22CA1AF5B40A00D28EAB /* Milestons */,
 				CF2C22E31AF5B40A00D28EAB /* MilestonsTests */,
-				CFE3604E1B21716D003323A7 /* postPhotoToApp */,
 			);
 		};
 /* End PBXProject section */
@@ -599,14 +511,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CFE3604D1B21716D003323A7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CFE360571B21716E003323A7 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,14 +562,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFE3604B1B21716D003323A7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CFE360551B21716E003323A7 /* ShareViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -673,11 +569,6 @@
 			isa = PBXTargetDependency;
 			target = CF2C22CA1AF5B40A00D28EAB /* Milestons */;
 			targetProxy = CF2C22E51AF5B40A00D28EAB /* PBXContainerItemProxy */;
-		};
-		CFE360591B21716E003323A7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CFE3604E1B21716D003323A7 /* postPhotoToApp */;
-			targetProxy = CFE360581B21716E003323A7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -777,7 +668,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Milestons/Milestons.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -796,7 +686,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Milestons/Milestons.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -845,34 +734,6 @@
 			};
 			name = Release;
 		};
-		CFE3605C1B21716E003323A7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = postPhotoToApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		CFE3605D1B21716E003323A7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = postPhotoToApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -902,14 +763,6 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
-		};
-		CFE3605B1B21716E003323A7 /* Build configuration list for PBXNativeTarget "postPhotoToApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CFE3605C1B21716E003323A7 /* Debug */,
-				CFE3605D1B21716E003323A7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

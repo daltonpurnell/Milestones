@@ -9,11 +9,6 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>postPhotoToApp.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -23,11 +18,6 @@
 			<true/>
 		</dict>
 		<key>CF2C22E31AF5B40A00D28EAB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CFE3604E1B21716D003323A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
