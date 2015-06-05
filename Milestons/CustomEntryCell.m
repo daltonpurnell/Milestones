@@ -24,8 +24,8 @@
 - (void)awakeFromNib {
     // Initialization code
     self.collectionView.delegate = self;
-    self.collectionView.dataSource = self.collectionViewDataSource;
-    
+    self.collectionViewDataSource = (CollectionViewDataSource *)self.collectionView.dataSource;
+
     
     // create drop shadow for description label
     self.descriptionLabel.layer.shadowColor = [UIColor grayColor].CGColor;
@@ -60,10 +60,10 @@
     
     self.descriptionLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Layer-1.png"]];
     
-//    self.collectionViewDataSource = (CollectionViewDataSource *)self.collectionView.dataSource;
     
         [[PhotoController sharedInstance] loadThesePhotosFromParseInEntry:entry completion:^(NSArray *photos, NSError *error) {
             self.collectionViewDataSource.photos = photos;
+            NSLog(@"%lu", photos.count);
             [self.collectionView reloadData];
         }];
         
