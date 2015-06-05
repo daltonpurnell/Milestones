@@ -866,7 +866,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eUQ-An-cSQ" customClass="PFImageView">
@@ -914,12 +914,6 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ao8-8S-qYY" id="vyA-2c-897">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cC6-4T-DOY">
-                                            <rect key="frame" x="8" y="249" width="584" height="92"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You do not have any milestones in this scrapbook. Tap the + to create your first one." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12v-Co-KoJ">
                                             <rect key="frame" x="8" y="31" width="584" height="66"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -928,20 +922,13 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="centerX" secondItem="cC6-4T-DOY" secondAttribute="centerX" id="GSd-ZN-Jqx"/>
                                         <constraint firstItem="12v-Co-KoJ" firstAttribute="top" secondItem="vyA-2c-897" secondAttribute="topMargin" constant="23" id="MYY-l6-ndq"/>
                                         <constraint firstItem="12v-Co-KoJ" firstAttribute="leading" secondItem="vyA-2c-897" secondAttribute="leadingMargin" id="MaW-rK-UeJ"/>
-                                        <constraint firstItem="cC6-4T-DOY" firstAttribute="leading" secondItem="vyA-2c-897" secondAttribute="leadingMargin" id="QSp-OY-Lai"/>
                                         <constraint firstItem="12v-Co-KoJ" firstAttribute="trailing" secondItem="vyA-2c-897" secondAttribute="trailingMargin" id="S6a-X7-oNt"/>
                                         <constraint firstAttribute="centerX" secondItem="12v-Co-KoJ" secondAttribute="centerX" id="aB4-jR-ZUj"/>
-                                        <constraint firstItem="cC6-4T-DOY" firstAttribute="trailing" secondItem="vyA-2c-897" secondAttribute="trailingMargin" id="h65-B5-Onp"/>
-                                        <constraint firstItem="cC6-4T-DOY" firstAttribute="bottom" secondItem="vyA-2c-897" secondAttribute="bottomMargin" id="qHH-Ms-fZm"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <outlet property="descriptionLabel" destination="cC6-4T-DOY" id="qeD-5a-JTs"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
