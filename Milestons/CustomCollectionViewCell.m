@@ -29,6 +29,10 @@
     self.imageView.layer.shadowOpacity = 1;
     self.imageView.layer.shadowRadius = 1.0;
     self.imageView.clipsToBounds = NO;
+    
+    isFullScreen = false;
+    tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imgToFullScreen)];
+    tap.delegate = self;
 }
 
 -(void)updateWithPhoto:(Photo *)photo {
@@ -37,5 +41,37 @@
         [self.imageView loadInBackground];
 }
 
+#pragma mark - gesture recognizer delegate method
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch;
+{
+    BOOL shouldReceiveTouch = YES;
+    
+    if (gestureRecognizer == tap) {
+        shouldReceiveTouch = (touch.view == self.imageView);
+    }
+    return shouldReceiveTouch;
+}
+
+
+-(void)imgToFullScreen{
+    if (!isFullScreen) {
+        [UIView animateWithDuration:0.5 delay:0 options:0 animations:^{
+            //save previous frame
+            prevFrame = self.imageView.frame;
+            [self.imageView setFrame:[[UIScreen mainScreen] bounds]];
+        }completion:^(BOOL finished){
+            isFullScreen = true;
+        }];
+        return;
+    } else {
+        [UIView animateWithDuration:0.5 delay:0 options:0 animations:^{
+            [self.imageView setFrame:prevFrame];
+        }completion:^(BOOL finished){
+            isFullScreen = false;
+        }];
+        return;
+    }
+}
 
 @end

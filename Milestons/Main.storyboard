@@ -955,6 +955,7 @@
                     </items>
                 </navigationBar>
                 <customObject id="1UO-pK-Nkk" customClass="EntryListViewDataSource"/>
+                <tapGestureRecognizer id="G1J-S1-m80"/>
                 <customObject id="KIx-6f-1ON" customClass="CollectionViewDataSource"/>
             </objects>
             <point key="canvasLocation" x="2074" y="1048"/>

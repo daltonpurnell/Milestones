@@ -10,7 +10,11 @@
 #import "PhotoController.h"
 @import ParseUI;
 
-@interface CustomCollectionViewCell : UICollectionViewCell
+@interface CustomCollectionViewCell : UICollectionViewCell <UIGestureRecognizerDelegate>{
+    UITapGestureRecognizer *tap;
+    BOOL isFullScreen;
+    CGRect prevFrame;
+}
 
 
 @property (weak, nonatomic) IBOutlet PFImageView *imageView;
