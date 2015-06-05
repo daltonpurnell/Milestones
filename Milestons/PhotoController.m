@@ -75,7 +75,7 @@
 //    [query fromLocalDatastore];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
         if (!error) {
-            self.photos = objects;
+//            self.photos = objects;
             completion(objects, nil);
         } else {
             completion(nil, error);

@@ -61,6 +61,7 @@
     [query whereKey:@"user" equalTo:user];
     [query whereKey:@"scrapbook" equalTo:scrapbook];
     
+    // [query fromLocalDatastore];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
         if (!error) {
             completion(objects, nil);
