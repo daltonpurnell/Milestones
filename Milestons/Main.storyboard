@@ -957,7 +957,7 @@
                 <customObject id="1UO-pK-Nkk" customClass="EntryListViewDataSource"/>
                 <customObject id="KIx-6f-1ON" customClass="CollectionViewDataSource"/>
             </objects>
-            <point key="canvasLocation" x="2074" y="1048.5"/>
+            <point key="canvasLocation" x="2074" y="1048"/>
         </scene>
         <!--Settings Menu View Controller-->
         <scene sceneID="JMz-Zo-3ZJ">

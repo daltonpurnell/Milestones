@@ -11,6 +11,8 @@
 @import ParseUI;
 
 @interface CustomCollectionViewCell : UICollectionViewCell
+
+
 @property (weak, nonatomic) IBOutlet PFImageView *imageView;
 
 -(void)updateWithPhoto:(Photo *)photo;

@@ -49,6 +49,7 @@
     
     self.refreshControl = [UIRefreshControl new];
     [self.refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];
+    
 } 
 
 - (void)updateWithSB:(Scrapbook *)scrapbook {

@@ -33,7 +33,7 @@
     self.descriptionLabel.layer.shadowOpacity = 1;
     self.descriptionLabel.layer.shadowRadius = 1.0;
     self.descriptionLabel.clipsToBounds = NO;
-
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
