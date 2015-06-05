@@ -25,8 +25,6 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-//    self.photos = [PhotoController sharedInstance].photos;
-
     return self.photos.count;
 }
 
