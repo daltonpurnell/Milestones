@@ -292,7 +292,7 @@
 
     //create cell...
     CustomCollectionViewCell2 *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
-    
+
     [cell updateWithImage:self.images[indexPath.row]];
     
     return cell;

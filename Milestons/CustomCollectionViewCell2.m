@@ -24,7 +24,12 @@
 }
 
 -(void)updateWithImage:(UIImage *)image {
-    self.imageView.image = image;
+    
+    if (image) {
+        self.imageView.image = image;
+    } if (!image) {
+        self.imageView.image = [UIImage imageNamed:@"dashedLineSquare"];
+    }
 }
 
 @end

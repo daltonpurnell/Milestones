@@ -26,7 +26,7 @@
 -(void)awakeFromNib {
     
     isFullScreen = false;
-    tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imgToFullScreen)];
+    tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageToFullScreen)];
     tap.delegate = self;
     
     // create drop shadow for image view
@@ -39,13 +39,22 @@
 }
 
 -(void)updateWithPhoto:(Photo *)photo {
-    self.imageView.file = photo.picture;
-
+    
+    if (photo) {
+        self.imageView.file = photo.picture;
+        
+        [self.imageView loadInBackground];
+        
+    } if (!photo) {
+        self.imageView.image = [UIImage imageNamed:@"dashedLineSquare"];
+        
+        [self.imageView loadInBackground];
+    }
 }
 
 
 // can't test this until I get the image views to show up
--(void)imgToFullScreen{
+-(void)imageToFullScreen{
     if (!isFullScreen) {
         [UIView animateWithDuration:0.5 delay:0 options:0 animations:^{
             //save previous frame
