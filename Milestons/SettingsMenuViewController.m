@@ -107,7 +107,7 @@
     
     if (indexPath.row == 2) {
         
-        // Take user to app store (this is not working)
+        // Take user to app store (this doesn't seem to be working)
         {
             NSString *appStoreString = @"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa";
             appStoreString = [NSString stringWithFormat:@"%@/wa/viewContentsUserReviews?", appStoreString];
