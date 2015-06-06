@@ -62,16 +62,12 @@
         [logInViewController setDelegate:self];
         [logInViewController setFields:PFLogInFieldsUsernameAndPassword
                 | PFLogInFieldsSignUpButton
-                | PFLogInFieldsDismissButton
-                | PFLogInFieldsSignUpButton
                 | PFLogInFieldsLogInButton
                 | PFLogInFieldsUsernameAndPassword];
         
         MySignUpViewController *signUpViewController = [[MySignUpViewController alloc] init];
         [signUpViewController setDelegate:self];
         [signUpViewController setFields:PFSignUpFieldsDefault
-         | PFSignUpFieldsAdditional
-         | PFSignUpFieldsAdditional
          | PFSignUpFieldsSignUpButton];
         
         [logInViewController setSignUpController:signUpViewController];
