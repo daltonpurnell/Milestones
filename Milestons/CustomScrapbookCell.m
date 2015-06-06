@@ -9,6 +9,7 @@
 #import "CustomScrapbookCell.h"
 #import "EntryController.h"
 #import "ScrapbookController.h"
+#import "EXPhotoViewer.h"
 @import QuartzCore;
 
 @implementation CustomScrapbookCell
@@ -62,8 +63,15 @@
 
 }
 
-#pragma mark - delete cell
 
+
+- (IBAction)imageTapped:(id)sender {
+    
+    [EXPhotoViewer showImageFrom:self.photoImageView];
+
+}
+
+#pragma mark - delete cell
 
 - (IBAction)deleteButtonTapped:(id)sender  {
     [self.delegate deleteButtonTapped:self.indexPath];

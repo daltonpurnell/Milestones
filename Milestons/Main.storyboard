@@ -221,6 +221,19 @@
                                                 <action selector="deleteButtonTapped:" destination="fBN-QD-Djk" eventType="touchUpInside" id="BmJ-yf-6xV"/>
                                             </connections>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Uk-xl-lHE">
+                                            <rect key="frame" x="190" y="59" width="220" height="186"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="186" id="T5c-qs-FJw"/>
+                                                <constraint firstAttribute="width" constant="220" id="wBL-OK-fq8"/>
+                                            </constraints>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="imageTapped:" destination="fBN-QD-Djk" eventType="touchUpInside" id="n1o-J4-sam"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="ucm-6n-4rU" firstAttribute="leading" secondItem="lf4-k8-Zsm" secondAttribute="trailing" constant="-35" id="0FC-Ba-29M"/>
@@ -229,6 +242,7 @@
                                         <constraint firstItem="xS7-BP-qyO" firstAttribute="top" secondItem="nLH-wX-Tto" secondAttribute="topMargin" constant="16" id="5ti-d6-oEl"/>
                                         <constraint firstItem="ebh-xf-pRW" firstAttribute="top" secondItem="xS7-BP-qyO" secondAttribute="bottom" constant="5" id="7p8-sM-umd"/>
                                         <constraint firstItem="ebh-xf-pRW" firstAttribute="leading" secondItem="nLH-wX-Tto" secondAttribute="leadingMargin" constant="75" id="ArB-ee-Eds"/>
+                                        <constraint firstItem="ebh-xf-pRW" firstAttribute="centerY" secondItem="7Uk-xl-lHE" secondAttribute="centerY" constant="-2.5" id="CHR-U8-oPY"/>
                                         <constraint firstItem="lf4-k8-Zsm" firstAttribute="top" secondItem="xS7-BP-qyO" secondAttribute="bottom" constant="-45" id="Ecy-Dv-H6v"/>
                                         <constraint firstItem="lf4-k8-Zsm" firstAttribute="leading" secondItem="nLH-wX-Tto" secondAttribute="leadingMargin" id="Hlx-5V-bPi"/>
                                         <constraint firstItem="ebh-xf-pRW" firstAttribute="centerX" secondItem="nLH-wX-Tto" secondAttribute="centerX" id="KaI-hO-z9I"/>
@@ -237,6 +251,7 @@
                                         <constraint firstItem="ebh-xf-pRW" firstAttribute="top" secondItem="KxY-iZ-7P5" secondAttribute="bottom" constant="21" id="Pqu-gI-IJw"/>
                                         <constraint firstItem="ebh-xf-pRW" firstAttribute="bottom" secondItem="nLH-wX-Tto" secondAttribute="bottomMargin" constant="-1" id="Px2-7c-2zq"/>
                                         <constraint firstItem="ebh-xf-pRW" firstAttribute="centerX" secondItem="nLH-wX-Tto" secondAttribute="centerX" id="VqR-dH-Pc1"/>
+                                        <constraint firstItem="ebh-xf-pRW" firstAttribute="centerY" secondItem="7Uk-xl-lHE" secondAttribute="centerY" constant="-2.5" id="W1u-Vp-LDe"/>
                                         <constraint firstItem="lf4-k8-Zsm" firstAttribute="top" secondItem="KxY-iZ-7P5" secondAttribute="bottom" constant="-29" id="cbO-6W-9Oy"/>
                                         <constraint firstItem="lf4-k8-Zsm" firstAttribute="top" secondItem="yDL-hD-qek" secondAttribute="bottom" constant="-32" id="eL3-tl-wrW"/>
                                         <constraint firstItem="ucm-6n-4rU" firstAttribute="top" secondItem="yDL-hD-qek" secondAttribute="bottom" constant="-24" id="iOk-dw-6rc"/>
@@ -246,7 +261,9 @@
                                         <constraint firstItem="lf4-k8-Zsm" firstAttribute="top" secondItem="nLH-wX-Tto" secondAttribute="topMargin" id="mmv-eF-Xnp"/>
                                         <constraint firstItem="KxY-iZ-7P5" firstAttribute="leading" secondItem="nLH-wX-Tto" secondAttribute="leadingMargin" id="ovm-ZA-fRH"/>
                                         <constraint firstItem="KxY-iZ-7P5" firstAttribute="top" secondItem="nLH-wX-Tto" secondAttribute="topMargin" id="sFM-gN-cUF"/>
+                                        <constraint firstItem="ebh-xf-pRW" firstAttribute="centerX" secondItem="7Uk-xl-lHE" secondAttribute="centerX" id="tP9-5I-qcT"/>
                                         <constraint firstItem="KxY-iZ-7P5" firstAttribute="leading" secondItem="ebh-xf-pRW" secondAttribute="trailing" constant="26" id="uUc-Xh-mWM"/>
+                                        <constraint firstItem="ebh-xf-pRW" firstAttribute="centerX" secondItem="7Uk-xl-lHE" secondAttribute="centerX" id="zqb-jA-2Uq"/>
                                     </constraints>
                                     <variation key="default">
                                         <mask key="constraints">
