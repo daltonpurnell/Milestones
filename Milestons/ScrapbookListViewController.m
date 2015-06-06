@@ -192,7 +192,8 @@
     
     if ([segue.identifier isEqualToString:@"showEntryList"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        EntryListViewController *entryViewController = [segue destinationViewController];
+        EntryListViewController *entryViewController = [[[segue destinationViewController] viewControllers] objectAtIndex:0];
+        
         [entryViewController updateWithSB:[ScrapbookController sharedInstance].scrapbooks[indexPath.row]];
     }
 

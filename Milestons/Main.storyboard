@@ -292,7 +292,7 @@
                                     <outlet property="photoImageView" destination="ebh-xf-pRW" id="d7F-8M-6kr"/>
                                     <outlet property="timestampLabel" destination="xS7-BP-qyO" id="wCe-Q7-x8g"/>
                                     <outlet property="titleOfScrapbookLabel" destination="KxY-iZ-7P5" id="XY9-cb-0fQ"/>
-                                    <segue destination="FdX-8r-yfi" kind="show" identifier="showEntryList" id="kLJ-6V-dOh"/>
+                                    <segue destination="a0b-3x-HLz" kind="show" identifier="showEntryList" id="kLJ-6V-dOh"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="emptyStateCell" id="uqk-Rp-Edb">
@@ -801,7 +801,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uqe-b7-Sfb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3678" y="1047.75"/>
+            <point key="canvasLocation" x="4490" y="1047"/>
         </scene>
         <!--Entry List View Controller-->
         <scene sceneID="Rbl-F3-3IO">
@@ -968,13 +968,13 @@
                         </connections>
                     </tableView>
                     <toolbarItems>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="ihk-ey-75F"/>
-                        <barButtonItem title="Add Contributor" id="JAe-G0-BlB">
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="GsR-yl-695"/>
+                        <barButtonItem title="Add Contributor" id="Bvw-a1-X6Z">
                             <connections>
-                                <action selector="addContributorButtonPressed:" destination="FdX-8r-yfi" id="xwK-c9-AFA"/>
+                                <action selector="addContributorButtonPressed:" destination="FdX-8r-yfi" id="mZr-Hm-mIg"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="TBp-s1-Z3P"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="WID-pK-TaC"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="5XQ-lp-FVI">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="eBZ-cd-uDS">
@@ -1000,7 +1000,7 @@
                 <tapGestureRecognizer id="G1J-S1-m80"/>
                 <customObject id="KIx-6f-1ON" customClass="CollectionViewDataSource"/>
             </objects>
-            <point key="canvasLocation" x="2120" y="1041"/>
+            <point key="canvasLocation" x="2932" y="1041"/>
         </scene>
         <!--Settings Menu View Controller-->
         <scene sceneID="JMz-Zo-3ZJ">
@@ -1072,7 +1072,7 @@
         <!--Navigation Controller-->
         <scene sceneID="SRb-kh-Pou">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="WkN-NV-hcd" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WkN-NV-hcd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sRv-yY-vw5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1130,7 +1130,28 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p1m-wT-w24" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2890" y="1049"/>
+            <point key="canvasLocation" x="3702" y="1049"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iQc-tj-Rcy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="a0b-3x-HLz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dP2-uX-kAy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="8Kg-jA-x55">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="FdX-8r-yfi" kind="relationship" relationship="rootViewController" id="wUh-Lj-RD2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I2f-Hc-N4v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2120" y="1041"/>
         </scene>
     </scenes>
     <resources>
