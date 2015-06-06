@@ -68,6 +68,7 @@
 		CFE360791B225ECE003323A7 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE3606E1B225ECE003323A7 /* AFURLRequestSerialization.m */; };
 		CFE3607A1B225ECE003323A7 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE360701B225ECE003323A7 /* AFURLResponseSerialization.m */; };
 		CFE3607B1B225ECE003323A7 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE360721B225ECE003323A7 /* AFURLSessionManager.m */; };
+		CFE360AE1B2272FD003323A7 /* EXPhotoViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE360AD1B2272FD003323A7 /* EXPhotoViewer.m */; };
 		CFEC12DC1B04379500AB6C1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFEC12DB1B04379500AB6C1B /* Main.storyboard */; };
 		CFEC12E91B0C117800AB6C1B /* MyLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */; };
 		CFEC12EC1B0C119100AB6C1B /* MySignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12EB1B0C119100AB6C1B /* MySignUpViewController.m */; };
@@ -186,6 +187,8 @@
 		CFE360701B225ECE003323A7 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		CFE360711B225ECE003323A7 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		CFE360721B225ECE003323A7 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		CFE360AC1B2272FD003323A7 /* EXPhotoViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPhotoViewer.h; sourceTree = "<group>"; };
+		CFE360AD1B2272FD003323A7 /* EXPhotoViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPhotoViewer.m; sourceTree = "<group>"; };
 		CFEC12DB1B04379500AB6C1B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CFEC12E71B0C117800AB6C1B /* MyLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLoginViewController.h; path = ../MyLoginViewController.h; sourceTree = "<group>"; };
 		CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyLoginViewController.m; path = ../MyLoginViewController.m; sourceTree = "<group>"; };
@@ -267,6 +270,7 @@
 				CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */,
 				CFEC12EA1B0C119100AB6C1B /* MySignUpViewController.h */,
 				CFEC12EB1B0C119100AB6C1B /* MySignUpViewController.m */,
+				CFE360AB1B2272FD003323A7 /* EXPhotoViewer */,
 				CFE04C341B1A5802001F1DA6 /* SettingsMenu */,
 				CF2C230C1AF5B50100D28EAB /* Scrapbooks */,
 				CF2C230D1AF5B50D00D28EAB /* Entries */,
@@ -473,6 +477,15 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
+		CFE360AB1B2272FD003323A7 /* EXPhotoViewer */ = {
+			isa = PBXGroup;
+			children = (
+				CFE360AC1B2272FD003323A7 /* EXPhotoViewer.h */,
+				CFE360AD1B2272FD003323A7 /* EXPhotoViewer.m */,
+			);
+			path = EXPhotoViewer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -578,6 +591,7 @@
 				CFE04C3E1B1AA757001F1DA6 /* CustomCollectionViewCell.m in Sources */,
 				CF2C23021AF5B49300D28EAB /* ScrapbookController.m in Sources */,
 				CF2C22D71AF5B40A00D28EAB /* ViewController.m in Sources */,
+				CFE360AE1B2272FD003323A7 /* EXPhotoViewer.m in Sources */,
 				CF2C23431AF6CDCE00D28EAB /* Photo.m in Sources */,
 				CFE360781B225ECE003323A7 /* AFURLConnectionOperation.m in Sources */,
 				CF2C248A1B01009F00D28EAB /* CustomEntryCell.m in Sources */,

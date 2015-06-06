@@ -868,9 +868,26 @@
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eUQ-An-cSQ" customClass="PFImageView">
                                                                 <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                                             </imageView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BE3-rG-nkI">
+                                                                <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="180" id="DcR-lj-pR7"/>
+                                                                    <constraint firstAttribute="height" constant="180" id="s4j-Uj-lOw"/>
+                                                                </constraints>
+                                                                <state key="normal">
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="imageTapped:" destination="wV2-RJ-KXw" eventType="touchUpInside" id="mmm-mt-Zk0"/>
+                                                                </connections>
+                                                            </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     </view>
+                                                    <constraints>
+                                                        <constraint firstAttribute="centerX" secondItem="BE3-rG-nkI" secondAttribute="centerX" id="hWm-JF-Tan"/>
+                                                        <constraint firstAttribute="centerY" secondItem="BE3-rG-nkI" secondAttribute="centerY" id="pdK-rP-2ii"/>
+                                                    </constraints>
                                                     <size key="customSize" width="180" height="180"/>
                                                     <connections>
                                                         <outlet property="imageView" destination="eUQ-An-cSQ" id="ytX-If-HXe"/>
