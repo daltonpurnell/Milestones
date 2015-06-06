@@ -54,17 +54,6 @@
    }
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (self.entries.count == 0) {
-        
-        return tableView.frame.size.height;
-        
-    } else {
-        
-        return 250;
-    }
-}
 
 
 

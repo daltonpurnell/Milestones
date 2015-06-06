@@ -14,6 +14,7 @@
 @property (strong, nonatomic) Entry *entry;
 @property (strong, nonatomic) Scrapbook *scrapbook;
 
+@property (nonatomic, strong) NSArray *entries;
 
 - (void)updateWithSB:(Scrapbook *)scrapbook;
 

@@ -83,7 +83,7 @@
             if (contributor) {
                 [[ScrapbookController sharedInstance] addContributor:contributor toScrapbook:self.scrapbook];
             } else {
-                // Display message that the user does not have an account and offer to invte
+                // Display message that the user does not have an account and offer to invite
                 
                                 [self presentInviteAlertViewController];
             }
@@ -109,6 +109,8 @@
     [[EntryController sharedInstance] loadTheseEntriesFromParseInScrapbook:self.scrapbook completion:^(NSArray *entries, NSError *error) {
         self.tableDataSource.entries = entries;
         [self.tableView reloadData];
+        
+        [self.refreshControl endRefreshing];
     }];
 }
 
@@ -116,6 +118,14 @@
 -(void)viewWillAppear:(BOOL)animated {
     
     [self.tableView reloadData];
+}
+
+#pragma mark - table view delegate method
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+        
+        return 450;
+
 }
 
 
@@ -160,11 +170,18 @@
     [self dismissViewControllerAnimated:YES completion:^{
         MFMailComposeViewController *mailViewController = [MFMailComposeViewController new];
         mailViewController.mailComposeDelegate = self;
+        
+//        [mailViewController setToRecipients:(NSString *) emailValueSelected];
+        
+        [mailViewController setSubject:@"I want to add you as a contributor to my scrapbook!"];
+        
+        [mailViewController setMessageBody:@"Download MyMilestones to start contributing." isHTML:NO]; // part of string should be link to app store to download app
+        
         [self presentViewController:mailViewController animated:YES completion:nil];
         NSLog(@"Invite friend");
     }];
     
-    return NO;
+    return YES;
 }
 
 - (BOOL)peoplePickerNavigationController:
@@ -173,7 +190,32 @@
                                 property:(ABPropertyID)property
                               identifier:(ABMultiValueIdentifier)identifier
 {
-    return NO;
+    
+    
+    // Only inspect the value if it’s an email
+    // get the email address
+    if (property == kABPersonEmailProperty) {
+        ABMultiValueRef emails = ABRecordCopyValue(person, property);
+        CFStringRef emailValueSelected = ABMultiValueCopyValueAtIndex(emails, identifier);
+
+        // Return to the main view controller and launch MFMailcompose
+        [ self dismissViewControllerAnimated:YES completion:^{
+            MFMailComposeViewController *mailViewController = [MFMailComposeViewController new];
+            mailViewController.mailComposeDelegate = self;
+            
+//            [mailViewController setToRecipients:(NSString *) emailValueSelected];
+            
+            [mailViewController setSubject:@"I want to add you as a contributor to my scrapbook!"];
+            
+            [mailViewController setMessageBody:@"Login to MyMilestones to start contributing." isHTML:NO]; // part of string should be link to app store to download app
+            
+            [self presentViewController:mailViewController animated:YES completion:nil];
+            NSLog(@"Invite friend");
+        }];
+
+        }
+    
+    return YES;
 }
 
 
@@ -195,6 +237,13 @@
             MFMailComposeViewController *mailViewController = [MFMailComposeViewController new];
             mailViewController.mailComposeDelegate = self;
             [self presentViewController:mailViewController animated:YES completion:nil];
+            
+//            [mailViewController setToRecipients:(NSString *) emailValueSelected];
+            
+            [mailViewController setSubject:@"I want to add you as a contributor to my scrapbook!"];
+            
+            [mailViewController setMessageBody:@"Download to MyMilestones to start contributing." isHTML:NO]; // part of string should be link to app store to download app
+            
             NSLog(@"Invite friend");
     }];
     
