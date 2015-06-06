@@ -69,6 +69,9 @@
 		CFE3607A1B225ECE003323A7 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE360701B225ECE003323A7 /* AFURLResponseSerialization.m */; };
 		CFE3607B1B225ECE003323A7 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE360721B225ECE003323A7 /* AFURLSessionManager.m */; };
 		CFE360AE1B2272FD003323A7 /* EXPhotoViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE360AD1B2272FD003323A7 /* EXPhotoViewer.m */; };
+		CFE361041B23739D003323A7 /* UserController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE361031B23739D003323A7 /* UserController.m */; };
+		CFE361061B237B65003323A7 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE361051B237B65003323A7 /* AddressBookUI.framework */; };
+		CFE361081B237B74003323A7 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE361071B237B74003323A7 /* AddressBook.framework */; };
 		CFEC12DC1B04379500AB6C1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFEC12DB1B04379500AB6C1B /* Main.storyboard */; };
 		CFEC12E91B0C117800AB6C1B /* MyLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */; };
 		CFEC12EC1B0C119100AB6C1B /* MySignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12EB1B0C119100AB6C1B /* MySignUpViewController.m */; };
@@ -189,6 +192,10 @@
 		CFE360721B225ECE003323A7 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		CFE360AC1B2272FD003323A7 /* EXPhotoViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPhotoViewer.h; sourceTree = "<group>"; };
 		CFE360AD1B2272FD003323A7 /* EXPhotoViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPhotoViewer.m; sourceTree = "<group>"; };
+		CFE361021B23739D003323A7 /* UserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserController.h; sourceTree = "<group>"; };
+		CFE361031B23739D003323A7 /* UserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserController.m; sourceTree = "<group>"; };
+		CFE361051B237B65003323A7 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		CFE361071B237B74003323A7 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		CFEC12DB1B04379500AB6C1B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CFEC12E71B0C117800AB6C1B /* MyLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLoginViewController.h; path = ../MyLoginViewController.h; sourceTree = "<group>"; };
 		CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyLoginViewController.m; path = ../MyLoginViewController.m; sourceTree = "<group>"; };
@@ -201,6 +208,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFE361081B237B74003323A7 /* AddressBook.framework in Frameworks */,
+				CFE361061B237B65003323A7 /* AddressBookUI.framework in Frameworks */,
 				CF2C23691AF7E1D400D28EAB /* Social.framework in Frameworks */,
 				CF2C23671AF7E1CA00D28EAB /* Accounts.framework in Frameworks */,
 				CF2C23651AF7E1BF00D28EAB /* libsqlite3.dylib in Frameworks */,
@@ -286,6 +295,8 @@
 		CF2C22CE1AF5B40A00D28EAB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CFE361071B237B74003323A7 /* AddressBook.framework */,
+				CFE361051B237B65003323A7 /* AddressBookUI.framework */,
 				CFE3605F1B225ECE003323A7 /* AFNetworking */,
 				CF2C23681AF7E1D400D28EAB /* Social.framework */,
 				CF2C23661AF7E1CA00D28EAB /* Accounts.framework */,
@@ -447,6 +458,8 @@
 				CF2C22FE1AF5B48400D28EAB /* EntryController.m */,
 				CF2C23001AF5B49300D28EAB /* ScrapbookController.h */,
 				CF2C23011AF5B49300D28EAB /* ScrapbookController.m */,
+				CFE361021B23739D003323A7 /* UserController.h */,
+				CFE361031B23739D003323A7 /* UserController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -593,6 +606,7 @@
 				CFE04C3E1B1AA757001F1DA6 /* CustomCollectionViewCell.m in Sources */,
 				CF2C23021AF5B49300D28EAB /* ScrapbookController.m in Sources */,
 				CF2C22D71AF5B40A00D28EAB /* ViewController.m in Sources */,
+				CFE361041B23739D003323A7 /* UserController.m in Sources */,
 				CFE360AE1B2272FD003323A7 /* EXPhotoViewer.m in Sources */,
 				CF2C23431AF6CDCE00D28EAB /* Photo.m in Sources */,
 				CFE360781B225ECE003323A7 /* AFURLConnectionOperation.m in Sources */,

@@ -57,8 +57,6 @@
     NSLog(@"Loading entries from Parse");
     PFQuery *query = [Entry query];
     
-    PFUser *user = [PFUser currentUser];
-    [query whereKey:@"user" equalTo:user];
     [query whereKey:@"scrapbook" equalTo:scrapbook];
     
     // [query fromLocalDatastore];

@@ -15,9 +15,10 @@
 @import Parse;
 @import MessageUI;
 @import ParseUI;
+@import AddressBookUI;
 
 
-@interface SettingsMenuViewController () <MFMailComposeViewControllerDelegate, PFSignUpViewControllerDelegate, PFLogInViewControllerDelegate>
+@interface SettingsMenuViewController () <MFMailComposeViewControllerDelegate, PFSignUpViewControllerDelegate, PFLogInViewControllerDelegate, ABPeoplePickerNavigationControllerDelegate>
 
 @property (nonatomic, strong) PFUser *currentUser;
 
@@ -94,6 +95,16 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.row == 0) {
+        
+        
+        ABPeoplePickerNavigationController *picker =
+        [ABPeoplePickerNavigationController new];
+         picker.peoplePickerDelegate = self;
+        picker.predicateForEnablingPerson = [NSPredicate predicateWithFormat:@"emailAddresses.@count > 0"];
+        picker.predicateForSelectionOfPerson = [NSPredicate predicateWithFormat:@"emailAddresses.@count = 1"];
+        
+        [self presentViewController:picker animated:YES completion:nil];
+        
         NSLog(@"Add Contributors");
     }
     
@@ -218,6 +229,39 @@
 }
 
 
+
+#pragma mark - ab people picker delegate methods
+
+- (void)peoplePickerNavigationControllerDidCancel:
+(ABPeoplePickerNavigationController *)peoplePicker
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+- (BOOL)peoplePickerNavigationController:
+(ABPeoplePickerNavigationController *)peoplePicker
+      shouldContinueAfterSelectingPerson:(ABRecordRef)person {
+    
+    [self displayPerson:person];
+    [self dismissModalViewControllerAnimated:YES];
+    
+    return NO;
+}
+
+- (BOOL)peoplePickerNavigationController:
+(ABPeoplePickerNavigationController *)peoplePicker
+      shouldContinueAfterSelectingPerson:(ABRecordRef)person
+                                property:(ABPropertyID)property
+                              identifier:(ABMultiValueIdentifier)identifier
+{
+    return NO;
+}
+
+- (void)displayPerson:(ABRecordRef)person
+{
+
+}
 
 
 @end

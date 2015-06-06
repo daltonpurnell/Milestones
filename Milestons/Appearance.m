@@ -39,7 +39,7 @@
                                                         nil]];
     
     
-    [[UITextView appearance] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Layer-1.png"]]];
+//    [[UITextView appearance] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Layer-1.png"]]];
     
     
     [[UITextField appearance] setBackground:[UIImage imageNamed:@"Layer-1.png"]];

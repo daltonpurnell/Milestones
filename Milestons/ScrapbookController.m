@@ -72,7 +72,7 @@
     PFUser *user = [PFUser currentUser];
     
     if (user) {
-        [query whereKey:@"user" equalTo:user];
+//        [query whereKey:@"user" equalTo:user];
         [query includeKey:@"entries"];
         
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
@@ -97,6 +97,19 @@
 //    [scrapbook pinInBackground];
     [scrapbook saveInBackground];
     
+}
+
+- (void)addContributor:(PFUser *)addedContributor toScrapbook:(Scrapbook *)scrapbook {
+    PFACL *currentACL = scrapbook.ACL;
+    [currentACL setReadAccess:YES forUser:addedContributor];
+    [currentACL setWriteAccess:YES forUser:addedContributor];
+    scrapbook.ACL = currentACL;
+    
+    // Get all the entries for the scrapbook and update their ACLs to match the scrapbook ACL
+//    for (Entry *entry in scrapbook.entries) {
+//        entry.ACL = scrapbook.ACL;
+//    }
+
 }
 
 #pragma mark - Delete

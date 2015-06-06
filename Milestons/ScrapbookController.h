@@ -19,5 +19,5 @@
 - (Scrapbook *)createScrapbookWithTitle: (NSString *) title date:(NSDate *)timestamp photo:(UIImage *)image;
 - (void)updateScrapbook:(Scrapbook *)scrapbook;
 - (void)removeScrapbook:(Scrapbook *)scrapbook;
-
+- (void)addContributor:(PFUser *)addedContributor toScrapbook:(Scrapbook *)scrapbook;
 @end
