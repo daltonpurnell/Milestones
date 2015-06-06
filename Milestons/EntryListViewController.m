@@ -58,6 +58,9 @@
     self.scrapbook = scrapbook;
     
 }
+
+
+
 - (IBAction)addContributorButtonPressed:(id)sender {
     
     // Show ABPeoplePickerNavigationController
@@ -180,22 +183,22 @@
 #pragma mark - invite friend alert controller
 
 
-//-(void)presentInviteAlertViewController {
-//    
-//    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"This person does not have an account with us" message:@"Would you like to invite him/her to download the app?" preferredStyle:UIAlertControllerStyleAlert];
-//    
-//    [alertController addAction:[UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-//
-//        [self dismissViewControllerAnimated:YES completion:^{
-//            MFMailComposeViewController *mailViewController = [MFMailComposeViewController new];
-//            mailViewController.mailComposeDelegate = self;
-//            [self presentViewController:mailViewController animated:YES completion:nil];
-//            NSLog(@"Invite friend");
-//    }];
-//    
-//    [alertController addAction:[UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDestructive handler:nil]];
-//    [self presentViewController:alertController animated:YES completion:nil];
-//}
+-(void)presentInviteAlertViewController {
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"This person does not have an account with us" message:@"Would you like to invite him/her to download the app?" preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
 
+        [self dismissViewControllerAnimated:YES completion:^{
+            MFMailComposeViewController *mailViewController = [MFMailComposeViewController new];
+            mailViewController.mailComposeDelegate = self;
+            [self presentViewController:mailViewController animated:YES completion:nil];
+            NSLog(@"Invite friend");
+    }];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDestructive handler:nil]];
+    [self presentViewController:alertController animated:YES completion:nil];
+    }]];
+}
 
 @end
