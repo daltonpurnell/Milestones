@@ -13,8 +13,7 @@
 #import "PhotoController.h"
 #import "CollectionViewDataSource.h"
 #import "CustomCollectionViewCell2.h"
-
-
+#import <QBImagePickerController/QBImagePickerController.h>
 
 @import MessageUI;
 
