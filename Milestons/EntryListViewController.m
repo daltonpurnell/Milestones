@@ -46,7 +46,7 @@
     self.navBar.title = [NSString stringWithFormat:@"%@", self.scrapbook.titleOfScrapbook];
 
     [Appearance initializeAppearanceDefaults];
-    self.tableView.rowHeight = 350;
+//    self.tableView.rowHeight = 350;
     self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"giftlyBackground.png"]];
     
     self.refreshControl = [UIRefreshControl new];
@@ -122,17 +122,13 @@
 
 #pragma mark - table view delegate method
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-        
         return 450;
-
 }
 
 
 #pragma mark - deleteCellDelegate method
 
 - (void)deleteButtonTapped:(NSIndexPath *)indexPath {
-
         [self.tableView reloadData];
 }
 
