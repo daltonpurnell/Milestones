@@ -107,17 +107,17 @@
     
     if (indexPath.row == 2) {
         
-        // Take user to app store
-//        {
-//            NSString *appStoreString = @"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa";
-//            appStoreString = [NSString stringWithFormat:@"%@/wa/viewContentsUserReviews?", appStoreString];
-//            appStoreString = [NSString stringWithFormat:@"%@type=Purple+Software&id=", appStoreString];
-//            
-//            // app id from itunesconnect
-//            appStoreString = [NSString stringWithFormat:@"%@yourAppIDHere", appStoreString];
-//            
-//            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:appStoreString]];
-//        }
+        // Take user to app store (this is not working)
+        {
+            NSString *appStoreString = @"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa";
+            appStoreString = [NSString stringWithFormat:@"%@/wa/viewContentsUserReviews?", appStoreString];
+            appStoreString = [NSString stringWithFormat:@"%@type=Purple+Software&id=", appStoreString];
+            
+            // app id from itunesconnect
+            appStoreString = [NSString stringWithFormat:@"%@997564176", appStoreString];
+            
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:appStoreString]];
+        }
         NSLog(@"Rate");
     }
     

@@ -22,10 +22,7 @@
     
     [self.logInView setBackgroundColor:[UIColor colorWithRed:240/255.0 green:240/255.0 blue:255/255.0 alpha:1]];
     [self.logInView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LaunchImage.png"]]];
-    
-    // Set buttons appearance
-//    [self.logInView.dismissButton setImage:[UIImage imageNamed:@"exit.png"] forState:UIControlStateNormal];
-//    [self.logInView.dismissButton setImage:[UIImage imageNamed:@"exit_down.png"] forState:UIControlStateHighlighted];
+
     
     [self.logInView.logInButton setBackgroundColor:[UIColor colorWithRed:74/255.0 green:75/255.0 blue:76/255.0 alpha:1]];
     [self.logInView.signUpButton setBackgroundColor:[UIColor colorWithRed:102/255.0 green:183/255.0 blue:235/255.0 alpha:1]];
