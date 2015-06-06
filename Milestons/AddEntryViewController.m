@@ -105,6 +105,7 @@
     
     UIAlertAction *cameraRollAction = [UIAlertAction actionWithTitle:@"From Library" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         imagePicker.sourceType =  UIImagePickerControllerSourceTypePhotoLibrary;
+//        imagePicker.mediaTypes = [[NSArray alloc] initWithObjects:(NSString *)kUTTypeMovie,      nil];
         [self presentViewController:imagePicker animated:YES completion:nil];
     }];
     [photoActionSheet addAction:cameraRollAction];
@@ -305,5 +306,16 @@
     
     return self.images.count;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 @end
