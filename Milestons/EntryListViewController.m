@@ -52,6 +52,8 @@
     self.refreshControl = [UIRefreshControl new];
     [self.refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];
     
+    self.navigationController.toolbarHidden = NO;
+    
 } 
 
 - (void)updateWithSB:(Scrapbook *)scrapbook {
@@ -81,9 +83,9 @@
             if (contributor) {
                 [[ScrapbookController sharedInstance] addContributor:contributor toScrapbook:self.scrapbook];
             } else {
-                // Display message that the user was not found and offer to invte
+                // Display message that the user does not have an account and offer to invte
                 
-                //                [self presentInviteAlertViewController];
+                                [self presentInviteAlertViewController];
             }
         } else {
             // Let them know there was an error
