@@ -967,7 +967,15 @@
                             <outlet property="delegate" destination="FdX-8r-yfi" id="Jy3-6Q-Y6z"/>
                         </connections>
                     </tableView>
-                    <toolbarItems/>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="ihk-ey-75F"/>
+                        <barButtonItem title="Add Contributor" id="JAe-G0-BlB">
+                            <connections>
+                                <action selector="addContributorButtonPressed:" destination="FdX-8r-yfi" id="xwK-c9-AFA"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="TBp-s1-Z3P"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="5XQ-lp-FVI">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="eBZ-cd-uDS">
                             <connections>
@@ -992,7 +1000,7 @@
                 <tapGestureRecognizer id="G1J-S1-m80"/>
                 <customObject id="KIx-6f-1ON" customClass="CollectionViewDataSource"/>
             </objects>
-            <point key="canvasLocation" x="2074" y="1048"/>
+            <point key="canvasLocation" x="2120" y="1041"/>
         </scene>
         <!--Settings Menu View Controller-->
         <scene sceneID="JMz-Zo-3ZJ">
@@ -1064,7 +1072,7 @@
         <!--Navigation Controller-->
         <scene sceneID="SRb-kh-Pou">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WkN-NV-hcd" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="WkN-NV-hcd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sRv-yY-vw5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

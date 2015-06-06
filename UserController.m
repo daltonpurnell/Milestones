@@ -8,8 +8,10 @@
 
 #import "UserController.h"
 #import "MySignUpViewController.h"
+#import "ScrapbookController.h"
 
 @interface UserController () <PFSignUpViewControllerDelegate>
+
 
 @end
 
@@ -21,13 +23,6 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [UserController new];
-        [sharedInstance loadUsersWithUsernameFromParse:^(NSError *error) {
-            // Nothing
-            
-            if (error) {
-                NSLog(@"Error: %@", error);
-            }
-        }];
     });
     return sharedInstance;
 }
@@ -35,25 +30,32 @@
 
 #pragma mark - read
 
--(void)loadUsersWithUsernameFromParse:(void (^)(NSError *error))completion {
+-(void)findUsersWithUsernameFromParse:(NSString *)emailAddress completion:(void (^)(PFUser *contributor, NSError *error))completion {
     
     PFQuery *query = [PFUser query];
     
-    [query whereKey:@"user" equalTo:@"emailaddress"];
+    [query whereKey:@"username" equalTo:emailAddress];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
         if (!error) {
-            completion(nil);
-        } else {
-            completion(error);
             
-            MySignUpViewController *signUpViewController = [[MySignUpViewController alloc] init];
-            [signUpViewController setDelegate:self];
-            [signUpViewController setFields:PFSignUpFieldsDefault
-             | PFSignUpFieldsSignUpButton];
-            // set user name and password
-
-        }
+            if (objects.count == 1) {
+                // add person as contributor
+                // update acl
+                
+                PFUser *contributor = objects.firstObject;
+//                [[ScrapbookController sharedInstance]addContributor:contributor toScrapbook:self.scrapbook];
+                
+                completion(contributor, nil);
+            } else { // (objects.count == 0) (Can never have more than one)
+                
+                // sorry, this person does not use the app, would you like to invite them?
+                //  for v2 instead of letting user invite them, sign them up
+                completion(nil, nil);
+            }
+        } else {
+            completion(nil, error);
+                }
     }];
     
 }

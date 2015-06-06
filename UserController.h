@@ -12,6 +12,7 @@
 
 @interface UserController : NSObject
 
--(void)loadUsersWithUsernameFromParse:(void (^)(NSError *error))completion;
++ (UserController *)sharedInstance;
 
+-(void)findUsersWithUsernameFromParse:(NSString *)emailAddress completion:(void (^)(PFUser *contributor, NSError *error))completion;
 @end
