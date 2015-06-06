@@ -22,6 +22,7 @@
     
     [self.logInView setBackgroundColor:[UIColor colorWithRed:240/255.0 green:240/255.0 blue:255/255.0 alpha:1]];
     [self.logInView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LaunchImage.png"]]];
+    self.logInView.contentMode = UIViewContentModeScaleAspectFit;
 
     
     [self.logInView.logInButton setBackgroundColor:[UIColor colorWithRed:74/255.0 green:75/255.0 blue:76/255.0 alpha:1]];
