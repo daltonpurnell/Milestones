@@ -23,7 +23,6 @@
 
 -(void)awakeFromNib {
     
-    
     // create drop shadow for image view (this doesn't seem to be working)
     self.imageView.layer.shadowColor = [UIColor grayColor].CGColor;
     self.imageView.layer.shadowOffset = CGSizeMake(0, 1);

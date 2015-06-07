@@ -16,6 +16,7 @@
 @import QuartzCore;
 
 @interface CustomEntryCell () <UICollectionViewDelegate> 
+@property (weak, nonatomic) IBOutlet UIImageView *backImageView;
 
 @end
 
@@ -33,6 +34,17 @@
     self.descriptionLabel.layer.shadowOpacity = 1;
     self.descriptionLabel.layer.shadowRadius = 1.0;
     self.descriptionLabel.clipsToBounds = NO;
+    
+    
+    self.backImageView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"giftlyBackground.png"]];
+    self.backImageView.layer.shadowColor = [UIColor grayColor].CGColor;
+    self.backImageView.layer.shadowOffset = CGSizeMake(0, 1);
+    self.backImageView.layer.shadowOpacity = 1;
+    self.backImageView.layer.shadowRadius = 1.0;
+    self.backImageView.clipsToBounds = NO;
+    
+    self.backImageView.clipsToBounds = YES;
+    self.backImageView.layer.cornerRadius = 5/2.0f;
     
 }
 
