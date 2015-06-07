@@ -253,6 +253,7 @@
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // 1
+    
     CGRect originalCellFrame = [self.tableView rectForRowAtIndexPath:indexPath];
     
     // 2

@@ -90,6 +90,35 @@
 
 - (IBAction)deleteButtonTapped:(id)sender  {
     [self.delegate deleteButtonTapped:self.indexPath];
+}
+
+
+#pragma mark - cell animation
+
+-(void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    // 1
+    UICollectionViewLayoutAttributes *attributes = [self.collectionView layoutAttributesForItemAtIndexPath:indexPath];
+
+    CGRect originalCellFrame = attributes.frame;
+    
+    // 2
+    cell.frame = CGRectMake(self.collectionView.frame.size.width + originalCellFrame.size.width,
+                            originalCellFrame.origin.y,
+                            originalCellFrame.size.width,
+                            originalCellFrame.size.height);
+    // 3
+    [UIView animateWithDuration:0.75
+                          delay:0.75
+         usingSpringWithDamping:0.8
+          initialSpringVelocity:2.0
+                        options: UIViewAnimationOptionCurveLinear
+     // 4
+                     animations:^{
+                         cell.frame = originalCellFrame;
+                     }
+                     completion:^(BOOL finished){
+                     }];
     
 }
 
