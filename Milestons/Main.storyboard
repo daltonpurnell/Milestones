@@ -204,7 +204,7 @@
                                                 <constraint firstAttribute="width" constant="24" id="BqS-S3-NOo"/>
                                                 <constraint firstAttribute="height" constant="24" id="vgp-Z3-Ia6"/>
                                             </constraints>
-                                            <state key="normal" image="Edit-32">
+                                            <state key="normal" image="Layer-0">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                         </button>
@@ -327,14 +327,15 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Your Scrapbooks" id="5dn-fF-DbF">
-                        <barButtonItem key="leftBarButtonItem" title="Options" id="qik-C3-cYW"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="gQQ-1V-zmg">
+                        <barButtonItem key="leftBarButtonItem" image="Cog" style="plain" id="qik-C3-cYW"/>
+                        <barButtonItem key="rightBarButtonItem" image="add" id="gQQ-1V-zmg">
                             <connections>
-                                <segue destination="du9-zh-6TT" kind="presentation" identifier="presentAddScrapbook" id="Jcj-8v-P0O"/>
+                                <segue destination="du9-zh-6TT" kind="presentation" identifier="presentAddEntry" id="aVE-kf-Kw0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addScrapbookButton" destination="gQQ-1V-zmg" id="Mql-0I-QBQ"/>
                         <outlet property="settingsButton" destination="qik-C3-cYW" id="7M3-2c-UWb"/>
                         <outlet property="tableView" destination="o8h-uA-uzi" id="6V5-6j-b2d"/>
                     </connections>
@@ -846,7 +847,7 @@
                                                 <constraint firstAttribute="width" constant="16" id="HdS-hy-lYM"/>
                                                 <constraint firstAttribute="height" constant="16" id="zzp-Nt-x2g"/>
                                             </constraints>
-                                            <state key="normal" image="Edit-32">
+                                            <state key="normal" image="Layer-0">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                         </button>
@@ -989,7 +990,7 @@
                     </tableView>
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="GsR-yl-695"/>
-                        <barButtonItem title="Add Contributor" id="Bvw-a1-X6Z">
+                        <barButtonItem image="add-person" style="plain" id="Bvw-a1-X6Z">
                             <connections>
                                 <action selector="addContributorButtonPressed:" destination="FdX-8r-yfi" id="mZr-Hm-mIg"/>
                             </connections>
@@ -997,7 +998,7 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="WID-pK-TaC"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="5XQ-lp-FVI">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="eBZ-cd-uDS">
+                        <barButtonItem key="rightBarButtonItem" image="add" id="eBZ-cd-uDS">
                             <connections>
                                 <segue destination="UaZ-7O-LOv" kind="presentation" identifier="presentAddEntry" id="3Ow-z2-8AQ"/>
                             </connections>
@@ -1176,10 +1177,13 @@
     </scenes>
     <resources>
         <image name="Camera" width="50" height="50"/>
-        <image name="Edit-32" width="32" height="32"/>
+        <image name="Cog" width="32" height="32"/>
+        <image name="Layer-0" width="30" height="30"/>
         <image name="ShareIcon" width="22" height="31"/>
         <image name="Trash-can" width="24" height="32"/>
         <image name="Video" width="50" height="48"/>
+        <image name="add" width="26" height="26"/>
+        <image name="add-person" width="32" height="32"/>
         <image name="dashedLineSquare" width="451" height="451"/>
         <image name="giftlyBackground" width="320" height="568"/>
     </resources>

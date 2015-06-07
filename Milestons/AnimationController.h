@@ -7,7 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+@import UIKit;
+
+
+@protocol AnimationController <UIViewControllerAnimatedTransitioning>
+
+@property (nonatomic, assign) NSTimeInterval presentationDuration;
+
+@property (nonatomic, assign) NSTimeInterval dismissalDuration;
+
+@property (nonatomic, assign) BOOL isPresenting;
+
+@end
 
 @interface AnimationController : NSObject
+
 
 @end

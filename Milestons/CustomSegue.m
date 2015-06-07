@@ -8,6 +8,25 @@
 
 #import "CustomSegue.h"
 
+
 @implementation CustomSegue
+
+//- (instancetype)initWithIdentifier:(NSString *)identifier source:(UIViewController *)source destination:(UIViewController *)destination {
+//     if (self = [super initWithIdentifier:identifier source:source destination:destination]) {
+//         
+//         
+//         self.animated = YES;
+//         
+//     }
+//    
+//    return self;
+//}
+//
+//- (void)perform
+//{
+//    // Add your own animation code here.
+//    
+//    [[self sourceViewController] presentModalViewController:[self destinationViewController] animated:NO];
+//}
 
 @end
