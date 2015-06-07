@@ -257,7 +257,7 @@
     CGRect originalCellFrame = [self.tableView rectForRowAtIndexPath:indexPath];
     
     // 2
-    cell.frame = CGRectMake(0 - originalCellFrame.size.width,
+    cell.frame = CGRectMake(self.tableView.frame.size.width + originalCellFrame.size.width,
                             originalCellFrame.origin.y,
                             originalCellFrame.size.width,
                             originalCellFrame.size.height);
