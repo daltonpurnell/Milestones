@@ -216,5 +216,32 @@
 
 
 
+#pragma mark - cell animation
+
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // 1
+    CGRect originalCellFrame = [self.tableView rectForRowAtIndexPath:indexPath];
+    
+    // 2
+    cell.frame = CGRectMake(0 - originalCellFrame.size.width,
+                            originalCellFrame.origin.y,
+                            originalCellFrame.size.width,
+                            originalCellFrame.size.height);
+    // 3
+    [UIView animateWithDuration:0.75
+                          delay:0.25
+         usingSpringWithDamping:0.8
+          initialSpringVelocity:2.0
+                        options: UIViewAnimationOptionCurveLinear
+     // 4
+                     animations:^{
+                         cell.frame = originalCellFrame;
+                     }
+                     completion:^(BOOL finished){
+                     }];
+    
+}
+
 
 @end

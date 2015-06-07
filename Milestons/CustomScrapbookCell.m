@@ -38,6 +38,7 @@
     self.photoImageView.layer.shadowOpacity = 1;
     self.photoImageView.layer.shadowRadius = 1.0;
     self.photoImageView.clipsToBounds = NO;
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

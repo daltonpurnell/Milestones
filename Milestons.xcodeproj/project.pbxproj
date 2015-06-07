@@ -72,6 +72,7 @@
 		CFE361041B23739D003323A7 /* UserController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE361031B23739D003323A7 /* UserController.m */; };
 		CFE361061B237B65003323A7 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE361051B237B65003323A7 /* AddressBookUI.framework */; };
 		CFE361081B237B74003323A7 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE361071B237B74003323A7 /* AddressBook.framework */; };
+		CFE3610B1B23D24E003323A7 /* AnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE3610A1B23D24E003323A7 /* AnimationController.m */; };
 		CFEC12DC1B04379500AB6C1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFEC12DB1B04379500AB6C1B /* Main.storyboard */; };
 		CFEC12E91B0C117800AB6C1B /* MyLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */; };
 		CFEC12EC1B0C119100AB6C1B /* MySignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12EB1B0C119100AB6C1B /* MySignUpViewController.m */; };
@@ -196,6 +197,8 @@
 		CFE361031B23739D003323A7 /* UserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserController.m; sourceTree = "<group>"; };
 		CFE361051B237B65003323A7 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		CFE361071B237B74003323A7 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		CFE361091B23D24E003323A7 /* AnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationController.h; sourceTree = "<group>"; };
+		CFE3610A1B23D24E003323A7 /* AnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationController.m; sourceTree = "<group>"; };
 		CFEC12DB1B04379500AB6C1B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CFEC12E71B0C117800AB6C1B /* MyLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLoginViewController.h; path = ../MyLoginViewController.h; sourceTree = "<group>"; };
 		CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyLoginViewController.m; path = ../MyLoginViewController.m; sourceTree = "<group>"; };
@@ -273,6 +276,8 @@
 				CF2C22D61AF5B40A00D28EAB /* ViewController.m */,
 				CF2C23141AF5C26200D28EAB /* Appearance.h */,
 				CF2C23151AF5C26200D28EAB /* Appearance.m */,
+				CFE361091B23D24E003323A7 /* AnimationController.h */,
+				CFE3610A1B23D24E003323A7 /* AnimationController.m */,
 				CFE04C051B1A0DEA001F1DA6 /* SettingsController.h */,
 				CFE04C061B1A0DEA001F1DA6 /* SettingsController.m */,
 				CFEC12E71B0C117800AB6C1B /* MyLoginViewController.h */,
@@ -613,6 +618,7 @@
 				CF2C248A1B01009F00D28EAB /* CustomEntryCell.m in Sources */,
 				CF2C22D41AF5B40A00D28EAB /* AppDelegate.m in Sources */,
 				CFE04C381B1A6724001F1DA6 /* SWRevealViewController.m in Sources */,
+				CFE3610B1B23D24E003323A7 /* AnimationController.m in Sources */,
 				CF2C23081AF5B4C300D28EAB /* EntryListViewDataSource.m in Sources */,
 				CF2C22D11AF5B40A00D28EAB /* main.m in Sources */,
 				CF2C23051AF5B4B000D28EAB /* ScrapbookListViewDataSource.m in Sources */,

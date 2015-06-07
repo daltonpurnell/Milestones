@@ -20,7 +20,7 @@
 @import Parse;
 @import ParseUI;
 
-@interface ScrapbookListViewController () <UITableViewDelegate, PFSignUpViewControllerDelegate, PFLogInViewControllerDelegate>
+@interface ScrapbookListViewController () <UITableViewDelegate, PFSignUpViewControllerDelegate, PFLogInViewControllerDelegate, UIViewControllerTransitioningDelegate>
 
 @property (nonatomic, strong) PFUser *currentUser;
 
@@ -249,6 +249,7 @@
                      }];
     
 }
+
 
 
 @end
