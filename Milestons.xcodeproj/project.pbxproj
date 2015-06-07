@@ -74,6 +74,9 @@
 		CFE361081B237B74003323A7 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE361071B237B74003323A7 /* AddressBook.framework */; };
 		CFE3610B1B23D24E003323A7 /* AnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE3610A1B23D24E003323A7 /* AnimationController.m */; };
 		CFE361161B23EDDD003323A7 /* CustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE361151B23EDDD003323A7 /* CustomSegue.m */; };
+		CFE361181B2483F2003323A7 /* echo_affirm1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CFE361171B2483F2003323A7 /* echo_affirm1.wav */; };
+		CFE3611A1B2483FB003323A7 /* techy_affirm.wav in Resources */ = {isa = PBXBuildFile; fileRef = CFE361191B2483FB003323A7 /* techy_affirm.wav */; };
+		CFE3611C1B248402003323A7 /* Transistion_SciFi_09.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CFE3611B1B248402003323A7 /* Transistion_SciFi_09.mp3 */; };
 		CFEC12DC1B04379500AB6C1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFEC12DB1B04379500AB6C1B /* Main.storyboard */; };
 		CFEC12E91B0C117800AB6C1B /* MyLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */; };
 		CFEC12EC1B0C119100AB6C1B /* MySignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12EB1B0C119100AB6C1B /* MySignUpViewController.m */; };
@@ -202,6 +205,9 @@
 		CFE3610A1B23D24E003323A7 /* AnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationController.m; sourceTree = "<group>"; };
 		CFE361141B23EDDD003323A7 /* CustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegue.h; sourceTree = "<group>"; };
 		CFE361151B23EDDD003323A7 /* CustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegue.m; sourceTree = "<group>"; };
+		CFE361171B2483F2003323A7 /* echo_affirm1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = echo_affirm1.wav; sourceTree = "<group>"; };
+		CFE361191B2483FB003323A7 /* techy_affirm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = techy_affirm.wav; sourceTree = "<group>"; };
+		CFE3611B1B248402003323A7 /* Transistion_SciFi_09.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Transistion_SciFi_09.mp3; sourceTree = "<group>"; };
 		CFEC12DB1B04379500AB6C1B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CFEC12E71B0C117800AB6C1B /* MyLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLoginViewController.h; path = ../MyLoginViewController.h; sourceTree = "<group>"; };
 		CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyLoginViewController.m; path = ../MyLoginViewController.m; sourceTree = "<group>"; };
@@ -305,6 +311,7 @@
 		CF2C22CE1AF5B40A00D28EAB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CFE3611D1B24840A003323A7 /* Audio */,
 				CFE361071B237B74003323A7 /* AddressBook.framework */,
 				CFE361051B237B65003323A7 /* AddressBookUI.framework */,
 				CFE3605F1B225ECE003323A7 /* AFNetworking */,
@@ -509,6 +516,16 @@
 			path = EXPhotoViewer;
 			sourceTree = "<group>";
 		};
+		CFE3611D1B24840A003323A7 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				CFE361171B2483F2003323A7 /* echo_affirm1.wav */,
+				CFE361191B2483FB003323A7 /* techy_affirm.wav */,
+				CFE3611B1B248402003323A7 /* Transistion_SciFi_09.mp3 */,
+			);
+			name = Audio;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -593,9 +610,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF2C22DF1AF5B40A00D28EAB /* LaunchScreen.xib in Resources */,
+				CFE361181B2483F2003323A7 /* echo_affirm1.wav in Resources */,
 				CFE04C191B1A3A9E001F1DA6 /* Products.json in Resources */,
 				CFEC12DC1B04379500AB6C1B /* Main.storyboard in Resources */,
 				CF2C22DC1AF5B40A00D28EAB /* Images.xcassets in Resources */,
+				CFE3611A1B2483FB003323A7 /* techy_affirm.wav in Resources */,
+				CFE3611C1B248402003323A7 /* Transistion_SciFi_09.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
