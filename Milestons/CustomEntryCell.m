@@ -109,7 +109,7 @@
                             originalCellFrame.size.height);
     // 3
     [UIView animateWithDuration:0.75
-                          delay:0.75
+                          delay:0.25
          usingSpringWithDamping:0.8
           initialSpringVelocity:2.0
                         options: UIViewAnimationOptionCurveLinear
