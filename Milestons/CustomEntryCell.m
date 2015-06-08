@@ -45,8 +45,8 @@
     self.backImageView.clipsToBounds = NO;
     
     // round corners on background image view
-    self.backImageView.clipsToBounds = YES;
-    self.backImageView.layer.cornerRadius = 5/2.0f;
+//    self.backImageView.clipsToBounds = YES;
+//    self.backImageView.layer.cornerRadius = 5/2.0f;
     
 }
 
