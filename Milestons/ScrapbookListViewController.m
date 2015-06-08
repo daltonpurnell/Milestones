@@ -22,7 +22,6 @@
 @import ParseUI;
 @import AVFoundation;
 @import AudioToolbox;
-@import iAd;
 
 @interface ScrapbookListViewController () <UITableViewDelegate, PFSignUpViewControllerDelegate, PFLogInViewControllerDelegate, UIViewControllerTransitioningDelegate>
 

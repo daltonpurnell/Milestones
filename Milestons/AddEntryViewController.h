@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "Entry.h"
 
-@interface AddEntryViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UICollectionViewDelegate>
+@import iAd;
+
+@interface AddEntryViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UICollectionViewDelegate, ADBannerViewDelegate> {
+    ADBannerView *adView;
+}
 
 @property (strong, nonatomic) Entry *entry;
 @property (strong, nonatomic) Scrapbook *scrapbook;

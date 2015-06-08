@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "Scrapbook.h"
-
+@import iAd;
 static NSString *const cellDeletedNotificationKey = @"cell deleted";
 
 
-@interface ScrapbookListViewController : UITableViewController
+@interface ScrapbookListViewController : UITableViewController < ADBannerViewDelegate> {
+    ADBannerView *adView;
+}
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *addScrapbookButton;
 

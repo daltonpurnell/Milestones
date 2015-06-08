@@ -10,9 +10,11 @@
 #import "Scrapbook.h"
 #import "ScrapbookController.h"
 
-@interface AddScrapbookViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate> {
-    
-        UIImage *finalImage;
+@import iAd;
+
+@interface AddScrapbookViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, ADBannerViewDelegate> {
+    ADBannerView *adView;
+    UIImage *finalImage;
 }
 
 @property (strong, nonatomic) Scrapbook *scrapbook;

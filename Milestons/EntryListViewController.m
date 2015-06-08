@@ -21,7 +21,6 @@
 @import ParseUI;
 @import AddressBookUI;
 @import MessageUI;
-@import iAd;
 
 @interface EntryListViewController () <UITableViewDelegate, deleteCellDelegate, ABPeoplePickerNavigationControllerDelegate, MFMailComposeViewControllerDelegate>
 
