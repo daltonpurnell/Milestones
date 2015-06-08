@@ -40,11 +40,9 @@
         if (!error) {
             
             if (objects.count == 1) {
-                // add person as contributor
-                // update acl
+                // add person as contributor and update ACL (this is done in the entry list view controller, which is after we have a scrapbook to add them to)
                 
                 PFUser *contributor = objects.firstObject;
-//                [[ScrapbookController sharedInstance]addContributor:contributor toScrapbook:self.scrapbook];
                 
                 completion(contributor, nil);
             } else { // (objects.count == 0) (Can never have more than one)
