@@ -21,6 +21,7 @@
 @end
 
 @implementation AddScrapbookViewController
+@synthesize adView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -28,6 +28,7 @@
 @end
 
 @implementation AddEntryViewController
+@synthesize adView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];

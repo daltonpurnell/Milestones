@@ -31,6 +31,7 @@
 @end
 
 @implementation EntryListViewController
+@synthesize adView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];

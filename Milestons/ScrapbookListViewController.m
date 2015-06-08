@@ -30,6 +30,7 @@
 @end
 
 @implementation ScrapbookListViewController
+@synthesize adView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,7 +42,6 @@
         [self.settingsButton setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
-
     
     [Appearance initializeAppearanceDefaults];
     self.tableView.backgroundColor = [UIColor colorWithRed:233/255.0 green:236/255.0 blue:243/255.0 alpha:1];

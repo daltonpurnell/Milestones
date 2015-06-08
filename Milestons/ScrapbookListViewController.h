@@ -24,5 +24,6 @@ static NSString *const cellDeletedNotificationKey = @"cell deleted";
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *settingsButton;
 
+@property (retain, nonatomic)IBOutlet ADBannerView *adView;
 
 @end
