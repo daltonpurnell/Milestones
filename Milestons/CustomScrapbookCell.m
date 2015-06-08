@@ -9,7 +9,6 @@
 #import "CustomScrapbookCell.h"
 #import "EntryController.h"
 #import "ScrapbookController.h"
-#import "EXPhotoViewer.h"
 @import QuartzCore;
 
 @implementation CustomScrapbookCell
@@ -61,14 +60,6 @@
     self.photoImageView.file = scrapbook.photo;
     
     [self.photoImageView loadInBackground];
-
-}
-
-
-
-- (IBAction)imageTapped:(id)sender {
-    
-    [EXPhotoViewer showImageFrom:self.photoImageView];
 
 }
 
