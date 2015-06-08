@@ -87,8 +87,6 @@
                 [[ScrapbookController sharedInstance] addContributor:contributor toScrapbook:self.scrapbook];
             } else {
                 // Display message that the user does not have an account and offer to invite
-                
-                                [self presentInviteAlertViewController];
             }
         } else {
             // Let them know there was an error
@@ -165,20 +163,20 @@
 (ABPeoplePickerNavigationController *)peoplePicker
       shouldContinueAfterSelectingPerson:(ABRecordRef)person {
     
-    [self displayPerson:person];
-    [self dismissViewControllerAnimated:YES completion:^{
-        MFMailComposeViewController *mailViewController = [MFMailComposeViewController new];
-        mailViewController.mailComposeDelegate = self;
-        
-//        [mailViewController setToRecipients:(NSString *) emailValueSelected];
-        
-        [mailViewController setSubject:@"I want to add you as a contributor to my scrapbook!"];
-        
-        [mailViewController setMessageBody:@"Download MyMilestones to start contributing." isHTML:NO]; // part of string should be link to app store to download app
-        
-        [self presentViewController:mailViewController animated:YES completion:nil];
-        NSLog(@"Invite friend");
-    }];
+//    [self displayPerson:person];
+//    [self dismissViewControllerAnimated:YES completion:^{
+//        MFMailComposeViewController *mailViewController = [MFMailComposeViewController new];
+//        mailViewController.mailComposeDelegate = self;
+//        
+////        [mailViewController setToRecipients:(NSString *) emailValueSelected];
+//        
+//        [mailViewController setSubject:@"I want to add you as a contributor to my scrapbook!"];
+//        
+//        [mailViewController setMessageBody:@"Download MyMilestones to start contributing." isHTML:NO]; // part of string should be link to app store to download app
+//        
+//        [self presentViewController:mailViewController animated:YES completion:nil];
+//        NSLog(@"Invite friend");
+//    }];
     
     return YES;
 }
@@ -199,6 +197,21 @@
 
         // Return to the main view controller and launch MFMailcompose
         [ self dismissViewControllerAnimated:YES completion:^{
+//            if //(user email is not found in parse database)
+//            {
+//                MFMailComposeViewController *mailViewController = [MFMailComposeViewController new];
+//                mailViewController.mailComposeDelegate = self;
+//                [self presentViewController:mailViewController animated:YES completion:nil];
+//                
+//                //            [mailViewController setToRecipients:(NSString *) emailValueSelected];
+//                
+//                [mailViewController setSubject:@"I want to add you as a contributor to my scrapbook!"];
+//                
+//                [mailViewController setMessageBody:@"Download MyMilestones to start contributing." isHTML:NO]; // part of string should be link to app store to download app
+//                [self presentViewController:mailViewController animated:YES completion:nil];
+//                NSLog(@"Invite friend to download app");
+//            }else {
+            
             MFMailComposeViewController *mailViewController = [MFMailComposeViewController new];
             mailViewController.mailComposeDelegate = self;
             
@@ -209,7 +222,8 @@
             [mailViewController setMessageBody:@"Login to MyMilestones to start contributing." isHTML:NO]; // part of string should be link to app store to download app
             
             [self presentViewController:mailViewController animated:YES completion:nil];
-            NSLog(@"Invite friend");
+            NSLog(@"Invite friend to log in to app");
+//            }
         }];
 
         }
@@ -223,33 +237,6 @@
     
 }
 
-#pragma mark - invite friend alert controller
-
-
--(void)presentInviteAlertViewController {
-    
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"This person does not have an account with us" message:@"Would you like to invite him/her to download the app?" preferredStyle:UIAlertControllerStyleAlert];
-    
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-
-        [self dismissViewControllerAnimated:YES completion:^{
-            MFMailComposeViewController *mailViewController = [MFMailComposeViewController new];
-            mailViewController.mailComposeDelegate = self;
-            [self presentViewController:mailViewController animated:YES completion:nil];
-            
-//            [mailViewController setToRecipients:(NSString *) emailValueSelected];
-            
-            [mailViewController setSubject:@"I want to add you as a contributor to my scrapbook!"];
-            
-            [mailViewController setMessageBody:@"Download to MyMilestones to start contributing." isHTML:NO]; // part of string should be link to app store to download app
-            
-            NSLog(@"Invite friend");
-    }];
-    
-    [alertController addAction:[UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDestructive handler:nil]];
-    [self presentViewController:alertController animated:YES completion:nil];
-    }]];
-}
 
 #pragma mark - cell animation
 
