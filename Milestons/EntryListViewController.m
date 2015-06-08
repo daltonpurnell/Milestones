@@ -47,6 +47,7 @@
     self.navBar.title = [NSString stringWithFormat:@"%@", self.scrapbook.titleOfScrapbook];
 
     [Appearance initializeAppearanceDefaults];
+    self.adView.delegate = self;
 
     self.tableView.backgroundColor =  [UIColor colorWithRed:233/255.0 green:236/255.0 blue:243/255.0 alpha:1];
 //        self.tableView.backgroundColor = [UIColor whiteColor];

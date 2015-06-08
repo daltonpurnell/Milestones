@@ -24,7 +24,7 @@
 @property (copy, nonatomic) void (^didCreateEntry)(Entry *entry);
 @property (copy, nonatomic) void (^didCreatePhoto)(Photo *photo);
 
-@property (retain, nonatomic)IBOutlet ADBannerView *adView;
+@property (strong, nonatomic)IBOutlet ADBannerView *adView;
 
 
 - (void)updateWithScrapbook:(Scrapbook *)scrapbook;

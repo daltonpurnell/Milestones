@@ -32,11 +32,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.adView.delegate = self;
     self.collectionView.delegate = self;
+    
     self.collectionView.dataSource = self;
     self.titleTextField.delegate = self;
+    
     self.descriptionTextView.delegate = self;
     [Appearance initializeAppearanceDefaults];
+    
     self.images = [NSMutableArray new];
     self.descriptionTextView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Layer-1.png"]];
 

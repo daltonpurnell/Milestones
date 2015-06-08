@@ -26,6 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.titleTextField.delegate = self;
+    self.adView.delegate = self;
+
     [Appearance initializeAppearanceDefaults];
     
     // create drop shadow for image view
@@ -34,6 +36,8 @@
     self.imageView.layer.shadowOpacity = 1;
     self.imageView.layer.shadowRadius = 1.0;
     self.imageView.clipsToBounds = NO;
+    
+    
     
 }
 

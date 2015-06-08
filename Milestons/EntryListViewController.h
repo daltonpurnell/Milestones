@@ -20,7 +20,7 @@
 
 @property (nonatomic, strong) NSArray *entries;
 
-@property (retain, nonatomic)IBOutlet ADBannerView *adView;
+@property (strong, nonatomic)IBOutlet ADBannerView *adView;
 
 
 - (void)updateWithSB:(Scrapbook *)scrapbook;

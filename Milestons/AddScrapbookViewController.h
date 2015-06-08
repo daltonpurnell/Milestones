@@ -19,7 +19,7 @@
 
 @property (strong, nonatomic) Scrapbook *scrapbook;
 
-@property (retain, nonatomic)IBOutlet ADBannerView *adView;
+@property (strong, nonatomic)IBOutlet ADBannerView *adView;
 
 
 //-(void)updateWithScrapbook:(Scrapbook *)scrapbook;

@@ -48,7 +48,7 @@
     
 
     [self registerForNotifications];
-
+    self.adView.delegate = self;
     
     self.refreshControl = [UIRefreshControl new];
     [self.refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];
