@@ -150,11 +150,7 @@
     UIImage *chosenImage = [info valueForKey:UIImagePickerControllerOriginalImage];
     
     [self.images addObject:chosenImage];
-    
     [self.collectionView reloadData];
-    
-    //    [self.collectionView insertItemsAtIndexPaths:self.images];
-    
     [picker dismissViewControllerAnimated:YES completion:nil];
     
 }
