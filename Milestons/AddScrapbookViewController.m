@@ -29,6 +29,8 @@
     self.adView.delegate = self;
 
     [Appearance initializeAppearanceDefaults];
+    self.view.backgroundColor = [UIColor colorWithRed:233/255.0 green:236/255.0 blue:243/255.0 alpha:1];
+
     
     // create drop shadow for image view
     self.imageView.layer.shadowColor = [UIColor grayColor].CGColor;
