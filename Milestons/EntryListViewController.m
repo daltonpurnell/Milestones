@@ -16,7 +16,7 @@
 #import "EntryListViewDataSource.h"
 #import "CustomCollectionViewCell.h"
 #import "UserController.h"
-#import "EditEntryViewController.h"
+
 
 @import Parse;
 @import ParseUI;
@@ -147,15 +147,6 @@
         };
         [addEntryViewController updateWithScrapbook:self.scrapbook];
     }
-    else if ([segue.identifier isEqualToString:@"presentEditEntry"]) {
-            UINavigationController *navController = [segue destinationViewController];
-            EditEntryViewController *editEntryViewController = navController.viewControllers.firstObject;
-            editEntryViewController.didCreateEntry = ^(Entry *entry) {
-                [self refreshTable];
-            };
-            [editEntryViewController updateWithScrapbook:self.scrapbook];
-    }
-
 }
 
 

@@ -78,8 +78,6 @@
 		CFE3611A1B2483FB003323A7 /* techy_affirm.wav in Resources */ = {isa = PBXBuildFile; fileRef = CFE361191B2483FB003323A7 /* techy_affirm.wav */; };
 		CFE3611C1B248402003323A7 /* Transistion_SciFi_09.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CFE3611B1B248402003323A7 /* Transistion_SciFi_09.mp3 */; };
 		CFE361211B253B58003323A7 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE361201B253B58003323A7 /* iAd.framework */; };
-		CFE361241B264053003323A7 /* EditScrapbookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE361231B264053003323A7 /* EditScrapbookViewController.m */; };
-		CFE361271B2644A4003323A7 /* EditEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE361261B2644A4003323A7 /* EditEntryViewController.m */; };
 		CFEC12DC1B04379500AB6C1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFEC12DB1B04379500AB6C1B /* Main.storyboard */; };
 		CFEC12E91B0C117800AB6C1B /* MyLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */; };
 		CFEC12EC1B0C119100AB6C1B /* MySignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12EB1B0C119100AB6C1B /* MySignUpViewController.m */; };
@@ -212,10 +210,6 @@
 		CFE361191B2483FB003323A7 /* techy_affirm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = techy_affirm.wav; sourceTree = "<group>"; };
 		CFE3611B1B248402003323A7 /* Transistion_SciFi_09.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Transistion_SciFi_09.mp3; sourceTree = "<group>"; };
 		CFE361201B253B58003323A7 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		CFE361221B264053003323A7 /* EditScrapbookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditScrapbookViewController.h; sourceTree = "<group>"; };
-		CFE361231B264053003323A7 /* EditScrapbookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditScrapbookViewController.m; sourceTree = "<group>"; };
-		CFE361251B2644A4003323A7 /* EditEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditEntryViewController.h; sourceTree = "<group>"; };
-		CFE361261B2644A4003323A7 /* EditEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditEntryViewController.m; sourceTree = "<group>"; };
 		CFEC12DB1B04379500AB6C1B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CFEC12E71B0C117800AB6C1B /* MyLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLoginViewController.h; path = ../MyLoginViewController.h; sourceTree = "<group>"; };
 		CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyLoginViewController.m; path = ../MyLoginViewController.m; sourceTree = "<group>"; };
@@ -450,8 +444,6 @@
 				CFE04C401B1AA92E001F1DA6 /* CustomCollectionViewCell2.m */,
 				CF2C23111AF5C03C00D28EAB /* AddEntryViewController.h */,
 				CF2C23121AF5C03C00D28EAB /* AddEntryViewController.m */,
-				CFE361251B2644A4003323A7 /* EditEntryViewController.h */,
-				CFE361261B2644A4003323A7 /* EditEntryViewController.m */,
 			);
 			name = DetailView;
 			sourceTree = "<group>";
@@ -474,8 +466,6 @@
 			children = (
 				CF2C230E1AF5C01D00D28EAB /* AddScrapbookViewController.h */,
 				CF2C230F1AF5C01D00D28EAB /* AddScrapbookViewController.m */,
-				CFE361221B264053003323A7 /* EditScrapbookViewController.h */,
-				CFE361231B264053003323A7 /* EditScrapbookViewController.m */,
 			);
 			name = DetailView;
 			sourceTree = "<group>";
@@ -658,10 +648,8 @@
 				CF2C248A1B01009F00D28EAB /* CustomEntryCell.m in Sources */,
 				CF2C22D41AF5B40A00D28EAB /* AppDelegate.m in Sources */,
 				CFE04C381B1A6724001F1DA6 /* SWRevealViewController.m in Sources */,
-				CFE361241B264053003323A7 /* EditScrapbookViewController.m in Sources */,
 				CFE3610B1B23D24E003323A7 /* AnimationController.m in Sources */,
 				CF2C23081AF5B4C300D28EAB /* EntryListViewDataSource.m in Sources */,
-				CFE361271B2644A4003323A7 /* EditEntryViewController.m in Sources */,
 				CF2C22D11AF5B40A00D28EAB /* main.m in Sources */,
 				CF2C23051AF5B4B000D28EAB /* ScrapbookListViewDataSource.m in Sources */,
 				CFE360791B225ECE003323A7 /* AFURLRequestSerialization.m in Sources */,
