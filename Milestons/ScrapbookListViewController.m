@@ -272,5 +272,19 @@
     NSLog(@"Banner hidden. No ad to show");
 }
 
+#pragma mark - table view delegate method
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    if ([ScrapbookController sharedInstance].scrapbooks.count == 0) {
+
+        return tableView.frame.size.height;
+
+    } else {
+
+        return 250;
+    }
+}
 
 @end

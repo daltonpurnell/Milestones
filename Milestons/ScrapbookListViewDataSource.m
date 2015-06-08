@@ -57,18 +57,7 @@
     }
 }
 
-//
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    
-//    if ([ScrapbookController sharedInstance].scrapbooks.count == 0) {
-//        
-//        return tableView.frame.size.height;
-//        
-//    } else {
-//
-//        return 100;
-//    }
-//}
+
 
 #pragma mark - delete cell
 
