@@ -13,6 +13,7 @@
 @import MessageUI;
 @import ParseUI;
 @import QuartzCore;
+@import iAd;
 
 @interface AddScrapbookViewController () <UITextFieldDelegate, MFMailComposeViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;

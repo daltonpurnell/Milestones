@@ -17,6 +17,7 @@
 
 
 @import MessageUI;
+@import iAd;
 
 
 @interface AddEntryViewController () <UITextFieldDelegate, MFMailComposeViewControllerDelegate, UITextViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource>

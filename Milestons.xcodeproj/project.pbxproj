@@ -77,6 +77,7 @@
 		CFE361181B2483F2003323A7 /* echo_affirm1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CFE361171B2483F2003323A7 /* echo_affirm1.wav */; };
 		CFE3611A1B2483FB003323A7 /* techy_affirm.wav in Resources */ = {isa = PBXBuildFile; fileRef = CFE361191B2483FB003323A7 /* techy_affirm.wav */; };
 		CFE3611C1B248402003323A7 /* Transistion_SciFi_09.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CFE3611B1B248402003323A7 /* Transistion_SciFi_09.mp3 */; };
+		CFE361211B253B58003323A7 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE361201B253B58003323A7 /* iAd.framework */; };
 		CFEC12DC1B04379500AB6C1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFEC12DB1B04379500AB6C1B /* Main.storyboard */; };
 		CFEC12E91B0C117800AB6C1B /* MyLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */; };
 		CFEC12EC1B0C119100AB6C1B /* MySignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12EB1B0C119100AB6C1B /* MySignUpViewController.m */; };
@@ -208,6 +209,7 @@
 		CFE361171B2483F2003323A7 /* echo_affirm1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = echo_affirm1.wav; sourceTree = "<group>"; };
 		CFE361191B2483FB003323A7 /* techy_affirm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = techy_affirm.wav; sourceTree = "<group>"; };
 		CFE3611B1B248402003323A7 /* Transistion_SciFi_09.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Transistion_SciFi_09.mp3; sourceTree = "<group>"; };
+		CFE361201B253B58003323A7 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		CFEC12DB1B04379500AB6C1B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CFEC12E71B0C117800AB6C1B /* MyLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLoginViewController.h; path = ../MyLoginViewController.h; sourceTree = "<group>"; };
 		CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyLoginViewController.m; path = ../MyLoginViewController.m; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFE361211B253B58003323A7 /* iAd.framework in Frameworks */,
 				CFE361081B237B74003323A7 /* AddressBook.framework in Frameworks */,
 				CFE361061B237B65003323A7 /* AddressBookUI.framework in Frameworks */,
 				CF2C23691AF7E1D400D28EAB /* Social.framework in Frameworks */,
@@ -312,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				CFE3611D1B24840A003323A7 /* Audio */,
+				CFE361201B253B58003323A7 /* iAd.framework */,
 				CFE361071B237B74003323A7 /* AddressBook.framework */,
 				CFE361051B237B65003323A7 /* AddressBookUI.framework */,
 				CFE3605F1B225ECE003323A7 /* AFNetworking */,
