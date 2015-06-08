@@ -27,6 +27,10 @@
     self.collectionView.delegate = self;
     self.collectionViewDataSource = (CollectionViewDataSource *)self.collectionView.dataSource;
 
+    // round corners on back image view
+    self.backImageView.clipsToBounds = YES;
+    self.backImageView.layer.cornerRadius = 5/2.0f;
+    
     
     // create drop shadow for description label
     self.descriptionLabel.layer.shadowColor = [UIColor grayColor].CGColor;
