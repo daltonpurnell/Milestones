@@ -12,8 +12,8 @@
 #import "CollectionViewDataSource.h"
 #import "EXPhotoViewer.h"
 
-
 @import QuartzCore;
+
 @interface CustomCollectionViewCell ()
 @end
 
