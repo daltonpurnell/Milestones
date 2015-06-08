@@ -98,15 +98,15 @@
 
 
 
-- (IBAction)shareButtonTapped:(id)sender {
+//- (IBAction)shareButtonTapped:(id)sender {
     
-    MFMailComposeViewController *mailViewController = [MFMailComposeViewController new];
-    mailViewController.mailComposeDelegate = self;
+    //MFMailComposeViewController *mailViewController = [MFMailComposeViewController new];
+    //mailViewController.mailComposeDelegate = self;
     
-    [mailViewController setSubject:[NSString stringWithFormat:@"%@", self.scrapbook.titleOfScrapbook]];
-    [self presentViewController:mailViewController animated:YES completion:nil];
+    //[mailViewController setSubject:[NSString stringWithFormat:@"%@", self.scrapbook.titleOfScrapbook]];
+    //[self presentViewController:mailViewController animated:YES completion:nil];
     
-}
+//}
 
 
 - (IBAction)deleteButtonTapped:(id)sender {

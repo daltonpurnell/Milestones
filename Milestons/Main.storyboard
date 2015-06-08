@@ -106,17 +106,13 @@
                         </variation>
                     </view>
                     <toolbarItems>
-                        <barButtonItem image="ShareIcon" id="aon-GH-hS7">
-                            <connections>
-                                <action selector="shareButtonTapped:" destination="zPV-Sb-Kcm" id="RlF-CE-rOq"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="EZm-jp-P8v"/>
                         <barButtonItem image="Trash-can" id="3tq-bT-LWA">
                             <connections>
                                 <action selector="deleteButtonTapped:" destination="zPV-Sb-Kcm" id="yiU-fC-ZHQ"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Rby-1E-wv3"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="0vG-Go-GSN">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="ozU-xd-te6">
@@ -770,17 +766,13 @@
                         </variation>
                     </view>
                     <toolbarItems>
-                        <barButtonItem image="ShareIcon" id="rnQ-NC-ClT">
-                            <connections>
-                                <action selector="shareButtonTapped:" destination="Y1i-jh-hRn" id="thV-dg-OjR"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="EUA-Yl-T0Z"/>
                         <barButtonItem image="Trash-can" id="ovB-a0-TZB">
                             <connections>
                                 <action selector="deleteButtonTapped:" destination="Y1i-jh-hRn" id="tG8-ja-2DO"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="1yg-Sa-ywD"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="eC7-C8-yUO">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="oH4-zR-6hT">
@@ -1179,7 +1171,6 @@
         <image name="Camera" width="50" height="50"/>
         <image name="Cog" width="32" height="32"/>
         <image name="Layer-0" width="30" height="30"/>
-        <image name="ShareIcon" width="22" height="31"/>
         <image name="Trash-can" width="24" height="32"/>
         <image name="Video" width="50" height="48"/>
         <image name="add" width="26" height="26"/>

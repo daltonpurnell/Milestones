@@ -37,6 +37,7 @@
     self.descriptionTextView.delegate = self;
     [Appearance initializeAppearanceDefaults];
     self.images = [NSMutableArray new];
+    self.descriptionTextView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Layer-1.png"]];
 
 }
 
@@ -156,16 +157,16 @@
 
 }
 
-
-- (IBAction)shareButtonTapped:(id)sender {
-    
-    MFMailComposeViewController *mailViewController = [MFMailComposeViewController new];
-    mailViewController.mailComposeDelegate = self;
-    
-    [mailViewController setSubject:[NSString stringWithFormat:@"%@", self.entry.titleOfEntry]];
-    [mailViewController setMessageBody:[NSString stringWithFormat:@"%@", self.entry.descriptionOfEntry] isHTML:NO];
-    [self presentViewController:mailViewController animated:YES completion:nil];
-}
+//
+//- (IBAction)shareButtonTapped:(id)sender {
+//    
+//    MFMailComposeViewController *mailViewController = [MFMailComposeViewController new];
+//    mailViewController.mailComposeDelegate = self;
+//    
+//    [mailViewController setSubject:[NSString stringWithFormat:@"%@", self.entry.titleOfEntry]];
+//    [mailViewController setMessageBody:[NSString stringWithFormat:@"%@", self.entry.descriptionOfEntry] isHTML:NO];
+//    [self presentViewController:mailViewController animated:YES completion:nil];
+//}
 
 
 - (IBAction)deleteButtonTapped:(id)sender {
