@@ -64,6 +64,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 </variation>
                             </imageView>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="782-NF-zL7">
+                                <rect key="frame" x="140" y="506" width="320" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HUG-S5-XCS"/>
+                                    <constraint firstAttribute="width" constant="320" id="m9U-bC-b4H"/>
+                                </constraints>
+                            </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -74,6 +81,7 @@
                             <constraint firstAttribute="centerX" secondItem="om3-1R-jsk" secondAttribute="centerX" id="F2k-ix-bQM"/>
                             <constraint firstItem="7Fi-kT-1hX" firstAttribute="leading" secondItem="RGW-PI-weK" secondAttribute="leadingMargin" constant="24" id="FZI-un-gnc"/>
                             <constraint firstItem="om3-1R-jsk" firstAttribute="top" secondItem="E0c-OU-lIt" secondAttribute="bottom" constant="14" id="NJK-NI-FCh"/>
+                            <constraint firstAttribute="centerX" secondItem="782-NF-zL7" secondAttribute="centerX" id="OK9-wC-CUB"/>
                             <constraint firstAttribute="centerY" secondItem="7Fi-kT-1hX" secondAttribute="centerY" id="OkO-Zc-JwL"/>
                             <constraint firstAttribute="centerY" secondItem="shO-6b-Ms9" secondAttribute="centerY" constant="33" id="QWY-yy-ZXq"/>
                             <constraint firstItem="shO-6b-Ms9" firstAttribute="leading" secondItem="RGW-PI-weK" secondAttribute="leadingMargin" constant="81" id="Qox-jb-Ywb"/>
@@ -82,6 +90,7 @@
                             <constraint firstItem="7Fi-kT-1hX" firstAttribute="top" secondItem="E0c-OU-lIt" secondAttribute="bottom" constant="284" id="j5c-cA-vPA"/>
                             <constraint firstItem="shO-6b-Ms9" firstAttribute="centerX" secondItem="p9u-EU-W3g" secondAttribute="centerX" id="jyo-rs-xcs"/>
                             <constraint firstItem="om3-1R-jsk" firstAttribute="leading" secondItem="RGW-PI-weK" secondAttribute="leadingMargin" id="l8J-y0-rrv"/>
+                            <constraint firstItem="2G9-Ku-OmO" firstAttribute="top" secondItem="782-NF-zL7" secondAttribute="bottom" id="ly2-iz-tYH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7Fi-kT-1hX" secondAttribute="trailing" constant="23" id="u6d-YD-Ava"/>
                         </constraints>
                         <variation key="default">
@@ -127,6 +136,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="adView" destination="782-NF-zL7" id="kyt-wY-w3V"/>
                         <outlet property="imageView" destination="7Fi-kT-1hX" id="emv-kR-laR"/>
                         <outlet property="titleTextField" destination="om3-1R-jsk" id="sFF-n0-oNr"/>
                     </connections>
@@ -551,6 +561,13 @@
                                     </mask>
                                 </variation>
                             </collectionView>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="dIY-sV-fWP">
+                                <rect key="frame" x="139" y="506" width="320" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="bCY-Cq-gqf"/>
+                                    <constraint firstAttribute="height" constant="50" id="cl8-7R-m2P"/>
+                                </constraints>
+                            </adBannerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -570,6 +587,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="X1r-lL-4dS" secondAttribute="trailing" constant="1" id="FqJ-tP-WZh"/>
                             <constraint firstItem="yeJ-gA-UCv" firstAttribute="top" secondItem="NoW-2q-WFc" secondAttribute="bottom" constant="98" id="Gsf-ZR-KrD"/>
                             <constraint firstItem="Dge-dQ-eke" firstAttribute="leading" secondItem="NbK-La-IKg" secondAttribute="leadingMargin" constant="524" id="HKq-6a-Jsb"/>
+                            <constraint firstItem="emn-oH-hK9" firstAttribute="top" secondItem="dIY-sV-fWP" secondAttribute="bottom" id="Jdo-vG-Ci4"/>
                             <constraint firstItem="uij-36-Bxk" firstAttribute="centerX" secondItem="ypf-1S-Ia1" secondAttribute="centerX" constant="5" id="M64-bq-sZd"/>
                             <constraint firstItem="Tdg-WY-h02" firstAttribute="leading" secondItem="NbK-La-IKg" secondAttribute="leadingMargin" id="MZU-Yx-R7h"/>
                             <constraint firstAttribute="centerX" secondItem="Lsg-kn-eAr" secondAttribute="centerX" id="Mv2-di-j9M"/>
@@ -584,6 +602,7 @@
                             <constraint firstItem="Dge-dQ-eke" firstAttribute="top" secondItem="NoW-2q-WFc" secondAttribute="bottom" constant="100" id="UBB-oo-Jtb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ypf-1S-Ia1" secondAttribute="trailing" constant="646" id="XhB-aN-RiK"/>
                             <constraint firstItem="yeJ-gA-UCv" firstAttribute="leading" secondItem="ypf-1S-Ia1" secondAttribute="trailing" constant="143" id="c8k-RP-k9P"/>
+                            <constraint firstAttribute="centerX" secondItem="dIY-sV-fWP" secondAttribute="centerX" constant="1" id="cPR-2i-vVp"/>
                             <constraint firstItem="X1r-lL-4dS" firstAttribute="top" secondItem="NoW-2q-WFc" secondAttribute="bottom" constant="158" id="cpw-sk-ziv"/>
                             <constraint firstAttribute="centerX" secondItem="Tdg-WY-h02" secondAttribute="centerX" id="fif-ef-0iP"/>
                             <constraint firstItem="yeJ-gA-UCv" firstAttribute="centerX" secondItem="ypf-1S-Ia1" secondAttribute="centerX" id="geL-5C-k9g"/>
@@ -770,6 +789,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="adView" destination="dIY-sV-fWP" id="zEf-Fb-JXo"/>
                         <outlet property="collectionView" destination="X1r-lL-4dS" id="JFC-1v-tFj"/>
                         <outlet property="descriptionTextView" destination="Dge-dQ-eke" id="Njz-VZ-5au"/>
                         <outlet property="titleTextField" destination="Tdg-WY-h02" id="Rib-9j-gOI"/>
