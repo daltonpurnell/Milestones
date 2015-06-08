@@ -921,7 +921,7 @@
                                                 <constraint firstAttribute="height" constant="92" id="1vu-cu-9st"/>
                                                 <constraint firstAttribute="width" constant="568" id="8l4-ta-j9x"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="13"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
