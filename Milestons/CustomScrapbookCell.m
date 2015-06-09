@@ -18,6 +18,11 @@
     self.backgroundColor = [UIColor clearColor];
     self.backImageView.backgroundColor = [UIColor whiteColor];
     
+// hide all buttons except edit
+    self.doneButton.hidden = YES;
+    self.cameraButton.hidden = YES;
+    self.deleteButton.hidden = YES;
+    
    // round corners on back image view
     self.backImageView.clipsToBounds = YES;
     self.backImageView.layer.cornerRadius = 5/2.0f;
@@ -54,7 +59,7 @@
     NSDate *date = scrapbook.timestamp;
     NSString *formattedDate = [formatter stringFromDate:date];
     
-    self.titleOfScrapbookLabel.text = [NSString stringWithFormat:@"%@", scrapbook.titleOfScrapbook];
+    self.titleTextField.text = [NSString stringWithFormat:@"%@", scrapbook.titleOfScrapbook];
     self.timestampLabel.text = [NSString stringWithFormat:@"%@", formattedDate];
     
     self.photoImageView.file = scrapbook.photo;
@@ -63,7 +68,7 @@
 
 }
 
-#pragma mark - delete cell
+#pragma mark - buttons
 
 - (IBAction)deleteButtonTapped:(id)sender  {
     [self.delegate deleteButtonTapped:self.indexPath];
@@ -71,9 +76,41 @@
 }
 
 
+- (IBAction)editButtonTapped:(id)sender {
+    
+    self.doneButton.hidden = NO;
+    self.cameraButton.hidden = NO;
+    self.deleteButton.hidden = NO;
+    
+}
 
 
 
+- (IBAction)cameraButtonTapped:(id)sender {
+    
+    
+}
+
+
+- (IBAction)doneButtonTapped:(id)sender {
+    
+    self.doneButton.hidden = YES;
+    self.cameraButton.hidden = YES;
+    self.deleteButton.hidden = YES;
+    
+    // save changes to parse
+    self.scrapbook.titleOfScrapbook = self.titleTextField.text;
+    self.scrapbook.timestamp = [NSDate date];
+    
+    PFFile *imageFile = [PFFile fileWithData:UIImageJPEGRepresentation(self.imageView.image,0.95)];
+    
+    self.scrapbook.photo = imageFile;
+    [[ScrapbookController sharedInstance] updateScrapbook:self.scrapbook];
+    
+    
+    // reload tableview
+    
+}
 
 
 

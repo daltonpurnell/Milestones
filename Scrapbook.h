@@ -17,6 +17,7 @@
 @property (nonatomic, retain) NSDate * timestamp;
 @property (nonatomic, retain) NSString * titleOfScrapbook;
 @property (nonatomic, retain) PFUser *user;
+@property (nonatomic, strong) NSArray *contributors;
 
 + (NSString *)parseClassName;
 

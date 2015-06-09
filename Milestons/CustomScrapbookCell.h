@@ -18,7 +18,7 @@
 
 @property (nonatomic, strong) id <deleteCellDelegate>delegate;
 
-@property (weak, nonatomic) IBOutlet UILabel *titleOfScrapbookLabel;
+@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 
 @property (weak, nonatomic) IBOutlet UILabel *timestampLabel;
 
@@ -27,6 +27,15 @@
 @property (weak, nonatomic) IBOutlet UIImageView *backImageView;
 
 @property (strong, nonatomic) NSIndexPath *indexPath;
+
+@property (weak, nonatomic) IBOutlet UIButton *cameraButton;
+
+@property (weak, nonatomic) IBOutlet UIButton *doneButton;
+
+@property (weak, nonatomic) IBOutlet UIButton *deleteButton;
+
+@property (strong, nonatomic) Scrapbook *scrapbook;
+
 
 -(void)updateWithScrapbook:(Scrapbook *)scrapbook;
 

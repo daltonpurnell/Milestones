@@ -16,6 +16,7 @@
 #import "EntryListViewDataSource.h"
 #import "CustomCollectionViewCell.h"
 #import "UserController.h"
+#import "ScrapbookController.h"
 
 
 @import Parse;
@@ -89,7 +90,19 @@
             if (contributor) {
                 [[ScrapbookController sharedInstance] addContributor:contributor toScrapbook:self.scrapbook];
             } else {
-                // Display message that the user does not have an account and offer to invite
+                // have user invite friend to contribute
+                
+                MFMailComposeViewController *mailViewController = [MFMailComposeViewController new];
+                mailViewController.mailComposeDelegate = self;
+                [self presentViewController:mailViewController animated:YES completion:nil];
+                
+                //            [mailViewController setToRecipients:(__bridge id)(emailValueSelected)];
+                
+                [mailViewController setSubject:@"I want to add you as a contributor to my scrapbook!"];
+                
+                [mailViewController setMessageBody:@"Download or log in to MyMilestones to start contributing." isHTML:NO]; // part of string should be link to app store to download app
+                [self presentViewController:mailViewController animated:YES completion:nil];
+                NSLog(@"Invite");
             }
         } else {
             // Let them know there was an error
@@ -106,6 +119,51 @@
 }
 
 
+#pragma mark - ab people picker delegate methods
+
+- (void)peoplePickerNavigationControllerDidCancel:
+(ABPeoplePickerNavigationController *)peoplePicker
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+- (BOOL)peoplePickerNavigationController:
+(ABPeoplePickerNavigationController *)peoplePicker
+      shouldContinueAfterSelectingPerson:(ABRecordRef)person {
+    
+    return YES;
+}
+
+- (BOOL)peoplePickerNavigationController:
+(ABPeoplePickerNavigationController *)peoplePicker
+      shouldContinueAfterSelectingPerson:(ABRecordRef)person
+                                property:(ABPropertyID)property
+                              identifier:(ABMultiValueIdentifier)identifier
+{
+    
+    
+    // Only inspect the value if it’s an email
+    if (property == kABPersonEmailProperty) {
+        ABMultiValueRef emails = ABRecordCopyValue(person, property);
+        
+        // get the email address
+        if(ABMultiValueGetCount(emails) > 0)
+        {
+            long index = ABMultiValueGetIndexForIdentifier(emails, identifier);
+            CFStringRef emailValueSelected = ABMultiValueCopyValueAtIndex(emails, index);
+        }
+        // Return to the main view controller and launch MFMailcompose
+        [self dismissViewControllerAnimated:YES completion:nil];
+        
+        return NO;
+    }
+    
+    return YES;
+}
+
+
+#pragma mark - load tableview with correct data
 -(void)refreshTable {
     
     [self.refreshControl beginRefreshing];
@@ -148,97 +206,6 @@
         [addEntryViewController updateWithScrapbook:self.scrapbook];
     }
 }
-
-
-#pragma mark - ab people picker delegate methods
-
-- (void)peoplePickerNavigationControllerDidCancel:
-(ABPeoplePickerNavigationController *)peoplePicker
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-
-- (BOOL)peoplePickerNavigationController:
-(ABPeoplePickerNavigationController *)peoplePicker
-      shouldContinueAfterSelectingPerson:(ABRecordRef)person {
-    
-//    [self displayPerson:person];
-//    [self dismissViewControllerAnimated:YES completion:^{
-//        MFMailComposeViewController *mailViewController = [MFMailComposeViewController new];
-//        mailViewController.mailComposeDelegate = self;
-//        
-////        [mailViewController setToRecipients:(NSString *) emailValueSelected];
-//        
-//        [mailViewController setSubject:@"I want to add you as a contributor to my scrapbook!"];
-//        
-//        [mailViewController setMessageBody:@"Download MyMilestones to start contributing." isHTML:NO]; // part of string should be link to app store to download app
-//        
-//        [self presentViewController:mailViewController animated:YES completion:nil];
-//        NSLog(@"Invite friend");
-//    }];
-    
-    return YES;
-}
-
-- (BOOL)peoplePickerNavigationController:
-(ABPeoplePickerNavigationController *)peoplePicker
-      shouldContinueAfterSelectingPerson:(ABRecordRef)person
-                                property:(ABPropertyID)property
-                              identifier:(ABMultiValueIdentifier)identifier
-{
-    
-    
-    // Only inspect the value if it’s an email
-    // get the email address
-    if (property == kABPersonEmailProperty) {
-        ABMultiValueRef emails = ABRecordCopyValue(person, property);
-        CFStringRef emailValueSelected = ABMultiValueCopyValueAtIndex(emails, identifier);
-
-        // Return to the main view controller and launch MFMailcompose
-        [ self dismissViewControllerAnimated:YES completion:^{
-//            if //(user email is not found in parse database)
-//            {
-//                MFMailComposeViewController *mailViewController = [MFMailComposeViewController new];
-//                mailViewController.mailComposeDelegate = self;
-//                [self presentViewController:mailViewController animated:YES completion:nil];
-//                
-//                //            [mailViewController setToRecipients:(NSString *) emailValueSelected];
-//                
-//                [mailViewController setSubject:@"I want to add you as a contributor to my scrapbook!"];
-//                
-//                [mailViewController setMessageBody:@"Download MyMilestones to start contributing." isHTML:NO]; // part of string should be link to app store to download app
-//                [self presentViewController:mailViewController animated:YES completion:nil];
-//                NSLog(@"Invite friend to download app");
-//            }else {
-            
-            MFMailComposeViewController *mailViewController = [MFMailComposeViewController new];
-            mailViewController.mailComposeDelegate = self;
-            
-//            [mailViewController setToRecipients:(NSString *) emailValueSelected];
-            
-            [mailViewController setSubject:@"I want to add you as a contributor to my scrapbook!"];
-            
-            [mailViewController setMessageBody:@"Login to MyMilestones to start contributing." isHTML:NO]; // part of string should be link to app store to download app
-            
-            [self presentViewController:mailViewController animated:YES completion:nil];
-            NSLog(@"Invite friend to log in to app");
-//            }
-        }];
-
-        }
-    
-    return YES;
-}
-
-
-- (void)displayPerson:(ABRecordRef)person
-{
-    
-}
-
-
-
 
 
 
