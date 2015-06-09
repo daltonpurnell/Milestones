@@ -11,6 +11,7 @@
 #import "EntryController.h"
 #import "CollectionViewDataSource.h"
 #import "EXPhotoViewer.h"
+#import "EntryListViewController.h"
 
 @import QuartzCore;
 
@@ -30,6 +31,8 @@
     self.imageView.layer.shadowRadius = 1.0;
     self.imageView.clipsToBounds = NO;
     
+    [self registerForNotifications];
+    
 }
 
 -(void)updateWithPhoto:(Photo *)photo {
@@ -43,6 +46,32 @@
 - (IBAction)imageTapped:(id)sender {
     
     [EXPhotoViewer showImageFrom:self.imageView];
+}
+
+
+
+#pragma mark - nsnotifications methods
+
+-(void)registerForNotifications {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(respondToImagePicked:) name:entryImagePickedKey object:nil];
+    
+}
+
+-(void)respondToImagePicked:(NSNotification *)notification {
+    
+    //        self.imageView.image = image;
+    NSLog(@"set image view");
+}
+
+
+-(void)unregisterForNotifications {
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:entryImagePickedKey object:nil];
+}
+
+-(void)dealloc {
+    
+    [self unregisterForNotifications];
 }
 
 @end
