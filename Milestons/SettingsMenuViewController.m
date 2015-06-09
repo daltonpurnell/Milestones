@@ -98,6 +98,9 @@
         
         MFMailComposeViewController *mailViewController = [MFMailComposeViewController new];
         mailViewController.mailComposeDelegate = self;
+        [mailViewController setToRecipients:@[@"dalton.purnell61@gmail.com"]];
+        [mailViewController setCcRecipients:@[@"daltonpurnell@live.com"]];
+        [mailViewController setSubject:@"Feedback message"];
         [self presentViewController:mailViewController animated:YES completion:nil];
         NSLog(@"Send Feedback");
     }
@@ -129,6 +132,7 @@
     
 }
 
+#pragma mark - mfmailcompose delegate method
 
 - (void)mailComposeController:(MFMailComposeViewController*)controller
           didFinishWithResult:(MFMailComposeResult)result
