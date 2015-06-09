@@ -297,5 +297,14 @@
     [self unregisterForNotifications];
 }
 
+#pragma mark - text field delegate method
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self.titleTextField resignFirstResponder];
+    return YES;
+}
+
+
+
 
 @end
