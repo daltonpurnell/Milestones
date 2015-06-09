@@ -27,6 +27,10 @@
 @property (nonatomic, strong) CollectionViewDataSource *collectionViewDataSource;
 @property (strong, nonatomic) Entry *entry;
 
+@property (weak, nonatomic) IBOutlet UIButton *deleteButton;
+@property (weak, nonatomic) IBOutlet UIButton *cameraButton;
+@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
+@property (weak, nonatomic) IBOutlet UIButton *doneButton;
 
 @property (strong, nonatomic) NSIndexPath *indexPath;
 

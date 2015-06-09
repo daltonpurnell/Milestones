@@ -36,14 +36,12 @@
     self.backImageView.clipsToBounds = YES;
     self.backImageView.layer.cornerRadius = 5/2.0f;
     
-    
     // create drop shadow for back image view
     self.backImageView.layer.shadowColor = [UIColor grayColor].CGColor;
     self.backImageView.layer.shadowOffset = CGSizeMake(0, 1);
     self.backImageView.layer.shadowOpacity = 1;
     self.backImageView.layer.shadowRadius = 1.0;
     self.backImageView.clipsToBounds = NO;
-    
     
     // create drop shadow for image view
     self.photoImageView.layer.shadowColor = [UIColor grayColor].CGColor;
@@ -197,7 +195,6 @@
                     completion:NULL];
     self.doneButton.hidden = YES;
     
-    
     // camera button animation
     [UIView transitionWithView:self.cameraButton
                       duration:0.4
@@ -247,7 +244,6 @@
                     animations:NULL
                     completion:NULL];
     self.doneButton.hidden = YES;
-
 
     // camera button animation
     [UIView transitionWithView:self.cameraButton

@@ -11,6 +11,10 @@
 
 @import iAd;
 
+static NSString *const entryCameraButtonTappedNotificationKey = @"camera button tapped";
+static NSString * const entryImagePickedKey = @"image picked";
+
+
 @interface EntryListViewController : UITableViewController <ADBannerViewDelegate> {
     ADBannerView *adView;
 }
