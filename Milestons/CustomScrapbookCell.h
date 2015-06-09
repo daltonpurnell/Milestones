@@ -12,6 +12,7 @@
 
 @import ParseUI;
 
+
 @protocol deleteCellDelegate;
 
 @interface CustomScrapbookCell : UITableViewCell
@@ -48,3 +49,4 @@
 - (IBAction)deleteButtonTapped:(NSIndexPath *)indexPath;
 
 @end
+

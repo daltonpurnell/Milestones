@@ -10,6 +10,7 @@
 #import "Scrapbook.h"
 @import iAd;
 static NSString *const cellDeletedNotificationKey = @"cell deleted";
+static NSString *const cameraButtonTappedNotificationKey = @"camera button tapped";
 
 
 @interface ScrapbookListViewController : UITableViewController < ADBannerViewDelegate> {
@@ -25,5 +26,7 @@ static NSString *const cellDeletedNotificationKey = @"cell deleted";
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *settingsButton;
 
 @property (strong, nonatomic)IBOutlet ADBannerView *adView;
+
+-(void)loadNewScreen:(UIViewController *)controller;
 
 @end

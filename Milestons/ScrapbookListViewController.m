@@ -213,6 +213,8 @@
 -(void)registerForNotifications {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(respondToCellDeletion:) name:cellDeletedNotificationKey object:nil];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(respondToCameraButtonTapped:) name:cameraButtonTappedNotificationKey object:nil];
+    
 }
 
 -(void)respondToCellDeletion:(NSNotification *)notification {
@@ -220,10 +222,62 @@
     
 }
 
+- (void)respondToCameraButtonTapped:(NSNotification *)notification {
+    
+    {
+        UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+        imagePicker.delegate = self;
+        
+        UIAlertController *photoActionSheet = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+        
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+            
+        }];
+        
+        [photoActionSheet addAction:cancelAction];
+        
+        UIAlertAction *cameraRollAction = [UIAlertAction actionWithTitle:@"From Library" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            imagePicker.sourceType =  UIImagePickerControllerSourceTypePhotoLibrary;
+            [self presentViewController:imagePicker animated:YES completion:nil];
+        }];
+        
+        [photoActionSheet addAction:cameraRollAction];
+        
+        UIAlertAction *takePictureAction = [UIAlertAction actionWithTitle:@"Take Picture" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            if ([UIImagePickerController isSourceTypeAvailable:
+                 UIImagePickerControllerSourceTypeCamera] == YES) {
+                
+                imagePicker.sourceType =  UIImagePickerControllerSourceTypeCamera;
+                imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+                imagePicker.allowsEditing = YES;
+                
+                [self presentViewController:imagePicker animated:YES completion:nil];
+                
+            } else {
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Camera Not Available on Device" message:@"This device does not have a camera option. Please choose photo from library." preferredStyle:UIAlertControllerStyleAlert];
+                
+                UIAlertAction *dismissAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+                }];
+                
+                [alert addAction:dismissAction];
+                
+                [self presentViewController:alert animated:YES completion:nil];
+            }
+        }];
+        
+        [photoActionSheet addAction:takePictureAction];
+        
+        [self presentViewController:photoActionSheet animated:YES completion:nil];
+        
+    }
+    
+}
+
+
 -(void)unregisterForNotifications {
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:cellDeletedNotificationKey object:nil];
-    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:cameraButtonTappedNotificationKey object:nil];
 }
 
 -(void)dealloc {
@@ -286,5 +340,6 @@
         return 250;
     }
 }
+
 
 @end

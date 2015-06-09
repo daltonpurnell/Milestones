@@ -9,7 +9,12 @@
 #import "CustomScrapbookCell.h"
 #import "EntryController.h"
 #import "ScrapbookController.h"
+#import "ScrapbookListViewController.h"
 @import QuartzCore;
+
+@interface CustomScrapbookCell () <UITextFieldDelegate>
+
+@end
 
 @implementation CustomScrapbookCell
 
@@ -87,7 +92,6 @@
     self.deleteButton.hidden = NO;
     self.titleTextField.enabled = YES;
     self.cancelButton.hidden = NO;
-
     self.titleTextField.delegate = self;
     
 }
@@ -96,7 +100,8 @@
 
 - (IBAction)cameraButtonTapped:(id)sender {
     
-    
+    [[NSNotificationCenter defaultCenter] postNotificationName:cameraButtonTappedNotificationKey object:nil userInfo:nil];
+
 }
 
 
@@ -130,6 +135,8 @@
     self.cancelButton.hidden = YES;
     
 }
+
+
 
 
 @end
