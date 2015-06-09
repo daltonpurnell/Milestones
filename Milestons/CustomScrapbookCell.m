@@ -151,8 +151,27 @@
                      }
                      completion:^(BOOL finished){
                      }];
-
+    // cancel button
     self.cancelButton.hidden = NO;
+    
+    CGRect originalCancelButtonFrame = self.cancelButton.frame;
+    self.cancelButton.frame = CGRectMake(0 - originalCancelButtonFrame.size.width,
+                                         originalCancelButtonFrame.origin.y,
+                                         originalCancelButtonFrame.size.width,
+                                         originalCancelButtonFrame.size.height);
+    
+    [UIView animateWithDuration:0.75
+                          delay:0.25
+         usingSpringWithDamping:0.8
+          initialSpringVelocity:2.0
+                        options: UIViewAnimationOptionCurveLinear
+     
+                     animations:^{
+                         self.cancelButton.frame = originalCancelButtonFrame;
+                     }
+                     completion:^(BOOL finished){
+                     }];
+
     
     self.titleTextField.enabled = YES;
     self.titleTextField.delegate = self;
