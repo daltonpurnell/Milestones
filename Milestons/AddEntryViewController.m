@@ -281,7 +281,7 @@
     
 }
 
-#pragma mark - text view delegate methods
+#pragma mark - text view delegate methods with animations
 
 
 -(void)textViewDidBeginEditing:(UITextView *)textView

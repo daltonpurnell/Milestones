@@ -274,6 +274,17 @@
 }
 
 
+-(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+       [picker dismissViewControllerAnimated:YES completion:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:imagePickedKey object:nil];
+    
+//    customScrapbookCell.photoImageView.image = image;
+    
+}
+
+
 -(void)unregisterForNotifications {
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:cellDeletedNotificationKey object:nil];

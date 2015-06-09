@@ -11,7 +11,7 @@
 @import iAd;
 static NSString *const cellDeletedNotificationKey = @"cell deleted";
 static NSString *const cameraButtonTappedNotificationKey = @"camera button tapped";
-
+static NSString * const imagePickedKey = @"image picked";
 
 @interface ScrapbookListViewController : UITableViewController < ADBannerViewDelegate> {
     ADBannerView *adView;
