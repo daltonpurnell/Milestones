@@ -255,6 +255,16 @@
                                             <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDg-uk-avy">
+                                            <rect key="frame" x="23" y="212" width="48" height="30"/>
+                                            <state key="normal" title="Cancel">
+                                                <color key="titleColor" red="0.31372549019607843" green="0.31372549019607843" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="cancelButtonTapped:" destination="fBN-QD-Djk" eventType="touchUpInside" id="UrL-iV-bkf"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="lf4-k8-Zsm" firstAttribute="trailing" secondItem="nLH-wX-Tto" secondAttribute="trailingMargin" id="0aX-j7-kwh"/>
@@ -302,6 +312,7 @@
                                 <connections>
                                     <outlet property="backImageView" destination="lf4-k8-Zsm" id="sL0-21-I1Q"/>
                                     <outlet property="cameraButton" destination="Exs-sC-PKi" id="Dcc-f9-Dom"/>
+                                    <outlet property="cancelButton" destination="rDg-uk-avy" id="YZB-Wd-ifQ"/>
                                     <outlet property="deleteButton" destination="ucm-6n-4rU" id="lW3-UF-r43"/>
                                     <outlet property="doneButton" destination="Fkm-C1-3lm" id="yLq-J6-wjD"/>
                                     <outlet property="photoImageView" destination="ebh-xf-pRW" id="d7F-8M-6kr"/>

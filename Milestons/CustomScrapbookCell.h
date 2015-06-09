@@ -34,6 +34,8 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 
+@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
+
 @property (strong, nonatomic) Scrapbook *scrapbook;
 
 

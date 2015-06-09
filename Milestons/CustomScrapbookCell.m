@@ -22,6 +22,7 @@
     self.doneButton.hidden = YES;
     self.cameraButton.hidden = YES;
     self.deleteButton.hidden = YES;
+    self.cancelButton.hidden = YES;
     
     // set text field to non editable
     self.titleTextField.enabled = NO;
@@ -85,6 +86,8 @@
     self.cameraButton.hidden = NO;
     self.deleteButton.hidden = NO;
     self.titleTextField.enabled = YES;
+    self.cancelButton.hidden = NO;
+
     self.titleTextField.delegate = self;
     
 }
@@ -118,6 +121,15 @@
     
 }
 
+- (IBAction)cancelButtonTapped:(id)sender {
+    
+    self.doneButton.hidden = YES;
+    self.cameraButton.hidden = YES;
+    self.deleteButton.hidden = YES;
+    self.titleTextField.enabled = NO;
+    self.cancelButton.hidden = YES;
+    
+}
 
 
 @end
