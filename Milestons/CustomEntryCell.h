@@ -31,6 +31,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *cameraButton;
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 @property (weak, nonatomic) IBOutlet UIButton *doneButton;
+@property (weak, nonatomic) IBOutlet UIImageView *sideImageView;
 
 @property (strong, nonatomic) NSIndexPath *indexPath;
 

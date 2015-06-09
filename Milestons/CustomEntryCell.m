@@ -33,6 +33,7 @@
     self.cameraButton.hidden = YES;
     self.deleteButton.hidden = YES;
     self.cancelButton.hidden = YES;
+    self.sideImageView.hidden = YES;
     
 
     // round corners on back image view
@@ -139,6 +140,29 @@
 #pragma mark - Buttons
 
 - (IBAction)editButtonTapped:(id)sender {
+    // side image view
+    self.sideImageView.hidden = NO;
+    
+    CGRect originalViewFrame = self.sideImageView.frame;
+    self.sideImageView.frame = CGRectMake(self.contentView.frame.size.width + originalViewFrame.size.width,
+                                       originalViewFrame.origin.y,
+                                       originalViewFrame.size.width,
+                                       originalViewFrame.size.height);
+    
+    [UIView animateWithDuration:0.75
+                          delay:0.25
+         usingSpringWithDamping:0.8
+          initialSpringVelocity:2.0
+                        options: UIViewAnimationOptionCurveLinear
+     
+                     animations:^{
+                         self.sideImageView.frame = originalViewFrame;
+                     }
+                     completion:^(BOOL finished){
+                     }];
+
+    
+    
     // done button
     self.doneButton.hidden = NO;
     
@@ -235,6 +259,15 @@
 }
 
 - (IBAction)cancelButtonTapped:(id)sender {
+    
+    // side image view animation
+    [UIView transitionWithView:self.sideImageView
+                      duration:0.4
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:NULL
+                    completion:NULL];
+    self.sideImageView.hidden = YES;
+    
     // done button animation
     [UIView transitionWithView:self.doneButton
                       duration:0.4
@@ -273,6 +306,15 @@
 }
 
 - (IBAction)doneButtonTapped:(id)sender {
+    
+    // side image view animation
+    [UIView transitionWithView:self.sideImageView
+                      duration:0.4
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:NULL
+                    completion:NULL];
+    self.sideImageView.hidden = YES;
+    
     // done button animation
     [UIView transitionWithView:self.doneButton
                       duration:0.4
