@@ -120,7 +120,7 @@
                                        originalCameraButtonFrame.size.height);
 
     [UIView animateWithDuration:0.75
-                          delay:0.25
+                          delay:0.35
          usingSpringWithDamping:0.8
           initialSpringVelocity:2.0
                         options: UIViewAnimationOptionCurveLinear
@@ -141,7 +141,7 @@
                                          originalDeleteButtonFrame.size.height);
     
     [UIView animateWithDuration:0.75
-                          delay:0.25
+                          delay:0.45
          usingSpringWithDamping:0.8
           initialSpringVelocity:2.0
                         options: UIViewAnimationOptionCurveLinear
