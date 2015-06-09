@@ -168,7 +168,7 @@
                                                 <constraint firstAttribute="width" constant="250" id="7Lp-9F-lnT"/>
                                                 <constraint firstAttribute="height" constant="21" id="Tib-tp-zsr"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="18"/>
+                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
                                             <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
@@ -822,7 +822,7 @@
                                                 <constraint firstAttribute="width" constant="250" id="Zv2-OB-hOp"/>
                                                 <constraint firstAttribute="height" constant="21" id="cRt-19-d1a"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="18"/>
+                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
                                             <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
