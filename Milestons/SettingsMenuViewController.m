@@ -130,6 +130,16 @@
 }
 
 
+- (void)mailComposeController:(MFMailComposeViewController*)controller
+          didFinishWithResult:(MFMailComposeResult)result
+                        error:(NSError*)error
+{
+    if(error) NSLog(@"ERROR - mailComposeController: %@", [error localizedDescription]);
+    [self dismissViewControllerAnimated:YES completion:nil];
+    return;
+}
+
+
 #pragma mark - login delegate methods
 
 // Sent to the delegate to determine whether the log in request should be submitted to the server.

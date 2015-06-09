@@ -19,7 +19,7 @@
 @import MessageUI;
 
 
-@interface AddEntryViewController () <UITextFieldDelegate, MFMailComposeViewControllerDelegate, UITextViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource>
+@interface AddEntryViewController () <UITextFieldDelegate, UITextViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
