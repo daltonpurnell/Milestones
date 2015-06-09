@@ -23,6 +23,9 @@
     self.cameraButton.hidden = YES;
     self.deleteButton.hidden = YES;
     
+    // set text field to non editable
+    self.titleTextField.enabled = NO;
+    
    // round corners on back image view
     self.backImageView.clipsToBounds = YES;
     self.backImageView.layer.cornerRadius = 5/2.0f;
@@ -81,6 +84,8 @@
     self.doneButton.hidden = NO;
     self.cameraButton.hidden = NO;
     self.deleteButton.hidden = NO;
+    self.titleTextField.enabled = YES;
+    self.titleTextField.delegate = self;
     
 }
 
@@ -97,6 +102,7 @@
     self.doneButton.hidden = YES;
     self.cameraButton.hidden = YES;
     self.deleteButton.hidden = YES;
+    self.titleTextField.enabled = NO;
     
     // save changes to parse
     self.scrapbook.titleOfScrapbook = self.titleTextField.text;
