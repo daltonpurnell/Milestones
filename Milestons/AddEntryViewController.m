@@ -283,21 +283,6 @@
 
 #pragma mark - text view delegate methods
 
-- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
-    
-    if([text isEqualToString:@"\n"]) {
-        [textView resignFirstResponder];
-        
-        [UIView beginAnimations:nil context:NULL];
-        [UIView setAnimationDuration:0.3];
-        
-        self.view.frame = CGRectMake(self.view.frame.origin.x, 0, self.view.frame.size.width, self.view.frame.size.height);
-        [UIView commitAnimations];
-        return NO;
-    }
-    
-    return YES;
-}
 
 -(void)textViewDidBeginEditing:(UITextView *)textView
 {
@@ -307,6 +292,25 @@
     [UIView commitAnimations];
     
 }
+
+
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    
+    if([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+        
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:0.2];
+        
+        self.view.frame = CGRectMake(self.view.frame.origin.x, 0, self.view.frame.size.width, self.view.frame.size.height);
+        [UIView commitAnimations];
+        return NO;
+    }
+    
+    return YES;
+}
+
 
 #pragma mark - Collection view data source methods
 
