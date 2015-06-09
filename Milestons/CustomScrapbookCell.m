@@ -189,11 +189,40 @@
 
 - (IBAction)doneButtonTapped:(id)sender {
     
+    // done button animation
+    [UIView transitionWithView:self.doneButton
+                      duration:0.4
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:NULL
+                    completion:NULL];
     self.doneButton.hidden = YES;
+    
+    
+    // camera button animation
+    [UIView transitionWithView:self.cameraButton
+                      duration:0.4
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:NULL
+                    completion:NULL];
     self.cameraButton.hidden = YES;
+    
+    // delete button animation
+    [UIView transitionWithView:self.deleteButton
+                      duration:0.4
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:NULL
+                    completion:NULL];
     self.deleteButton.hidden = YES;
-    self.titleTextField.enabled = NO;
+    
+    // cancel button animation
+    [UIView transitionWithView:self.cancelButton
+                      duration:0.4
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:NULL
+                    completion:NULL];
     self.cancelButton.hidden = YES;
+    
+    self.titleTextField.enabled = NO;
     
     // save changes to parse
     self.scrapbook.titleOfScrapbook = self.titleTextField.text;
@@ -211,12 +240,40 @@
 
 - (IBAction)cancelButtonTapped:(id)sender {
     
+    // done button animation
+    [UIView transitionWithView:self.doneButton
+                      duration:0.4
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:NULL
+                    completion:NULL];
     self.doneButton.hidden = YES;
+
+
+    // camera button animation
+    [UIView transitionWithView:self.cameraButton
+                      duration:0.4
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:NULL
+                    completion:NULL];
     self.cameraButton.hidden = YES;
+    
+    // delete button animation
+    [UIView transitionWithView:self.deleteButton
+                      duration:0.4
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:NULL
+                    completion:NULL];
     self.deleteButton.hidden = YES;
-    self.titleTextField.enabled = NO;
+    
+    // cancel button animation
+    [UIView transitionWithView:self.cancelButton
+                      duration:0.4
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:NULL
+                    completion:NULL];
     self.cancelButton.hidden = YES;
     
+    self.titleTextField.enabled = NO;
 }
 
 
