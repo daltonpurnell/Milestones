@@ -74,9 +74,10 @@
     // Show ABPeoplePickerNavigationController
     ABPeoplePickerNavigationController *picker = [ABPeoplePickerNavigationController new];
     picker.peoplePickerDelegate = self;
+    picker.displayedProperties = @[@(kABPersonEmailProperty)];
     picker.predicateForEnablingPerson = [NSPredicate predicateWithFormat:@"emailAddresses.@count > 0"];
     picker.predicateForSelectionOfPerson = [NSPredicate predicateWithFormat:@"emailAddresses.@count = 1"];
-    
+
     [self presentViewController:picker animated:YES completion:nil];
     
     NSLog(@"Add Contributors");
@@ -84,16 +85,32 @@
 }
 
 
-#pragma mark - ab people picker delegate methods
 
-- (void)peoplePickerNavigationControllerDidCancel:
-(ABPeoplePickerNavigationController *)peoplePicker
+#pragma mark ABPeoplePickerNavigationControllerDelegate methods
+
+// A selected person is returned with this method.
+- (void)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker didSelectPerson:(ABRecordRef)person
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self didSelectPerson:person identifier:kABMultiValueInvalidIdentifier];
 }
 
 
-- (void)peoplePickerNavigationController:(ABPeoplePickerNavigationController*)peoplePicker didSelectPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifier {
+// A selected person and property is returned with this method.
+- (void)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker didSelectPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifier
+{
+    [self didSelectPerson:person identifier:identifier];
+}
+
+
+// Implement this if you want to do additional work when the picker is cancelled by the user. This method may be optional in a future iOS 8.0 seed.
+- (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker
+{
+}
+
+#pragma mark - ABPeoplePickerNavigationController helper methods
+
+- (void)didSelectPerson:(ABRecordRef)person identifier:(ABMultiValueIdentifier)identifier
+{
 
     // When we get the email address of someone back
 //        [[UserController sharedInstance] findUsersWithUsernameFromParse:@"emailAddressFromContacts" completion:^(PFUser *contributor, NSError *error) {
