@@ -51,14 +51,13 @@
     self.adView.delegate = self;
 
     self.tableView.backgroundColor =  [UIColor colorWithRed:233/255.0 green:236/255.0 blue:243/255.0 alpha:1];
-//        self.tableView.backgroundColor = [UIColor whiteColor];
 
-    
-    
     self.refreshControl = [UIRefreshControl new];
     [self.refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];
     
     self.navigationController.toolbarHidden = NO;
+    
+    [self registerForNotifications];
     
 } 
 
@@ -195,12 +194,7 @@
 }
 
 
-#pragma mark - deleteCellDelegate method
-
-- (void)deleteButtonTapped:(NSIndexPath *)indexPath {
-        [self.tableView reloadData];
-}
-
+#pragma mark - navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
@@ -336,6 +330,19 @@
     //    customScrapbookCell.photoImageView.image = image;
     
 }
+
+-(void)unregisterForNotifications {
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:entryCellDeletedNotificationKey object:nil];
+}
+
+-(void)dealloc {
+    
+    [self unregisterForNotifications];
+}
+
+
+
 
 #pragma mark - mfmailcompose delegate method
 

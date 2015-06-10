@@ -8,6 +8,7 @@
 
 #import "EntryListViewDataSource.h"
 #import "CustomEntryCell.h"
+#import "EntryListViewController.h"
 
 @interface EntryListViewDataSource ()<deleteCellDelegate>
 
@@ -65,7 +66,8 @@
     [[EntryController sharedInstance] removeEntry:entry];
 
     NSLog(@"cell deleted");
-    
+    [[NSNotificationCenter defaultCenter] postNotificationName:entryCellDeletedNotificationKey object:nil userInfo:nil];
+
 }
 
 
