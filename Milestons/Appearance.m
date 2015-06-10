@@ -40,16 +40,14 @@
                                                         NSFontAttributeName,
                                                         nil]];
     
-    
-//    [[UITextView appearance] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Layer-1.png"]]];
-    
-    
-//    [[UITextField appearance] setBackground:[UIImage imageNamed:@"Layer-1.png"]];
-    
-    
-    
 }
 
+
+
++ (NSArray *)imageNames {
+    
+    return @[@"Mail.png", @"Star.png", @"PriceTag.png", @"LogOut.png"];
+}
 
 
 @end

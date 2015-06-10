@@ -11,6 +11,7 @@
 #import "MyLoginViewController.h"
 #import "MySignUpViewController.h"
 #import "ScrapbookController.h"
+#import "Appearance.h"
 
 @import Parse;
 @import MessageUI;
@@ -85,6 +86,8 @@
     
     cell.textLabel.text=[self.optionsList objectAtIndex:indexPath.row];
     cell.textLabel.textColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:255/255.0 alpha:1];
+    cell.imageView.image = [UIImage imageNamed:[Appearance imageNames][indexPath.row]];
+
     cell.backgroundColor = [UIColor clearColor];
     
     return cell;

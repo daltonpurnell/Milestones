@@ -12,5 +12,6 @@
 
 + (void)initializeAppearanceDefaults;
 
++ (NSArray *)imageNames;
 
 @end
