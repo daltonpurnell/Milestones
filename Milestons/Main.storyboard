@@ -245,7 +245,7 @@
                                                 <action selector="doneButtonTapped:" destination="fBN-QD-Djk" eventType="touchUpInside" id="y9N-Kd-3O7"/>
                                             </connections>
                                         </button>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fQg-7j-ATu">
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fQg-7j-ATu">
                                             <rect key="frame" x="23" y="10" width="250" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="ie0-2l-thy"/>
@@ -253,9 +253,9 @@
                                             </constraints>
                                             <color key="textColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                         </textField>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDg-uk-avy">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDg-uk-avy">
                                             <rect key="frame" x="23" y="212" width="48" height="30"/>
                                             <state key="normal" title="Cancel">
                                                 <color key="titleColor" red="0.31372549019607843" green="0.31372549019607843" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
@@ -265,11 +265,22 @@
                                                 <action selector="cancelButtonTapped:" destination="fBN-QD-Djk" eventType="touchUpInside" id="UrL-iV-bkf"/>
                                             </connections>
                                         </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Contributors" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDX-bA-3sZ">
+                                            <rect key="frame" x="440" y="35" width="100" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="1Bs-Ku-bSz"/>
+                                                <constraint firstAttribute="width" constant="100" id="Xub-jT-ODb"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="lf4-k8-Zsm" firstAttribute="trailing" secondItem="nLH-wX-Tto" secondAttribute="trailingMargin" id="0aX-j7-kwh"/>
                                         <constraint firstItem="ucm-6n-4rU" firstAttribute="centerX" secondItem="Exs-sC-PKi" secondAttribute="centerX" id="1CI-WE-g7B"/>
                                         <constraint firstItem="yDL-hD-qek" firstAttribute="top" secondItem="nLH-wX-Tto" secondAttribute="topMargin" constant="8" id="6G3-QU-ur6"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="LDX-bA-3sZ" secondAttribute="trailing" constant="52" id="78x-JD-6p3"/>
                                         <constraint firstItem="ebh-xf-pRW" firstAttribute="top" secondItem="xS7-BP-qyO" secondAttribute="bottom" constant="5" id="7p8-sM-umd"/>
                                         <constraint firstItem="xS7-BP-qyO" firstAttribute="top" secondItem="nLH-wX-Tto" secondAttribute="topMargin" constant="27" id="8dH-r5-w0o"/>
                                         <constraint firstItem="ucm-6n-4rU" firstAttribute="top" secondItem="yDL-hD-qek" secondAttribute="bottom" constant="35" id="AJy-Hl-OFC"/>
@@ -280,14 +291,17 @@
                                         <constraint firstItem="ebh-xf-pRW" firstAttribute="bottom" secondItem="nLH-wX-Tto" secondAttribute="bottomMargin" id="Khx-76-xsa"/>
                                         <constraint firstItem="ucm-6n-4rU" firstAttribute="centerX" secondItem="yDL-hD-qek" secondAttribute="centerX" id="LHy-yG-UHt"/>
                                         <constraint firstItem="ebh-xf-pRW" firstAttribute="bottom" secondItem="nLH-wX-Tto" secondAttribute="bottomMargin" constant="-1" id="Px2-7c-2zq"/>
+                                        <constraint firstItem="rDg-uk-avy" firstAttribute="bottom" secondItem="nLH-wX-Tto" secondAttribute="bottomMargin" id="T7E-xw-DJh"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="yDL-hD-qek" secondAttribute="trailing" constant="13" id="V3U-Im-fpb"/>
                                         <constraint firstItem="Exs-sC-PKi" firstAttribute="centerX" secondItem="Fkm-C1-3lm" secondAttribute="centerX" constant="6.5" id="VdB-YO-S9F"/>
                                         <constraint firstItem="ebh-xf-pRW" firstAttribute="centerX" secondItem="nLH-wX-Tto" secondAttribute="centerX" id="VqR-dH-Pc1"/>
                                         <constraint firstItem="Exs-sC-PKi" firstAttribute="top" secondItem="ucm-6n-4rU" secondAttribute="bottom" constant="49" id="Xhj-YP-w9b"/>
                                         <constraint firstItem="fQg-7j-ATu" firstAttribute="leading" secondItem="nLH-wX-Tto" secondAttribute="leadingMargin" constant="15" id="dRb-Ot-fFA"/>
                                         <constraint firstItem="fQg-7j-ATu" firstAttribute="top" secondItem="nLH-wX-Tto" secondAttribute="topMargin" constant="2" id="jGf-6S-wQp"/>
+                                        <constraint firstItem="LDX-bA-3sZ" firstAttribute="top" secondItem="nLH-wX-Tto" secondAttribute="topMargin" constant="27" id="jkr-Gg-MtB"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="lf4-k8-Zsm" secondAttribute="bottom" constant="-8" id="jzn-V9-2u5"/>
                                         <constraint firstItem="Fkm-C1-3lm" firstAttribute="top" secondItem="Exs-sC-PKi" secondAttribute="bottom" constant="40" id="m8N-xk-zJf"/>
+                                        <constraint firstItem="rDg-uk-avy" firstAttribute="leading" secondItem="nLH-wX-Tto" secondAttribute="leadingMargin" constant="15" id="mXH-4A-pvM"/>
                                         <constraint firstItem="lf4-k8-Zsm" firstAttribute="top" secondItem="nLH-wX-Tto" secondAttribute="topMargin" id="mmv-eF-Xnp"/>
                                     </constraints>
                                     <variation key="default">
@@ -313,6 +327,7 @@
                                     <outlet property="backImageView" destination="lf4-k8-Zsm" id="sL0-21-I1Q"/>
                                     <outlet property="cameraButton" destination="Exs-sC-PKi" id="Dcc-f9-Dom"/>
                                     <outlet property="cancelButton" destination="rDg-uk-avy" id="YZB-Wd-ifQ"/>
+                                    <outlet property="contributorsLabel" destination="LDX-bA-3sZ" id="1CC-TC-dKt"/>
                                     <outlet property="deleteButton" destination="ucm-6n-4rU" id="lW3-UF-r43"/>
                                     <outlet property="doneButton" destination="Fkm-C1-3lm" id="yLq-J6-wjD"/>
                                     <outlet property="photoImageView" destination="ebh-xf-pRW" id="d7F-8M-6kr"/>

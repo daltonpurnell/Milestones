@@ -37,8 +37,9 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 
-@property (strong, nonatomic) Scrapbook *scrapbook;
+@property (weak, nonatomic) IBOutlet UILabel *contributorsLabel;
 
+@property (strong, nonatomic) Scrapbook *scrapbook;
 
 -(void)updateWithScrapbook:(Scrapbook *)scrapbook;
 

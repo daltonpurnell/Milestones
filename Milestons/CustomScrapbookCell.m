@@ -70,6 +70,7 @@
     
     self.titleTextField.text = [NSString stringWithFormat:@"%@", scrapbook.titleOfScrapbook];
     self.timestampLabel.text = [NSString stringWithFormat:@"%@", formattedDate];
+    self.contributorsLabel.text = [NSString stringWithFormat:@"%lu Contributors", (unsigned long)scrapbook.contributors.count];
     
     self.photoImageView.file = scrapbook.photo;
     
