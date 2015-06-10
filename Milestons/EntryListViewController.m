@@ -18,7 +18,6 @@
 #import "UserController.h"
 #import "ScrapbookController.h"
 
-
 @import Parse;
 @import ParseUI;
 @import AddressBookUI;
@@ -93,41 +92,62 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+
 - (void)peoplePickerNavigationController:(ABPeoplePickerNavigationController*)peoplePicker didSelectPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifier {
+
     // When we get the email address of someone back
-    [[UserController sharedInstance] findUsersWithUsernameFromParse:@"emailAddressFromContacts" completion:^(PFUser *contributor, NSError *error) {
-        if (!error) {
-            if (contributor) {
-                [[ScrapbookController sharedInstance] addContributor:contributor toScrapbook:self.scrapbook];
-            } else {
+//        [[UserController sharedInstance] findUsersWithUsernameFromParse:@"emailAddressFromContacts" completion:^(PFUser *contributor, NSError *error) {
+//        if (!error) {
+//            if (contributor) {
+//                [[ScrapbookController sharedInstance] addContributor:contributor toScrapbook:self.scrapbook];
+//            } else
+//            {
                 // have user invite friend to contribute
+                NSString *emailAddress = @"no email address";
+                ABMultiValueRef emails = ABRecordCopyValue(person, kABPersonEmailProperty);
+                if (emails)
+                {
+                    if (ABMultiValueGetCount(emails) > 0)
+                    {
+                        CFIndex index = 0;
+                        if (identifier != kABMultiValueInvalidIdentifier)
+                        {
+                            index = ABMultiValueGetIndexForIdentifier(emails, identifier);
+                        }
+                        emailAddress = CFBridgingRelease(ABMultiValueCopyValueAtIndex(emails, index));
+                    }
+                    CFRelease(emails);
+                }
+
                 
                 MFMailComposeViewController *mailViewController = [MFMailComposeViewController new];
                 mailViewController.mailComposeDelegate = self;
                 [self presentViewController:mailViewController animated:YES completion:nil];
                 
-                //            [mailViewController setToRecipients:(__bridge id)(emailValueSelected)];
+//                [mailViewController setToRecipients:@[emailValueSelected]];
+                [mailViewController setToRecipients:@[emailAddress]];
+
+                [mailViewController setSubject:@"Contribute to my scrapbook!"];
                 
-                [mailViewController setSubject:@"I want to add you as a contributor to my scrapbook!"];
-                
-                [mailViewController setMessageBody:@"Download or log in to MyMilestones to start contributing." isHTML:NO]; // part of string should be link to app store to download app
+                [mailViewController setMessageBody:@"I would like to add you as a contributor to my scrapbook! Download or log in to MyMilestones to start contributing." isHTML:NO]; // part of string should be link to app store to download app
                 [self presentViewController:mailViewController animated:YES completion:nil];
                 NSLog(@"Invite");
             }
-        } else {
-            // Let them know there was an error
-            
-            [[[UIAlertView alloc] initWithTitle:@"Error finding user"
-                                        message:nil
-                                       delegate:nil
-                              cancelButtonTitle:@"OK"
-                              otherButtonTitles:nil] show];
-            
-            NSLog(@"Error finding user: %@", error);
-        }
-    }];
-    
-}
+//        } else {
+//            // Let them know there was an error
+//            
+//            [[[UIAlertView alloc] initWithTitle:@"Error adding contributor"
+//                                        message:@"Please try again"
+//                                       delegate:nil
+//                              cancelButtonTitle:@"OK"
+//                              otherButtonTitles:nil] show];
+//            
+//            NSLog(@"Error finding user: %@", error);
+//        }
+////    }];
+
+//    }
+//}
 
 
 
@@ -300,7 +320,16 @@
     
 }
 
+#pragma mark - mfmailcompose delegate method
 
+- (void)mailComposeController:(MFMailComposeViewController*)controller
+          didFinishWithResult:(MFMailComposeResult)result
+                        error:(NSError*)error
+{
+    if(error) NSLog(@"ERROR - mailComposeController: %@", [error localizedDescription]);
+    [self dismissViewControllerAnimated:YES completion:nil];
+    return;
+}
 
 
 @end
