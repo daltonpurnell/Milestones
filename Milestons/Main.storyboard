@@ -853,16 +853,6 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="23R-dg-K6R">
                                             <rect key="frame" x="8" y="8" width="584" height="434"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4O-SL-oLs">
-                                            <rect key="frame" x="16" y="13" width="250" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="250" id="Zv2-OB-hOp"/>
-                                                <constraint firstAttribute="height" constant="21" id="cRt-19-d1a"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
-                                            <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48l-dk-EiE">
                                             <rect key="frame" x="16" y="30" width="114" height="21"/>
                                             <constraints>
@@ -1016,19 +1006,27 @@
                                                 <action selector="doneButtonTapped:" destination="Jfh-bi-QJz" eventType="touchUpInside" id="POU-rq-Oym"/>
                                             </connections>
                                         </button>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I6E-cp-lVf">
+                                            <rect key="frame" x="16" y="8" width="200" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="Rzh-wA-SYX"/>
+                                                <constraint firstAttribute="width" constant="200" id="lPP-CI-QTc"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                        </textField>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="m4O-SL-oLs" firstAttribute="top" secondItem="VgF-Zm-3CR" secondAttribute="topMargin" constant="5" id="2e2-oR-bW1"/>
                                         <constraint firstItem="23R-dg-K6R" firstAttribute="top" secondItem="VgF-Zm-3CR" secondAttribute="topMargin" id="2gN-sr-Z1F"/>
                                         <constraint firstItem="dFk-IX-uQz" firstAttribute="centerX" secondItem="R0B-Hr-dBa" secondAttribute="centerX" id="7Vl-dA-8xY"/>
                                         <constraint firstItem="23R-dg-K6R" firstAttribute="leading" secondItem="VgF-Zm-3CR" secondAttribute="leadingMargin" id="BJb-e4-2Fe"/>
                                         <constraint firstItem="23R-dg-K6R" firstAttribute="trailing" secondItem="VgF-Zm-3CR" secondAttribute="trailingMargin" id="BUE-oP-vGa"/>
                                         <constraint firstItem="dFk-IX-uQz" firstAttribute="top" secondItem="R0B-Hr-dBa" secondAttribute="bottom" constant="40" id="D45-U2-oU9"/>
                                         <constraint firstItem="4QB-mo-vbP" firstAttribute="top" secondItem="VgF-Zm-3CR" secondAttribute="topMargin" constant="45" id="EDY-Ie-pyD"/>
-                                        <constraint firstItem="m4O-SL-oLs" firstAttribute="leading" secondItem="VgF-Zm-3CR" secondAttribute="leadingMargin" constant="8" id="GJB-Hc-7Qw"/>
                                         <constraint firstItem="R0B-Hr-dBa" firstAttribute="top" secondItem="FPZ-Nn-kdY" secondAttribute="bottom" constant="43" id="Ics-6j-8xc"/>
                                         <constraint firstItem="3Js-is-wye" firstAttribute="top" secondItem="Jdo-B8-UQy" secondAttribute="bottom" constant="41" id="L3y-QD-26L"/>
                                         <constraint firstItem="48l-dk-EiE" firstAttribute="top" secondItem="VgF-Zm-3CR" secondAttribute="topMargin" constant="22" id="MSb-6k-Lom"/>
+                                        <constraint firstItem="I6E-cp-lVf" firstAttribute="top" secondItem="VgF-Zm-3CR" secondAttribute="topMargin" id="OeJ-cu-erD"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="4QB-mo-vbP" secondAttribute="bottom" constant="100" id="SEu-0D-ASF"/>
                                         <constraint firstItem="FPZ-Nn-kdY" firstAttribute="centerX" secondItem="R0B-Hr-dBa" secondAttribute="centerX" constant="-1" id="X09-bY-yMG"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="4QB-mo-vbP" secondAttribute="trailing" id="ZtV-z1-89I"/>
@@ -1038,6 +1036,7 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="ooa-6b-X2T" secondAttribute="bottom" constant="10" id="dNz-c4-xwx"/>
                                         <constraint firstItem="ZTe-ln-gMh" firstAttribute="top" secondItem="VgF-Zm-3CR" secondAttribute="topMargin" id="dnm-qO-sgb"/>
                                         <constraint firstItem="Jdo-B8-UQy" firstAttribute="top" secondItem="dFk-IX-uQz" secondAttribute="bottom" constant="39" id="eEB-Om-bn9"/>
+                                        <constraint firstItem="I6E-cp-lVf" firstAttribute="leading" secondItem="VgF-Zm-3CR" secondAttribute="leadingMargin" constant="8" id="jmV-yD-JdW"/>
                                         <constraint firstItem="ZTe-ln-gMh" firstAttribute="trailing" secondItem="VgF-Zm-3CR" secondAttribute="trailingMargin" id="k9v-MT-uZJ"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="ooa-6b-X2T" secondAttribute="trailing" constant="8" id="kdm-A9-fib"/>
                                         <constraint firstItem="48l-dk-EiE" firstAttribute="leading" secondItem="VgF-Zm-3CR" secondAttribute="leadingMargin" constant="8" id="ne1-pg-RBk"/>
@@ -1057,7 +1056,7 @@
                                     <outlet property="doneButton" destination="3Js-is-wye" id="fLm-BW-tbg"/>
                                     <outlet property="sideImageView" destination="ZTe-ln-gMh" id="ova-3K-iNV"/>
                                     <outlet property="timestampLabel" destination="48l-dk-EiE" id="Z2Q-4b-vsa"/>
-                                    <outlet property="titleOfEntryLabel" destination="m4O-SL-oLs" id="fjd-h5-kTd"/>
+                                    <outlet property="titleTextField" destination="I6E-cp-lVf" id="hOA-2E-d9Y"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="emptyStateCell" id="Ao8-8S-qYY" customClass="CustomEntryCell">

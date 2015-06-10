@@ -73,8 +73,7 @@
 - (IBAction)addContributorButtonPressed:(id)sender {
     
     // Show ABPeoplePickerNavigationController
-    ABPeoplePickerNavigationController *picker =
-    [ABPeoplePickerNavigationController new];
+    ABPeoplePickerNavigationController *picker = [ABPeoplePickerNavigationController new];
     picker.peoplePickerDelegate = self;
     picker.predicateForEnablingPerson = [NSPredicate predicateWithFormat:@"emailAddresses.@count > 0"];
     picker.predicateForSelectionOfPerson = [NSPredicate predicateWithFormat:@"emailAddresses.@count = 1"];
@@ -82,8 +81,19 @@
     [self presentViewController:picker animated:YES completion:nil];
     
     NSLog(@"Add Contributors");
-    
-    
+
+}
+
+
+#pragma mark - ab people picker delegate methods
+
+- (void)peoplePickerNavigationControllerDidCancel:
+(ABPeoplePickerNavigationController *)peoplePicker
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)peoplePickerNavigationController:(ABPeoplePickerNavigationController*)peoplePicker didSelectPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifier {
     // When we get the email address of someone back
     [[UserController sharedInstance] findUsersWithUsernameFromParse:@"emailAddressFromContacts" completion:^(PFUser *contributor, NSError *error) {
         if (!error) {
@@ -116,51 +126,11 @@
             NSLog(@"Error finding user: %@", error);
         }
     }];
+    
 }
 
 
-#pragma mark - ab people picker delegate methods
 
-- (void)peoplePickerNavigationControllerDidCancel:
-(ABPeoplePickerNavigationController *)peoplePicker
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-
-- (BOOL)peoplePickerNavigationController:
-(ABPeoplePickerNavigationController *)peoplePicker
-      shouldContinueAfterSelectingPerson:(ABRecordRef)person {
-    
-    return YES;
-}
-
-- (BOOL)peoplePickerNavigationController:
-(ABPeoplePickerNavigationController *)peoplePicker
-      shouldContinueAfterSelectingPerson:(ABRecordRef)person
-                                property:(ABPropertyID)property
-                              identifier:(ABMultiValueIdentifier)identifier
-{
-    
-    
-    // Only inspect the value if it’s an email
-    if (property == kABPersonEmailProperty) {
-        ABMultiValueRef emails = ABRecordCopyValue(person, property);
-        
-        // get the email address
-        if(ABMultiValueGetCount(emails) > 0)
-        {
-            long index = ABMultiValueGetIndexForIdentifier(emails, identifier);
-            CFStringRef emailValueSelected = ABMultiValueCopyValueAtIndex(emails, index);
-        }
-        // Return to the main view controller and launch MFMailcompose
-        [self dismissViewControllerAnimated:YES completion:nil];
-        
-        return NO;
-    }
-    
-    return YES;
-}
 
 
 #pragma mark - load tableview with correct data

@@ -16,7 +16,7 @@
 #import "EntryListViewController.h"
 @import QuartzCore;
 
-@interface CustomEntryCell () <UICollectionViewDelegate> 
+@interface CustomEntryCell () <UICollectionViewDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *backImageView;
 
 @end
@@ -57,10 +57,6 @@
     self.backImageView.layer.shadowRadius = 1.0;
     self.backImageView.clipsToBounds = NO;
     
-    // round corners on background image view
-//    self.backImageView.clipsToBounds = YES;
-//    self.backImageView.layer.cornerRadius = 5/2.0f;
-    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -79,7 +75,7 @@
     NSDate *date = entry.timestamp;
     NSString *formattedDate = [formatter stringFromDate:date];
     
-    self.titleOfEntryLabel.text = [NSString stringWithFormat:@"%@", entry.titleOfEntry];
+    self.titleTextField.text = [NSString stringWithFormat:@"%@", entry.titleOfEntry];
     
     self.timestampLabel.text = [NSString stringWithFormat:@"%@", formattedDate];
     
@@ -194,7 +190,7 @@
                                          originalCameraButtonFrame.size.height);
     
     [UIView animateWithDuration:0.75
-                          delay:0.35
+                          delay:0.45
          usingSpringWithDamping:0.8
           initialSpringVelocity:2.0
                         options: UIViewAnimationOptionCurveLinear
@@ -215,7 +211,7 @@
                                          originalDeleteButtonFrame.size.height);
     
     [UIView animateWithDuration:0.75
-                          delay:0.45
+                          delay:0.55
          usingSpringWithDamping:0.8
           initialSpringVelocity:2.0
                         options: UIViewAnimationOptionCurveLinear
@@ -235,7 +231,7 @@
                                          originalCancelButtonFrame.size.height);
     
     [UIView animateWithDuration:0.75
-                          delay:0.25
+                          delay:0.35
          usingSpringWithDamping:0.8
           initialSpringVelocity:2.0
                         options: UIViewAnimationOptionCurveLinear
@@ -247,8 +243,8 @@
                      }];
     
     
-//    self.titleTextField.enabled = YES;
-//    self.titleTextField.delegate = self;
+    self.titleTextField.enabled = YES;
+    self.titleTextField.delegate = self;
 
 }
 
@@ -347,7 +343,7 @@
                     completion:NULL];
     self.cancelButton.hidden = YES;
     
-//    self.titleTextField.enabled = NO;
+    self.titleTextField.enabled = NO;
 // save changes to parse
 // reload tableview
     
