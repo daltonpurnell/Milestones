@@ -74,10 +74,12 @@
 		CFE361081B237B74003323A7 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE361071B237B74003323A7 /* AddressBook.framework */; };
 		CFE3610B1B23D24E003323A7 /* AnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE3610A1B23D24E003323A7 /* AnimationController.m */; };
 		CFE361161B23EDDD003323A7 /* CustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE361151B23EDDD003323A7 /* CustomSegue.m */; };
-		CFE361181B2483F2003323A7 /* echo_affirm1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CFE361171B2483F2003323A7 /* echo_affirm1.wav */; };
-		CFE3611A1B2483FB003323A7 /* techy_affirm.wav in Resources */ = {isa = PBXBuildFile; fileRef = CFE361191B2483FB003323A7 /* techy_affirm.wav */; };
-		CFE3611C1B248402003323A7 /* Transistion_SciFi_09.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CFE3611B1B248402003323A7 /* Transistion_SciFi_09.mp3 */; };
 		CFE361211B253B58003323A7 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE361201B253B58003323A7 /* iAd.framework */; };
+		CFE361291B28B8DE003323A7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE361281B28B8DE003323A7 /* AVFoundation.framework */; };
+		CFE3612B1B28B925003323A7 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE3612A1B28B925003323A7 /* AVKit.framework */; };
+		CFE3612D1B28C30F003323A7 /* New Notification 02.wav in Resources */ = {isa = PBXBuildFile; fileRef = CFE3612C1B28C30F003323A7 /* New Notification 02.wav */; };
+		CFE3612F1B28C31F003323A7 /* success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CFE3612E1B28C31F003323A7 /* success.mp3 */; };
+		CFE361311B28C335003323A7 /* Fast Swoosh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CFE361301B28C335003323A7 /* Fast Swoosh.mp3 */; };
 		CFEC12DC1B04379500AB6C1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFEC12DB1B04379500AB6C1B /* Main.storyboard */; };
 		CFEC12E91B0C117800AB6C1B /* MyLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */; };
 		CFEC12EC1B0C119100AB6C1B /* MySignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12EB1B0C119100AB6C1B /* MySignUpViewController.m */; };
@@ -206,10 +208,12 @@
 		CFE3610A1B23D24E003323A7 /* AnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationController.m; sourceTree = "<group>"; };
 		CFE361141B23EDDD003323A7 /* CustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegue.h; sourceTree = "<group>"; };
 		CFE361151B23EDDD003323A7 /* CustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegue.m; sourceTree = "<group>"; };
-		CFE361171B2483F2003323A7 /* echo_affirm1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = echo_affirm1.wav; sourceTree = "<group>"; };
-		CFE361191B2483FB003323A7 /* techy_affirm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = techy_affirm.wav; sourceTree = "<group>"; };
-		CFE3611B1B248402003323A7 /* Transistion_SciFi_09.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Transistion_SciFi_09.mp3; sourceTree = "<group>"; };
 		CFE361201B253B58003323A7 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		CFE361281B28B8DE003323A7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CFE3612A1B28B925003323A7 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		CFE3612C1B28C30F003323A7 /* New Notification 02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "New Notification 02.wav"; sourceTree = "<group>"; };
+		CFE3612E1B28C31F003323A7 /* success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = success.mp3; sourceTree = "<group>"; };
+		CFE361301B28C335003323A7 /* Fast Swoosh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Fast Swoosh.mp3"; sourceTree = "<group>"; };
 		CFEC12DB1B04379500AB6C1B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CFEC12E71B0C117800AB6C1B /* MyLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLoginViewController.h; path = ../MyLoginViewController.h; sourceTree = "<group>"; };
 		CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyLoginViewController.m; path = ../MyLoginViewController.m; sourceTree = "<group>"; };
@@ -222,6 +226,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFE3612B1B28B925003323A7 /* AVKit.framework in Frameworks */,
+				CFE361291B28B8DE003323A7 /* AVFoundation.framework in Frameworks */,
 				CFE361211B253B58003323A7 /* iAd.framework in Frameworks */,
 				CFE361081B237B74003323A7 /* AddressBook.framework in Frameworks */,
 				CFE361061B237B65003323A7 /* AddressBookUI.framework in Frameworks */,
@@ -315,6 +321,8 @@
 			isa = PBXGroup;
 			children = (
 				CFE3611D1B24840A003323A7 /* Audio */,
+				CFE361281B28B8DE003323A7 /* AVFoundation.framework */,
+				CFE3612A1B28B925003323A7 /* AVKit.framework */,
 				CFE361201B253B58003323A7 /* iAd.framework */,
 				CFE361071B237B74003323A7 /* AddressBook.framework */,
 				CFE361051B237B65003323A7 /* AddressBookUI.framework */,
@@ -523,9 +531,9 @@
 		CFE3611D1B24840A003323A7 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				CFE361171B2483F2003323A7 /* echo_affirm1.wav */,
-				CFE361191B2483FB003323A7 /* techy_affirm.wav */,
-				CFE3611B1B248402003323A7 /* Transistion_SciFi_09.mp3 */,
+				CFE3612E1B28C31F003323A7 /* success.mp3 */,
+				CFE3612C1B28C30F003323A7 /* New Notification 02.wav */,
+				CFE361301B28C335003323A7 /* Fast Swoosh.mp3 */,
 			);
 			name = Audio;
 			sourceTree = "<group>";
@@ -614,12 +622,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF2C22DF1AF5B40A00D28EAB /* LaunchScreen.xib in Resources */,
-				CFE361181B2483F2003323A7 /* echo_affirm1.wav in Resources */,
+				CFE3612F1B28C31F003323A7 /* success.mp3 in Resources */,
 				CFE04C191B1A3A9E001F1DA6 /* Products.json in Resources */,
 				CFEC12DC1B04379500AB6C1B /* Main.storyboard in Resources */,
 				CF2C22DC1AF5B40A00D28EAB /* Images.xcassets in Resources */,
-				CFE3611A1B2483FB003323A7 /* techy_affirm.wav in Resources */,
-				CFE3611C1B248402003323A7 /* Transistion_SciFi_09.mp3 in Resources */,
+				CFE3612D1B28C30F003323A7 /* New Notification 02.wav in Resources */,
+				CFE361311B28C335003323A7 /* Fast Swoosh.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

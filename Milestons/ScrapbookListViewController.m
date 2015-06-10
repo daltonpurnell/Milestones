@@ -17,13 +17,12 @@
 #import "MySignUpViewController.h"
 #import "SWRevealViewController.h"
 
-
 @import Parse;
 @import ParseUI;
 @import AVFoundation;
 @import AudioToolbox;
 
-@interface ScrapbookListViewController () <UITableViewDelegate, PFSignUpViewControllerDelegate, PFLogInViewControllerDelegate, UIViewControllerTransitioningDelegate>
+@interface ScrapbookListViewController () <UITableViewDelegate, PFSignUpViewControllerDelegate, PFLogInViewControllerDelegate, UIViewControllerTransitioningDelegate, AVAudioPlayerDelegate>
 
 @property (nonatomic, strong) PFUser *currentUser;
 
@@ -169,16 +168,27 @@
 }
 
 
-#pragma mark - loading table view with correct data
+#pragma mark - loading table view with correct data and av audio player
+
 
 -(void)refreshTable {
     
     [self.refreshControl beginRefreshing];
-    
-    // path is nil
-    NSString *path = [[NSBundle mainBundle]pathForResource:@"Transistion_SciFi_09" ofType:@"mp3"];
-    AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
-    [audioPlayer play];
+    NSString *pathAndFileName = [[NSBundle mainBundle] pathForResource:@"Fast Swoosh" ofType:@"mp3"];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:pathAndFileName])
+    {
+        AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:pathAndFileName] error:NULL];
+
+        audioPlayer.delegate=self;
+        [audioPlayer prepareToPlay];
+        [audioPlayer play];
+        NSLog(@"File exists in BUNDLE");
+    }
+    else
+    {
+        NSLog(@"File not found");
+    }
+
     
     [[ScrapbookController sharedInstance]loadScrapbooksFromParse:^(NSError *error) {
         [self.tableView reloadData];

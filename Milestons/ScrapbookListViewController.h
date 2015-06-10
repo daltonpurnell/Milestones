@@ -27,6 +27,4 @@ static NSString * const imagePickedKey = @"image picked";
 
 @property (strong, nonatomic)IBOutlet ADBannerView *adView;
 
--(void)loadNewScreen:(UIViewController *)controller;
-
 @end
