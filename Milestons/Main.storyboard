@@ -114,15 +114,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="EZm-jp-P8v"/>
-                        <barButtonItem image="Trash-can" id="3tq-bT-LWA">
-                            <connections>
-                                <action selector="deleteButtonTapped:" destination="zPV-Sb-Kcm" id="yiU-fC-ZHQ"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Rby-1E-wv3"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="0vG-Go-GSN">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="ozU-xd-te6">
                             <connections>
@@ -416,8 +408,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="giftlyBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Lsg-kn-eAr">
-                                <rect key="frame" x="-4" y="64" width="607" height="492"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="giftlyBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Lsg-kn-eAr">
+                                <rect key="frame" x="-4" y="64" width="607" height="536"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tdg-WY-h02">
                                 <rect key="frame" x="16" y="79" width="568" height="30"/>
@@ -613,7 +605,7 @@
                                     </mask>
                                 </variation>
                             </collectionView>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="dIY-sV-fWP">
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dIY-sV-fWP">
                                 <rect key="frame" x="139" y="506" width="320" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="bCY-Cq-gqf"/>
@@ -630,6 +622,7 @@
                             <constraint firstItem="emn-oH-hK9" firstAttribute="top" secondItem="yeJ-gA-UCv" secondAttribute="bottom" constant="115" id="63s-tq-FlA"/>
                             <constraint firstItem="ypf-1S-Ia1" firstAttribute="top" secondItem="NoW-2q-WFc" secondAttribute="bottom" constant="98" id="68F-KY-r53"/>
                             <constraint firstItem="X1r-lL-4dS" firstAttribute="top" secondItem="NoW-2q-WFc" secondAttribute="bottom" constant="198" id="7Bq-gi-vee"/>
+                            <constraint firstAttribute="centerX" secondItem="Lsg-kn-eAr" secondAttribute="centerX" constant="0.5" id="8WW-2J-1Ln"/>
                             <constraint firstItem="Tdg-WY-h02" firstAttribute="trailing" secondItem="NbK-La-IKg" secondAttribute="trailingMargin" id="8mE-4z-nwr"/>
                             <constraint firstItem="ppX-YY-l8P" firstAttribute="top" secondItem="yeJ-gA-UCv" secondAttribute="bottom" constant="7" id="8zN-nj-s52"/>
                             <constraint firstItem="ppX-YY-l8P" firstAttribute="top" secondItem="NoW-2q-WFc" secondAttribute="bottom" constant="266" id="9Au-eM-af9"/>
@@ -639,6 +632,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="X1r-lL-4dS" secondAttribute="trailing" constant="1" id="FqJ-tP-WZh"/>
                             <constraint firstItem="yeJ-gA-UCv" firstAttribute="top" secondItem="NoW-2q-WFc" secondAttribute="bottom" constant="98" id="Gsf-ZR-KrD"/>
                             <constraint firstItem="Dge-dQ-eke" firstAttribute="leading" secondItem="NbK-La-IKg" secondAttribute="leadingMargin" constant="524" id="HKq-6a-Jsb"/>
+                            <constraint firstItem="Lsg-kn-eAr" firstAttribute="leading" secondItem="NbK-La-IKg" secondAttribute="leadingMargin" constant="-20" id="HmK-HG-89h"/>
                             <constraint firstItem="emn-oH-hK9" firstAttribute="top" secondItem="dIY-sV-fWP" secondAttribute="bottom" id="Jdo-vG-Ci4"/>
                             <constraint firstItem="uij-36-Bxk" firstAttribute="centerX" secondItem="ypf-1S-Ia1" secondAttribute="centerX" constant="5" id="M64-bq-sZd"/>
                             <constraint firstItem="Tdg-WY-h02" firstAttribute="leading" secondItem="NbK-La-IKg" secondAttribute="leadingMargin" id="MZU-Yx-R7h"/>
@@ -649,9 +643,11 @@
                             <constraint firstAttribute="height" secondItem="Lsg-kn-eAr" secondAttribute="height" id="PPk-WH-iWV"/>
                             <constraint firstAttribute="centerY" secondItem="Lsg-kn-eAr" secondAttribute="centerY" constant="-19" id="Ph7-Ci-3Ha"/>
                             <constraint firstItem="Lsg-kn-eAr" firstAttribute="width" secondItem="NbK-La-IKg" secondAttribute="width" id="PtE-Tl-2ua"/>
+                            <constraint firstItem="emn-oH-hK9" firstAttribute="top" secondItem="Lsg-kn-eAr" secondAttribute="bottom" id="S6E-ib-w0e"/>
                             <constraint firstItem="emn-oH-hK9" firstAttribute="top" secondItem="ppX-YY-l8P" secondAttribute="bottom" constant="58" id="T5m-Hj-Wdl"/>
                             <constraint firstItem="Tdg-WY-h02" firstAttribute="leading" secondItem="NbK-La-IKg" secondAttribute="leadingMargin" id="U94-rG-y1H"/>
                             <constraint firstItem="Dge-dQ-eke" firstAttribute="top" secondItem="NoW-2q-WFc" secondAttribute="bottom" constant="100" id="UBB-oo-Jtb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lsg-kn-eAr" secondAttribute="trailing" constant="-19" id="VmN-7l-EW7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ypf-1S-Ia1" secondAttribute="trailing" constant="646" id="XhB-aN-RiK"/>
                             <constraint firstItem="yeJ-gA-UCv" firstAttribute="leading" secondItem="ypf-1S-Ia1" secondAttribute="trailing" constant="143" id="c8k-RP-k9P"/>
                             <constraint firstAttribute="centerX" secondItem="dIY-sV-fWP" secondAttribute="centerX" constant="1" id="cPR-2i-vVp"/>
@@ -672,6 +668,7 @@
                             <constraint firstAttribute="centerX" secondItem="Tdg-WY-h02" secondAttribute="centerX" id="mqR-hJ-TH6"/>
                             <constraint firstItem="emn-oH-hK9" firstAttribute="top" secondItem="Tdg-WY-h02" secondAttribute="bottom" constant="291" id="mrM-Mh-2Xb"/>
                             <constraint firstItem="ppX-YY-l8P" firstAttribute="top" secondItem="yeJ-gA-UCv" secondAttribute="bottom" constant="8" id="nqM-ux-PpA"/>
+                            <constraint firstItem="Lsg-kn-eAr" firstAttribute="top" secondItem="NoW-2q-WFc" secondAttribute="bottom" id="nym-fZ-Qaa"/>
                             <constraint firstItem="ppX-YY-l8P" firstAttribute="centerX" secondItem="yeJ-gA-UCv" secondAttribute="centerX" id="osn-MJ-rvA"/>
                             <constraint firstItem="Tdg-WY-h02" firstAttribute="trailing" secondItem="NbK-La-IKg" secondAttribute="trailingMargin" id="pbe-WT-ZPv"/>
                             <constraint firstItem="emn-oH-hK9" firstAttribute="top" secondItem="Dge-dQ-eke" secondAttribute="bottom" constant="34" id="qGP-tr-jf0"/>
@@ -819,15 +816,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="EUA-Yl-T0Z"/>
-                        <barButtonItem image="Trash-can" id="ovB-a0-TZB">
-                            <connections>
-                                <action selector="deleteButtonTapped:" destination="Y1i-jh-hRn" id="tG8-ja-2DO"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="1yg-Sa-ywD"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="eC7-C8-yUO">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="oH4-zR-6hT">
                             <connections>
@@ -1247,7 +1236,7 @@
         <!--Navigation Controller-->
         <scene sceneID="KI7-pi-pYR">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="du9-zh-6TT" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="du9-zh-6TT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2jV-LF-Abb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1268,7 +1257,7 @@
         <!--Navigation Controller-->
         <scene sceneID="4jO-5I-RA6">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="UaZ-7O-LOv" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UaZ-7O-LOv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zsC-kW-CBK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

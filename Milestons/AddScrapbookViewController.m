@@ -115,11 +115,6 @@
 //}
 
 
-- (IBAction)deleteButtonTapped:(id)sender {
-    [self presentDeleteAlertViewController];
-}
-
-
 - (IBAction)cancelButtonTapped:(id)sender {
     [self presentAlertViewController];
 }
@@ -177,24 +172,6 @@
 }
 
 
-
-
--(void)presentDeleteAlertViewController {
-    
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Are you sure you want to delete?" message:nil preferredStyle:UIAlertControllerStyleAlert];
-    
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
-        
-        // write code to delete the draft here
-        [[ScrapbookController sharedInstance]removeScrapbook:self.scrapbook];
-        
-        [self dismissViewControllerAnimated:YES completion:nil];
-        
-    }]];
-    
-    [alertController addAction:[UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDefault handler:nil]];
-    [self presentViewController:alertController animated:YES completion:nil];
-}
 
 
 #pragma mark - text field delegate method

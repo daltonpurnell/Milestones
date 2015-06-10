@@ -174,10 +174,6 @@
 //}
 
 
-- (IBAction)deleteButtonTapped:(id)sender {
-    [self presentDeleteAlertViewController];
-}
-
 - (IBAction)cancelButtonTapped:(id)sender {
     [self presentAlertViewController];
 }
@@ -218,28 +214,6 @@
         self.scrapbook = scrapbook;
     }
 }
-
-
-
-#pragma mark - delete button alert controller
-
--(void)presentDeleteAlertViewController {
-    
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Are you sure you want to delete?" message:nil preferredStyle:UIAlertControllerStyleAlert];
-    
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
-        
-        // write code to delete draft here
-
-        
-        [self dismissViewControllerAnimated:YES completion:nil];
-        
-    }]];
-    
-    [alertController addAction:[UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDefault handler:nil]];
-    [self presentViewController:alertController animated:YES completion:nil];
-}
-
 
 
 #pragma mark - cancel button action sheet alert controller
