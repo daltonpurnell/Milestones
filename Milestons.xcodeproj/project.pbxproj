@@ -260,6 +260,7 @@
 		CFE361411B293DDC003323A7 /* MilestonesKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MilestonesKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE361491B293DDC003323A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFE3614A1B293DDC003323A7 /* MilestonesKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MilestonesKitTests.m; sourceTree = "<group>"; };
+		CFE361571B293F05003323A7 /* Milestons.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Milestons.entitlements; path = Milestons/Milestons.entitlements; sourceTree = "<group>"; };
 		CFEC12DB1B04379500AB6C1B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CFEC12E71B0C117800AB6C1B /* MyLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLoginViewController.h; path = ../MyLoginViewController.h; sourceTree = "<group>"; };
 		CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyLoginViewController.m; path = ../MyLoginViewController.m; sourceTree = "<group>"; };
@@ -329,6 +330,7 @@
 		CF2C22C21AF5B40A00D28EAB = {
 			isa = PBXGroup;
 			children = (
+				CFE361571B293F05003323A7 /* Milestons.entitlements */,
 				CFE04C0E1B1A3999001F1DA6 /* InAppPurchases */,
 				CF2C236A1AF7EE6C00D28EAB /* Model */,
 				CFE360461B1E2FE5003323A7 /* Controller */,
@@ -738,6 +740,11 @@
 					CF2C22CA1AF5B40A00D28EAB = {
 						CreatedOnToolsVersion = 6.3;
 						DevelopmentTeam = ZW8XHLXS82;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					CF2C22E31AF5B40A00D28EAB = {
 						CreatedOnToolsVersion = 6.3;
@@ -1009,6 +1016,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Milestons/Milestons.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1027,6 +1035,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Milestons/Milestons.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
