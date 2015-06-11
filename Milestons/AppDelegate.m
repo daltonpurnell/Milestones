@@ -50,6 +50,7 @@
     PFACL *defaultACL = [PFACL ACL];
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
     
+// play launch sound
     NSString *pathAndFileName = [[NSBundle mainBundle] pathForResource:@"New Notification 02" ofType:@"wav"];
     if ([[NSFileManager defaultManager] fileExistsAtPath:pathAndFileName])
     {
@@ -65,7 +66,12 @@
         NSLog(@"File not found");
     }
 
-    
+// local notifications
+    UILocalNotification *localNotification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
+    if (localNotification) {
+        application.applicationIconBadgeNumber = 0;
+        
+    }
     
     return YES;
 }
@@ -87,7 +93,31 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+        [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound) categories:nil]];
+        
+        [application registerForRemoteNotifications];
+    }
+    
+    else {
+        
+        [application registerForRemoteNotificationTypes:(UIRemoteNotificationType)(UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound)];
+        
+    }
 }
+
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    
+    UIAlertController *notificationAlert = [UIAlertController alertControllerWithTitle:@"You were notified" message:notification.alertBody preferredStyle:UIAlertControllerStyleAlert];
+    
+    [notificationAlert addAction:[UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:nil]];
+    
+    [self.window.rootViewController presentViewController:notificationAlert animated:YES completion:nil];
+    
+}
+
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.

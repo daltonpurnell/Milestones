@@ -65,10 +65,10 @@
                                 </variation>
                             </imageView>
                             <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="782-NF-zL7">
-                                <rect key="frame" x="140" y="506" width="320" height="50"/>
+                                <rect key="frame" x="140" y="550" width="320" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="HUG-S5-XCS"/>
-                                    <constraint firstAttribute="width" constant="320" id="m9U-bC-b4H"/>
+                                    <constraint firstAttribute="height" constant="50" id="Tgs-1b-ITp"/>
+                                    <constraint firstAttribute="width" constant="320" id="tCw-ut-G7e"/>
                                 </constraints>
                             </adBannerView>
                         </subviews>
@@ -78,19 +78,19 @@
                             <constraint firstAttribute="centerX" secondItem="7Fi-kT-1hX" secondAttribute="centerX" constant="-0.5" id="32i-mt-qMH"/>
                             <constraint firstAttribute="centerX" secondItem="7Fi-kT-1hX" secondAttribute="centerX" id="7ZC-fo-49j"/>
                             <constraint firstAttribute="centerX" secondItem="shO-6b-Ms9" secondAttribute="centerX" id="92b-H9-2YB"/>
+                            <constraint firstAttribute="centerX" secondItem="782-NF-zL7" secondAttribute="centerX" id="9jb-Ry-5VW"/>
                             <constraint firstAttribute="centerX" secondItem="om3-1R-jsk" secondAttribute="centerX" id="F2k-ix-bQM"/>
                             <constraint firstItem="7Fi-kT-1hX" firstAttribute="leading" secondItem="RGW-PI-weK" secondAttribute="leadingMargin" constant="24" id="FZI-un-gnc"/>
                             <constraint firstItem="om3-1R-jsk" firstAttribute="top" secondItem="E0c-OU-lIt" secondAttribute="bottom" constant="14" id="NJK-NI-FCh"/>
-                            <constraint firstAttribute="centerX" secondItem="782-NF-zL7" secondAttribute="centerX" id="OK9-wC-CUB"/>
                             <constraint firstAttribute="centerY" secondItem="7Fi-kT-1hX" secondAttribute="centerY" id="OkO-Zc-JwL"/>
                             <constraint firstAttribute="centerY" secondItem="shO-6b-Ms9" secondAttribute="centerY" constant="33" id="QWY-yy-ZXq"/>
                             <constraint firstItem="shO-6b-Ms9" firstAttribute="leading" secondItem="RGW-PI-weK" secondAttribute="leadingMargin" constant="81" id="Qox-jb-Ywb"/>
                             <constraint firstItem="p9u-EU-W3g" firstAttribute="top" secondItem="shO-6b-Ms9" secondAttribute="bottom" constant="8" id="ULy-mV-lba"/>
+                            <constraint firstItem="2G9-Ku-OmO" firstAttribute="top" secondItem="782-NF-zL7" secondAttribute="bottom" id="UeH-2l-XU5"/>
                             <constraint firstItem="2G9-Ku-OmO" firstAttribute="top" secondItem="7Fi-kT-1hX" secondAttribute="bottom" constant="87" id="a1O-fx-yDJ"/>
                             <constraint firstItem="7Fi-kT-1hX" firstAttribute="top" secondItem="E0c-OU-lIt" secondAttribute="bottom" constant="284" id="j5c-cA-vPA"/>
                             <constraint firstItem="shO-6b-Ms9" firstAttribute="centerX" secondItem="p9u-EU-W3g" secondAttribute="centerX" id="jyo-rs-xcs"/>
                             <constraint firstItem="om3-1R-jsk" firstAttribute="leading" secondItem="RGW-PI-weK" secondAttribute="leadingMargin" id="l8J-y0-rrv"/>
-                            <constraint firstItem="2G9-Ku-OmO" firstAttribute="top" secondItem="782-NF-zL7" secondAttribute="bottom" id="ly2-iz-tYH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7Fi-kT-1hX" secondAttribute="trailing" constant="23" id="u6d-YD-Ava"/>
                         </constraints>
                         <variation key="default">
@@ -605,11 +605,11 @@
                                     </mask>
                                 </variation>
                             </collectionView>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dIY-sV-fWP">
-                                <rect key="frame" x="139" y="506" width="320" height="50"/>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="dIY-sV-fWP">
+                                <rect key="frame" x="140" y="550" width="320" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="bCY-Cq-gqf"/>
-                                    <constraint firstAttribute="height" constant="50" id="cl8-7R-m2P"/>
+                                    <constraint firstAttribute="width" constant="320" id="OWk-To-7rn"/>
+                                    <constraint firstAttribute="height" constant="50" id="P6l-h1-OUQ"/>
                                 </constraints>
                             </adBannerView>
                         </subviews>
@@ -633,7 +633,6 @@
                             <constraint firstItem="yeJ-gA-UCv" firstAttribute="top" secondItem="NoW-2q-WFc" secondAttribute="bottom" constant="98" id="Gsf-ZR-KrD"/>
                             <constraint firstItem="Dge-dQ-eke" firstAttribute="leading" secondItem="NbK-La-IKg" secondAttribute="leadingMargin" constant="524" id="HKq-6a-Jsb"/>
                             <constraint firstItem="Lsg-kn-eAr" firstAttribute="leading" secondItem="NbK-La-IKg" secondAttribute="leadingMargin" constant="-20" id="HmK-HG-89h"/>
-                            <constraint firstItem="emn-oH-hK9" firstAttribute="top" secondItem="dIY-sV-fWP" secondAttribute="bottom" id="Jdo-vG-Ci4"/>
                             <constraint firstItem="uij-36-Bxk" firstAttribute="centerX" secondItem="ypf-1S-Ia1" secondAttribute="centerX" constant="5" id="M64-bq-sZd"/>
                             <constraint firstItem="Tdg-WY-h02" firstAttribute="leading" secondItem="NbK-La-IKg" secondAttribute="leadingMargin" id="MZU-Yx-R7h"/>
                             <constraint firstAttribute="centerX" secondItem="Lsg-kn-eAr" secondAttribute="centerX" id="Mv2-di-j9M"/>
@@ -648,9 +647,9 @@
                             <constraint firstItem="Tdg-WY-h02" firstAttribute="leading" secondItem="NbK-La-IKg" secondAttribute="leadingMargin" id="U94-rG-y1H"/>
                             <constraint firstItem="Dge-dQ-eke" firstAttribute="top" secondItem="NoW-2q-WFc" secondAttribute="bottom" constant="100" id="UBB-oo-Jtb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Lsg-kn-eAr" secondAttribute="trailing" constant="-19" id="VmN-7l-EW7"/>
+                            <constraint firstAttribute="centerX" secondItem="dIY-sV-fWP" secondAttribute="centerX" id="Vok-vp-arg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ypf-1S-Ia1" secondAttribute="trailing" constant="646" id="XhB-aN-RiK"/>
                             <constraint firstItem="yeJ-gA-UCv" firstAttribute="leading" secondItem="ypf-1S-Ia1" secondAttribute="trailing" constant="143" id="c8k-RP-k9P"/>
-                            <constraint firstAttribute="centerX" secondItem="dIY-sV-fWP" secondAttribute="centerX" constant="1" id="cPR-2i-vVp"/>
                             <constraint firstItem="X1r-lL-4dS" firstAttribute="top" secondItem="NoW-2q-WFc" secondAttribute="bottom" constant="158" id="cpw-sk-ziv"/>
                             <constraint firstAttribute="centerX" secondItem="Tdg-WY-h02" secondAttribute="centerX" id="fif-ef-0iP"/>
                             <constraint firstItem="yeJ-gA-UCv" firstAttribute="centerX" secondItem="ypf-1S-Ia1" secondAttribute="centerX" id="geL-5C-k9g"/>
@@ -687,6 +686,7 @@
                             <constraint firstItem="Dge-dQ-eke" firstAttribute="leading" secondItem="NbK-La-IKg" secondAttribute="leadingMargin" constant="-1" id="vn4-U0-IvS"/>
                             <constraint firstItem="uij-36-Bxk" firstAttribute="top" secondItem="ypf-1S-Ia1" secondAttribute="bottom" constant="8" id="x96-Np-APq"/>
                             <constraint firstItem="emn-oH-hK9" firstAttribute="top" secondItem="ypf-1S-Ia1" secondAttribute="bottom" constant="228" id="y9w-Qd-CHn"/>
+                            <constraint firstItem="emn-oH-hK9" firstAttribute="top" secondItem="dIY-sV-fWP" secondAttribute="bottom" id="yTA-IQ-S6g"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
