@@ -42,6 +42,7 @@
     self.images = [NSMutableArray new];
     self.descriptionTextView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Layer-1.png"]];
 
+    requestingAd = NO;
 }
 
 
@@ -211,10 +212,11 @@
                         NSLog(@"File not found");
                     }
                     
-                    
                 }
                 
+                
                 [self dismissViewControllerAnimated:YES completion:nil];
+                
             } else {
                 // Display error
             }
@@ -335,5 +337,50 @@
     adView.hidden = YES;
     NSLog(@"Banner hidden. No ad to show");
 }
+
+
+#pragma mark - interstitial delegate methods
+
+////Interstitial iAd
+//-(void)showFullScreenAd {
+//    //Check if already requesting ad
+//    if (requestingAd == NO) {
+//        interstitial = [[ADInterstitialAd alloc] init];
+//        interstitial.delegate = self;
+//        self.interstitialPresentationPolicy = ADInterstitialPresentationPolicyManual;
+//        [self requestInterstitialAdPresentation];
+//        NSLog(@"interstitialAdREQUEST");
+//        requestingAd = YES;
+//    }//end if
+//}
+//
+//-(void)interstitialAd:(ADInterstitialAd *)interstitialAd didFailWithError:(NSError *)error {
+//    interstitial = nil;
+//    requestingAd = NO;
+//    NSLog(@"interstitialAd didFailWithERROR");
+//    NSLog(@"%@", error);
+//}
+//
+//-(void)interstitialAdDidLoad:(ADInterstitialAd *)interstitialAd {
+//    NSLog(@"interstitialAdDidLOAD");
+//    if (interstitialAd != nil && interstitial != nil && requestingAd == YES) {
+//        [interstitial presentFromViewController:self];
+//        NSLog(@"interstitialAdDidPRESENT");
+//    }//end if
+//}
+//
+//-(void)interstitialAdDidUnload:(ADInterstitialAd *)interstitialAd {
+//    interstitial = nil;
+//    requestingAd = NO;
+//    NSLog(@"interstitialAdDidUNLOAD");
+//}
+//
+//-(void)interstitialAdActionDidFinish:(ADInterstitialAd *)interstitialAd {
+//    interstitial = nil;
+//    requestingAd = NO;
+//    NSLog(@"interstitialAdDidFINISH");
+//}
+//
+
 
 @end

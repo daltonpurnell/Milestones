@@ -11,8 +11,10 @@
 
 @import iAd;
 
-@interface AddEntryViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UICollectionViewDelegate, ADBannerViewDelegate> {
+@interface AddEntryViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UICollectionViewDelegate, ADBannerViewDelegate, ADInterstitialAdDelegate> {
     ADBannerView *adView;
+    ADInterstitialAd *interstitial;
+    BOOL requestingAd;
 }
 
 @property (strong, nonatomic) Entry *entry;
@@ -28,5 +30,7 @@
 
 
 - (void)updateWithScrapbook:(Scrapbook *)scrapbook;
+
+//-(void)showFullScreenAd;
 
 @end
