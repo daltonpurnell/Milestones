@@ -24,9 +24,6 @@
 		CF2C23161AF5C26200D28EAB /* Appearance.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C23151AF5C26200D28EAB /* Appearance.m */; };
 		CF2C231B1AF5D1E900D28EAB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C231A1AF5D1E900D28EAB /* CoreData.framework */; };
 		CF2C232F1AF5EE2B00D28EAB /* PhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C232E1AF5EE2B00D28EAB /* PhotoController.m */; };
-		CF2C233D1AF6CDCE00D28EAB /* Scrapbook.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C233C1AF6CDCE00D28EAB /* Scrapbook.m */; };
-		CF2C23401AF6CDCE00D28EAB /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C233F1AF6CDCE00D28EAB /* Entry.m */; };
-		CF2C23431AF6CDCE00D28EAB /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C23421AF6CDCE00D28EAB /* Photo.m */; };
 		CF2C234A1AF7E13800D28EAB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23441AF7E13800D28EAB /* Bolts.framework */; };
 		CF2C234B1AF7E13800D28EAB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23451AF7E13800D28EAB /* Parse.framework */; };
 		CF2C234C1AF7E13800D28EAB /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23461AF7E13800D28EAB /* ParseCrashReporting.framework */; };
@@ -85,6 +82,12 @@
 		CFE3614B1B293DDC003323A7 /* MilestonesKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE3614A1B293DDC003323A7 /* MilestonesKitTests.m */; };
 		CFE3614E1B293DDC003323A7 /* MilestonesKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE361371B293DDB003323A7 /* MilestonesKit.framework */; };
 		CFE361501B293DDC003323A7 /* MilestonesKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CFE361371B293DDB003323A7 /* MilestonesKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CFE361581B2940B5003323A7 /* Photo.h in Headers */ = {isa = PBXBuildFile; fileRef = CF2C23411AF6CDCE00D28EAB /* Photo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CFE361591B2940BE003323A7 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C23421AF6CDCE00D28EAB /* Photo.m */; };
+		CFE3615A1B2940D9003323A7 /* Entry.h in Headers */ = {isa = PBXBuildFile; fileRef = CF2C233E1AF6CDCE00D28EAB /* Entry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CFE3615B1B2940E1003323A7 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C233F1AF6CDCE00D28EAB /* Entry.m */; };
+		CFE3615C1B2940E6003323A7 /* Scrapbook.h in Headers */ = {isa = PBXBuildFile; fileRef = CF2C233B1AF6CDCE00D28EAB /* Scrapbook.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CFE3615D1B2940EC003323A7 /* Scrapbook.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C233C1AF6CDCE00D28EAB /* Scrapbook.m */; };
 		CFEC12DC1B04379500AB6C1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFEC12DB1B04379500AB6C1B /* Main.storyboard */; };
 		CFEC12E91B0C117800AB6C1B /* MyLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */; };
 		CFEC12EC1B0C119100AB6C1B /* MySignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12EB1B0C119100AB6C1B /* MySignUpViewController.m */; };
@@ -332,8 +335,6 @@
 			children = (
 				CFE361571B293F05003323A7 /* Milestons.entitlements */,
 				CFE04C0E1B1A3999001F1DA6 /* InAppPurchases */,
-				CF2C236A1AF7EE6C00D28EAB /* Model */,
-				CFE360461B1E2FE5003323A7 /* Controller */,
 				CF2C22CD1AF5B40A00D28EAB /* View */,
 				CF2C22E71AF5B40A00D28EAB /* MilestonsTests */,
 				CFE361381B293DDC003323A7 /* MilestonesKit */,
@@ -467,6 +468,7 @@
 				CF2C233C1AF6CDCE00D28EAB /* Scrapbook.m */,
 			);
 			name = Model;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		CFE04C0E1B1A3999001F1DA6 /* InAppPurchases */ = {
@@ -559,6 +561,7 @@
 				CFE361031B23739D003323A7 /* UserController.m */,
 			);
 			name = Controller;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		CFE3605F1B225ECE003323A7 /* AFNetworking */ = {
@@ -609,6 +612,8 @@
 		CFE361381B293DDC003323A7 /* MilestonesKit */ = {
 			isa = PBXGroup;
 			children = (
+				CF2C236A1AF7EE6C00D28EAB /* Model */,
+				CFE360461B1E2FE5003323A7 /* Controller */,
 				CFE3613B1B293DDC003323A7 /* MilestonesKit.h */,
 				CFE361391B293DDC003323A7 /* Supporting Files */,
 			);
@@ -647,7 +652,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFE3615A1B2940D9003323A7 /* Entry.h in Headers */,
+				CFE3615C1B2940E6003323A7 /* Scrapbook.h in Headers */,
 				CFE3613C1B293DDC003323A7 /* MilestonesKit.h in Headers */,
+				CFE361581B2940B5003323A7 /* Photo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -832,7 +840,6 @@
 				CF2C22D71AF5B40A00D28EAB /* ViewController.m in Sources */,
 				CFE361041B23739D003323A7 /* UserController.m in Sources */,
 				CFE360AE1B2272FD003323A7 /* EXPhotoViewer.m in Sources */,
-				CF2C23431AF6CDCE00D28EAB /* Photo.m in Sources */,
 				CFE360781B225ECE003323A7 /* AFURLConnectionOperation.m in Sources */,
 				CF2C248A1B01009F00D28EAB /* CustomEntryCell.m in Sources */,
 				CF2C22D41AF5B40A00D28EAB /* AppDelegate.m in Sources */,
@@ -850,8 +857,6 @@
 				CF2C232F1AF5EE2B00D28EAB /* PhotoController.m in Sources */,
 				CFE04C0D1B1A3986001F1DA6 /* StorePurchaseController.m in Sources */,
 				CFE04C161B1A3A75001F1DA6 /* StoreViewController.m in Sources */,
-				CF2C233D1AF6CDCE00D28EAB /* Scrapbook.m in Sources */,
-				CF2C23401AF6CDCE00D28EAB /* Entry.m in Sources */,
 				CF2C22FF1AF5B48400D28EAB /* EntryController.m in Sources */,
 				CFE360771B225ECE003323A7 /* AFSecurityPolicy.m in Sources */,
 				CFE3607B1B225ECE003323A7 /* AFURLSessionManager.m in Sources */,
@@ -884,6 +889,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFE3615B1B2940E1003323A7 /* Entry.m in Sources */,
+				CFE3615D1B2940EC003323A7 /* Scrapbook.m in Sources */,
+				CFE361591B2940BE003323A7 /* Photo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
