@@ -14,8 +14,6 @@
 		CF2C22DF1AF5B40A00D28EAB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF2C22DD1AF5B40A00D28EAB /* LaunchScreen.xib */; };
 		CF2C22EB1AF5B40A00D28EAB /* MilestonsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C22EA1AF5B40A00D28EAB /* MilestonsTests.m */; };
 		CF2C22F61AF5B45900D28EAB /* ScrapbookListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C22F51AF5B45900D28EAB /* ScrapbookListViewController.m */; };
-		CF2C22FF1AF5B48400D28EAB /* EntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C22FE1AF5B48400D28EAB /* EntryController.m */; };
-		CF2C23021AF5B49300D28EAB /* ScrapbookController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C23011AF5B49300D28EAB /* ScrapbookController.m */; };
 		CF2C23051AF5B4B000D28EAB /* ScrapbookListViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C23041AF5B4B000D28EAB /* ScrapbookListViewDataSource.m */; };
 		CF2C23081AF5B4C300D28EAB /* EntryListViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C23071AF5B4C300D28EAB /* EntryListViewDataSource.m */; };
 		CF2C230B1AF5B4D800D28EAB /* EntryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C230A1AF5B4D800D28EAB /* EntryListViewController.m */; };
@@ -23,7 +21,6 @@
 		CF2C23131AF5C03C00D28EAB /* AddEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C23121AF5C03C00D28EAB /* AddEntryViewController.m */; };
 		CF2C23161AF5C26200D28EAB /* Appearance.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C23151AF5C26200D28EAB /* Appearance.m */; };
 		CF2C231B1AF5D1E900D28EAB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C231A1AF5D1E900D28EAB /* CoreData.framework */; };
-		CF2C232F1AF5EE2B00D28EAB /* PhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C232E1AF5EE2B00D28EAB /* PhotoController.m */; };
 		CF2C234A1AF7E13800D28EAB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23441AF7E13800D28EAB /* Bolts.framework */; };
 		CF2C234B1AF7E13800D28EAB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23451AF7E13800D28EAB /* Parse.framework */; };
 		CF2C234C1AF7E13800D28EAB /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23461AF7E13800D28EAB /* ParseCrashReporting.framework */; };
@@ -66,7 +63,6 @@
 		CFE3607A1B225ECE003323A7 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE360701B225ECE003323A7 /* AFURLResponseSerialization.m */; };
 		CFE3607B1B225ECE003323A7 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE360721B225ECE003323A7 /* AFURLSessionManager.m */; };
 		CFE360AE1B2272FD003323A7 /* EXPhotoViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE360AD1B2272FD003323A7 /* EXPhotoViewer.m */; };
-		CFE361041B23739D003323A7 /* UserController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE361031B23739D003323A7 /* UserController.m */; };
 		CFE361061B237B65003323A7 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE361051B237B65003323A7 /* AddressBookUI.framework */; };
 		CFE361081B237B74003323A7 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE361071B237B74003323A7 /* AddressBook.framework */; };
 		CFE3610B1B23D24E003323A7 /* AnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE3610A1B23D24E003323A7 /* AnimationController.m */; };
@@ -88,6 +84,14 @@
 		CFE3615B1B2940E1003323A7 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C233F1AF6CDCE00D28EAB /* Entry.m */; };
 		CFE3615C1B2940E6003323A7 /* Scrapbook.h in Headers */ = {isa = PBXBuildFile; fileRef = CF2C233B1AF6CDCE00D28EAB /* Scrapbook.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CFE3615D1B2940EC003323A7 /* Scrapbook.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C233C1AF6CDCE00D28EAB /* Scrapbook.m */; };
+		CFE3615E1B294408003323A7 /* PhotoController.h in Headers */ = {isa = PBXBuildFile; fileRef = CF2C232D1AF5EE2B00D28EAB /* PhotoController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CFE3615F1B29440C003323A7 /* PhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C232E1AF5EE2B00D28EAB /* PhotoController.m */; };
+		CFE361601B294410003323A7 /* EntryController.h in Headers */ = {isa = PBXBuildFile; fileRef = CF2C22FD1AF5B48400D28EAB /* EntryController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CFE361611B294413003323A7 /* EntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C22FE1AF5B48400D28EAB /* EntryController.m */; };
+		CFE361621B294417003323A7 /* ScrapbookController.h in Headers */ = {isa = PBXBuildFile; fileRef = CF2C23001AF5B49300D28EAB /* ScrapbookController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CFE361631B294430003323A7 /* ScrapbookController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C23011AF5B49300D28EAB /* ScrapbookController.m */; };
+		CFE361641B294434003323A7 /* UserController.h in Headers */ = {isa = PBXBuildFile; fileRef = CFE361021B23739D003323A7 /* UserController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CFE361651B294439003323A7 /* UserController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE361031B23739D003323A7 /* UserController.m */; };
 		CFEC12DC1B04379500AB6C1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFEC12DB1B04379500AB6C1B /* Main.storyboard */; };
 		CFEC12E91B0C117800AB6C1B /* MyLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */; };
 		CFEC12EC1B0C119100AB6C1B /* MySignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12EB1B0C119100AB6C1B /* MySignUpViewController.m */; };
@@ -466,6 +470,14 @@
 				CF2C233F1AF6CDCE00D28EAB /* Entry.m */,
 				CF2C233B1AF6CDCE00D28EAB /* Scrapbook.h */,
 				CF2C233C1AF6CDCE00D28EAB /* Scrapbook.m */,
+				CF2C232D1AF5EE2B00D28EAB /* PhotoController.h */,
+				CF2C232E1AF5EE2B00D28EAB /* PhotoController.m */,
+				CF2C22FD1AF5B48400D28EAB /* EntryController.h */,
+				CF2C22FE1AF5B48400D28EAB /* EntryController.m */,
+				CF2C23001AF5B49300D28EAB /* ScrapbookController.h */,
+				CF2C23011AF5B49300D28EAB /* ScrapbookController.m */,
+				CFE361021B23739D003323A7 /* UserController.h */,
+				CFE361031B23739D003323A7 /* UserController.m */,
 			);
 			name = Model;
 			path = ..;
@@ -548,22 +560,6 @@
 			name = DetailView;
 			sourceTree = "<group>";
 		};
-		CFE360461B1E2FE5003323A7 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				CF2C232D1AF5EE2B00D28EAB /* PhotoController.h */,
-				CF2C232E1AF5EE2B00D28EAB /* PhotoController.m */,
-				CF2C22FD1AF5B48400D28EAB /* EntryController.h */,
-				CF2C22FE1AF5B48400D28EAB /* EntryController.m */,
-				CF2C23001AF5B49300D28EAB /* ScrapbookController.h */,
-				CF2C23011AF5B49300D28EAB /* ScrapbookController.m */,
-				CFE361021B23739D003323A7 /* UserController.h */,
-				CFE361031B23739D003323A7 /* UserController.m */,
-			);
-			name = Controller;
-			path = ..;
-			sourceTree = "<group>";
-		};
 		CFE3605F1B225ECE003323A7 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -613,7 +609,6 @@
 			isa = PBXGroup;
 			children = (
 				CF2C236A1AF7EE6C00D28EAB /* Model */,
-				CFE360461B1E2FE5003323A7 /* Controller */,
 				CFE3613B1B293DDC003323A7 /* MilestonesKit.h */,
 				CFE361391B293DDC003323A7 /* Supporting Files */,
 			);
@@ -653,9 +648,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFE3615A1B2940D9003323A7 /* Entry.h in Headers */,
+				CFE361641B294434003323A7 /* UserController.h in Headers */,
 				CFE3615C1B2940E6003323A7 /* Scrapbook.h in Headers */,
+				CFE361621B294417003323A7 /* ScrapbookController.h in Headers */,
 				CFE3613C1B293DDC003323A7 /* MilestonesKit.h in Headers */,
 				CFE361581B2940B5003323A7 /* Photo.h in Headers */,
+				CFE3615E1B294408003323A7 /* PhotoController.h in Headers */,
+				CFE361601B294410003323A7 /* EntryController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -836,9 +835,7 @@
 			files = (
 				CFE04C3E1B1AA757001F1DA6 /* CustomCollectionViewCell.m in Sources */,
 				CFE361161B23EDDD003323A7 /* CustomSegue.m in Sources */,
-				CF2C23021AF5B49300D28EAB /* ScrapbookController.m in Sources */,
 				CF2C22D71AF5B40A00D28EAB /* ViewController.m in Sources */,
-				CFE361041B23739D003323A7 /* UserController.m in Sources */,
 				CFE360AE1B2272FD003323A7 /* EXPhotoViewer.m in Sources */,
 				CFE360781B225ECE003323A7 /* AFURLConnectionOperation.m in Sources */,
 				CF2C248A1B01009F00D28EAB /* CustomEntryCell.m in Sources */,
@@ -854,10 +851,8 @@
 				CFE04C411B1AA92E001F1DA6 /* CustomCollectionViewCell2.m in Sources */,
 				CF2C230B1AF5B4D800D28EAB /* EntryListViewController.m in Sources */,
 				CFEC12EC1B0C119100AB6C1B /* MySignUpViewController.m in Sources */,
-				CF2C232F1AF5EE2B00D28EAB /* PhotoController.m in Sources */,
 				CFE04C0D1B1A3986001F1DA6 /* StorePurchaseController.m in Sources */,
 				CFE04C161B1A3A75001F1DA6 /* StoreViewController.m in Sources */,
-				CF2C22FF1AF5B48400D28EAB /* EntryController.m in Sources */,
 				CFE360771B225ECE003323A7 /* AFSecurityPolicy.m in Sources */,
 				CFE3607B1B225ECE003323A7 /* AFURLSessionManager.m in Sources */,
 				CFE04C151B1A3A75001F1DA6 /* PurchasedDataController.m in Sources */,
@@ -889,8 +884,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFE361611B294413003323A7 /* EntryController.m in Sources */,
+				CFE361651B294439003323A7 /* UserController.m in Sources */,
 				CFE3615B1B2940E1003323A7 /* Entry.m in Sources */,
+				CFE361631B294430003323A7 /* ScrapbookController.m in Sources */,
 				CFE3615D1B2940EC003323A7 /* Scrapbook.m in Sources */,
+				CFE3615F1B29440C003323A7 /* PhotoController.m in Sources */,
 				CFE361591B2940BE003323A7 /* Photo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
