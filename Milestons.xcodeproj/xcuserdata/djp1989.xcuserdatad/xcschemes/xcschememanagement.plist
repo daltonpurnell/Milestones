@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>MilestonesKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Milestons.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,16 @@
 			<true/>
 		</dict>
 		<key>CF2C22E31AF5B40A00D28EAB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CFE361361B293DDB003323A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CFE361401B293DDC003323A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

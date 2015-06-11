@@ -34,6 +34,20 @@
                ReferencedContainer = "container:Milestons.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CFE361401B293DDC003323A7"
+               BuildableName = "MilestonesKitTests.xctest"
+               BlueprintName = "MilestonesKitTests"
+               ReferencedContainer = "container:Milestons.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -49,6 +63,16 @@
                BlueprintIdentifier = "CF2C22E31AF5B40A00D28EAB"
                BuildableName = "MilestonsTests.xctest"
                BlueprintName = "MilestonsTests"
+               ReferencedContainer = "container:Milestons.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CFE361401B293DDC003323A7"
+               BuildableName = "MilestonesKitTests.xctest"
+               BlueprintName = "MilestonesKitTests"
                ReferencedContainer = "container:Milestons.xcodeproj">
             </BuildableReference>
          </TestableReference>

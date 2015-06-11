@@ -22,6 +22,8 @@
     
     [self.logInView setBackgroundColor:[UIColor colorWithRed:240/255.0 green:240/255.0 blue:255/255.0 alpha:1]];
     [self.logInView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LaunchImage.png"]]];
+    self.logInView.logo.contentMode = UIViewContentModeScaleAspectFit;
+    [self.logInView.logo setFrame:CGRectMake(self.logInView.frame.origin.x, self.logInView.frame.origin.y, self.logInView.frame.size.width, self.logInView.frame.size.height * 2)];
     self.logInView.contentMode = UIViewContentModeScaleAspectFit;
 
     
