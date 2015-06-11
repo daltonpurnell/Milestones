@@ -14,17 +14,15 @@
 #import "CollectionViewDataSource.h"
 #import "CustomCollectionViewCell2.h"
 
-
-
 @import MessageUI;
+@import AVFoundation;
+@import AudioToolbox;
 
-
-@interface AddEntryViewController () <UITextFieldDelegate, UITextViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource>
+@interface AddEntryViewController () <UITextFieldDelegate, UITextViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, AVAudioPlayerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-
-
+@property (strong, nonatomic)AVAudioPlayer *audioPlayer;
 @end
 
 @implementation AddEntryViewController
@@ -198,6 +196,22 @@
                      [[PhotoController sharedInstance]createPhotoWithImage:self.image inEntry:entry completion:^(BOOL succeeded, Photo *photo) {
                          //...
                      }];
+                    NSString *pathAndFileName = [[NSBundle mainBundle] pathForResource:@"success" ofType:@"mp3"];
+                    if ([[NSFileManager defaultManager] fileExistsAtPath:pathAndFileName])
+                    {
+                        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:pathAndFileName] error:NULL];
+                        
+                        self.audioPlayer.delegate=self;
+                        [self.audioPlayer prepareToPlay];
+                        [self.audioPlayer play];
+                        NSLog(@"File exists in BUNDLE");
+                    }
+                    else
+                    {
+                        NSLog(@"File not found");
+                    }
+                    
+                    
                 }
                 
                 [self dismissViewControllerAnimated:YES completion:nil];

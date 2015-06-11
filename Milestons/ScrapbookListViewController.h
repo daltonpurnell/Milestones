@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Scrapbook.h"
+#import "Photo.h"
 @import iAd;
 static NSString *const cellDeletedNotificationKey = @"cell deleted";
 static NSString *const cameraButtonTappedNotificationKey = @"camera button tapped";
@@ -22,6 +23,8 @@ static NSString * const imagePickedKey = @"image picked";
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *options;
 
 @property (strong, nonatomic) Scrapbook *scrapbook;
+
+@property (strong, nonatomic) Photo *photo;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *settingsButton;
 

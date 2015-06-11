@@ -25,6 +25,7 @@
 @interface ScrapbookListViewController () <UITableViewDelegate, PFSignUpViewControllerDelegate, PFLogInViewControllerDelegate, UIViewControllerTransitioningDelegate, AVAudioPlayerDelegate>
 
 @property (nonatomic, strong) PFUser *currentUser;
+@property (nonatomic, strong)AVAudioPlayer *audioPlayer;
 
 @end
 
@@ -177,11 +178,11 @@
     NSString *pathAndFileName = [[NSBundle mainBundle] pathForResource:@"Fast Swoosh" ofType:@"mp3"];
     if ([[NSFileManager defaultManager] fileExistsAtPath:pathAndFileName])
     {
-        AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:pathAndFileName] error:NULL];
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:pathAndFileName] error:NULL];
 
-        audioPlayer.delegate=self;
-        [audioPlayer prepareToPlay];
-        [audioPlayer play];
+        self.audioPlayer.delegate=self;
+        [self.audioPlayer prepareToPlay];
+        [self.audioPlayer play];
         NSLog(@"File exists in BUNDLE");
     }
     else
@@ -287,11 +288,13 @@
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
-       [picker dismissViewControllerAnimated:YES completion:nil];
-    [[NSNotificationCenter defaultCenter] postNotificationName:imagePickedKey object:nil];
     
-//    customScrapbookCell.photoImageView.image = image;
+    PFFile *imageFile = [PFFile fileWithData:UIImageJPEGRepresentation(image,0.95)];
+    self.scrapbook.photo = imageFile;
     
+    [picker dismissViewControllerAnimated:YES completion:^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:imagePickedKey object:nil];
+    }];
 }
 
 

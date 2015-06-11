@@ -12,8 +12,8 @@
 
 @import ParseUI;
 
-
 @protocol deleteCellDelegate;
+
 
 @interface CustomScrapbookCell : UITableViewCell
 

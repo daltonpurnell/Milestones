@@ -51,7 +51,7 @@
     self.photoImageView.clipsToBounds = NO;
     
     [self registerForNotifications];
-    
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -152,6 +152,7 @@
                      }];
     // cancel button
     self.cancelButton.hidden = NO;
+    
     
     CGRect originalCancelButtonFrame = self.cancelButton.frame;
     self.cancelButton.frame = CGRectMake(0 - originalCancelButtonFrame.size.width,
@@ -283,7 +284,9 @@
 
 -(void)respondToImagePicked:(NSNotification *)notification {
 
-//        self.imageView.image = image;
+    self.photoImageView.file = self.scrapbook.photo;
+    
+    [self.photoImageView loadInBackground];
     NSLog(@"set image view");
 }
 

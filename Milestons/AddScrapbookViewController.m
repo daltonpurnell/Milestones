@@ -12,10 +12,14 @@
 
 @import ParseUI;
 @import QuartzCore;
+@import AVFoundation;
+@import AudioToolbox;
 
-@interface AddScrapbookViewController () <UITextFieldDelegate>
+
+@interface AddScrapbookViewController () <UITextFieldDelegate, AVAudioPlayerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) AVAudioPlayer *audioPlayer;
 
 @end
 
@@ -100,6 +104,7 @@
     UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
     [picker dismissViewControllerAnimated:YES completion:nil];
     self.imageView.image = image;
+    
 }
 
 
@@ -136,15 +141,30 @@
     } else {
         [[ScrapbookController sharedInstance] createScrapbookWithTitle:self.titleTextField.text date:[NSDate date] photo:self.imageView.image];
     }
+    NSString *pathAndFileName = [[NSBundle mainBundle] pathForResource:@"success" ofType:@"mp3"];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:pathAndFileName])
+    {
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:pathAndFileName] error:NULL];
+        
+        self.audioPlayer.delegate=self;
+        [self.audioPlayer prepareToPlay];
+        [self.audioPlayer play];
+        NSLog(@"File exists in BUNDLE");
+    }
+    else
+    {
+        NSLog(@"File not found");
+    }
     
-        [self dismissViewControllerAnimated:YES completion:nil];
+[self dismissViewControllerAnimated:YES completion:nil];
+
 }
 
 
 
 
 -(void)presentAlertViewController {
-        
+    
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     
     [alertController addAction:[UIAlertAction actionWithTitle:@"Delete Draft" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
