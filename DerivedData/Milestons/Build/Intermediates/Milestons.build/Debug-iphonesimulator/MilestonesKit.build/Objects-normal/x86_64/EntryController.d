@@ -48,4 +48,6 @@ dependencies: \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseUI.framework/Headers/ParseUIConstants.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseUI.framework/Headers/PFCollectionViewCell.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseUI.framework/Headers/ParseUI.h \
-  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseUI.framework/Modules/module.modulemap
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseUI.framework/Modules/module.modulemap \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseCrashReporting.framework/Headers/ParseCrashReporting.h \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseCrashReporting.framework/Modules/module.modulemap

@@ -15,14 +15,6 @@
 #import <MilestonesKit/EntryController.h>
 #import <MilestonesKit/UserController.h>
 
-//@import Photo;
-//@import Entry;
-//@import Scrapbook;
-//@import ScrapbookController;
-//@import PhotoController;
-//@import EntryController;
-//@import UserController;
-
 
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>

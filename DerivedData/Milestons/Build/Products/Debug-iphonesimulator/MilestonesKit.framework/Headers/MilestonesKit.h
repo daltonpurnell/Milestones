@@ -15,35 +15,24 @@
 #import <MilestonesKit/EntryController.h>
 #import <MilestonesKit/UserController.h>
 
-//@import Photo;
-//@import Entry;
-//@import Scrapbook;
-//@import ScrapbookController;
-//@import PhotoController;
-//@import EntryController;
-//@import UserController;
-
 
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
-//#import <ParseFacebookUtils/ParseFacebookUtils.h>
+#import <AudioToolbox/AudioToolbox.h>
+#import <CFNetwork/CFNetwork.h>
+#import <ParseCrashReporting/ParseCrashReporting.h>
+#import <CoreGraphics/CoreGraphics.h>
+#import <CoreLocation/CoreLocation.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+#import <QuartzCore/QuartzCore.h>
+#import <Security/Security.h>
+#import <StoreKit/StoreKit.h>
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <Accounts/Accounts.h>
+#import <Social/Social.h>
 
-//@import Parse;
-//@import ParseUI;
-//@import ParseFacebookUtils;
-//@import ParseFacebookUtilsV4;
-//@import ParseCrashReporting;
-//@import AudioToolbox;
-//@import CFNetwork;
-//@import CoreGraphics;
-//@import CoreLocation;
-//@import MobileCoreServices;
-//@import QuartzCore;
-//@import Security;
-//@import Storekit;
-//@import SystemConfiguration;
-//@import Accounts;
-//@import Social;
+
+//#import <ParseFacebookUtils/ParseFacebookUtils.h>
 //@import libsqlite3;
 //@import libz;
 

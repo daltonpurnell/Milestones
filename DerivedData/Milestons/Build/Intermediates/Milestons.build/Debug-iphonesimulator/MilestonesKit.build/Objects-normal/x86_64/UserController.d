@@ -49,4 +49,6 @@ dependencies: \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Photo.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Entry.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/PhotoController.h \
-  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/EntryController.h
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/EntryController.h \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseCrashReporting.framework/Headers/ParseCrashReporting.h \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseCrashReporting.framework/Modules/module.modulemap
