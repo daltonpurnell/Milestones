@@ -10,12 +10,12 @@
 #import "SWRevealViewController.h"
 #import "MyLoginViewController.h"
 #import "MySignUpViewController.h"
-#import "ScrapbookController.h"
+//#import "ScrapbookController.h"
 #import "Appearance.h"
 
-@import Parse;
+//@import Parse;
 @import MessageUI;
-@import ParseUI;
+//@import ParseUI;
 @import AddressBookUI;
 
 

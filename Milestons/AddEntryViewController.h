@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Entry.h"
+//#import "Entry.h"
+
+@import MilestonesKit;
 
 @import iAd;
 

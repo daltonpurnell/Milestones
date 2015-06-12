@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@import MilestonesKit;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

@@ -44,11 +44,4 @@ dependencies: \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseUI.framework/Modules/module.modulemap \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/MySignUpViewController.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ScrapbookController.h \
-  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Scrapbook.h \
-  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/MilestonesKit/MilestonesKit.h \
-  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Photo.h \
-  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Entry.h \
-  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/PhotoController.h \
-  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/EntryController.h \
-  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseCrashReporting.framework/Headers/ParseCrashReporting.h \
-  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseCrashReporting.framework/Modules/module.modulemap
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Scrapbook.h

@@ -17,8 +17,6 @@
 #import "MySignUpViewController.h"
 #import "SWRevealViewController.h"
 
-@import MilestonesKit;
-
 //@import Parse;
 //@import ParseUI;
 @import AVFoundation;

@@ -7,8 +7,7 @@
 //
 
 #import "CustomCollectionViewCell2.h"
-@import QuartzCore;
-
+//@import QuartzCore;
 
 @implementation CustomCollectionViewCell2
 

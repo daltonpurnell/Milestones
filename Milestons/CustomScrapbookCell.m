@@ -12,8 +12,6 @@
 #import "ScrapbookListViewController.h"
 //@import QuartzCore;
 
-@import MilestonesKit;
-
 @interface CustomScrapbookCell () <UITextFieldDelegate>
 
 @end

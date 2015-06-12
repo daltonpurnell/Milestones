@@ -12,7 +12,6 @@
 #import "ScrapbookListViewController.h"
 //#import "EntryController.h"
 //#import "PhotoController.h"
-#import "MilestonesKit.h"
 
 @import Parse;
 @import ParseUI;

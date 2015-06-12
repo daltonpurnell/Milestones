@@ -1,7 +1,6 @@
 dependencies: \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/EntryListViewDataSource.m \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/EntryListViewDataSource.h \
-  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ScrapbookController.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/Parse.framework/Headers/PF_Twitter.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/Parse.framework/Headers/PFTwitterUtils.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/Parse.framework/Headers/PFPush.h \
@@ -48,6 +47,7 @@ dependencies: \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/UserController.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/EntryController.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/PhotoController.h \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ScrapbookController.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Scrapbook.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Entry.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Photo.h \

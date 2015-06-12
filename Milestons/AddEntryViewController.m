@@ -8,9 +8,9 @@
 
 #import "AddEntryViewController.h"
 #import "Appearance.h"
-#import "EntryController.h"
-#import "Entry.h"
-#import "PhotoController.h"
+//#import "EntryController.h"
+//#import "Entry.h"
+//#import "PhotoController.h"
 #import "CollectionViewDataSource.h"
 #import "CustomCollectionViewCell2.h"
 

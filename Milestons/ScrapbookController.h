@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "Scrapbook.h"
-#import "MilestonesKit.h"
 
 @interface ScrapbookController : NSObject
 

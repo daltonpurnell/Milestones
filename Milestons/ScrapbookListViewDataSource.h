@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "CustomScrapbookCell.h"
 @import UIKit;
-
+@import MilestonesKit;
 
 @interface ScrapbookListViewDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
 

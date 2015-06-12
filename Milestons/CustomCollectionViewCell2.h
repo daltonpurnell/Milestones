@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PhotoController.h"
+//#import "PhotoController.h"
+
+@import MilestonesKit;
 
 @interface CustomCollectionViewCell2 : UICollectionViewCell
 

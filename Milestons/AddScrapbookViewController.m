@@ -10,8 +10,6 @@
 #import "Appearance.h"
 //#import "ScrapbookController.h"
 
-//@import MilestonesKit;
-
 //@import ParseUI;
 //@import QuartzCore;
 @import AVFoundation;

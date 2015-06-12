@@ -1,7 +1,7 @@
 dependencies: \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/CustomEntryCell.m \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/CustomEntryCell.h \
-  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/EntryController.h \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/CollectionViewDataSource.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/Parse.framework/Headers/PF_Twitter.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/Parse.framework/Headers/PFTwitterUtils.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/Parse.framework/Headers/PFPush.h \
@@ -46,6 +46,7 @@ dependencies: \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseCrashReporting.framework/Headers/ParseCrashReporting.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseCrashReporting.framework/Modules/module.modulemap \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/UserController.h \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/EntryController.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/PhotoController.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ScrapbookController.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Scrapbook.h \
@@ -53,6 +54,5 @@ dependencies: \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Photo.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/MilestonesKit/MilestonesKit.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/DerivedData/Milestons/Build/Intermediates/Milestons.build/Debug-iphonesimulator/MilestonesKit.build/module.modulemap \
-  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/CollectionViewDataSource.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/CustomCollectionViewCell.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/EntryListViewController.h

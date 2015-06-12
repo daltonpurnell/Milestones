@@ -12,11 +12,7 @@
 #import "CustomScrapbookCell.h"
 //#import <QuartzCore/QuartzCore.h>
 
-@import MilestonesKit;
-
 @interface ScrapbookListViewDataSource () <deleteCellDelegate>
-
-
 
 @end
 
