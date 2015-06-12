@@ -1,8 +1,6 @@
 dependencies: \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/AppDelegate.m \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/AppDelegate.h \
-  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/Appearance.h \
-  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ScrapbookListViewController.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/Parse.framework/Headers/PF_Twitter.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/Parse.framework/Headers/PFTwitterUtils.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/Parse.framework/Headers/PFPush.h \
@@ -54,4 +52,6 @@ dependencies: \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Entry.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Photo.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/MilestonesKit/MilestonesKit.h \
-  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/DerivedData/Milestons/Build/Intermediates/Milestons.build/Debug-iphonesimulator/MilestonesKit.build/module.modulemap
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/DerivedData/Milestons/Build/Intermediates/Milestons.build/Debug-iphonesimulator/MilestonesKit.build/module.modulemap \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/Appearance.h \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ScrapbookListViewController.h
