@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 @import UIKit;
-#import "ScrapbookController.h"
+//#import "ScrapbookController.h"
+@import MilestonesKit;
 
 @interface EntryListViewDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
 

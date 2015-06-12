@@ -7,6 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+
+
+//! Project version number for MilestonesKit.
+FOUNDATION_EXPORT double MilestonesKitVersionNumber;
+
+//! Project version string for MilestonesKit.
+FOUNDATION_EXPORT const unsigned char MilestonesKitVersionString[];
+
+// In this header, you should import all the public headers of your framework using statements like #import <MilestonesKit/PublicHeader.h>
+
 #import <MilestonesKit/Photo.h>
 #import <MilestonesKit/Entry.h>
 #import <MilestonesKit/Scrapbook.h>
@@ -30,21 +40,9 @@
 #import <SystemConfiguration/SystemConfiguration.h>
 #import <Accounts/Accounts.h>
 #import <Social/Social.h>
-
-
-//#import <ParseFacebookUtils/ParseFacebookUtils.h>
+//#import <ParseFacebookUtils/PFFacebookUtils.h>
 //@import libsqlite3;
 //@import libz;
 
-
-
-
-//! Project version number for MilestonesKit.
-FOUNDATION_EXPORT double MilestonesKitVersionNumber;
-
-//! Project version string for MilestonesKit.
-FOUNDATION_EXPORT const unsigned char MilestonesKitVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <MilestonesKit/PublicHeader.h>
 
 

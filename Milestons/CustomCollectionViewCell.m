@@ -7,13 +7,13 @@
 //
 
 #import "CustomCollectionViewCell.h"
-#import "PhotoController.h"
-#import "EntryController.h"
+//#import "PhotoController.h"
+//#import "EntryController.h"
 #import "CollectionViewDataSource.h"
 #import "EXPhotoViewer.h"
 #import "EntryListViewController.h"
 
-@import QuartzCore;
+//@import QuartzCore;
 
 @interface CustomCollectionViewCell ()
 @end

@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PhotoController.h"
-@import ParseUI;
+//#import "PhotoController.h"
+//@import ParseUI;
+
+@import MilestonesKit;
 
 @interface CustomCollectionViewCell : UICollectionViewCell
 

@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "ScrapbookController.h"
+//#import "ScrapbookController.h"
 
-@import ParseUI;
+@import MilestonesKit;
+
+//@import ParseUI;
 
 @protocol deleteCellDelegate;
 

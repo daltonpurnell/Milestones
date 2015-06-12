@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>MilestonesShareExtension.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>Milestons.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -33,6 +38,11 @@
 			<true/>
 		</dict>
 		<key>CFE361401B293DDC003323A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CFE3618F1B2A7525003323A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

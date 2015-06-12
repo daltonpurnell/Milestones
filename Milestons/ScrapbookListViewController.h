@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Scrapbook.h"
-#import "Photo.h"
+//#import "Scrapbook.h"
+//#import "Photo.h"
+@import MilestonesKit;
+
 @import iAd;
 static NSString *const cellDeletedNotificationKey = @"cell deleted";
 static NSString *const cameraButtonTappedNotificationKey = @"camera button tapped";

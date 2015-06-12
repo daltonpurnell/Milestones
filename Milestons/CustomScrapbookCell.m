@@ -7,10 +7,12 @@
 //
 
 #import "CustomScrapbookCell.h"
-#import "EntryController.h"
-#import "ScrapbookController.h"
+//#import "EntryController.h"
+//#import "ScrapbookController.h"
 #import "ScrapbookListViewController.h"
-@import QuartzCore;
+//@import QuartzCore;
+
+@import MilestonesKit;
 
 @interface CustomScrapbookCell () <UITextFieldDelegate>
 

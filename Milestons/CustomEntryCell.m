@@ -11,11 +11,10 @@
 //#import "ScrapbookController.h"
 //#import "Entry.h"
 //#import "PhotoController.h"
-#import "MilestonesKit.h"
 #import "CollectionViewDataSource.h"
 #import "CustomCollectionViewCell.h"
 #import "EntryListViewController.h"
-@import QuartzCore;
+//@import QuartzCore;
 
 @interface CustomEntryCell () <UICollectionViewDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *backImageView;

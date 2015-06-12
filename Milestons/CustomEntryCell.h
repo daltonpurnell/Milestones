@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-#import "EntryController.h"
-#import "PhotoController.h"
+//#import "EntryController.h"
+//#import "PhotoController.h"
 #import "CollectionViewDataSource.h"
 
-@import ParseUI;
+@import MilestonesKit;
+
+//@import ParseUI;
 
 @protocol deleteCellDelegate;
 

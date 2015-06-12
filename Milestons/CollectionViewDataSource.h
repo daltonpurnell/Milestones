@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 @import UIKit;
 
-#import "EntryController.h"
+//#import "EntryController.h"
+
+@import MilestonesKit;
 
 @interface CollectionViewDataSource : NSObject <UICollectionViewDataSource>
 

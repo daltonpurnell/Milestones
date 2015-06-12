@@ -9,16 +9,18 @@
 #import "ScrapbookListViewController.h"
 #import "Appearance.h"
 #import "AddScrapbookViewController.h"
-#import "ScrapbookController.h"
+//#import "ScrapbookController.h"
 #import "EntryListViewController.h"
-#import "EntryController.h"
+//#import "EntryController.h"
 #import "CustomScrapbookCell.h"
 #import "MyLoginViewController.h"
 #import "MySignUpViewController.h"
 #import "SWRevealViewController.h"
 
-@import Parse;
-@import ParseUI;
+@import MilestonesKit;
+
+//@import Parse;
+//@import ParseUI;
 @import AVFoundation;
 @import AudioToolbox;
 

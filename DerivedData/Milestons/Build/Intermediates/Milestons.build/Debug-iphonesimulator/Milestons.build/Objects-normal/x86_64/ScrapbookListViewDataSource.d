@@ -44,9 +44,10 @@ dependencies: \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseUI.framework/Headers/PFCollectionViewCell.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseUI.framework/Headers/ParseUI.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseUI.framework/Modules/module.modulemap \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseCrashReporting.framework/Headers/ParseCrashReporting.h \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseCrashReporting.framework/Modules/module.modulemap \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/UserController.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/EntryController.h \
-  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/PhotoController.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Scrapbook.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Entry.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Photo.h \

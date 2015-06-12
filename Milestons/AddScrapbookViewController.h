@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Scrapbook.h"
-#import "ScrapbookController.h"
+//#import "Scrapbook.h"
+//#import "ScrapbookController.h"
+
+@import MilestonesKit;
 
 @import iAd;
 

@@ -8,10 +8,12 @@
 
 #import "AddScrapbookViewController.h"
 #import "Appearance.h"
-#import "ScrapbookController.h"
+//#import "ScrapbookController.h"
 
-@import ParseUI;
-@import QuartzCore;
+//@import MilestonesKit;
+
+//@import ParseUI;
+//@import QuartzCore;
 @import AVFoundation;
 @import AudioToolbox;
 

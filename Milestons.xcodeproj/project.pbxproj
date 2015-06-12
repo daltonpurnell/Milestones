@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		CF2C22D11AF5B40A00D28EAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C22D01AF5B40A00D28EAB /* main.m */; };
 		CF2C22D41AF5B40A00D28EAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C22D31AF5B40A00D28EAB /* AppDelegate.m */; };
-		CF2C22D71AF5B40A00D28EAB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C22D61AF5B40A00D28EAB /* ViewController.m */; };
 		CF2C22DC1AF5B40A00D28EAB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF2C22DB1AF5B40A00D28EAB /* Images.xcassets */; };
 		CF2C22DF1AF5B40A00D28EAB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF2C22DD1AF5B40A00D28EAB /* LaunchScreen.xib */; };
 		CF2C22EB1AF5B40A00D28EAB /* MilestonsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C22EA1AF5B40A00D28EAB /* MilestonsTests.m */; };
@@ -83,6 +82,10 @@
 		CFE361771B29F305003323A7 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23661AF7E1CA00D28EAB /* Accounts.framework */; };
 		CFE361781B29F30A003323A7 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23681AF7E1D400D28EAB /* Social.framework */; };
 		CFE3618B1B2A3461003323A7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23441AF7E13800D28EAB /* Bolts.framework */; };
+		CFE361961B2A7525003323A7 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE361951B2A7525003323A7 /* ShareViewController.m */; };
+		CFE361981B2A7525003323A7 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFE361971B2A7525003323A7 /* MainInterface.storyboard */; };
+		CFE3619B1B2A7525003323A7 /* MilestonesShareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CFE361901B2A7525003323A7 /* MilestonesShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CFE361A01B2A7673003323A7 /* MilestonesKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE361371B293DDB003323A7 /* MilestonesKit.framework */; };
 		CFEC12DC1B04379500AB6C1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFEC12DB1B04379500AB6C1B /* Main.storyboard */; };
 		CFEC12E91B0C117800AB6C1B /* MyLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */; };
 		CFEC12EC1B0C119100AB6C1B /* MySignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12EB1B0C119100AB6C1B /* MySignUpViewController.m */; };
@@ -117,6 +120,13 @@
 			remoteGlobalIDString = CFE361361B293DDB003323A7;
 			remoteInfo = MilestonesKit;
 		};
+		CFE361991B2A7525003323A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF2C22C31AF5B40A00D28EAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFE3618F1B2A7525003323A7;
+			remoteInfo = MilestonesShareExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -131,6 +141,17 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CFE3619F1B2A7525003323A7 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CFE3619B1B2A7525003323A7 /* MilestonesShareExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -139,8 +160,6 @@
 		CF2C22D01AF5B40A00D28EAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CF2C22D21AF5B40A00D28EAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CF2C22D31AF5B40A00D28EAB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CF2C22D51AF5B40A00D28EAB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CF2C22D61AF5B40A00D28EAB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CF2C22DB1AF5B40A00D28EAB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CF2C22DE1AF5B40A00D28EAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CF2C22E41AF5B40A00D28EAB /* MilestonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MilestonsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -240,6 +259,11 @@
 		CFE361491B293DDC003323A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFE3614A1B293DDC003323A7 /* MilestonesKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MilestonesKitTests.m; sourceTree = "<group>"; };
 		CFE361571B293F05003323A7 /* Milestons.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Milestons.entitlements; path = Milestons/Milestons.entitlements; sourceTree = "<group>"; };
+		CFE361901B2A7525003323A7 /* MilestonesShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MilestonesShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFE361931B2A7525003323A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFE361941B2A7525003323A7 /* ShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		CFE361951B2A7525003323A7 /* ShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
+		CFE361971B2A7525003323A7 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		CFEC12DB1B04379500AB6C1B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CFEC12E71B0C117800AB6C1B /* MyLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLoginViewController.h; path = ../MyLoginViewController.h; sourceTree = "<group>"; };
 		CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyLoginViewController.m; path = ../MyLoginViewController.m; sourceTree = "<group>"; };
@@ -303,6 +327,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CFE3618D1B2A7525003323A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFE361A01B2A7673003323A7 /* MilestonesKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -315,6 +347,7 @@
 				CF2C22E71AF5B40A00D28EAB /* MilestonsTests */,
 				CFE361381B293DDC003323A7 /* MilestonesKit */,
 				CFE361471B293DDC003323A7 /* MilestonesKitTests */,
+				CFE361911B2A7525003323A7 /* MilestonesShareExtension */,
 				CF2C22CC1AF5B40A00D28EAB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -326,6 +359,7 @@
 				CF2C22E41AF5B40A00D28EAB /* MilestonsTests.xctest */,
 				CFE361371B293DDB003323A7 /* MilestonesKit.framework */,
 				CFE361411B293DDC003323A7 /* MilestonesKitTests.xctest */,
+				CFE361901B2A7525003323A7 /* MilestonesShareExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -335,8 +369,6 @@
 			children = (
 				CF2C22D21AF5B40A00D28EAB /* AppDelegate.h */,
 				CF2C22D31AF5B40A00D28EAB /* AppDelegate.m */,
-				CF2C22D51AF5B40A00D28EAB /* ViewController.h */,
-				CF2C22D61AF5B40A00D28EAB /* ViewController.m */,
 				CF2C23141AF5C26200D28EAB /* Appearance.h */,
 				CF2C23151AF5C26200D28EAB /* Appearance.m */,
 				CFE361091B23D24E003323A7 /* AnimationController.h */,
@@ -593,6 +625,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CFE361911B2A7525003323A7 /* MilestonesShareExtension */ = {
+			isa = PBXGroup;
+			children = (
+				CFE361941B2A7525003323A7 /* ShareViewController.h */,
+				CFE361951B2A7525003323A7 /* ShareViewController.m */,
+				CFE361971B2A7525003323A7 /* MainInterface.storyboard */,
+				CFE361921B2A7525003323A7 /* Supporting Files */,
+			);
+			path = MilestonesShareExtension;
+			sourceTree = "<group>";
+		};
+		CFE361921B2A7525003323A7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CFE361931B2A7525003323A7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -622,11 +673,13 @@
 				CF2C22C81AF5B40A00D28EAB /* Frameworks */,
 				CF2C22C91AF5B40A00D28EAB /* Resources */,
 				CFE3614F1B293DDC003323A7 /* Embed Frameworks */,
+				CFE3619F1B2A7525003323A7 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				CFE3614D1B293DDC003323A7 /* PBXTargetDependency */,
+				CFE3619A1B2A7525003323A7 /* PBXTargetDependency */,
 			);
 			name = Milestons;
 			productName = Milestons;
@@ -688,6 +741,23 @@
 			productReference = CFE361411B293DDC003323A7 /* MilestonesKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		CFE3618F1B2A7525003323A7 /* MilestonesShareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFE3619C1B2A7525003323A7 /* Build configuration list for PBXNativeTarget "MilestonesShareExtension" */;
+			buildPhases = (
+				CFE3618C1B2A7525003323A7 /* Sources */,
+				CFE3618D1B2A7525003323A7 /* Frameworks */,
+				CFE3618E1B2A7525003323A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MilestonesShareExtension;
+			productName = MilestonesShareExtension;
+			productReference = CFE361901B2A7525003323A7 /* MilestonesShareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -718,6 +788,10 @@
 						CreatedOnToolsVersion = 6.3;
 						TestTargetID = CF2C22CA1AF5B40A00D28EAB;
 					};
+					CFE3618F1B2A7525003323A7 = {
+						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = ZW8XHLXS82;
+					};
 				};
 			};
 			buildConfigurationList = CF2C22C61AF5B40A00D28EAB /* Build configuration list for PBXProject "Milestons" */;
@@ -739,6 +813,7 @@
 				CF2C22E31AF5B40A00D28EAB /* MilestonsTests */,
 				CFE361361B293DDB003323A7 /* MilestonesKit */,
 				CFE361401B293DDC003323A7 /* MilestonesKitTests */,
+				CFE3618F1B2A7525003323A7 /* MilestonesShareExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -779,6 +854,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CFE3618E1B2A7525003323A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFE361981B2A7525003323A7 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -788,7 +871,6 @@
 			files = (
 				CFE04C3E1B1AA757001F1DA6 /* CustomCollectionViewCell.m in Sources */,
 				CFE361161B23EDDD003323A7 /* CustomSegue.m in Sources */,
-				CF2C22D71AF5B40A00D28EAB /* ViewController.m in Sources */,
 				CFE360AE1B2272FD003323A7 /* EXPhotoViewer.m in Sources */,
 				CF2C248A1B01009F00D28EAB /* CustomEntryCell.m in Sources */,
 				CF2C22D41AF5B40A00D28EAB /* AppDelegate.m in Sources */,
@@ -846,6 +928,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CFE3618C1B2A7525003323A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFE361961B2A7525003323A7 /* ShareViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -868,6 +958,11 @@
 			isa = PBXTargetDependency;
 			target = CFE361361B293DDB003323A7 /* MilestonesKit */;
 			targetProxy = CFE3614C1B293DDC003323A7 /* PBXContainerItemProxy */;
+		};
+		CFE3619A1B2A7525003323A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFE3618F1B2A7525003323A7 /* MilestonesShareExtension */;
+			targetProxy = CFE361991B2A7525003323A7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1123,6 +1218,34 @@
 			};
 			name = Release;
 		};
+		CFE3619D1B2A7525003323A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MilestonesShareExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CFE3619E1B2A7525003323A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = MilestonesShareExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1166,6 +1289,14 @@
 			buildConfigurations = (
 				CFE361531B293DDC003323A7 /* Debug */,
 				CFE361541B293DDC003323A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CFE3619C1B2A7525003323A7 /* Build configuration list for PBXNativeTarget "MilestonesShareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFE3619D1B2A7525003323A7 /* Debug */,
+				CFE3619E1B2A7525003323A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
