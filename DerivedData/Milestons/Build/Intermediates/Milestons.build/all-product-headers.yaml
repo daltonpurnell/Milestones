@@ -1,0 +1,68 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/djp1989/Documents/Development/PersonalProjects/Milestons/DerivedData/Milestons/Build/Products/Debug-iphonesimulator/MilestonesKit.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Entry.h",
+          'external-contents': "/Users/djp1989/Documents/Development/PersonalProjects/Milestons/Entry.h"
+        },
+        {
+          'type': 'file',
+          'name': "EntryController.h",
+          'external-contents': "/Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/EntryController.h"
+        },
+        {
+          'type': 'file',
+          'name': "MilestonesKit-Swift.h",
+          'external-contents': "/Users/djp1989/Documents/Development/PersonalProjects/Milestons/DerivedData/Milestons/Build/Products/Debug-iphonesimulator/MilestonesKit.framework/Headers/MilestonesKit-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "MilestonesKit.h",
+          'external-contents': "/Users/djp1989/Documents/Development/PersonalProjects/Milestons/MilestonesKit/MilestonesKit.h"
+        },
+        {
+          'type': 'file',
+          'name': "Photo.h",
+          'external-contents': "/Users/djp1989/Documents/Development/PersonalProjects/Milestons/Photo.h"
+        },
+        {
+          'type': 'file',
+          'name': "PhotoController.h",
+          'external-contents': "/Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/PhotoController.h"
+        },
+        {
+          'type': 'file',
+          'name': "Scrapbook.h",
+          'external-contents': "/Users/djp1989/Documents/Development/PersonalProjects/Milestons/Scrapbook.h"
+        },
+        {
+          'type': 'file',
+          'name': "ScrapbookController.h",
+          'external-contents': "/Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ScrapbookController.h"
+        },
+        {
+          'type': 'file',
+          'name': "UserController.h",
+          'external-contents': "/Users/djp1989/Documents/Development/PersonalProjects/Milestons/UserController.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/djp1989/Documents/Development/PersonalProjects/Milestons/DerivedData/Milestons/Build/Products/Debug-iphonesimulator/MilestonesKit.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/djp1989/Documents/Development/PersonalProjects/Milestons/DerivedData/Milestons/Build/Intermediates/Milestons.build/Debug-iphonesimulator/MilestonesKit.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

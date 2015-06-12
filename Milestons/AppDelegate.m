@@ -8,10 +8,11 @@
 
 #import "AppDelegate.h"
 #import "Appearance.h"
-#import "ScrapbookController.h"
+//#import "ScrapbookController.h"
 #import "ScrapbookListViewController.h"
-#import "EntryController.h"
-#import "PhotoController.h"
+//#import "EntryController.h"
+//#import "PhotoController.h"
+#import "MilestonesKit.h"
 
 @import Parse;
 @import ParseUI;

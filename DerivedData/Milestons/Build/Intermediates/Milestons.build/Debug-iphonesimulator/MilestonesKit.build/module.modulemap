@@ -1,0 +1,6 @@
+framework module MilestonesKit {
+  umbrella header "MilestonesKit.h"
+
+  export *
+  module * { export * }
+}

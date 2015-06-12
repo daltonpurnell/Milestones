@@ -21,7 +21,6 @@
 		CF2C23131AF5C03C00D28EAB /* AddEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C23121AF5C03C00D28EAB /* AddEntryViewController.m */; };
 		CF2C23161AF5C26200D28EAB /* Appearance.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C23151AF5C26200D28EAB /* Appearance.m */; };
 		CF2C231B1AF5D1E900D28EAB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C231A1AF5D1E900D28EAB /* CoreData.framework */; };
-		CF2C234A1AF7E13800D28EAB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23441AF7E13800D28EAB /* Bolts.framework */; };
 		CF2C24871B01008A00D28EAB /* CustomScrapbookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C24861B01008A00D28EAB /* CustomScrapbookCell.m */; };
 		CF2C248A1B01009F00D28EAB /* CustomEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C24891B01009F00D28EAB /* CustomEntryCell.m */; };
 		CFE04C071B1A0DEA001F1DA6 /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE04C061B1A0DEA001F1DA6 /* SettingsController.m */; };
@@ -83,6 +82,7 @@
 		CFE361761B29F301003323A7 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23641AF7E1BF00D28EAB /* libsqlite3.dylib */; };
 		CFE361771B29F305003323A7 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23661AF7E1CA00D28EAB /* Accounts.framework */; };
 		CFE361781B29F30A003323A7 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23681AF7E1D400D28EAB /* Social.framework */; };
+		CFE3618B1B2A3461003323A7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23441AF7E13800D28EAB /* Bolts.framework */; };
 		CFEC12DC1B04379500AB6C1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFEC12DB1B04379500AB6C1B /* Main.storyboard */; };
 		CFEC12E91B0C117800AB6C1B /* MyLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */; };
 		CFEC12EC1B0C119100AB6C1B /* MySignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEC12EB1B0C119100AB6C1B /* MySignUpViewController.m */; };
@@ -173,7 +173,7 @@
 		CF2C233F1AF6CDCE00D28EAB /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
 		CF2C23411AF6CDCE00D28EAB /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
 		CF2C23421AF6CDCE00D28EAB /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
-		CF2C23441AF7E13800D28EAB /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		CF2C23441AF7E13800D28EAB /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../Milestons/Bolts.framework; sourceTree = "<group>"; };
 		CF2C23451AF7E13800D28EAB /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../Milestons/Parse.framework; sourceTree = "<group>"; };
 		CF2C23461AF7E13800D28EAB /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = ../Milestons/ParseCrashReporting.framework; sourceTree = "<group>"; };
 		CF2C23471AF7E13800D28EAB /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = ../Milestons/ParseFacebookUtils.framework; sourceTree = "<group>"; };
@@ -259,7 +259,6 @@
 				CFE361061B237B65003323A7 /* AddressBookUI.framework in Frameworks */,
 				CFE3614E1B293DDC003323A7 /* MilestonesKit.framework in Frameworks */,
 				CF2C231B1AF5D1E900D28EAB /* CoreData.framework in Frameworks */,
-				CF2C234A1AF7E13800D28EAB /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFE361681B29F2BC003323A7 /* ParseFacebookUtilsV4.framework in Frameworks */,
+				CFE3618B1B2A3461003323A7 /* Bolts.framework in Frameworks */,
 				CFE361671B29F2AA003323A7 /* ParseUI.framework in Frameworks */,
 				CFE3616D1B29F2D6003323A7 /* CFNetwork.framework in Frameworks */,
 				CFE361711B29F2E8003323A7 /* QuartzCore.framework in Frameworks */,
@@ -371,7 +371,6 @@
 				CFE361201B253B58003323A7 /* iAd.framework */,
 				CFE361071B237B74003323A7 /* AddressBook.framework */,
 				CFE361051B237B65003323A7 /* AddressBookUI.framework */,
-				CF2C23441AF7E13800D28EAB /* Bolts.framework */,
 				CF2C231A1AF5D1E900D28EAB /* CoreData.framework */,
 				CF2C22CF1AF5B40A00D28EAB /* Info.plist */,
 				CF2C22D01AF5B40A00D28EAB /* main.m */,
@@ -571,6 +570,7 @@
 		CFE361661B29F289003323A7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CF2C23441AF7E13800D28EAB /* Bolts.framework */,
 				CF2C23681AF7E1D400D28EAB /* Social.framework */,
 				CF2C23661AF7E1CA00D28EAB /* Accounts.framework */,
 				CF2C23641AF7E1BF00D28EAB /* libsqlite3.dylib */,
@@ -1038,6 +1038,7 @@
 		CFE361511B293DDC003323A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1067,6 +1068,7 @@
 		CFE361521B293DDC003323A7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
