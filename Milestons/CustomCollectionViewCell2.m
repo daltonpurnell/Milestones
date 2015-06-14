@@ -15,14 +15,15 @@
 
 -(void)awakeFromNib {
     
+//    self.imageView.image = [UIImage imageNamed:@"dashedLineSquare"];
+
+    
     // create drop shadow for image view
     self.imageView.layer.shadowColor = [UIColor grayColor].CGColor;
     self.imageView.layer.shadowOffset = CGSizeMake(0, 1);
     self.imageView.layer.shadowOpacity = 1;
     self.imageView.layer.shadowRadius = 1.0;
     self.imageView.clipsToBounds = NO;
-    
-    self.imageView.image = [UIImage imageNamed:@"dashedLineSquare"];
 
     
 }
