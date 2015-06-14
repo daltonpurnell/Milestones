@@ -345,8 +345,15 @@
     
     self.titleTextField.enabled = NO;
 // save changes to parse
+    
+    
 // reload tableview
     
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self.titleTextField resignFirstResponder];
+    return YES;
 }
 
 

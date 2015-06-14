@@ -22,11 +22,13 @@
 @import ParseUI;
 @import AddressBookUI;
 @import MessageUI;
+@import AVFoundation;
 
-@interface EntryListViewController () <UITableViewDelegate, deleteCellDelegate, ABPeoplePickerNavigationControllerDelegate, MFMailComposeViewControllerDelegate>
+@interface EntryListViewController () <UITableViewDelegate, ABPeoplePickerNavigationControllerDelegate, MFMailComposeViewControllerDelegate, AVAudioPlayerDelegate>
 
 @property (weak, nonatomic) IBOutlet UINavigationItem *navBar;
 @property (nonatomic, strong) EntryListViewDataSource *tableDataSource;
+@property (nonatomic, strong)AVAudioPlayer *audioPlayer;
 
 
 @end
@@ -173,6 +175,22 @@
 -(void)refreshTable {
     
     [self.refreshControl beginRefreshing];
+    
+    NSString *pathAndFileName = [[NSBundle mainBundle] pathForResource:@"Fast Swoosh" ofType:@"mp3"];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:pathAndFileName])
+    {
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:pathAndFileName] error:NULL];
+        
+        self.audioPlayer.delegate=self;
+        [self.audioPlayer prepareToPlay];
+        [self.audioPlayer play];
+        NSLog(@"File exists in BUNDLE");
+    }
+    else
+    {
+        NSLog(@"File not found");
+    }
+
     
     [[EntryController sharedInstance] loadTheseEntriesFromParseInScrapbook:self.scrapbook completion:^(NSArray *entries, NSError *error) {
         self.tableDataSource.entries = entries;
