@@ -50,22 +50,6 @@
     PFACL *defaultACL = [PFACL ACL];
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
     
-// play launch sound
-    NSString *pathAndFileName = [[NSBundle mainBundle] pathForResource:@"New Notification 02" ofType:@"wav"];
-    if ([[NSFileManager defaultManager] fileExistsAtPath:pathAndFileName])
-    {
-        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:pathAndFileName] error:NULL];
-        
-        self.audioPlayer.delegate=self;
-        [self.audioPlayer prepareToPlay];
-        [self.audioPlayer play];
-        NSLog(@"File exists in BUNDLE");
-    }
-    else
-    {
-        NSLog(@"File not found");
-    }
-
 // local notifications
     UILocalNotification *localNotification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
     if (localNotification) {

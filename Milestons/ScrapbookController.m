@@ -87,6 +87,8 @@
         NSLog(@"No user logged in");
     }
     
+    NSLog(@"Loading Scrapbooks from Parse");
+    
 }
 
 

@@ -15,16 +15,17 @@ static NSString *const entryCameraButtonTappedNotificationKey = @"camera button 
 static NSString * const entryImagePickedKey = @"image picked";
 
 
-@interface EntryListViewController : UITableViewController <ADBannerViewDelegate> {
-    ADBannerView *adView;
-}
+@interface EntryListViewController : UITableViewController
+//<ADBannerViewDelegate> {
+//    ADBannerView *adView;
+//}
 
 @property (strong, nonatomic) Entry *entry;
 @property (strong, nonatomic) Scrapbook *scrapbook;
 
 @property (nonatomic, strong) NSArray *entries;
 
-@property (strong, nonatomic)IBOutlet ADBannerView *adView;
+//@property (strong, nonatomic)IBOutlet ADBannerView *adView;
 
 
 - (void)updateWithSB:(Scrapbook *)scrapbook;

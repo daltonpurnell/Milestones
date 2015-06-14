@@ -11,11 +11,12 @@
 
 @import iAd;
 
-@interface AddEntryViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UICollectionViewDelegate, ADBannerViewDelegate, ADInterstitialAdDelegate> {
-    ADBannerView *adView;
-    ADInterstitialAd *interstitial;
-    BOOL requestingAd;
-}
+@interface AddEntryViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UICollectionViewDelegate>
+//{
+//    ADBannerView *adView;
+//    ADInterstitialAd *interstitial;
+//    BOOL requestingAd;
+//}
 
 @property (strong, nonatomic) Entry *entry;
 @property (strong, nonatomic) Scrapbook *scrapbook;
@@ -26,7 +27,7 @@
 @property (copy, nonatomic) void (^didCreateEntry)(Entry *entry);
 @property (copy, nonatomic) void (^didCreatePhoto)(Photo *photo);
 
-@property (strong, nonatomic)IBOutlet ADBannerView *adView;
+//@property (strong, nonatomic)IBOutlet ADBannerView *adView;
 
 
 - (void)updateWithScrapbook:(Scrapbook *)scrapbook;

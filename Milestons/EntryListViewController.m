@@ -34,7 +34,7 @@
 @end
 
 @implementation EntryListViewController
-@synthesize adView;
+//@synthesize adView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -50,7 +50,7 @@
     self.navBar.title = [NSString stringWithFormat:@"%@", self.scrapbook.titleOfScrapbook];
 
     [Appearance initializeAppearanceDefaults];
-    self.adView.delegate = self;
+//    self.adView.delegate = self;
 
     self.tableView.backgroundColor =  [UIColor colorWithRed:233/255.0 green:236/255.0 blue:243/255.0 alpha:1];
 
@@ -258,20 +258,20 @@
 }
 
 
-#pragma mark - banner view delegate methods
-
--(void)bannerViewDidLoadAd:(ADBannerView *)banner {
-    
-    adView.hidden = NO;
-    NSLog(@"Banner showing");
-}
-
--(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
-    
-    adView.hidden = YES;
-    NSLog(@"Banner hidden. No ad to show");
-}
-
+//#pragma mark - banner view delegate methods
+//
+//-(void)bannerViewDidLoadAd:(ADBannerView *)banner {
+//    
+//    adView.hidden = NO;
+//    NSLog(@"Banner showing");
+//}
+//
+//-(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
+//    
+//    adView.hidden = YES;
+//    NSLog(@"Banner hidden. No ad to show");
+//}
+//
 
 #pragma mark - nsnotifications methods
 

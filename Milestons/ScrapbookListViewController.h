@@ -14,9 +14,10 @@ static NSString *const cellDeletedNotificationKey = @"cell deleted";
 static NSString *const cameraButtonTappedNotificationKey = @"camera button tapped";
 static NSString * const imagePickedKey = @"image picked";
 
-@interface ScrapbookListViewController : UITableViewController < ADBannerViewDelegate> {
-    ADBannerView *adView;
-}
+@interface ScrapbookListViewController : UITableViewController
+//< ADBannerViewDelegate> {
+//    ADBannerView *adView;
+//}
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *addScrapbookButton;
 
@@ -28,6 +29,6 @@ static NSString * const imagePickedKey = @"image picked";
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *settingsButton;
 
-@property (strong, nonatomic)IBOutlet ADBannerView *adView;
+//@property (strong, nonatomic)IBOutlet ADBannerView *adView;
 
 @end

@@ -24,12 +24,12 @@
 @end
 
 @implementation AddScrapbookViewController
-@synthesize adView;
+//@synthesize adView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.titleTextField.delegate = self;
-    self.adView.delegate = self;
+//    self.adView.delegate = self;
 
     [Appearance initializeAppearanceDefaults];
     self.view.backgroundColor = [UIColor colorWithRed:233/255.0 green:236/255.0 blue:243/255.0 alpha:1];
@@ -203,19 +203,19 @@
 
 
 
-#pragma mark - banner view delegate methods
-
--(void)bannerViewDidLoadAd:(ADBannerView *)banner {
-    
-    adView.hidden = NO;
-    NSLog(@"Banner showing");
-}
-
--(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
-    
-    adView.hidden = YES;
-    NSLog(@"Banner hidden. No ad to show");
-}
+//#pragma mark - banner view delegate methods
+//
+//-(void)bannerViewDidLoadAd:(ADBannerView *)banner {
+//    
+//    adView.hidden = NO;
+//    NSLog(@"Banner showing");
+//}
+//
+//-(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
+//    
+//    adView.hidden = YES;
+//    NSLog(@"Banner hidden. No ad to show");
+//}
 
 
 @end

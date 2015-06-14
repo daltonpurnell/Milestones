@@ -26,11 +26,11 @@
 @end
 
 @implementation AddEntryViewController
-@synthesize adView;
+//@synthesize adView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.adView.delegate = self;
+//    self.adView.delegate = self;
     self.collectionView.delegate = self;
     
     self.collectionView.dataSource = self;
@@ -42,7 +42,7 @@
     self.images = [NSMutableArray new];
     self.descriptionTextView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Layer-1.png"]];
 
-    requestingAd = NO;
+//    requestingAd = NO;
 }
 
 
@@ -93,6 +93,22 @@
     [self presentViewController:photoActionSheet animated:YES completion:nil];
 }
 
+
+-(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    
+
+    UIImage *chosenImage = [info valueForKey:UIImagePickerControllerOriginalImage];
+    
+    [self.images addObject:chosenImage];
+    
+    [self.collectionView reloadData];
+    
+//    [self.collectionView insertItemsAtIndexPaths:self.images];
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
+
+}
 
 //
 //- (IBAction)shareButtonTapped:(id)sender {
@@ -257,19 +273,19 @@
 
 
 
-#pragma mark - banner view delegate methods
-
--(void)bannerViewDidLoadAd:(ADBannerView *)banner {
-    
-    adView.hidden = NO;
-    NSLog(@"Banner showing");
-}
-
--(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
-    
-    adView.hidden = YES;
-    NSLog(@"Banner hidden. No ad to show");
-}
+//#pragma mark - banner view delegate methods
+//
+//-(void)bannerViewDidLoadAd:(ADBannerView *)banner {
+//    
+//    adView.hidden = NO;
+//    NSLog(@"Banner showing");
+//}
+//
+//-(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
+//    
+//    adView.hidden = YES;
+//    NSLog(@"Banner hidden. No ad to show");
+//}
 
 
 #pragma mark - interstitial delegate methods

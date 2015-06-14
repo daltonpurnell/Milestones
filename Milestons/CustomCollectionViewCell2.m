@@ -21,15 +21,15 @@
     self.imageView.layer.shadowOpacity = 1;
     self.imageView.layer.shadowRadius = 1.0;
     self.imageView.clipsToBounds = NO;
+    
+    self.imageView.image = [UIImage imageNamed:@"dashedLineSquare"];
+
+    
 }
 
 -(void)updateWithImage:(UIImage *)image {
     
-    if (image) {
         self.imageView.image = image;
-    } if (!image) {
-        self.imageView.image = [UIImage imageNamed:@"dashedLineSquare"];
-    }
 }
 
 @end

@@ -13,13 +13,13 @@
 @import iAd;
 
 @interface AddScrapbookViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, ADBannerViewDelegate> {
-    ADBannerView *adView;
+//    ADBannerView *adView;
     UIImage *finalImage;
 }
 
 @property (strong, nonatomic) Scrapbook *scrapbook;
 
-@property (strong, nonatomic)IBOutlet ADBannerView *adView;
+//@property (strong, nonatomic)IBOutlet ADBannerView *adView;
 
 
 //-(void)updateWithScrapbook:(Scrapbook *)scrapbook;
