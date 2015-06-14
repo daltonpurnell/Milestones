@@ -30,7 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.optionsList= [[NSArray alloc] initWithObjects: @"Send Feedback", @"Rate", @"Remove Ads",
+    self.optionsList= [[NSArray alloc] initWithObjects: @"Send Feedback", @"Rate",
                   @"Log Out", nil];
     
     self.tableView.backgroundColor = [UIColor colorWithRed:74/255.0 green:75/255.0 blue:76/255.0 alpha:1];
@@ -124,11 +124,7 @@
         NSLog(@"Rate");
     }
     
-    if (indexPath.row ==2) {
-        NSLog(@"Remove Ads");
-    }
-    
-    if (indexPath.row == 3) {
+    if (indexPath.row == 2) {
         [self presentLogOutAlert];
         NSLog(@"Log Out");
     }
