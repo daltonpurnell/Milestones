@@ -7,6 +7,9 @@
 //
 
 #import "CollectionViewDataSource.h"
+#import "PhotoController.h"
+#import "EntryController.h"
+#import "CustomCollectionViewCell.h"
 
 @implementation CollectionViewDataSource
 

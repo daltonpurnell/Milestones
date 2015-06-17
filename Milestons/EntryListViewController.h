@@ -8,21 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Entry.h"
-#import "Appearance.h"
-#import "EntryController.h"
-#import "AddEntryViewController.h"
-#import "AddScrapbookViewController.h"
-#import "CustomEntryCell.h"
-#import "PhotoController.h"
-#import "EntryListViewDataSource.h"
-#import "CustomCollectionViewCell.h"
-#import "UserController.h"
-#import "ScrapbookController.h"
 
-@import Parse;
-@import ParseUI;
-@import AddressBookUI;
-@import MessageUI;
 @import iAd;
 static NSString *const entryCellDeletedNotificationKey = @"cell deleted";
 static NSString *const entryCameraButtonTappedNotificationKey = @"camera button tapped";

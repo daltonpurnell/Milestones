@@ -7,8 +7,13 @@
 //
 
 #import "CustomScrapbookCell.h"
+#import "EntryController.h"
+#import "ScrapbookController.h"
+#import "ScrapbookListViewController.h"
+@import QuartzCore;
 
 @interface CustomScrapbookCell () <UITextFieldDelegate>
+
 @end
 
 @implementation CustomScrapbookCell

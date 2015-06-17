@@ -7,8 +7,24 @@
 //
 
 #import "EntryListViewController.h"
+#import "Appearance.h"
+#import "EntryController.h"
+#import "AddEntryViewController.h"
+#import "AddScrapbookViewController.h"
+#import "CustomEntryCell.h"
+#import "PhotoController.h"
+#import "EntryListViewDataSource.h"
+#import "CustomCollectionViewCell.h"
+#import "UserController.h"
+#import "ScrapbookController.h"
 
-@interface EntryListViewController () <UITableViewDelegate, ABPeoplePickerNavigationControllerDelegate, MFMailComposeViewControllerDelegate>
+@import Parse;
+@import ParseUI;
+@import AddressBookUI;
+@import MessageUI;
+@import AVFoundation;
+
+@interface EntryListViewController () <UITableViewDelegate, ABPeoplePickerNavigationControllerDelegate, MFMailComposeViewControllerDelegate, AVAudioPlayerDelegate>
 
 @property (weak, nonatomic) IBOutlet UINavigationItem *navBar;
 @property (nonatomic, strong) EntryListViewDataSource *tableDataSource;

@@ -7,8 +7,19 @@
 //
 
 #import "AppDelegate.h"
+#import "Appearance.h"
+#import "ScrapbookController.h"
+#import "ScrapbookListViewController.h"
+#import "EntryController.h"
+#import "PhotoController.h"
 
-@interface AppDelegate ()
+@import Parse;
+@import ParseUI;
+@import AVFoundation;
+@import AudioToolbox;
+
+@interface AppDelegate () <AVAudioPlayerDelegate>
+@property (nonatomic, strong) AVAudioPlayer *audioPlayer;
 
 @end
 

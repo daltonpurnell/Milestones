@@ -7,8 +7,16 @@
 //
 
 #import "AddScrapbookViewController.h"
+#import "Appearance.h"
+#import "ScrapbookController.h"
 
-@interface AddScrapbookViewController () <UITextFieldDelegate>
+@import ParseUI;
+@import QuartzCore;
+@import AVFoundation;
+@import AudioToolbox;
+
+
+@interface AddScrapbookViewController () <UITextFieldDelegate, AVAudioPlayerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @end

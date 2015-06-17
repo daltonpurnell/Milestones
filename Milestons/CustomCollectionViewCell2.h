@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "PhotoController.h"
 
-@import QuartzCore;
-
 @interface CustomCollectionViewCell2 : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;

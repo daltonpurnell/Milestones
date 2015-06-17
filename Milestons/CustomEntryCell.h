@@ -7,15 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+
 #import "EntryController.h"
 #import "PhotoController.h"
 #import "CollectionViewDataSource.h"
-#import "ScrapbookController.h"
-#import "Entry.h"
-#import "CustomCollectionViewCell.h"
-#import "EntryListViewController.h"
 
-@import QuartzCore;
 @import ParseUI;
 
 @protocol deleteCellDelegate;

@@ -9,20 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "Scrapbook.h"
 #import "Photo.h"
-#import "Appearance.h"
-#import "AddScrapbookViewController.h"
-#import "ScrapbookController.h"
-#import "EntryListViewController.h"
-#import "EntryController.h"
-#import "CustomScrapbookCell.h"
-#import "MyLoginViewController.h"
-#import "MySignUpViewController.h"
-#import "SWRevealViewController.h"
-
-@import Parse;
-@import ParseUI;
-@import AVFoundation;
-@import AudioToolbox;
 @import iAd;
 static NSString *const cellDeletedNotificationKey = @"cell deleted";
 static NSString *const cameraButtonTappedNotificationKey = @"camera button tapped";

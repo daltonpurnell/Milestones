@@ -7,7 +7,15 @@
 //
 
 #import "ScrapbookListViewDataSource.h"
+#import "ScrapbookListViewController.h"
+#import "ScrapbookController.h"
+#import "CustomScrapbookCell.h"
+#import <QuartzCore/QuartzCore.h>
+
 @interface ScrapbookListViewDataSource () <deleteCellDelegate>
+
+
+
 @end
 
 @implementation ScrapbookListViewDataSource

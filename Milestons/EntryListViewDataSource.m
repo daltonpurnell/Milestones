@@ -7,7 +7,8 @@
 //
 
 #import "EntryListViewDataSource.h"
-
+#import "CustomEntryCell.h"
+#import "EntryListViewController.h"
 
 @interface EntryListViewDataSource ()<deleteCellDelegate>
 

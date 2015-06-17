@@ -8,13 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "PhotoController.h"
-#import "EntryController.h"
-#import "CollectionViewDataSource.h"
-#import "EXPhotoViewer.h"
-#import "EntryListViewController.h"
-
-@import QuartzCore;
-@import UIKit;
 @import ParseUI;
 
 @interface CustomCollectionViewCell : UICollectionViewCell

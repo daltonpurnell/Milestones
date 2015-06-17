@@ -8,14 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "Entry.h"
-#import "Appearance.h"
-#import "EntryController.h"
-#import "PhotoController.h"
-#import "CollectionViewDataSource.h"
-#import "CustomCollectionViewCell2.h"
-
-@import MessageUI;
-@import AVFoundation;
 
 @import iAd;
 

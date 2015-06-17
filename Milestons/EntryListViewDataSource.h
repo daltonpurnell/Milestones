@@ -7,12 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ScrapbookController.h"
-#import "CustomEntryCell.h"
-#import "EntryListViewController.h"
-
 @import UIKit;
+#import "ScrapbookController.h"
 
 @interface EntryListViewDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
+
 @property (nonatomic, strong) NSArray *entries;
+
 @end
