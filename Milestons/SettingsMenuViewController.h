@@ -7,6 +7,16 @@
 //
 
 #import "ViewController.h"
+#import "SWRevealViewController.h"
+#import "MyLoginViewController.h"
+#import "MySignUpViewController.h"
+#import "ScrapbookController.h"
+#import "Appearance.h"
+
+@import Parse;
+@import MessageUI;
+@import ParseUI;
+@import AddressBookUI;
 
 @interface SettingsMenuViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 

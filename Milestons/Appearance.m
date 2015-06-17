@@ -7,13 +7,6 @@
 //
 
 #import "Appearance.h"
-#import "ScrapbookListViewController.h"
-
-#import "AddScrapbookViewController.h"
-#import "EntryListViewController.h"
-
-#import "AddEntryViewController.h"
-
 
 @implementation Appearance
 

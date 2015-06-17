@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "CustomScrapbookCell.h"
+#import "ScrapbookListViewController.h"
+#import "ScrapbookController.h"
+#import "CustomScrapbookCell.h"
+#import <QuartzCore/QuartzCore.h>
+
 @import UIKit;
 
 

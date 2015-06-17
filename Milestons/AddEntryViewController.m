@@ -7,18 +7,8 @@
 //
 
 #import "AddEntryViewController.h"
-#import "Appearance.h"
-#import "EntryController.h"
-#import "Entry.h"
-#import "PhotoController.h"
-#import "CollectionViewDataSource.h"
-#import "CustomCollectionViewCell2.h"
 
-@import MessageUI;
-@import AVFoundation;
-@import AudioToolbox;
-
-@interface AddEntryViewController () <UITextFieldDelegate, UITextViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, AVAudioPlayerDelegate>
+@interface AddEntryViewController () <UITextFieldDelegate, UITextViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;

@@ -7,14 +7,7 @@
 //
 
 #import "CustomEntryCell.h"
-#import "EntryController.h"
-#import "ScrapbookController.h"
-#import "Entry.h"
-#import "PhotoController.h"
-#import "CollectionViewDataSource.h"
-#import "CustomCollectionViewCell.h"
-#import "EntryListViewController.h"
-@import QuartzCore;
+
 
 @interface CustomEntryCell () <UICollectionViewDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *backImageView;

@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-@import UIKit;
-
+#import "PhotoController.h"
+#import "CustomCollectionViewCell.h"
 #import "EntryController.h"
+
+@import UIKit;
 
 @interface CollectionViewDataSource : NSObject <UICollectionViewDataSource>
 

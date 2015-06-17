@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
 #import "ScrapbookController.h"
+#import "EntryController.h"
+#import "ScrapbookListViewController.h"
 
 @import ParseUI;
+@import QuartzCore;
 
 @protocol deleteCellDelegate;
 
