@@ -48,6 +48,7 @@
 		CF2C23691AF7E1D400D28EAB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23681AF7E1D400D28EAB /* Social.framework */; };
 		CF2C24871B01008A00D28EAB /* CustomScrapbookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C24861B01008A00D28EAB /* CustomScrapbookCell.m */; };
 		CF2C248A1B01009F00D28EAB /* CustomEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C24891B01009F00D28EAB /* CustomEntryCell.m */; };
+		CFE04C071B1A0DEA001F1DA6 /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE04C061B1A0DEA001F1DA6 /* SettingsController.m */; };
 		CFE04C0A1B1A1C73001F1DA6 /* CollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE04C091B1A1C73001F1DA6 /* CollectionViewDataSource.m */; };
 		CFE04C0D1B1A3986001F1DA6 /* StorePurchaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE04C0C1B1A3986001F1DA6 /* StorePurchaseController.m */; };
 		CFE04C151B1A3A75001F1DA6 /* PurchasedDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE04C101B1A3A75001F1DA6 /* PurchasedDataController.m */; };
@@ -71,6 +72,8 @@
 		CFE361041B23739D003323A7 /* UserController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE361031B23739D003323A7 /* UserController.m */; };
 		CFE361061B237B65003323A7 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE361051B237B65003323A7 /* AddressBookUI.framework */; };
 		CFE361081B237B74003323A7 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE361071B237B74003323A7 /* AddressBook.framework */; };
+		CFE3610B1B23D24E003323A7 /* AnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE3610A1B23D24E003323A7 /* AnimationController.m */; };
+		CFE361161B23EDDD003323A7 /* CustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE361151B23EDDD003323A7 /* CustomSegue.m */; };
 		CFE361211B253B58003323A7 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE361201B253B58003323A7 /* iAd.framework */; };
 		CFE361291B28B8DE003323A7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE361281B28B8DE003323A7 /* AVFoundation.framework */; };
 		CFE3612B1B28B925003323A7 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE3612A1B28B925003323A7 /* AVKit.framework */; };
@@ -195,6 +198,8 @@
 		CF2C24861B01008A00D28EAB /* CustomScrapbookCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomScrapbookCell.m; sourceTree = "<group>"; };
 		CF2C24881B01009F00D28EAB /* CustomEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomEntryCell.h; sourceTree = "<group>"; };
 		CF2C24891B01009F00D28EAB /* CustomEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomEntryCell.m; sourceTree = "<group>"; };
+		CFE04C051B1A0DEA001F1DA6 /* SettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsController.h; sourceTree = "<group>"; };
+		CFE04C061B1A0DEA001F1DA6 /* SettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsController.m; sourceTree = "<group>"; };
 		CFE04C081B1A1C73001F1DA6 /* CollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewDataSource.h; sourceTree = "<group>"; };
 		CFE04C091B1A1C73001F1DA6 /* CollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewDataSource.m; sourceTree = "<group>"; };
 		CFE04C0B1B1A3986001F1DA6 /* StorePurchaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StorePurchaseController.h; path = Milestons/StorePurchaseController.h; sourceTree = "<group>"; };
@@ -239,6 +244,10 @@
 		CFE361031B23739D003323A7 /* UserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserController.m; sourceTree = "<group>"; };
 		CFE361051B237B65003323A7 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		CFE361071B237B74003323A7 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		CFE361091B23D24E003323A7 /* AnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationController.h; sourceTree = "<group>"; };
+		CFE3610A1B23D24E003323A7 /* AnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationController.m; sourceTree = "<group>"; };
+		CFE361141B23EDDD003323A7 /* CustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegue.h; sourceTree = "<group>"; };
+		CFE361151B23EDDD003323A7 /* CustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegue.m; sourceTree = "<group>"; };
 		CFE361201B253B58003323A7 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		CFE361281B28B8DE003323A7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		CFE3612A1B28B925003323A7 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
@@ -353,10 +362,16 @@
 				CF2C22D61AF5B40A00D28EAB /* ViewController.m */,
 				CF2C23141AF5C26200D28EAB /* Appearance.h */,
 				CF2C23151AF5C26200D28EAB /* Appearance.m */,
+				CFE361091B23D24E003323A7 /* AnimationController.h */,
+				CFE3610A1B23D24E003323A7 /* AnimationController.m */,
+				CFE04C051B1A0DEA001F1DA6 /* SettingsController.h */,
+				CFE04C061B1A0DEA001F1DA6 /* SettingsController.m */,
 				CFEC12E71B0C117800AB6C1B /* MyLoginViewController.h */,
 				CFEC12E81B0C117800AB6C1B /* MyLoginViewController.m */,
 				CFEC12EA1B0C119100AB6C1B /* MySignUpViewController.h */,
 				CFEC12EB1B0C119100AB6C1B /* MySignUpViewController.m */,
+				CFE361141B23EDDD003323A7 /* CustomSegue.h */,
+				CFE361151B23EDDD003323A7 /* CustomSegue.m */,
 				CFE360AB1B2272FD003323A7 /* EXPhotoViewer */,
 				CFE04C341B1A5802001F1DA6 /* SettingsMenu */,
 				CF2C230C1AF5B50100D28EAB /* Scrapbooks */,
@@ -812,6 +827,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFE04C3E1B1AA757001F1DA6 /* CustomCollectionViewCell.m in Sources */,
+				CFE361161B23EDDD003323A7 /* CustomSegue.m in Sources */,
 				CF2C23021AF5B49300D28EAB /* ScrapbookController.m in Sources */,
 				CF2C22D71AF5B40A00D28EAB /* ViewController.m in Sources */,
 				CFE361041B23739D003323A7 /* UserController.m in Sources */,
@@ -821,11 +837,13 @@
 				CF2C248A1B01009F00D28EAB /* CustomEntryCell.m in Sources */,
 				CF2C22D41AF5B40A00D28EAB /* AppDelegate.m in Sources */,
 				CFE04C381B1A6724001F1DA6 /* SWRevealViewController.m in Sources */,
+				CFE3610B1B23D24E003323A7 /* AnimationController.m in Sources */,
 				CF2C23081AF5B4C300D28EAB /* EntryListViewDataSource.m in Sources */,
 				CF2C22D11AF5B40A00D28EAB /* main.m in Sources */,
 				CF2C23051AF5B4B000D28EAB /* ScrapbookListViewDataSource.m in Sources */,
 				CFE360791B225ECE003323A7 /* AFURLRequestSerialization.m in Sources */,
 				CFEC12E91B0C117800AB6C1B /* MyLoginViewController.m in Sources */,
+				CFE04C071B1A0DEA001F1DA6 /* SettingsController.m in Sources */,
 				CFE04C411B1AA92E001F1DA6 /* CustomCollectionViewCell2.m in Sources */,
 				CF2C230B1AF5B4D800D28EAB /* EntryListViewController.m in Sources */,
 				CFEC12EC1B0C119100AB6C1B /* MySignUpViewController.m in Sources */,
@@ -1181,7 +1199,6 @@
 				CFE361521B293DDC003323A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		CFE361561B293DDC003323A7 /* Build configuration list for PBXNativeTarget "MilestonesKitTests" */ = {
 			isa = XCConfigurationList;
@@ -1190,7 +1207,6 @@
 				CFE361541B293DDC003323A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
