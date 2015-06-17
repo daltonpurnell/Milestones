@@ -25,7 +25,6 @@
 @interface ScrapbookListViewController () <UITableViewDelegate, PFSignUpViewControllerDelegate, PFLogInViewControllerDelegate, UIViewControllerTransitioningDelegate, AVAudioPlayerDelegate>
 
 @property (nonatomic, strong) PFUser *currentUser;
-@property (nonatomic, strong)AVAudioPlayer *audioPlayer;
 
 @end
 
@@ -174,23 +173,7 @@
 
 -(void)refreshTable {
     
-    [self.refreshControl beginRefreshing];
-    NSString *pathAndFileName = [[NSBundle mainBundle] pathForResource:@"Fast Swoosh" ofType:@"mp3"];
-    if ([[NSFileManager defaultManager] fileExistsAtPath:pathAndFileName])
-    {
-        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:pathAndFileName] error:NULL];
-
-        self.audioPlayer.delegate=self;
-        [self.audioPlayer prepareToPlay];
-        [self.audioPlayer play];
-        NSLog(@"File exists in BUNDLE");
-    }
-    else
-    {
-        NSLog(@"File not found");
-    }
-
-    
+    [self.refreshControl beginRefreshing];    
     [[ScrapbookController sharedInstance]loadScrapbooksFromParse:^(NSError *error) {
         [self.tableView reloadData];
         [self.refreshControl endRefreshing];

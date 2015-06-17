@@ -1,0 +1,19 @@
+dependencies: \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/MyLoginViewController.m \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/MyLoginViewController.h \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseUI.framework/Headers/PFTextField.h \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseUI.framework/Headers/PFSignUpViewController.h \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseUI.framework/Headers/PFSignUpView.h \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseUI.framework/Headers/PFQueryCollectionViewController.h \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseUI.framework/Headers/PFTableViewCell.h \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseUI.framework/Headers/PFPurchaseTableViewCell.h \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseUI.framework/Headers/PFQueryTableViewController.h \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseUI.framework/Headers/PFProductTableViewController.h \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseUI.framework/Headers/PFLogInViewController.h \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseUI.framework/Headers/PFLogInView.h \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseUI.framework/Headers/PFImageView.h \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseUI.framework/Headers/ParseUIConstants.h \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseUI.framework/Headers/PFCollectionViewCell.h \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseUI.framework/Headers/ParseUI.h \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseUI.framework/Modules/module.modulemap \
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/MySignUpViewController.h

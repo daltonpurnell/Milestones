@@ -227,7 +227,7 @@
                                                 <action selector="doneButtonTapped:" destination="fBN-QD-Djk" eventType="touchUpInside" id="y9N-Kd-3O7"/>
                                             </connections>
                                         </button>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fQg-7j-ATu">
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fQg-7j-ATu">
                                             <rect key="frame" x="23" y="10" width="250" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="ie0-2l-thy"/>

@@ -19,8 +19,6 @@
 @interface AddScrapbookViewController () <UITextFieldDelegate, AVAudioPlayerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (strong, nonatomic) AVAudioPlayer *audioPlayer;
-
 @end
 
 @implementation AddScrapbookViewController
@@ -140,20 +138,6 @@
         
     } else {
         [[ScrapbookController sharedInstance] createScrapbookWithTitle:self.titleTextField.text date:[NSDate date] photo:self.imageView.image];
-    }
-    NSString *pathAndFileName = [[NSBundle mainBundle] pathForResource:@"success" ofType:@"mp3"];
-    if ([[NSFileManager defaultManager] fileExistsAtPath:pathAndFileName])
-    {
-        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:pathAndFileName] error:NULL];
-        
-        self.audioPlayer.delegate=self;
-        [self.audioPlayer prepareToPlay];
-        [self.audioPlayer play];
-        NSLog(@"File exists in BUNDLE");
-    }
-    else
-    {
-        NSLog(@"File not found");
     }
     
 [self dismissViewControllerAnimated:YES completion:nil];
