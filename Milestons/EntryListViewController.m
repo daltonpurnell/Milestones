@@ -28,7 +28,7 @@
 
 @property (weak, nonatomic) IBOutlet UINavigationItem *navBar;
 @property (nonatomic, strong) EntryListViewDataSource *tableDataSource;
-
+@property (nonatomic, strong) NSString *emailSaved;
 
 @end
 
@@ -102,7 +102,6 @@
 }
 
 
-// Implement this if you want to do additional work when the picker is cancelled by the user. This method may be optional in a future iOS 8.0 seed.
 - (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker
 {
 }
@@ -141,7 +140,6 @@
                 mailViewController.mailComposeDelegate = self;
                 [self presentViewController:mailViewController animated:YES completion:nil];
                 
-//                [mailViewController setToRecipients:@[emailValueSelected]];
                 [mailViewController setToRecipients:@[emailAddress]];
 
                 [mailViewController setSubject:@"Contribute to my scrapbook!"];
@@ -149,22 +147,11 @@
                 [mailViewController setMessageBody:@"I would like to add you as a contributor to my scrapbook! Download or log in to MyMilestones to start contributing." isHTML:NO]; // part of string should be link to app store to download app
                 [self presentViewController:mailViewController animated:YES completion:nil];
                 NSLog(@"Invite");
+    
+    
+    self.emailSaved = emailAddress;
             }
-//        } else {
-//            // Let them know there was an error
-//            
-//            [[[UIAlertView alloc] initWithTitle:@"Error adding contributor"
-//                                        message:@"Please try again"
-//                                       delegate:nil
-//                              cancelButtonTitle:@"OK"
-//                              otherButtonTitles:nil] show];
-//            
-//            NSLog(@"Error finding user: %@", error);
-//        }
-////    }];
 
-//    }
-//}
 
 
 
@@ -351,8 +338,39 @@
                         error:(NSError*)error
 {
     if(error) NSLog(@"ERROR - mailComposeController: %@", [error localizedDescription]);
+    
+    if (result == MFMailComposeResultSent || result == MFMailComposeResultSaved) {
+        // call look up method with email
+        [self lookUpEmail];
+    }
+    
     [self dismissViewControllerAnimated:YES completion:nil];
     return;
+}
+
+-(void)lookUpEmail {
+    // When we get the email address of someone back
+    [[UserController sharedInstance] findUsersWithUsernameFromParse:self.emailSaved completion:^(PFUser *contributor, NSError *error) {
+        if (!error) {
+            if (contributor) {
+                [[ScrapbookController sharedInstance] addContributor:contributor toScrapbook:self.scrapbook];
+            } else {
+                // create invite for email and scrapbook
+            }
+        } else {
+            // Let them know there was an error
+            
+            [[[UIAlertView alloc] initWithTitle:@"Error adding contributor"
+                                        message:@"Please try again"
+                                       delegate:nil
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles:nil] show];
+            
+            NSLog(@"Error finding user: %@", error);
+        }
+    }];
+    
+    self.emailSaved = nil;
 }
 
 

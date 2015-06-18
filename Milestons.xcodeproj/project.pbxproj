@@ -48,6 +48,8 @@
 		CF2C23691AF7E1D400D28EAB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C23681AF7E1D400D28EAB /* Social.framework */; };
 		CF2C24871B01008A00D28EAB /* CustomScrapbookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C24861B01008A00D28EAB /* CustomScrapbookCell.m */; };
 		CF2C248A1B01009F00D28EAB /* CustomEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C24891B01009F00D28EAB /* CustomEntryCell.m */; };
+		CF6E51F01B326479006CC03D /* Invite.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6E51EF1B326479006CC03D /* Invite.m */; };
+		CF6E51F31B32649E006CC03D /* InviteController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6E51F21B32649E006CC03D /* InviteController.m */; };
 		CFE04C071B1A0DEA001F1DA6 /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE04C061B1A0DEA001F1DA6 /* SettingsController.m */; };
 		CFE04C0A1B1A1C73001F1DA6 /* CollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE04C091B1A1C73001F1DA6 /* CollectionViewDataSource.m */; };
 		CFE04C0D1B1A3986001F1DA6 /* StorePurchaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE04C0C1B1A3986001F1DA6 /* StorePurchaseController.m */; };
@@ -198,6 +200,10 @@
 		CF2C24861B01008A00D28EAB /* CustomScrapbookCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomScrapbookCell.m; sourceTree = "<group>"; };
 		CF2C24881B01009F00D28EAB /* CustomEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomEntryCell.h; sourceTree = "<group>"; };
 		CF2C24891B01009F00D28EAB /* CustomEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomEntryCell.m; sourceTree = "<group>"; };
+		CF6E51EE1B326479006CC03D /* Invite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Invite.h; path = Milestons/Invite.h; sourceTree = "<group>"; };
+		CF6E51EF1B326479006CC03D /* Invite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Invite.m; path = Milestons/Invite.m; sourceTree = "<group>"; };
+		CF6E51F11B32649E006CC03D /* InviteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteController.h; sourceTree = "<group>"; };
+		CF6E51F21B32649E006CC03D /* InviteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteController.m; sourceTree = "<group>"; };
 		CFE04C051B1A0DEA001F1DA6 /* SettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsController.h; sourceTree = "<group>"; };
 		CFE04C061B1A0DEA001F1DA6 /* SettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsController.m; sourceTree = "<group>"; };
 		CFE04C081B1A1C73001F1DA6 /* CollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewDataSource.h; sourceTree = "<group>"; };
@@ -465,6 +471,10 @@
 				CF2C233F1AF6CDCE00D28EAB /* Entry.m */,
 				CF2C233B1AF6CDCE00D28EAB /* Scrapbook.h */,
 				CF2C233C1AF6CDCE00D28EAB /* Scrapbook.m */,
+				CF6E51EE1B326479006CC03D /* Invite.h */,
+				CF6E51EF1B326479006CC03D /* Invite.m */,
+				CF6E51F11B32649E006CC03D /* InviteController.h */,
+				CF6E51F21B32649E006CC03D /* InviteController.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -832,6 +842,7 @@
 				CF2C22D71AF5B40A00D28EAB /* ViewController.m in Sources */,
 				CFE361041B23739D003323A7 /* UserController.m in Sources */,
 				CFE360AE1B2272FD003323A7 /* EXPhotoViewer.m in Sources */,
+				CF6E51F01B326479006CC03D /* Invite.m in Sources */,
 				CF2C23431AF6CDCE00D28EAB /* Photo.m in Sources */,
 				CFE360781B225ECE003323A7 /* AFURLConnectionOperation.m in Sources */,
 				CF2C248A1B01009F00D28EAB /* CustomEntryCell.m in Sources */,
@@ -858,6 +869,7 @@
 				CFE04C151B1A3A75001F1DA6 /* PurchasedDataController.m in Sources */,
 				CFE360741B225ECE003323A7 /* AFHTTPRequestOperationManager.m in Sources */,
 				CFE04C3B1B1A67E7001F1DA6 /* SettingsMenuViewController.m in Sources */,
+				CF6E51F31B32649E006CC03D /* InviteController.m in Sources */,
 				CF2C22F61AF5B45900D28EAB /* ScrapbookListViewController.m in Sources */,
 				CFE3607A1B225ECE003323A7 /* AFURLResponseSerialization.m in Sources */,
 				CF2C23131AF5C03C00D28EAB /* AddEntryViewController.m in Sources */,
@@ -1199,6 +1211,7 @@
 				CFE361521B293DDC003323A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CFE361561B293DDC003323A7 /* Build configuration list for PBXNativeTarget "MilestonesKitTests" */ = {
 			isa = XCConfigurationList;
@@ -1207,6 +1220,7 @@
 				CFE361541B293DDC003323A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

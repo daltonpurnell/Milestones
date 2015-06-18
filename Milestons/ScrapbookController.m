@@ -7,8 +7,7 @@
 //
 
 #import "ScrapbookController.h"
-#import "Scrapbook.h"
-
+#import "EntryController.h"
 @interface ScrapbookController()
 
 @property (nonatomic, strong) NSArray *scrapbooks;
@@ -107,11 +106,28 @@
     [currentACL setWriteAccess:YES forUser:addedContributor];
     scrapbook.ACL = currentACL;
     
-    // Get all the entries for the scrapbook and update their ACLs to match the scrapbook ACL
-//    for (Entry *entry in scrapbook.entries) {
-//        entry.ACL = scrapbook.ACL;
-//    }
+    PFQuery *entriesQuery = [Entry query];
+    
+    [entriesQuery whereKey:@"scrapbook" equalTo:scrapbook];
+    
+    [entriesQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+       
+        if (!error) {
+            // Get all the entries for the scrapbook and update their ACLs to match the scrapbook ACL
 
+                for (Entry *entry in objects) {
+                    entry.ACL = scrapbook.ACL;
+                    [entry saveEventually];
+                }
+                [scrapbook saveEventually];
+            
+        } else {
+            
+            // error
+        }
+        
+    }];
+    
 }
 
 #pragma mark - Delete
