@@ -107,18 +107,13 @@
 {
 }
 
+
+
 #pragma mark - ABPeoplePickerNavigationController helper methods
 
 - (void)didSelectPerson:(ABRecordRef)person identifier:(ABMultiValueIdentifier)identifier
 {
 
-    // When we get the email address of someone back
-//        [[UserController sharedInstance] findUsersWithUsernameFromParse:@"emailAddressFromContacts" completion:^(PFUser *contributor, NSError *error) {
-//        if (!error) {
-//            if (contributor) {
-//                [[ScrapbookController sharedInstance] addContributor:contributor toScrapbook:self.scrapbook];
-//            } else
-//            {
                 // have user invite friend to contribute
                 NSString *emailAddress = @"no email address";
                 ABMultiValueRef emails = ABRecordCopyValue(person, kABPersonEmailProperty);
@@ -151,10 +146,7 @@
     
     
     self.emailSaved = emailAddress;
-            }
-
-
-
+}
 
 
 
@@ -361,7 +353,6 @@
             }
         } else {
             // Let them know there was an error
-            
             [[[UIAlertView alloc] initWithTitle:@"Error adding contributor"
                                         message:@"Please try again"
                                        delegate:nil
