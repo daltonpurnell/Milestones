@@ -17,6 +17,7 @@
 #import "CustomCollectionViewCell.h"
 #import "UserController.h"
 #import "ScrapbookController.h"
+#import "InviteController.h"
 
 @import Parse;
 @import ParseUI;
@@ -356,6 +357,7 @@
                 [[ScrapbookController sharedInstance] addContributor:contributor toScrapbook:self.scrapbook];
             } else {
                 // create invite for email and scrapbook
+                [[InviteController sharedInstance]createInviteWithEmail:self.emailSaved forScrapbook:self.scrapbook];
             }
         } else {
             // Let them know there was an error

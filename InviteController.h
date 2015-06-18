@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ScrapbookController.h"
+#import "Invite.h"
 
 @interface InviteController : NSObject
+
+-(void)createInviteWithEmail:(NSString *)email forScrapbook: (Scrapbook *)scrapbook;
+
++ (InviteController *) sharedInstance;
 
 @end

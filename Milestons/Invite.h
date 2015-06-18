@@ -9,7 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "ScrapbookController.h"
 
-@interface Invite : NSObject
+@import Parse;
+
+@class Scrapbook;
+
+@interface Invite : PFObject <PFSubclassing>
 
 @property (nonatomic, strong) NSString *emailAddress;
 @property (nonatomic, strong) Scrapbook *scrapbook;

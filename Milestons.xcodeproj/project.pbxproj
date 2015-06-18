@@ -473,8 +473,6 @@
 				CF2C233C1AF6CDCE00D28EAB /* Scrapbook.m */,
 				CF6E51EE1B326479006CC03D /* Invite.h */,
 				CF6E51EF1B326479006CC03D /* Invite.m */,
-				CF6E51F11B32649E006CC03D /* InviteController.h */,
-				CF6E51F21B32649E006CC03D /* InviteController.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -567,6 +565,8 @@
 				CF2C23011AF5B49300D28EAB /* ScrapbookController.m */,
 				CFE361021B23739D003323A7 /* UserController.h */,
 				CFE361031B23739D003323A7 /* UserController.m */,
+				CF6E51F11B32649E006CC03D /* InviteController.h */,
+				CF6E51F21B32649E006CC03D /* InviteController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
