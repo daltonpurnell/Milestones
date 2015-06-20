@@ -50,6 +50,9 @@
 		CF2C248A1B01009F00D28EAB /* CustomEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C24891B01009F00D28EAB /* CustomEntryCell.m */; };
 		CF6E51F01B326479006CC03D /* Invite.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6E51EF1B326479006CC03D /* Invite.m */; };
 		CF6E51F31B32649E006CC03D /* InviteController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6E51F21B32649E006CC03D /* InviteController.m */; };
+		CF6E51FB1B350EF4006CC03D /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = CF6E51F61B350EF4006CC03D /* main.js */; };
+		CF6E51FC1B350EF4006CC03D /* global.json in Resources */ = {isa = PBXBuildFile; fileRef = CF6E51F81B350EF4006CC03D /* global.json */; };
+		CF6E51FD1B350EF4006CC03D /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = CF6E51FA1B350EF4006CC03D /* index.html */; };
 		CFE04C071B1A0DEA001F1DA6 /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE04C061B1A0DEA001F1DA6 /* SettingsController.m */; };
 		CFE04C0A1B1A1C73001F1DA6 /* CollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE04C091B1A1C73001F1DA6 /* CollectionViewDataSource.m */; };
 		CFE04C0D1B1A3986001F1DA6 /* StorePurchaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE04C0C1B1A3986001F1DA6 /* StorePurchaseController.m */; };
@@ -204,6 +207,9 @@
 		CF6E51EF1B326479006CC03D /* Invite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Invite.m; path = Milestons/Invite.m; sourceTree = "<group>"; };
 		CF6E51F11B32649E006CC03D /* InviteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteController.h; sourceTree = "<group>"; };
 		CF6E51F21B32649E006CC03D /* InviteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteController.m; sourceTree = "<group>"; };
+		CF6E51F61B350EF4006CC03D /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
+		CF6E51F81B350EF4006CC03D /* global.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = global.json; sourceTree = "<group>"; };
+		CF6E51FA1B350EF4006CC03D /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		CFE04C051B1A0DEA001F1DA6 /* SettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsController.h; sourceTree = "<group>"; };
 		CFE04C061B1A0DEA001F1DA6 /* SettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsController.m; sourceTree = "<group>"; };
 		CFE04C081B1A1C73001F1DA6 /* CollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewDataSource.h; sourceTree = "<group>"; };
@@ -394,6 +400,7 @@
 		CF2C22CE1AF5B40A00D28EAB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CF6E51F41B350EF4006CC03D /* MyCloudCode */,
 				CFE3611D1B24840A003323A7 /* Audio */,
 				CFE361281B28B8DE003323A7 /* AVFoundation.framework */,
 				CFE3612A1B28B925003323A7 /* AVKit.framework */,
@@ -475,6 +482,40 @@
 				CF6E51EF1B326479006CC03D /* Invite.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		CF6E51F41B350EF4006CC03D /* MyCloudCode */ = {
+			isa = PBXGroup;
+			children = (
+				CF6E51F51B350EF4006CC03D /* cloud */,
+				CF6E51F71B350EF4006CC03D /* config */,
+				CF6E51F91B350EF4006CC03D /* public */,
+			);
+			path = MyCloudCode;
+			sourceTree = "<group>";
+		};
+		CF6E51F51B350EF4006CC03D /* cloud */ = {
+			isa = PBXGroup;
+			children = (
+				CF6E51F61B350EF4006CC03D /* main.js */,
+			);
+			path = cloud;
+			sourceTree = "<group>";
+		};
+		CF6E51F71B350EF4006CC03D /* config */ = {
+			isa = PBXGroup;
+			children = (
+				CF6E51F81B350EF4006CC03D /* global.json */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		CF6E51F91B350EF4006CC03D /* public */ = {
+			isa = PBXGroup;
+			children = (
+				CF6E51FA1B350EF4006CC03D /* index.html */,
+			);
+			path = public;
 			sourceTree = "<group>";
 		};
 		CFE04C0E1B1A3999001F1DA6 /* InAppPurchases */ = {
@@ -803,8 +844,11 @@
 				CFE04C191B1A3A9E001F1DA6 /* Products.json in Resources */,
 				CFEC12DC1B04379500AB6C1B /* Main.storyboard in Resources */,
 				CF2C22DC1AF5B40A00D28EAB /* Images.xcassets in Resources */,
+				CF6E51FD1B350EF4006CC03D /* index.html in Resources */,
 				CFE3612D1B28C30F003323A7 /* New Notification 02.wav in Resources */,
+				CF6E51FC1B350EF4006CC03D /* global.json in Resources */,
 				CFE361311B28C335003323A7 /* Fast Swoosh.mp3 in Resources */,
+				CF6E51FB1B350EF4006CC03D /* main.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
