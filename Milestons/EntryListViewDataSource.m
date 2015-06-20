@@ -64,6 +64,9 @@
     
     Entry *entry = [self.entries objectAtIndex:indexPath.row];
     [[EntryController sharedInstance] removeEntry:entry];
+    
+    NSMutableArray *mutableEntries = [NSMutableArray arrayWithArray:self.entries];
+    [mutableEntries removeObject:entry];
 
     NSLog(@"cell deleted");
     [[NSNotificationCenter defaultCenter] postNotificationName:entryCellDeletedNotificationKey object:nil userInfo:nil];
