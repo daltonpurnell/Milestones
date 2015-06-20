@@ -31,6 +31,7 @@
     
     // set text field to non editable
     self.titleTextField.enabled = NO;
+    self.titleTextField.textColor = [UIColor darkGrayColor];
     
    // round corners on back image view
     self.backImageView.clipsToBounds = YES;
