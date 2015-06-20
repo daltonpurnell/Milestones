@@ -1,6 +1,6 @@
 
 // Use Parse.Cloud.define to define as many cloud functions as you want.
-Parse.Cloud.define("updateInviteForAcceptedResponse", function(request, response) {
+Parse.Cloud.define("searchForPendingInvites", function(request, response) {
     
     Parse.Cloud.useMasterKey();
     var Invite = Parse.Object.extend("Invite");
@@ -8,13 +8,24 @@ Parse.Cloud.define("updateInviteForAcceptedResponse", function(request, response
     
         inviteRecipientToSignUp.save(null, {
             success: function(invite) {
-                        var recipientUsernames = request.params.emailAddress;
-                        if (recipientUsernames.length > 0) {
+                        var recipientUsername = request.params.emailAddress;
+                                     console.log(recipientUsername);
+                        if (recipientUsername) {
                                      
                                      var pushQuery = new Parse.Query(Invite);
-                                     pushQuery.equalTo("accountSetup",
-                                     pushQuery.containedIn("objectId", emailAddress);
-                                        
+                                     pushQuery.equalTo("emailAddress", recipientUsername);
+                                     pushQuery.includeKey("scrapbook.entries");
+                                     pushQuery.find({
+                                                    success: function(invitesArray) {
+                                                    console.log(invitesArray);
+                                                    // for loop through invite array
+                                                    
+                                                    },
+                                                    error: function(error) {
+                                                    response.error(error);
+                                                    console.error(error);
+                                                    }
+                                                    });
         
         
     }

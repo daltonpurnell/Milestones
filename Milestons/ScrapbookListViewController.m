@@ -151,6 +151,15 @@
 - (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
     self.currentUser = user;
     
+    [PFCloud callFunctionInBackground:@"searchForPendingInvites" withParameters:@{@"emailAddress": user.username} block:^(id result, NSError *error) {
+        if (!error) {
+             [self.tableView reloadData];
+        } else {
+            
+            NSLog(@"%@", error);
+        }
+    }];
+    
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }

@@ -55,6 +55,7 @@
     if (localNotification) {
         application.applicationIconBadgeNumber = 0;
         
+        
     }
     
     return YES;

@@ -1,0 +1,14 @@
+{
+  "global": {
+    "parseVersion": "1.4.2"
+  },
+  "applications": {
+    "Milestones": {
+      "applicationId": "ZP4dc4didhOZFuurMoswvziSSuuc1aHByCsZT5MC",
+      "masterKey": "mYGqsX4VSMKODNW2uTPv16NT16mQW6bIBEpMeC8t"
+    },
+    "_default": {
+      "link": "Milestones"
+    }
+  }
+}

@@ -25,7 +25,7 @@
 @import MessageUI;
 @import AVFoundation;
 
-@interface EntryListViewController () <UITableViewDelegate, ABPeoplePickerNavigationControllerDelegate, MFMailComposeViewControllerDelegate, AVAudioPlayerDelegate>
+@interface EntryListViewController () <UITableViewDelegate, ABPeoplePickerNavigationControllerDelegate, MFMailComposeViewControllerDelegate, AVAudioPlayerDelegate, UIImagePickerControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UINavigationItem *navBar;
 @property (nonatomic, strong) EntryListViewDataSource *tableDataSource;
@@ -363,7 +363,7 @@
         }
     }];
     
-    self.emailSaved = nil;
+//    self.emailSaved = nil;
 }
 
 
