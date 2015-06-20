@@ -236,21 +236,37 @@
 #pragma mark - Collection view data source methods
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-
-    //create cell...
-    CustomCollectionViewCell2 *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
-
-    [cell updateWithImage:self.images[indexPath.row]];
     
-    return cell;
-    
-    
+    if (self.images.count == 0) {
+        
+        // return emptyState cell
+        UICollectionViewCell *emptyStateCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"emptyStateCell" forIndexPath:indexPath];
+        
+        return emptyStateCell;
+        
+    } else {
+        
+        
+        //create cell...
+        CustomCollectionViewCell2 *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
+        
+        [cell updateWithImage:self.images[indexPath.row]];
+        
+        return cell;
+        
+        
+    }
 }
 
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return self.images.count;
+    if (self.images.count == 0) {
+        return 1;
+    } else {
+        
+        return self.images.count;
+    }
 }
 
 

@@ -526,6 +526,23 @@
                                             <outlet property="imageView" destination="4TZ-AZ-gAa" id="BXO-M1-uoB"/>
                                         </connections>
                                     </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="emptyStateCell" id="4ix-N2-r94" customClass="CustomCollectionViewCell2">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dashedLineSquare" translatesAutoresizingMaskIntoConstraints="NO" id="Bfr-3e-FiI">
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <outlet property="imageView" destination="Bfr-3e-FiI" id="e8S-hY-mqJ"/>
+                                        </connections>
+                                    </collectionViewCell>
                                 </cells>
                                 <variation key="default">
                                     <mask key="constraints">
