@@ -30,7 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.optionsList= [[NSArray alloc] initWithObjects: @"Send Feedback", @"Rate",
+    self.optionsList= [[NSArray alloc] initWithObjects: @"Send Feedback",
                   @"Log Out", nil];
     
     self.tableView.backgroundColor = [UIColor colorWithRed:74/255.0 green:75/255.0 blue:76/255.0 alpha:1];
@@ -102,29 +102,12 @@
         MFMailComposeViewController *mailViewController = [MFMailComposeViewController new];
         mailViewController.mailComposeDelegate = self;
         [mailViewController setToRecipients:@[@"dalton.purnell61@gmail.com"]];
-        [mailViewController setCcRecipients:@[@"daltonpurnell@live.com"]];
         [mailViewController setSubject:@"Feedback message"];
         [self presentViewController:mailViewController animated:YES completion:nil];
         NSLog(@"Send Feedback");
     }
     
     if (indexPath.row == 1) {
-        
-        // Take user to app store (this doesn't seem to be working)
-        {
-            NSString *appStoreString = @"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa";
-            appStoreString = [NSString stringWithFormat:@"%@/wa/viewContentsUserReviews?", appStoreString];
-            appStoreString = [NSString stringWithFormat:@"%@type=Purple+Software&id=", appStoreString];
-            
-            // app id from itunesconnect
-            appStoreString = [NSString stringWithFormat:@"%@997564176", appStoreString];
-            
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:appStoreString]];
-        }
-        NSLog(@"Rate");
-    }
-    
-    if (indexPath.row == 2) {
         [self presentLogOutAlert];
         NSLog(@"Log Out");
     }
