@@ -516,15 +516,38 @@
                                             <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dashedLineSquare" translatesAutoresizingMaskIntoConstraints="NO" id="4TZ-AZ-gAa">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dashedLineSquare" translatesAutoresizingMaskIntoConstraints="NO" id="gqD-PE-SJ2">
                                                     <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <connections>
-                                            <outlet property="imageView" destination="4TZ-AZ-gAa" id="BXO-M1-uoB"/>
-                                        </connections>
+                                        <constraints>
+                                            <constraint firstItem="gqD-PE-SJ2" firstAttribute="leading" secondItem="QHm-t2-MBj" secondAttribute="leading" id="6g2-PG-f0q"/>
+                                            <constraint firstAttribute="trailing" secondItem="gqD-PE-SJ2" secondAttribute="trailing" id="OTA-Jd-qOS"/>
+                                            <constraint firstAttribute="bottom" secondItem="gqD-PE-SJ2" secondAttribute="bottom" id="T3z-RX-qaK"/>
+                                            <constraint firstItem="gqD-PE-SJ2" firstAttribute="top" secondItem="QHm-t2-MBj" secondAttribute="top" id="kpZ-zj-Mlo"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="emptyStateCell" id="AF2-9A-yZu" customClass="CustomCollectionViewCell2">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dashedLineSquare" translatesAutoresizingMaskIntoConstraints="NO" id="pAB-9H-eAc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="pAB-9H-eAc" secondAttribute="trailing" id="4qa-6S-Yfp"/>
+                                            <constraint firstAttribute="bottom" secondItem="pAB-9H-eAc" secondAttribute="bottom" id="dTP-sC-eEQ"/>
+                                            <constraint firstItem="pAB-9H-eAc" firstAttribute="top" secondItem="AF2-9A-yZu" secondAttribute="top" id="dwz-3n-hLc"/>
+                                            <constraint firstItem="pAB-9H-eAc" firstAttribute="leading" secondItem="AF2-9A-yZu" secondAttribute="leading" id="u3M-y1-9Ws"/>
+                                        </constraints>
                                     </collectionViewCell>
                                 </cells>
                                 <variation key="default">
