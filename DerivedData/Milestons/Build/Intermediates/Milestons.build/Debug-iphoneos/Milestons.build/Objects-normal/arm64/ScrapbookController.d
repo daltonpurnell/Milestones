@@ -27,6 +27,4 @@ dependencies: \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/Parse.framework/Headers/PFNullability.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/Parse.framework/Headers/PFACL.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/Parse.framework/Headers/Parse.h \
-  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/Parse.framework/Modules/module.modulemap \
-  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/EntryController.h \
-  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Entry.h
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/Parse.framework/Modules/module.modulemap

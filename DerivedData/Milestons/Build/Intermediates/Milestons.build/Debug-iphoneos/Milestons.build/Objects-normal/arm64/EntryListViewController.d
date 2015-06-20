@@ -55,6 +55,4 @@ dependencies: \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/ParseUI.framework/Modules/module.modulemap \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/EntryListViewDataSource.h \
   /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/CustomCollectionViewCell.h \
-  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/UserController.h \
-  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/InviteController.h \
-  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/Milestons/Invite.h
+  /Users/djp1989/Documents/Development/PersonalProjects/Milestons/UserController.h
