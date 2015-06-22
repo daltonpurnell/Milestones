@@ -186,20 +186,4 @@
 }
 
 
-
-//#pragma mark - banner view delegate methods
-//
-//-(void)bannerViewDidLoadAd:(ADBannerView *)banner {
-//    
-//    adView.hidden = NO;
-//    NSLog(@"Banner showing");
-//}
-//
-//-(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
-//    
-//    adView.hidden = YES;
-//    NSLog(@"Banner hidden. No ad to show");
-//}
-
-
 @end
