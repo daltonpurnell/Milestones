@@ -6,8 +6,8 @@ Parse.Cloud.define("searchForPendingInvites", function(request, response) {
     var Invite = Parse.Object.extend("Invite");
     var emailAddress = request.params.emailAddress;
     
-        inviteRecipientToSignUp.save(null, {
-            success: function(invite) {
+//        inviteRecipientToSignUp.save(null, {
+//            success: function(invite) {
                         var recipientUsername = request.params.emailAddress;
                                      console.log(recipientUsername);
                         if (recipientUsername) {
@@ -19,6 +19,14 @@ Parse.Cloud.define("searchForPendingInvites", function(request, response) {
                                                     success: function(invitesArray) {
                                                     console.log(invitesArray);
                                                     // for loop through invite array
+                                                    for (Invite in invitesArray) {
+                                                    // update acl for scrapbooks and entries
+                                                        for (scrapbook in scrapbooks)
+                                                        var postACL = new Parse.ACL();
+                                                        postACL.setWriteAccess(request.user["recipientUsername"].toString(),true);
+                                                                for (entry in scrapbook.entries)
+                                                                var postACL = new Parse.ACL();
+                                                                postACL.setWriteAccess(request.user["recipientUsername"].toString(),true);
                                                     
                                                     },
                                                     error: function(error) {

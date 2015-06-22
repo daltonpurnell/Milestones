@@ -309,6 +309,7 @@
     
     //    customScrapbookCell.photoImageView.image = image;
     
+    
 }
 
 -(void)unregisterForNotifications {
