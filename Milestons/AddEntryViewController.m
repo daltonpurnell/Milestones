@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @end
 
 @implementation AddEntryViewController
@@ -36,6 +37,16 @@
     self.titleTextField.delegate = self;
     
     self.descriptionTextView.delegate = self;
+    
+    // create drop shadow for back image view
+    self.descriptionTextView.layer.shadowColor = [UIColor grayColor].CGColor;
+    self.descriptionTextView.layer.shadowOffset = CGSizeMake(0, 1);
+    self.descriptionTextView.layer.shadowOpacity = 1;
+    self.descriptionTextView.layer.shadowRadius = 1.0;
+    self.descriptionTextView.clipsToBounds = NO;
+
+    self.descriptionLabel.textColor = [UIColor lightGrayColor];
+    
     [Appearance initializeAppearanceDefaults];
     
     self.images = [NSMutableArray new];
@@ -207,6 +218,7 @@
 
 -(void)textViewDidBeginEditing:(UITextView *)textView
 {
+    self.descriptionLabel.hidden = YES;
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.3];
     self.view.frame = CGRectMake(self.view.frame.origin.x, -160, self.view.frame.size.width, self.view.frame.size.height);
