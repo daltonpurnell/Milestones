@@ -22,6 +22,7 @@
     
     self.backgroundColor = [UIColor clearColor];
     self.backImageView.backgroundColor = [UIColor whiteColor];
+    self.contributorsLabel.hidden = YES;
     
 // hide all buttons except edit
     self.doneButton.hidden = YES;

@@ -4,12 +4,12 @@
   'roots': [
     {
       'type': 'directory',
-      'name': "/Users/djp1989/Documents/Development/PersonalProjects/Milestons/DerivedData/Milestons/Build/Products/Debug-iphoneos/MilestonesKit.framework/Headers",
+      'name': "/Users/djp1989/Documents/Development/PersonalProjects/Milestons/DerivedData/Milestons/Build/Products/Debug-iphonesimulator/MilestonesKit.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "MilestonesKit-Swift.h",
-          'external-contents': "/Users/djp1989/Documents/Development/PersonalProjects/Milestons/DerivedData/Milestons/Build/Products/Debug-iphoneos/MilestonesKit.framework/Headers/MilestonesKit-Swift.h"
+          'external-contents': "/Users/djp1989/Documents/Development/PersonalProjects/Milestons/DerivedData/Milestons/Build/Products/Debug-iphonesimulator/MilestonesKit.framework/Headers/MilestonesKit-Swift.h"
         },
         {
           'type': 'file',
@@ -20,12 +20,12 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/djp1989/Documents/Development/PersonalProjects/Milestons/DerivedData/Milestons/Build/Products/Debug-iphoneos/MilestonesKit.framework/Modules",
+      'name': "/Users/djp1989/Documents/Development/PersonalProjects/Milestons/DerivedData/Milestons/Build/Products/Debug-iphonesimulator/MilestonesKit.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/djp1989/Documents/Development/PersonalProjects/Milestons/DerivedData/Milestons/Build/Intermediates/Milestons.build/Debug-iphoneos/MilestonesKit.build/module.modulemap"
+          'external-contents': "/Users/djp1989/Documents/Development/PersonalProjects/Milestons/DerivedData/Milestons/Build/Intermediates/Milestons.build/Debug-iphonesimulator/MilestonesKit.build/module.modulemap"
         }
       ]
     }

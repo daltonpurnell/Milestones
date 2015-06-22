@@ -34,7 +34,7 @@
     
     Photo *photo = [Photo object];
     
-    PFFile *imageFile = [PFFile fileWithData:UIImageJPEGRepresentation(myPhoto,0.95)];
+    PFFile *imageFile = [PFFile fileWithData:UIImageJPEGRepresentation(myPhoto,0.40)];
     
     [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {

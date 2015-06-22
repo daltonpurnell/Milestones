@@ -1,0 +1,1 @@
+ const unsigned char MilestonesKitVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:MilestonesKit  PROJECT:Milestons-1" "\n"; const double MilestonesKitVersionNumber __attribute__ ((used)) = (double)1.;

@@ -43,7 +43,7 @@
 
     //setup scrapbook image
     if (image) {
-        PFFile *imageFile = [PFFile fileWithData:UIImageJPEGRepresentation(image,0.95)];
+        PFFile *imageFile = [PFFile fileWithData:UIImageJPEGRepresentation(image,0.40)];
         scrapbook.photo = imageFile;
     }
     
