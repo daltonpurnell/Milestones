@@ -322,24 +322,6 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uqk-Rp-Edb" id="4pp-WB-R2k">
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You do not have any scrapbooks. Tap the + to create your first one!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soF-Uj-dO2">
-                                            <rect key="frame" x="8" y="50" width="584" height="65"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="584" id="EUg-MK-ZWE"/>
-                                                <constraint firstAttribute="height" constant="65" id="IWo-De-MEV"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="centerX" secondItem="soF-Uj-dO2" secondAttribute="centerX" constant="-0.5" id="7oi-z5-ZmV"/>
-                                        <constraint firstItem="soF-Uj-dO2" firstAttribute="leading" secondItem="4pp-WB-R2k" secondAttribute="leadingMargin" id="G7m-kZ-HeE"/>
-                                        <constraint firstItem="soF-Uj-dO2" firstAttribute="trailing" secondItem="4pp-WB-R2k" secondAttribute="trailingMargin" id="QKd-ZN-SCm"/>
-                                        <constraint firstItem="soF-Uj-dO2" firstAttribute="top" secondItem="4pp-WB-R2k" secondAttribute="topMargin" constant="42" id="uut-bM-Qs1"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -980,40 +962,6 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ao8-8S-qYY" id="vyA-2c-897">
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You do not have any milestones in this scrapbook. Tap the + to create your first one." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12v-Co-KoJ">
-                                            <rect key="frame" x="8" y="31" width="584" height="66"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="66" id="2uw-B6-S4A"/>
-                                                <constraint firstAttribute="width" constant="584" id="Udi-Ly-io7"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the toolbar button to add a contributor to this scrapbook." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9o-v5-2lE">
-                                            <rect key="frame" x="8" y="184" width="584" height="66"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="584" id="MMj-nF-eLe"/>
-                                                <constraint firstAttribute="width" constant="584" id="ZsR-89-29t"/>
-                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="66" id="gQM-dd-B9Z"/>
-                                                <constraint firstAttribute="height" constant="66" id="oKi-9t-6kQ"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="q9o-v5-2lE" firstAttribute="leading" secondItem="vyA-2c-897" secondAttribute="leadingMargin" id="Ag4-lV-fSQ"/>
-                                        <constraint firstItem="12v-Co-KoJ" firstAttribute="top" secondItem="vyA-2c-897" secondAttribute="topMargin" constant="23" id="MYY-l6-ndq"/>
-                                        <constraint firstItem="12v-Co-KoJ" firstAttribute="leading" secondItem="vyA-2c-897" secondAttribute="leadingMargin" id="MaW-rK-UeJ"/>
-                                        <constraint firstItem="12v-Co-KoJ" firstAttribute="trailing" secondItem="vyA-2c-897" secondAttribute="trailingMargin" id="S6a-X7-oNt"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="q9o-v5-2lE" secondAttribute="bottom" constant="92" id="Wwz-Cx-KpG"/>
-                                        <constraint firstAttribute="centerX" secondItem="12v-Co-KoJ" secondAttribute="centerX" id="aB4-jR-ZUj"/>
-                                        <constraint firstItem="q9o-v5-2lE" firstAttribute="trailing" secondItem="vyA-2c-897" secondAttribute="trailingMargin" id="fzl-SS-Unr"/>
-                                        <constraint firstAttribute="centerX" secondItem="q9o-v5-2lE" secondAttribute="centerX" id="r6P-53-6Oq"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                             </tableViewCell>
