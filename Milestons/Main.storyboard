@@ -323,8 +323,12 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uqk-Rp-Edb" id="4pp-WB-R2k">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You do not have any scrapbooks. Tap the + to create your first one!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soF-Uj-dO2">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You do not have any scrapbooks. Tap the + to create your first one!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soF-Uj-dO2">
                                             <rect key="frame" x="8" y="50" width="584" height="65"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="584" id="EUg-MK-ZWE"/>
+                                                <constraint firstAttribute="height" constant="65" id="IWo-De-MEV"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -350,7 +354,7 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Your Scrapbooks" id="5dn-fF-DbF">
-                        <barButtonItem key="leftBarButtonItem" image="Cog" style="plain" id="qik-C3-cYW"/>
+                        <barButtonItem key="leftBarButtonItem" image="Cog" id="qik-C3-cYW"/>
                         <barButtonItem key="rightBarButtonItem" image="add" id="gQQ-1V-zmg">
                             <connections>
                                 <segue destination="du9-zh-6TT" kind="presentation" identifier="presentAddEntry" id="aVE-kf-Kw0"/>
@@ -367,24 +371,6 @@
                 <customObject id="WJD-2D-TR3" customClass="ScrapbookListViewDataSource"/>
             </objects>
             <point key="canvasLocation" x="1123" y="185"/>
-        </scene>
-        <!--Store View Controller-->
-        <scene sceneID="MHW-un-bO7">
-            <objects>
-                <viewController id="dRC-2e-XQd" customClass="StoreViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cRx-fD-95A"/>
-                        <viewControllerLayoutGuide type="bottom" id="qjT-yV-ClL"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cgh-uK-Na5">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mdV-ug-z2W" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1130" y="-692"/>
         </scene>
         <!--Add Entry View Controller-->
         <scene sceneID="u96-xn-APN">

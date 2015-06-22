@@ -25,7 +25,7 @@
 @import MessageUI;
 @import AVFoundation;
 
-@interface EntryListViewController () <UITableViewDelegate, ABPeoplePickerNavigationControllerDelegate, MFMailComposeViewControllerDelegate, AVAudioPlayerDelegate, UIImagePickerControllerDelegate>
+@interface EntryListViewController () <UITableViewDelegate, ABPeoplePickerNavigationControllerDelegate, MFMailComposeViewControllerDelegate, AVAudioPlayerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UINavigationItem *navBar;
 @property (nonatomic, strong) EntryListViewDataSource *tableDataSource;
