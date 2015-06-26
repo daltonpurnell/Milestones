@@ -112,7 +112,7 @@
                      }];
 
     // camera button
-    self.cameraButton.hidden = NO;
+    self.cameraButton.hidden = YES;
     
     CGRect originalCameraButtonFrame = self.cameraButton.frame;
     self.cameraButton.frame = CGRectMake(self.contentView.frame.size.width + originalCameraButtonFrame.size.width,
@@ -157,13 +157,12 @@
     
     
     CGRect originalCancelButtonFrame = self.cancelButton.frame;
-    self.cancelButton.frame = CGRectMake(0 - originalCancelButtonFrame.size.width,
+    self.cancelButton.frame = CGRectMake(self.contentView.frame.size.width + originalCancelButtonFrame.size.width,
                                          originalCancelButtonFrame.origin.y,
                                          originalCancelButtonFrame.size.width,
                                          originalCancelButtonFrame.size.height);
-    
     [UIView animateWithDuration:0.75
-                          delay:0.25
+                          delay:0.35
          usingSpringWithDamping:0.8
           initialSpringVelocity:2.0
                         options: UIViewAnimationOptionCurveLinear
