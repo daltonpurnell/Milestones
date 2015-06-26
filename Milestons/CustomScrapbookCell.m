@@ -90,6 +90,9 @@
 
 - (IBAction)editButtonTapped:(id)sender {
     
+    // border on text field
+  //  [self.titleTextField setBorderStyle:UITextBorderStyleLine];
+    
     // done button
     self.doneButton.hidden = NO;
     
@@ -190,6 +193,9 @@
 
 - (IBAction)doneButtonTapped:(id)sender {
     
+    //remove border on text field
+      //  [self.titleTextField setBorderStyle:UITextBorderStyleNone];
+    
     // done button animation
     [UIView transitionWithView:self.doneButton
                       duration:0.4
@@ -239,6 +245,10 @@
 }
 
 - (IBAction)cancelButtonTapped:(id)sender {
+    
+    
+    //remove border on text field
+    //[self.titleTextField setBorderStyle:UITextBorderStyleNone];
     
     // done button animation
     [UIView transitionWithView:self.doneButton
