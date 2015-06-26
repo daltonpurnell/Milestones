@@ -856,25 +856,8 @@
                                                 <action selector="deleteButtonTapped:" destination="Jfh-bi-QJz" eventType="touchUpInside" id="rZL-Al-QK8"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFk-IX-uQz">
-                                            <rect key="frame" x="551" y="146" width="25" height="25"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="25" id="8N5-zu-qIh"/>
-                                                <constraint firstAttribute="width" constant="25" id="fJD-ag-JC1"/>
-                                            </constraints>
-                                            <state key="normal" image="Camera">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="cameraButtonTapped:" destination="Jfh-bi-QJz" eventType="touchUpInside" id="cOS-yv-w8f"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jdo-B8-UQy">
-                                            <rect key="frame" x="539" y="210" width="48" height="30"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="48" id="4Yi-Dw-1Ps"/>
-                                                <constraint firstAttribute="height" constant="30" id="ihf-be-6OQ"/>
-                                            </constraints>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jdo-B8-UQy">
+                                            <rect key="frame" x="539" y="182" width="48" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <state key="normal" title="Cancel">
                                                 <color key="titleColor" red="0.31372549019607843" green="0.31372549019607843" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
@@ -884,11 +867,11 @@
                                                 <action selector="cancelButtonTapped:" destination="Jfh-bi-QJz" eventType="touchUpInside" id="f8i-KL-SBP"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Js-is-wye">
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Js-is-wye">
                                             <rect key="frame" x="544" y="281" width="37" height="30"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="30" id="mNY-3b-gyx"/>
-                                                <constraint firstAttribute="width" constant="37" id="oC1-G0-Cnd"/>
+                                                <constraint firstAttribute="width" constant="37" id="DTa-Wz-aXB"/>
+                                                <constraint firstAttribute="height" constant="30" id="JVU-hi-oNR"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <state key="normal" title="Done">
@@ -908,34 +891,42 @@
                                             <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                         </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFk-IX-uQz">
+                                            <rect key="frame" x="550" y="386" width="25" height="25"/>
+                                            <state key="normal" image="Camera">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="cameraButtonTapped:" destination="Jfh-bi-QJz" eventType="touchUpInside" id="cOS-yv-w8f"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="3Js-is-wye" secondAttribute="trailing" constant="11" id="0rm-Sx-yfw"/>
                                         <constraint firstItem="23R-dg-K6R" firstAttribute="top" secondItem="VgF-Zm-3CR" secondAttribute="topMargin" id="2gN-sr-Z1F"/>
-                                        <constraint firstItem="dFk-IX-uQz" firstAttribute="centerX" secondItem="R0B-Hr-dBa" secondAttribute="centerX" id="7Vl-dA-8xY"/>
                                         <constraint firstItem="23R-dg-K6R" firstAttribute="leading" secondItem="VgF-Zm-3CR" secondAttribute="leadingMargin" id="BJb-e4-2Fe"/>
                                         <constraint firstItem="23R-dg-K6R" firstAttribute="trailing" secondItem="VgF-Zm-3CR" secondAttribute="trailingMargin" id="BUE-oP-vGa"/>
-                                        <constraint firstItem="dFk-IX-uQz" firstAttribute="top" secondItem="R0B-Hr-dBa" secondAttribute="bottom" constant="40" id="D45-U2-oU9"/>
                                         <constraint firstItem="4QB-mo-vbP" firstAttribute="top" secondItem="VgF-Zm-3CR" secondAttribute="topMargin" constant="45" id="EDY-Ie-pyD"/>
                                         <constraint firstItem="R0B-Hr-dBa" firstAttribute="top" secondItem="FPZ-Nn-kdY" secondAttribute="bottom" constant="43" id="Ics-6j-8xc"/>
-                                        <constraint firstItem="3Js-is-wye" firstAttribute="top" secondItem="Jdo-B8-UQy" secondAttribute="bottom" constant="41" id="L3y-QD-26L"/>
                                         <constraint firstItem="48l-dk-EiE" firstAttribute="top" secondItem="VgF-Zm-3CR" secondAttribute="topMargin" constant="22" id="MSb-6k-Lom"/>
                                         <constraint firstItem="I6E-cp-lVf" firstAttribute="top" secondItem="VgF-Zm-3CR" secondAttribute="topMargin" id="OeJ-cu-erD"/>
+                                        <constraint firstItem="R0B-Hr-dBa" firstAttribute="leading" secondItem="Jdo-B8-UQy" secondAttribute="trailing" constant="-36" id="REP-GY-f7a"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="4QB-mo-vbP" secondAttribute="bottom" constant="100" id="SEu-0D-ASF"/>
+                                        <constraint firstItem="3Js-is-wye" firstAttribute="top" secondItem="Jdo-B8-UQy" secondAttribute="bottom" constant="69" id="T2c-wA-8Ta"/>
                                         <constraint firstItem="FPZ-Nn-kdY" firstAttribute="centerX" secondItem="R0B-Hr-dBa" secondAttribute="centerX" constant="-1" id="X09-bY-yMG"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="4QB-mo-vbP" secondAttribute="trailing" id="ZtV-z1-89I"/>
                                         <constraint firstItem="4QB-mo-vbP" firstAttribute="leading" secondItem="VgF-Zm-3CR" secondAttribute="leadingMargin" constant="10" id="aO6-DR-i4T"/>
-                                        <constraint firstItem="3Js-is-wye" firstAttribute="centerX" secondItem="Jdo-B8-UQy" secondAttribute="centerX" constant="-0.5" id="bPU-hJ-uui"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="FPZ-Nn-kdY" secondAttribute="trailing" constant="17" id="cB7-Je-ANP"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="ooa-6b-X2T" secondAttribute="bottom" constant="10" id="dNz-c4-xwx"/>
                                         <constraint firstItem="ZTe-ln-gMh" firstAttribute="top" secondItem="VgF-Zm-3CR" secondAttribute="topMargin" id="dnm-qO-sgb"/>
-                                        <constraint firstItem="Jdo-B8-UQy" firstAttribute="top" secondItem="dFk-IX-uQz" secondAttribute="bottom" constant="39" id="eEB-Om-bn9"/>
+                                        <constraint firstItem="Jdo-B8-UQy" firstAttribute="top" secondItem="R0B-Hr-dBa" secondAttribute="bottom" constant="76" id="ixV-0u-4Xe"/>
                                         <constraint firstItem="I6E-cp-lVf" firstAttribute="leading" secondItem="VgF-Zm-3CR" secondAttribute="leadingMargin" constant="8" id="jmV-yD-JdW"/>
                                         <constraint firstItem="ZTe-ln-gMh" firstAttribute="trailing" secondItem="VgF-Zm-3CR" secondAttribute="trailingMargin" id="k9v-MT-uZJ"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="ooa-6b-X2T" secondAttribute="trailing" constant="8" id="kdm-A9-fib"/>
                                         <constraint firstItem="48l-dk-EiE" firstAttribute="leading" secondItem="VgF-Zm-3CR" secondAttribute="leadingMargin" constant="8" id="ne1-pg-RBk"/>
                                         <constraint firstItem="ooa-6b-X2T" firstAttribute="leading" secondItem="VgF-Zm-3CR" secondAttribute="leadingMargin" constant="8" id="pcw-h3-U7p"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Jdo-B8-UQy" secondAttribute="trailing" constant="5" id="w2B-Af-mst"/>
                                         <constraint firstItem="FPZ-Nn-kdY" firstAttribute="top" secondItem="VgF-Zm-3CR" secondAttribute="topMargin" constant="5" id="wEf-A5-fvz"/>
-                                        <constraint firstItem="Jdo-B8-UQy" firstAttribute="centerX" secondItem="dFk-IX-uQz" secondAttribute="centerX" constant="-0.5" id="xX6-3m-TfB"/>
                                         <constraint firstItem="23R-dg-K6R" firstAttribute="bottom" secondItem="VgF-Zm-3CR" secondAttribute="bottomMargin" id="zAj-ZN-L3d"/>
                                     </constraints>
                                 </tableViewCellContentView>
