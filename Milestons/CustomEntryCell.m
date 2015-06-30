@@ -86,7 +86,7 @@
     
         [[PhotoController sharedInstance] loadThesePhotosFromParseInEntry:entry completion:^(NSArray *photos, NSError *error) {
             self.collectionViewDataSource.photos = photos;
-            NSLog(@"%lu", photos.count);
+            NSLog(@"%lu", (unsigned long)photos.count);
             [self.collectionView reloadData];
         }];
         
