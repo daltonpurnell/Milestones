@@ -22,6 +22,7 @@ static NSString * const entryImagePickedKey = @"image picked";
 
 @property (strong, nonatomic) Entry *entry;
 @property (strong, nonatomic) Scrapbook *scrapbook;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *addContributorsButton;
 
 @property (nonatomic, strong) NSArray *entries;
 

@@ -1345,6 +1345,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addContributorsButton" destination="Bvw-a1-X6Z" id="mis-z7-hNn"/>
                         <outlet property="navBar" destination="5XQ-lp-FVI" id="dsz-gJ-bgo"/>
                     </connections>
                 </tableViewController>

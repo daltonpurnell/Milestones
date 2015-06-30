@@ -57,7 +57,8 @@
     self.refreshControl = [UIRefreshControl new];
     [self.refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];
     
-    self.navigationController.toolbarHidden = NO;
+    self.navigationController.toolbarHidden = YES;
+ 
     
     [self registerForNotifications];
     
@@ -73,19 +74,19 @@
 - (IBAction)addContributorButtonPressed:(id)sender {
     
     // this feature is coming soon!
-    [self presentComingSoonAlert];
+   // [self presentComingSoonAlert];
     
     
     // Show ABPeoplePickerNavigationController
-//    ABPeoplePickerNavigationController *picker = [ABPeoplePickerNavigationController new];
-//    picker.peoplePickerDelegate = self;
-//    picker.displayedProperties = @[@(kABPersonEmailProperty)];
-//    picker.predicateForEnablingPerson = [NSPredicate predicateWithFormat:@"emailAddresses.@count > 0"];
-//    picker.predicateForSelectionOfPerson = [NSPredicate predicateWithFormat:@"emailAddresses.@count = 1"];
-//
-//    [self presentViewController:picker animated:YES completion:nil];
-//    
-//    NSLog(@"Add Contributors");
+    ABPeoplePickerNavigationController *picker = [ABPeoplePickerNavigationController new];
+    picker.peoplePickerDelegate = self;
+    picker.displayedProperties = @[@(kABPersonEmailProperty)];
+    picker.predicateForEnablingPerson = [NSPredicate predicateWithFormat:@"emailAddresses.@count > 0"];
+    picker.predicateForSelectionOfPerson = [NSPredicate predicateWithFormat:@"emailAddresses.@count = 1"];
+
+    [self presentViewController:picker animated:YES completion:nil];
+    
+    NSLog(@"Add Contributors");
 
 }
 
