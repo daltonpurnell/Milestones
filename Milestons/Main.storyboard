@@ -535,11 +535,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4TZ-AZ-gAa">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4TZ-AZ-gAa">
                                                     <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="height" constant="180" id="Bgo-te-7iN"/>
                                                         <constraint firstAttribute="width" constant="180" id="JUb-uX-VLX"/>
                                                         <constraint firstAttribute="height" constant="180" id="meO-af-fy6"/>
+                                                        <constraint firstAttribute="width" constant="180" id="wcL-T6-f02"/>
                                                     </constraints>
                                                     <variation key="default">
                                                         <mask key="constraints">
@@ -560,6 +562,8 @@
                                         <constraints>
                                             <constraint firstAttribute="centerY" secondItem="4TZ-AZ-gAa" secondAttribute="centerY" id="3rA-BX-ICW"/>
                                             <constraint firstAttribute="centerX" secondItem="4TZ-AZ-gAa" secondAttribute="centerX" id="4ow-Zk-5em"/>
+                                            <constraint firstAttribute="centerX" secondItem="4TZ-AZ-gAa" secondAttribute="centerX" id="puF-To-8Sm"/>
+                                            <constraint firstAttribute="centerY" secondItem="4TZ-AZ-gAa" secondAttribute="centerY" id="rOC-Uj-IsY"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -584,11 +588,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="dashedLineSquare" translatesAutoresizingMaskIntoConstraints="NO" id="Bfr-3e-FiI">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dashedLineSquare" translatesAutoresizingMaskIntoConstraints="NO" id="Bfr-3e-FiI">
                                                     <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="180" id="SKG-Kf-mRu"/>
+                                                        <constraint firstAttribute="height" constant="180" id="j4d-4n-SVb"/>
                                                         <constraint firstAttribute="height" constant="180" id="mi5-N1-fb5"/>
+                                                        <constraint firstAttribute="width" constant="180" id="vCJ-ib-giM"/>
                                                     </constraints>
                                                     <variation key="default">
                                                         <mask key="constraints">
@@ -607,7 +613,9 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
+                                            <constraint firstAttribute="centerX" secondItem="Bfr-3e-FiI" secondAttribute="centerX" id="Du3-l1-ifb"/>
                                             <constraint firstAttribute="centerY" secondItem="Bfr-3e-FiI" secondAttribute="centerY" id="p8X-DP-Sjk"/>
+                                            <constraint firstAttribute="centerY" secondItem="Bfr-3e-FiI" secondAttribute="centerY" id="q7x-Gk-SjV"/>
                                             <constraint firstAttribute="centerX" secondItem="Bfr-3e-FiI" secondAttribute="centerX" id="t92-9m-zKr"/>
                                         </constraints>
                                         <variation key="default">
@@ -1204,8 +1212,12 @@
                                                 <action selector="deleteButtonTapped:" destination="Jfh-bi-QJz" eventType="touchUpInside" id="rZL-Al-QK8"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jdo-B8-UQy">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jdo-B8-UQy">
                                             <rect key="frame" x="539" y="182" width="48" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="egf-Am-xBi"/>
+                                                <constraint firstAttribute="width" constant="48" id="uyr-6g-ebQ"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <state key="normal" title="Cancel">
                                                 <color key="titleColor" red="0.31372549019607843" green="0.31372549019607843" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
@@ -1215,8 +1227,8 @@
                                                 <action selector="cancelButtonTapped:" destination="Jfh-bi-QJz" eventType="touchUpInside" id="f8i-KL-SBP"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Js-is-wye">
-                                            <rect key="frame" x="544" y="281" width="37" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Js-is-wye">
+                                            <rect key="frame" x="544" y="278" width="37" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="37" id="DTa-Wz-aXB"/>
                                                 <constraint firstAttribute="height" constant="30" id="JVU-hi-oNR"/>
@@ -1262,7 +1274,7 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="ooa-6b-X2T" secondAttribute="bottom" constant="10" id="OrI-Jy-cAp"/>
                                         <constraint firstItem="R0B-Hr-dBa" firstAttribute="leading" secondItem="Jdo-B8-UQy" secondAttribute="trailing" constant="-36" id="REP-GY-f7a"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="4QB-mo-vbP" secondAttribute="bottom" constant="100" id="SEu-0D-ASF"/>
-                                        <constraint firstItem="3Js-is-wye" firstAttribute="top" secondItem="Jdo-B8-UQy" secondAttribute="bottom" constant="69" id="T2c-wA-8Ta"/>
+                                        <constraint firstItem="3Js-is-wye" firstAttribute="top" secondItem="Jdo-B8-UQy" secondAttribute="bottom" constant="66" id="T2c-wA-8Ta"/>
                                         <constraint firstItem="FPZ-Nn-kdY" firstAttribute="centerX" secondItem="R0B-Hr-dBa" secondAttribute="centerX" constant="-1" id="X09-bY-yMG"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="4QB-mo-vbP" secondAttribute="trailing" id="ZtV-z1-89I"/>
                                         <constraint firstItem="4QB-mo-vbP" firstAttribute="leading" secondItem="VgF-Zm-3CR" secondAttribute="leadingMargin" constant="10" id="aO6-DR-i4T"/>
