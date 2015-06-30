@@ -21,11 +21,11 @@ Parse.Cloud.define("searchForPendingInvites", function(request, response) {
                                                     // for loop through invite array
                                                     for (Invite in invitesArray) {
                                                     // update acl for scrapbooks and entries
-                                                        var postACL = new Parse.ACL();
-                                                        postACL.setWriteAccess(request.user["recipientUsername"].toString(),true);
+                                                        var updatedACL = invite.ACL();
+                                                        updatedACL.setWriteAccess(request.user["recipientUsername"].toString(),true);
                                                                 for (entry in scrapbook.entries)
-                                                                var postACL = new Parse.ACL();
-                                                                postACL.setWriteAccess(request.user["recipientUsername"].toString(),true);
+                                                                var updatedACL = entry.ACL();
+                                                                updatedACL.setWriteAccess(request.user["recipientUsername"].toString(),true);
                                                     
                                                     },
                                                     error: function(error) {

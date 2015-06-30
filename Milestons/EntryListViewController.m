@@ -72,22 +72,36 @@
 
 - (IBAction)addContributorButtonPressed:(id)sender {
     
-    // Show ABPeoplePickerNavigationController
-    ABPeoplePickerNavigationController *picker = [ABPeoplePickerNavigationController new];
-    picker.peoplePickerDelegate = self;
-    picker.displayedProperties = @[@(kABPersonEmailProperty)];
-    picker.predicateForEnablingPerson = [NSPredicate predicateWithFormat:@"emailAddresses.@count > 0"];
-    picker.predicateForSelectionOfPerson = [NSPredicate predicateWithFormat:@"emailAddresses.@count = 1"];
-
-    [self presentViewController:picker animated:YES completion:nil];
     
-    NSLog(@"Add Contributors");
+    
+    // this feature is coming soon!
+    [self presentComingSoonAlert];
+    
+    
+    // Show ABPeoplePickerNavigationController
+//    ABPeoplePickerNavigationController *picker = [ABPeoplePickerNavigationController new];
+//    picker.peoplePickerDelegate = self;
+//    picker.displayedProperties = @[@(kABPersonEmailProperty)];
+//    picker.predicateForEnablingPerson = [NSPredicate predicateWithFormat:@"emailAddresses.@count > 0"];
+//    picker.predicateForSelectionOfPerson = [NSPredicate predicateWithFormat:@"emailAddresses.@count = 1"];
+//
+//    [self presentViewController:picker animated:YES completion:nil];
+//    
+//    NSLog(@"Add Contributors");
 
 }
 
+#pragma mark - add contributor coming soon alert
+-(void)presentComingSoonAlert {
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Add Contributor" message:@"This feature is coming soon!" preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil]];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
 
 
-#pragma mark ABPeoplePickerNavigationControllerDelegate methods
+#pragma mark - ABPeoplePickerNavigationControllerDelegate methods
 
 // A selected person is returned with this method.
 - (void)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker didSelectPerson:(ABRecordRef)person
@@ -303,12 +317,11 @@
 
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+//    UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
     [picker dismissViewControllerAnimated:YES completion:nil];
     [[NSNotificationCenter defaultCenter] postNotificationName:entryImagePickedKey object:nil];
     
     //    customScrapbookCell.photoImageView.image = image;
-    
     
 }
 

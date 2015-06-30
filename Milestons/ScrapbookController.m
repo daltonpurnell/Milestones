@@ -51,7 +51,7 @@
     PFUser *user = [PFUser currentUser];
     scrapbook.user = user;
     scrapbook.ACL = [PFACL ACLWithUser:user];
-
+    
     [scrapbook saveInBackground];
     
     NSMutableArray *mutableScrapbooks = [NSMutableArray arrayWithArray:self.scrapbooks];
