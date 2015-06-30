@@ -72,8 +72,6 @@
 
 - (IBAction)addContributorButtonPressed:(id)sender {
     
-    
-    
     // this feature is coming soon!
     [self presentComingSoonAlert];
     
